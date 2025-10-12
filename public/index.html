@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeetCode Interview Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Landing Page -->
+        <div id="landing-page" class="page active">
+            <header>
+                <h1>🎯 LeetCode Interview Assistant</h1>
+                <p>Practice coding interviews in real-time with a partner</p>
+            </header>
+
+            <div class="action-cards">
+                <div class="card">
+                    <h3>👨‍💼 Start as Interviewer</h3>
+                    <p>Create a new interview session and share the room code</p>
+                    <button id="create-room-btn" class="btn btn-primary">Create Room</button>
+                </div>
+
+                <div class="card">
+                    <h3>👩‍💻 Join as Interviewee</h3>
+                    <p>Enter a room code to join an existing interview session</p>
+                    <div class="input-group">
+                        <input type="text" id="room-code-input" placeholder="Enter room code" maxlength="6">
+                        <button id="join-room-btn" class="btn btn-secondary">Join Room</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features">
+                <h4>Features</h4>
+                <ul>
+                    <li>✅ Real-time collaborative code editor</li>
+                    <li>✅ Shared whiteboard for diagrams</li>
+                    <li>✅ Fake terminal for testing ideas</li>
+                    <li>✅ Built-in chat for communication</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Room Page -->
+        <div id="room-page" class="page">
+            <header class="room-header">
+                <div class="room-info">
+                    <h2>Interview Room: <span id="current-room-code">XXXX</span></h2>
+                    <span id="user-role" class="role-badge">Interviewer</span>
+                    <span id="user-count" class="user-count">1/2 users</span>
+                </div>
+                <button id="leave-room-btn" class="btn btn-danger">Leave Room</button>
+            </header>
+
+            <div class="room-content">
+                <!-- Placeholder for future features -->
+                <div class="feature-placeholder">
+                    <h3>🚧 Coming Soon</h3>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <h4>📝 Code Editor</h4>
+                            <p>Real-time collaborative coding (Day 3-4)</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>🎨 Whiteboard</h4>
+                            <p>Shared drawing canvas (Day 5-6)</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>💬 Chat</h4>
+                            <p>Built-in communication (Day 7)</p>
+                        </div>
+                        <div class="feature-item">
+                            <h4>⚡ Terminal</h4>
+                            <p>Fake terminal for testing (Day 7)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Connection Status -->
+                <div class="status-panel">
+                    <h4>Connection Status</h4>
+                    <div id="connection-status" class="status-item">
+                        <span class="status-dot connected"></span>
+                        Connected to server
+                    </div>
+                    <div id="room-status" class="status-item">
+                        <span class="status-dot connected"></span>
+                        Room active
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading overlay -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Connecting...</p>
+        </div>
+
+        <!-- Error messages -->
+        <div id="error-message" class="error-message hidden">
+            <span class="error-text"></span>
+            <button class="close-error">&times;</button>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
