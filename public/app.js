@@ -3,12 +3,18 @@ class InterviewApp {
     constructor() {
         this.socket = null;
         this.currentRoom = null;
+        this.userRole = 'candidate';
+        this.currentProblem = 'two-sum';
+        this.currentLanguage = 'javascript';
+        this.timerInterval = null;
+        this.timerSeconds = 0;
         this.isDrawing = false;
         this.lastDrawPoint = null;
         
         this.initializeElements();
         this.setupEventListeners();
         this.connectSocket();
+        this.loadProblemBank();
     }
 
     initializeElements() {

@@ -207,22 +207,53 @@ io.on('connection', (socket) => {
   // users.set(socket.id, { ... });
 
   // Handle room creation
-  socket.on('create-room', (callback) => {
+  socket.on('create-room', (data: { role: 'interviewer' | 'candidate' }, callback) => {
     // TODO: Generate room ID
-    // TODO: Create room object
-    // TODO: Add user to room
-    // TODO: Send success response
-    console.log('TODO: Implement room creation');
+    // TODO: Create room object with default problem
+    // TODO: Add user to room with specified role
+    // TODO: Send success response with room data
+    console.log('TODO: Implement room creation with role:', data.role);
   });
 
   // Handle room joining
-  socket.on('join-room', (roomId: string, callback) => {
+  socket.on('join-room', (data: { roomId: string, role: 'interviewer' | 'candidate' }, callback) => {
     // TODO: Validate room exists
     // TODO: Check room capacity
-    // TODO: Add user to room
-    // TODO: Send room state to new user
+    // TODO: Add user to room with specified role
+    // TODO: Send room state to new user including problem data
     // TODO: Notify other participants
-    console.log('TODO: Implement room joining');
+    console.log('TODO: Implement room joining with role:', data.role);
+  });
+
+  // Handle problem selection
+  socket.on('change-problem', (data: { problemId: string }) => {
+    // TODO: Validate problem exists in problemBank
+    // TODO: Update room's current problem
+    // TODO: Reset code editor with new starter code
+    // TODO: Broadcast problem change to all participants
+    console.log('TODO: Implement problem selection:', data.problemId);
+  });
+
+  // Handle language change
+  socket.on('change-language', (data: { language: string }) => {
+    // TODO: Update room's selected language
+    // TODO: Update code editor with language-specific starter code
+    // TODO: Broadcast language change to all participants
+    console.log('TODO: Implement language change:', data.language);
+  });
+
+  // Handle timer controls
+  socket.on('timer-control', (data: { action: 'start' | 'pause' | 'reset' }) => {
+    // TODO: Update room timer state
+    // TODO: Broadcast timer state to all participants
+    console.log('TODO: Implement timer control:', data.action);
+  });
+
+  // Handle share room link
+  socket.on('get-share-link', (callback) => {
+    // TODO: Generate shareable room link
+    // TODO: Return full URL for easy sharing
+    console.log('TODO: Generate shareable link');
   });
 
   // Handle code changes
