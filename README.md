@@ -220,6 +220,6 @@ We welcome contributions to make this interview practice tool even better! Pleas
 
 ## 📄 License
 
-MIT License - feel free to use this for your own interview practice!
+Apache License 2.0 - feel free to use this for your own interview practice!
 
 **Happy interviewing!** 🎉 Use this tool to practice coding interviews with friends, simulate real technical interview conditions, and improve your collaborative problem-solving skills.
