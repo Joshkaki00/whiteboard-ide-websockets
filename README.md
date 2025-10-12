@@ -42,14 +42,6 @@ Visit `http://localhost:3000` to access the application.
 3. **Both users** will see connection status and user count
 4. **Coming soon**: Code editor, whiteboard, chat, and terminal
 
-## 🗓️ Week Schedule
-
-- **Day 1** ✅: Basic Socket.IO setup + room management
-- **Day 2**: Room persistence and error handling improvements
-- **Day 3-4**: Shared text editor with syntax highlighting
-- **Day 5-6**: Canvas-based whiteboard for diagrams
-- **Day 7**: Chat system and fake terminal + deployment
-
 ## 🛠️ Tech Stack
 
 - **Server**: Node.js, Express, Socket.IO
@@ -84,15 +76,3 @@ Open multiple browser tabs/windows to test:
 2. Join with the room code in another tab
 3. Verify user count updates and connection status
 
-## 📝 Next Steps (Day 2+)
-
-- [ ] Add room expiration and cleanup
-- [ ] Implement shared code editor
-- [ ] Build canvas whiteboard
-- [ ] Add chat functionality
-- [ ] Create fake terminal interface
-- [ ] Deploy to production
-
----
-
-Built for the Fall 2025 Intensive Program 🚀
