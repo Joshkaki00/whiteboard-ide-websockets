@@ -163,12 +163,6 @@ npm run dev  # Runs on http://localhost:3000
    npm start
    ```
 
-3. **Deploy to platforms**:
-   - **Heroku**: Add `Procfile` with `web: npm start`
-   - **Vercel**: Configure for Node.js deployment
-   - **Railway**: Connect GitHub repo and deploy
-   - **DigitalOcean**: Use App Platform with Node.js buildpack
-
 ### Environment Variables
 ```bash
 PORT=3000  # Server port (default: 3000)
