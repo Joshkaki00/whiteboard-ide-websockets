@@ -52,6 +52,100 @@ header p {
     margin-bottom: 2rem;
 }
 
+/* Role Selection */
+.role-selection {
+    margin-bottom: 2rem;
+}
+
+.role-selection h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #4a5568;
+    font-size: 1.2rem;
+}
+
+.role-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.role-btn {
+    padding: 1.5rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.role-btn:hover {
+    border-color: #667eea;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.role-btn.selected {
+    border-color: #667eea;
+    background: #f7faff;
+}
+
+.role-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.role-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #2d3748;
+    margin-bottom: 0.25rem;
+}
+
+.role-desc {
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+/* Features Preview */
+.features-preview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #718096;
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .features-preview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .role-buttons {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Button styles */
 .btn {
     padding: 12px 24px;
