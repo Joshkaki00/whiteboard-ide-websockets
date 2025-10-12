@@ -84,19 +84,57 @@
             </div>
 
             <div class="room-layout">
-                <!-- Code Editor Section -->
+                <!-- Problem & Code Section -->
                 <div class="code-section">
-                    <div class="section-header">
-                        <h3>📝 Code Editor</h3>
-                        <div class="editor-info">
-                            <span id="typing-indicator"></span>
+                    <!-- Problem Statement -->
+                    <div class="problem-section">
+                        <div class="section-header">
+                            <h3>📋 Problem</h3>
+                            <div class="problem-controls">
+                                <select id="problem-selector" class="problem-select">
+                                    <option value="two-sum">Two Sum (Easy)</option>
+                                    <option value="reverse-linked-list">Reverse Linked List (Easy)</option>
+                                    <option value="valid-parentheses">Valid Parentheses (Easy)</option>
+                                    <option value="binary-search">Binary Search (Easy)</option>
+                                    <option value="merge-intervals">Merge Intervals (Medium)</option>
+                                    <option value="longest-substring">Longest Substring Without Repeating Characters (Medium)</option>
+                                </select>
+                                <span id="problem-difficulty" class="difficulty easy">Easy</span>
+                            </div>
+                        </div>
+                        <div id="problem-content" class="problem-content">
+                            <h4>Two Sum</h4>
+                            <p>Given an array of integers <code>nums</code> and an integer <code>target</code>, return indices of the two numbers such that they add up to <code>target</code>.</p>
+                            <p><strong>Example:</strong></p>
+                            <pre>Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].</pre>
                         </div>
                     </div>
-                    <textarea 
-                        id="code-editor" 
-                        placeholder="Start typing your solution here..."
-                        spellcheck="false"
-                    ></textarea>
+                    
+                    <!-- Code Editor -->
+                    <div class="editor-section">
+                        <div class="section-header">
+                            <h3>📝 Solution</h3>
+                            <div class="editor-info">
+                                <span id="typing-indicator"></span>
+                                <select id="language-selector" class="language-select">
+                                    <option value="javascript">JavaScript</option>
+                                    <option value="python">Python</option>
+                                    <option value="java">Java</option>
+                                    <option value="cpp">C++</option>
+                                </select>
+                            </div>
+                        </div>
+                        <textarea 
+                            id="code-editor" 
+                            placeholder="// Start typing your solution here...
+function twoSum(nums, target) {
+    
+}"
+                            spellcheck="false"
+                        ></textarea>
+                    </div>
                 </div>
 
                 <!-- Whiteboard Section -->
