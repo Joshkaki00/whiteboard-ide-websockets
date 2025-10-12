@@ -300,6 +300,95 @@ header p {
     overflow: hidden;
 }
 
+/* Problem Section */
+.problem-section {
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    max-height: 40%;
+    overflow-y: auto;
+}
+
+.problem-content {
+    padding: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.problem-content h4 {
+    color: #2d3748;
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.problem-content p {
+    color: #4a5568;
+    margin-bottom: 0.75rem;
+}
+
+.problem-content code {
+    background: #edf2f7;
+    padding: 0.125rem 0.25rem;
+    border-radius: 3px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.875rem;
+}
+
+.problem-content pre {
+    background: #1a202c;
+    color: #e2e8f0;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.875rem;
+    margin: 0.75rem 0;
+}
+
+.problem-controls {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.problem-select, .language-select {
+    padding: 0.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    background: white;
+    font-size: 0.875rem;
+}
+
+.difficulty {
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.difficulty.easy {
+    background: #c6f6d5;
+    color: #22543d;
+}
+
+.difficulty.medium {
+    background: #fbd38d;
+    color: #744210;
+}
+
+.difficulty.hard {
+    background: #fed7d7;
+    color: #742a2a;
+}
+
+/* Editor Section */
+.editor-section {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
 /* Section styles */
 .code-section,
 .whiteboard-section,
