@@ -214,6 +214,15 @@ We welcome contributions to make this interview practice tool even better! Pleas
 
 ## 📄 License
 
-Apache License 2.0 - feel free to use this for your own interview practice!
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
+
+### What this means:
+- ✅ You can freely use, modify, and distribute this software
+- ✅ You can use it for commercial purposes
+- ✅ You must include the original copyright and license notice
+- ⚠️ Any derivative work must also be licensed under GPL v3.0
+- ⚠️ You must disclose the source code of any distributed modifications
+
+For more information about GPL v3.0, visit: https://www.gnu.org/licenses/gpl-3.0.en.html
 
 **Happy interviewing!** 🎉 Use this tool to practice coding interviews with friends, simulate real technical interview conditions, and improve your collaborative problem-solving skills.
