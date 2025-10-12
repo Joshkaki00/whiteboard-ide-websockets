@@ -51,6 +51,11 @@ class InterviewApp {
     }
 
     setupEventListeners() {
+        // TODO: Add event listeners for role selection
+        // document.querySelectorAll('.role-btn').forEach(btn => {
+        //     btn.addEventListener('click', () => this.selectRole(btn.dataset.role));
+        // });
+        
         // TODO: Add event listeners for landing page
         // this.createRoomBtn.addEventListener('click', () => this.createRoom());
         // this.joinRoomBtn.addEventListener('click', () => this.joinRoom());
@@ -60,6 +65,14 @@ class InterviewApp {
         
         // TODO: Add event listeners for room interface
         // this.leaveRoomBtn.addEventListener('click', () => this.leaveRoom());
+        // this.shareRoomBtn.addEventListener('click', () => this.shareRoom());
+        
+        // TODO: Add event listeners for problem selection
+        // this.problemSelector.addEventListener('change', () => this.changeProblem());
+        // this.languageSelector.addEventListener('change', () => this.changeLanguage());
+        
+        // TODO: Add event listeners for timer
+        // this.timerToggle.addEventListener('click', () => this.toggleTimer());
         
         // TODO: Add event listeners for code editor
         // let codeTimeout;
@@ -81,6 +94,56 @@ class InterviewApp {
         // });
         
         console.log('TODO: Setup event listeners');
+    }
+
+    selectRole(role) {
+        // TODO: Update selected role
+        // TODO: Update UI to show selected state
+        // TODO: Store role for room creation/joining
+        console.log('TODO: Select role:', role);
+    }
+
+    loadProblemBank() {
+        // TODO: Load problem definitions
+        // TODO: Populate problem selector
+        // TODO: Set default problem content
+        console.log('TODO: Load problem bank');
+    }
+
+    changeProblem() {
+        // TODO: Get selected problem ID
+        // TODO: Update problem content display
+        // TODO: Update difficulty badge
+        // TODO: Reset code editor with starter code
+        // TODO: Emit problem change to other participants
+        console.log('TODO: Change problem');
+    }
+
+    changeLanguage() {
+        // TODO: Get selected language
+        // TODO: Update code editor with language-specific starter code
+        // TODO: Emit language change to other participants
+        console.log('TODO: Change language');
+    }
+
+    toggleTimer() {
+        // TODO: Start/pause/reset timer
+        // TODO: Update timer display
+        // TODO: Emit timer state to other participants
+        console.log('TODO: Toggle timer');
+    }
+
+    updateTimer() {
+        // TODO: Update timer display
+        // TODO: Handle timer completion
+        console.log('TODO: Update timer');
+    }
+
+    shareRoom() {
+        // TODO: Generate shareable link
+        // TODO: Copy to clipboard
+        // TODO: Show success message
+        console.log('TODO: Share room');
     }
 
     connectSocket() {
