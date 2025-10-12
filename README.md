@@ -186,13 +186,37 @@ PORT=3000  # Server port (default: 3000)
 
 ## 🤝 Contributing
 
-This is an MVP built for a one-week intensive. Key areas for improvement:
+We welcome contributions to make this interview practice tool even better! Please follow these guidelines to ensure a smooth contribution process.
 
-- **Security**: Add input validation and rate limiting
-- **Persistence**: Replace in-memory storage with database
-- **Features**: Add syntax highlighting, problem banks, timers
-- **Testing**: Add unit and integration tests
-- **Performance**: Optimize for larger rooms and heavy usage
+### Getting Started
+1. **Fork the repository** and clone your fork locally
+2. **Create a feature branch** from `main`: `git checkout -b feature/your-feature-name`
+3. **Install dependencies**: `npm install`
+4. **Run the development server**: `npm run dev`
+
+### Development Guidelines
+- **Code Style**: Follow existing TypeScript/JavaScript patterns
+- **Testing**: Test all features locally before submitting
+- **Commits**: Use clear, descriptive commit messages
+- **Documentation**: Update README.md if adding new features
+
+### Pull Request Process
+1. **Ensure your code builds**: `npm run build` should complete without errors
+2. **Test thoroughly**: Verify real-time features work across multiple browser tabs
+3. **Create a PR** with a clear description of changes
+4. **Link any related issues** in your PR description
+
+### What to Contribute
+- 🐛 Bug fixes and performance improvements
+- ✨ New interview features (timers, problem templates, etc.)
+- 🎨 UI/UX enhancements
+- 📚 Documentation improvements
+- 🧪 Test coverage additions
+
+### Code of Conduct
+- Be respectful and constructive in all interactions
+- Focus on improving the interview practice experience
+- Help maintain a welcoming environment for all skill levels
 
 ## 📄 License
 
