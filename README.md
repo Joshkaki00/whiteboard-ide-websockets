@@ -200,23 +200,4 @@ MIT License - feel free to use this for your own interview practice!
 
 ## 🎯 MVP Scope
 
-This project was built as a **one-week MVP** focusing on core collaboration features:
-
-✅ **Included**:
-- Real-time code sharing
-- Interactive whiteboard
-- Chat system
-- Room management
-- Responsive UI
-
-❌ **Intentionally excluded** (for future versions):
-- User authentication
-- Code execution
-- Video/audio calls
-- Problem databases
-- Advanced drawing tools
-- Persistent storage
-
----
-
 **Happy interviewing!** 🎉 Use this tool to practice coding interviews with friends, simulate real technical interview conditions, and improve your collaborative problem-solving skills.
