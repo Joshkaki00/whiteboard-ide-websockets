@@ -12,317 +12,236 @@ class InterviewApp {
     }
 
     initializeElements() {
-        // Landing page elements
-        this.landingPage = document.getElementById('landing-page');
-        this.interviewRoom = document.getElementById('interview-room');
-        this.createRoomBtn = document.getElementById('create-room-btn');
-        this.joinRoomBtn = document.getElementById('join-room-btn');
-        this.roomCodeInput = document.getElementById('room-code-input');
-        this.statusMessage = document.getElementById('status-message');
+        // TODO: Get DOM elements for landing page
+        // this.landingPage = document.getElementById('landing-page');
+        // this.interviewRoom = document.getElementById('interview-room');
+        // this.createRoomBtn = document.getElementById('create-room-btn');
+        // this.joinRoomBtn = document.getElementById('join-room-btn');
+        // this.roomCodeInput = document.getElementById('room-code-input');
+        // this.statusMessage = document.getElementById('status-message');
         
-        // Room elements
-        this.roomIdDisplay = document.getElementById('room-id-display');
-        this.participantsCount = document.getElementById('participants-count');
-        this.leaveRoomBtn = document.getElementById('leave-room-btn');
+        // TODO: Get DOM elements for room interface
+        // this.roomIdDisplay = document.getElementById('room-id-display');
+        // this.participantsCount = document.getElementById('participants-count');
+        // this.leaveRoomBtn = document.getElementById('leave-room-btn');
         
-        // Code editor
-        this.codeEditor = document.getElementById('code-editor');
-        this.typingIndicator = document.getElementById('typing-indicator');
+        // TODO: Get DOM elements for code editor
+        // this.codeEditor = document.getElementById('code-editor');
+        // this.typingIndicator = document.getElementById('typing-indicator');
         
-        // Whiteboard
-        this.whiteboard = document.getElementById('whiteboard');
-        this.whiteboardCtx = this.whiteboard.getContext('2d');
-        this.clearWhiteboardBtn = document.getElementById('clear-whiteboard');
-        this.penColor = document.getElementById('pen-color');
-        this.penSize = document.getElementById('pen-size');
+        // TODO: Get DOM elements for whiteboard
+        // this.whiteboard = document.getElementById('whiteboard');
+        // this.whiteboardCtx = this.whiteboard.getContext('2d');
+        // this.clearWhiteboardBtn = document.getElementById('clear-whiteboard');
+        // this.penColor = document.getElementById('pen-color');
+        // this.penSize = document.getElementById('pen-size');
         
-        // Chat
-        this.chatMessages = document.getElementById('chat-messages');
-        this.chatInput = document.getElementById('chat-input');
-        this.sendChatBtn = document.getElementById('send-chat');
+        // TODO: Get DOM elements for chat
+        // this.chatMessages = document.getElementById('chat-messages');
+        // this.chatInput = document.getElementById('chat-input');
+        // this.sendChatBtn = document.getElementById('send-chat');
+        
+        console.log('TODO: Initialize DOM elements');
     }
 
     setupEventListeners() {
-        // Landing page events
-        this.createRoomBtn.addEventListener('click', () => this.createRoom());
-        this.joinRoomBtn.addEventListener('click', () => this.joinRoom());
-        this.roomCodeInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') this.joinRoom();
-        });
+        // TODO: Add event listeners for landing page
+        // this.createRoomBtn.addEventListener('click', () => this.createRoom());
+        // this.joinRoomBtn.addEventListener('click', () => this.joinRoom());
+        // this.roomCodeInput.addEventListener('keypress', (e) => {
+        //     if (e.key === 'Enter') this.joinRoom();
+        // });
         
-        // Room events
-        this.leaveRoomBtn.addEventListener('click', () => this.leaveRoom());
+        // TODO: Add event listeners for room interface
+        // this.leaveRoomBtn.addEventListener('click', () => this.leaveRoom());
         
-        // Code editor events
-        let codeTimeout;
-        this.codeEditor.addEventListener('input', () => {
-            clearTimeout(codeTimeout);
-            codeTimeout = setTimeout(() => {
-                this.sendCodeChange();
-            }, 300); // Debounce for 300ms
-        });
+        // TODO: Add event listeners for code editor
+        // let codeTimeout;
+        // this.codeEditor.addEventListener('input', () => {
+        //     clearTimeout(codeTimeout);
+        //     codeTimeout = setTimeout(() => {
+        //         this.sendCodeChange();
+        //     }, 300); // Debounce for 300ms
+        // });
         
-        // Whiteboard events
-        this.setupWhiteboardEvents();
-        this.clearWhiteboardBtn.addEventListener('click', () => this.clearWhiteboard());
+        // TODO: Add event listeners for whiteboard
+        // this.setupWhiteboardEvents();
+        // this.clearWhiteboardBtn.addEventListener('click', () => this.clearWhiteboard());
         
-        // Chat events
-        this.sendChatBtn.addEventListener('click', () => this.sendChatMessage());
-        this.chatInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') this.sendChatMessage();
-        });
+        // TODO: Add event listeners for chat
+        // this.sendChatBtn.addEventListener('click', () => this.sendChatMessage());
+        // this.chatInput.addEventListener('keypress', (e) => {
+        //     if (e.key === 'Enter') this.sendChatMessage();
+        // });
+        
+        console.log('TODO: Setup event listeners');
     }
 
     connectSocket() {
-        this.socket = io();
+        // TODO: Initialize Socket.IO connection
+        // this.socket = io();
         
-        this.socket.on('connect', () => {
-            console.log('Connected to server');
-        });
+        // TODO: Handle connection events
+        // this.socket.on('connect', () => {
+        //     console.log('Connected to server');
+        // });
         
-        this.socket.on('disconnect', () => {
-            console.log('Disconnected from server');
-            this.showStatus('Connection lost. Trying to reconnect...', 'error');
-        });
+        // TODO: Handle disconnect events
+        // this.socket.on('disconnect', () => {
+        //     console.log('Disconnected from server');
+        //     this.showStatus('Connection lost. Trying to reconnect...', 'error');
+        // });
         
-        // Room events
-        this.socket.on('room-state', (state) => {
-            this.codeEditor.value = state.codeContent;
-            this.loadWhiteboardData(state.whiteboardData);
-            this.loadChatMessages(state.chatMessages);
-        });
+        // TODO: Handle room events
+        // this.socket.on('room-state', (state) => { ... });
+        // this.socket.on('user-joined', (data) => { ... });
+        // this.socket.on('user-left', (data) => { ... });
         
-        this.socket.on('user-joined', (data) => {
-            this.addSystemMessage(`${data.username} joined the room`);
-            this.updateParticipantCount();
-        });
+        // TODO: Handle code editor events
+        // this.socket.on('code-update', (data) => { ... });
         
-        this.socket.on('user-left', (data) => {
-            this.addSystemMessage(`${data.username} left the room`);
-            this.updateParticipantCount();
-        });
+        // TODO: Handle whiteboard events
+        // this.socket.on('whiteboard-update', (data) => { ... });
         
-        // Code editor events
-        this.socket.on('code-update', (data) => {
-            const cursorPosition = this.codeEditor.selectionStart;
-            this.codeEditor.value = data.content;
-            this.codeEditor.setSelectionRange(cursorPosition, cursorPosition);
-            this.showTypingIndicator(data.userId);
-        });
+        // TODO: Handle chat events
+        // this.socket.on('chat-update', (message) => { ... });
         
-        // Whiteboard events
-        this.socket.on('whiteboard-update', (data) => {
-            this.drawOnWhiteboard(data);
-        });
-        
-        // Chat events
-        this.socket.on('chat-update', (message) => {
-            this.addChatMessage(message);
-        });
+        console.log('TODO: Setup Socket.IO connection and event handlers');
     }
 
     createRoom() {
-        this.socket.emit('create-room', (response) => {
-            if (response.success) {
-                this.currentRoom = response.roomId;
-                this.showInterviewRoom();
-                this.showStatus('Room created successfully!', 'success');
-            } else {
-                this.showStatus('Failed to create room', 'error');
-            }
-        });
+        // TODO: Emit create-room event
+        // TODO: Handle response and update UI
+        console.log('TODO: Implement room creation');
     }
 
     joinRoom() {
-        const roomCode = this.roomCodeInput.value.trim().toUpperCase();
-        if (!roomCode) {
-            this.showStatus('Please enter a room code', 'error');
-            return;
-        }
-        
-        this.socket.emit('join-room', roomCode, (response) => {
-            if (response.success) {
-                this.currentRoom = response.roomId;
-                this.showInterviewRoom();
-                this.showStatus('Joined room successfully!', 'success');
-            } else {
-                this.showStatus(response.error || 'Failed to join room', 'error');
-            }
-        });
+        // TODO: Get room code from input
+        // TODO: Validate room code
+        // TODO: Emit join-room event
+        // TODO: Handle response and update UI
+        console.log('TODO: Implement room joining');
     }
 
     leaveRoom() {
-        if (this.currentRoom) {
-            this.socket.disconnect();
-            this.socket.connect();
-            this.currentRoom = null;
-            this.showLandingPage();
-            this.resetRoom();
-        }
+        // TODO: Disconnect from current room
+        // TODO: Reset UI to landing page
+        // TODO: Clear room data
+        console.log('TODO: Implement room leaving');
     }
 
     showLandingPage() {
-        this.landingPage.classList.add('active');
-        this.interviewRoom.classList.remove('active');
+        // TODO: Show landing page, hide interview room
+        console.log('TODO: Show landing page');
     }
 
     showInterviewRoom() {
-        this.landingPage.classList.remove('active');
-        this.interviewRoom.classList.add('active');
-        this.roomIdDisplay.textContent = `Room: ${this.currentRoom}`;
-        this.updateParticipantCount();
+        // TODO: Hide landing page, show interview room
+        // TODO: Update room display with current room ID
+        console.log('TODO: Show interview room');
     }
 
     resetRoom() {
-        this.codeEditor.value = '';
-        this.clearWhiteboard();
-        this.chatMessages.innerHTML = '';
-        this.roomCodeInput.value = '';
+        // TODO: Clear code editor
+        // TODO: Clear whiteboard
+        // TODO: Clear chat messages
+        // TODO: Reset input fields
+        console.log('TODO: Reset room interface');
     }
 
     updateParticipantCount() {
-        // This is a simplified version - in a real app you'd track this properly
-        this.participantsCount.textContent = '1-2 participants';
+        // TODO: Update participant count display
+        console.log('TODO: Update participant count');
     }
 
     showStatus(message, type) {
-        this.statusMessage.textContent = message;
-        this.statusMessage.className = `status-message ${type}`;
-        
-        setTimeout(() => {
-            this.statusMessage.textContent = '';
-            this.statusMessage.className = 'status-message';
-        }, 3000);
+        // TODO: Display status message with appropriate styling
+        // TODO: Auto-hide after timeout
+        console.log('TODO: Show status message');
     }
 
     sendCodeChange() {
-        if (this.currentRoom) {
-            this.socket.emit('code-change', {
-                content: this.codeEditor.value
-            });
-        }
+        // TODO: Emit code-change event with current editor content
+        console.log('TODO: Send code changes');
     }
 
     showTypingIndicator(userId) {
-        this.typingIndicator.textContent = 'Partner is typing...';
-        setTimeout(() => {
-            this.typingIndicator.textContent = '';
-        }, 2000);
+        // TODO: Show typing indicator
+        // TODO: Hide after timeout
+        console.log('TODO: Show typing indicator');
     }
 
     setupWhiteboardEvents() {
-        this.whiteboard.addEventListener('mousedown', (e) => {
-            this.isDrawing = true;
-            this.lastDrawPoint = this.getMousePos(e);
-        });
-        
-        this.whiteboard.addEventListener('mousemove', (e) => {
-            if (!this.isDrawing) return;
-            
-            const currentPoint = this.getMousePos(e);
-            const drawData = {
-                type: 'draw',
-                from: this.lastDrawPoint,
-                to: currentPoint,
-                color: this.penColor.value,
-                size: parseInt(this.penSize.value)
-            };
-            
-            this.drawOnWhiteboard(drawData);
-            this.socket.emit('whiteboard-change', drawData);
-            
-            this.lastDrawPoint = currentPoint;
-        });
-        
-        this.whiteboard.addEventListener('mouseup', () => {
-            this.isDrawing = false;
-        });
-        
-        this.whiteboard.addEventListener('mouseout', () => {
-            this.isDrawing = false;
-        });
+        // TODO: Add mouse event listeners for drawing
+        // TODO: Handle mousedown, mousemove, mouseup events
+        // TODO: Track drawing state and coordinates
+        console.log('TODO: Setup whiteboard drawing events');
     }
 
     getMousePos(e) {
-        const rect = this.whiteboard.getBoundingClientRect();
-        return {
-            x: e.clientX - rect.left,
-            y: e.clientY - rect.top
-        };
+        // TODO: Calculate mouse position relative to canvas
+        // TODO: Account for canvas offset
+        console.log('TODO: Get mouse position');
+        return { x: 0, y: 0 };
     }
 
     drawOnWhiteboard(data) {
-        if (data.type === 'draw') {
-            this.whiteboardCtx.strokeStyle = data.color;
-            this.whiteboardCtx.lineWidth = data.size;
-            this.whiteboardCtx.lineCap = 'round';
-            
-            this.whiteboardCtx.beginPath();
-            this.whiteboardCtx.moveTo(data.from.x, data.from.y);
-            this.whiteboardCtx.lineTo(data.to.x, data.to.y);
-            this.whiteboardCtx.stroke();
-        }
+        // TODO: Draw on canvas using provided data
+        // TODO: Set stroke style, line width, and line cap
+        // TODO: Draw line from start to end point
+        console.log('TODO: Draw on whiteboard');
     }
 
     clearWhiteboard() {
-        this.whiteboardCtx.clearRect(0, 0, this.whiteboard.width, this.whiteboard.height);
-        if (this.currentRoom) {
-            this.socket.emit('whiteboard-change', { type: 'clear' });
-        }
+        // TODO: Clear canvas
+        // TODO: Emit clear event if in room
+        console.log('TODO: Clear whiteboard');
     }
 
     loadWhiteboardData(data) {
-        this.clearWhiteboard();
-        data.forEach(item => {
-            if (item.type === 'draw') {
-                this.drawOnWhiteboard(item);
-            }
-        });
+        // TODO: Clear whiteboard
+        // TODO: Replay all drawing data
+        console.log('TODO: Load whiteboard data');
     }
 
     sendChatMessage() {
-        const message = this.chatInput.value.trim();
-        if (!message || !this.currentRoom) return;
-        
-        this.socket.emit('chat-message', { message });
-        this.chatInput.value = '';
+        // TODO: Get message from input
+        // TODO: Validate message
+        // TODO: Emit chat-message event
+        // TODO: Clear input field
+        console.log('TODO: Send chat message');
     }
 
     addChatMessage(message) {
-        const messageDiv = document.createElement('div');
-        messageDiv.className = `chat-message ${message.userId === this.socket.id ? 'own' : 'other'}`;
-        
-        messageDiv.innerHTML = `
-            <div class="chat-username">${message.username}</div>
-            <div class="chat-text">${this.escapeHtml(message.message)}</div>
-            <div class="chat-timestamp">${new Date(message.timestamp).toLocaleTimeString()}</div>
-        `;
-        
-        this.chatMessages.appendChild(messageDiv);
-        this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
+        // TODO: Create message DOM element
+        // TODO: Set appropriate CSS classes
+        // TODO: Add to chat container
+        // TODO: Scroll to bottom
+        console.log('TODO: Add chat message to UI');
     }
 
     loadChatMessages(messages) {
-        this.chatMessages.innerHTML = '';
-        messages.forEach(message => this.addChatMessage(message));
+        // TODO: Clear chat container
+        // TODO: Add all messages to UI
+        console.log('TODO: Load chat messages');
     }
 
     addSystemMessage(text) {
-        const messageDiv = document.createElement('div');
-        messageDiv.className = 'system-message';
-        messageDiv.textContent = text;
-        this.chatMessages.appendChild(messageDiv);
-        this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
+        // TODO: Create system message DOM element
+        // TODO: Add to chat container
+        // TODO: Scroll to bottom
+        console.log('TODO: Add system message');
     }
 
     escapeHtml(text) {
-        const div = document.createElement('div');
-        div.textContent = text;
-        return div.innerHTML;
+        // TODO: Escape HTML characters for security
+        console.log('TODO: Escape HTML');
+        return text;
     }
 }
 
 // Initialize the app when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    new InterviewApp();
+    // TODO: Create new InterviewApp instance
+    console.log('TODO: Initialize InterviewApp');
 });

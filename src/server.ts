@@ -48,153 +48,58 @@ const users = new Map<string, UserSocket>();
 io.on('connection', (socket) => {
   console.log(`User connected: ${socket.id}`);
   
-  // Initialize user
-  users.set(socket.id, {
-    id: socket.id,
-    username: `User_${socket.id.substring(0, 6)}`
-  });
+  // TODO: Initialize user
+  // users.set(socket.id, { ... });
 
   // Handle room creation
   socket.on('create-room', (callback) => {
-    const roomId = uuidv4().substring(0, 8);
-    const room: Room = {
-      id: roomId,
-      participants: new Set([socket.id]),
-      codeContent: '// Welcome to the coding interview practice!\n// Start typing your solution here...\n\n',
-      whiteboardData: [],
-      chatMessages: [],
-      createdAt: new Date()
-    };
-    
-    rooms.set(roomId, room);
-    socket.join(roomId);
-    
-    const user = users.get(socket.id)!;
-    user.roomId = roomId;
-    
-    callback({ success: true, roomId });
-    console.log(`Room created: ${roomId} by ${socket.id}`);
+    // TODO: Generate room ID
+    // TODO: Create room object
+    // TODO: Add user to room
+    // TODO: Send success response
+    console.log('TODO: Implement room creation');
   });
 
   // Handle room joining
   socket.on('join-room', (roomId: string, callback) => {
-    const room = rooms.get(roomId);
-    
-    if (!room) {
-      callback({ success: false, error: 'Room not found' });
-      return;
-    }
-    
-    if (room.participants.size >= 2) {
-      callback({ success: false, error: 'Room is full' });
-      return;
-    }
-    
-    room.participants.add(socket.id);
-    socket.join(roomId);
-    
-    const user = users.get(socket.id)!;
-    user.roomId = roomId;
-    
-    // Send current room state to the new participant
-    socket.emit('room-state', {
-      codeContent: room.codeContent,
-      whiteboardData: room.whiteboardData,
-      chatMessages: room.chatMessages
-    });
-    
-    // Notify others in the room
-    socket.to(roomId).emit('user-joined', {
-      userId: socket.id,
-      username: user.username
-    });
-    
-    callback({ success: true, roomId });
-    console.log(`User ${socket.id} joined room: ${roomId}`);
+    // TODO: Validate room exists
+    // TODO: Check room capacity
+    // TODO: Add user to room
+    // TODO: Send room state to new user
+    // TODO: Notify other participants
+    console.log('TODO: Implement room joining');
   });
 
   // Handle code changes
   socket.on('code-change', (data: { content: string }) => {
-    const user = users.get(socket.id);
-    if (!user?.roomId) return;
-    
-    const room = rooms.get(user.roomId);
-    if (!room) return;
-    
-    room.codeContent = data.content;
-    
-    // Broadcast to others in the room
-    socket.to(user.roomId).emit('code-update', {
-      content: data.content,
-      userId: socket.id
-    });
+    // TODO: Update room code content
+    // TODO: Broadcast to other participants
+    console.log('TODO: Implement code synchronization');
   });
 
   // Handle whiteboard changes
   socket.on('whiteboard-change', (data: any) => {
-    const user = users.get(socket.id);
-    if (!user?.roomId) return;
-    
-    const room = rooms.get(user.roomId);
-    if (!room) return;
-    
-    room.whiteboardData.push({
-      ...data,
-      userId: socket.id,
-      timestamp: new Date()
-    });
-    
-    // Broadcast to others in the room
-    socket.to(user.roomId).emit('whiteboard-update', data);
+    // TODO: Store whiteboard data
+    // TODO: Broadcast drawing to other participants
+    console.log('TODO: Implement whiteboard synchronization');
   });
 
   // Handle chat messages
   socket.on('chat-message', (data: { message: string }) => {
-    const user = users.get(socket.id);
-    if (!user?.roomId) return;
-    
-    const room = rooms.get(user.roomId);
-    if (!room) return;
-    
-    const chatMessage: ChatMessage = {
-      id: uuidv4(),
-      userId: socket.id,
-      username: user.username,
-      message: data.message,
-      timestamp: new Date()
-    };
-    
-    room.chatMessages.push(chatMessage);
-    
-    // Broadcast to everyone in the room (including sender)
-    io.to(user.roomId).emit('chat-update', chatMessage);
+    // TODO: Create chat message object
+    // TODO: Store in room
+    // TODO: Broadcast to all participants
+    console.log('TODO: Implement chat messaging');
   });
 
   // Handle disconnect
   socket.on('disconnect', () => {
     console.log(`User disconnected: ${socket.id}`);
     
-    const user = users.get(socket.id);
-    if (user?.roomId) {
-      const room = rooms.get(user.roomId);
-      if (room) {
-        room.participants.delete(socket.id);
-        
-        // Notify others in the room
-        socket.to(user.roomId).emit('user-left', {
-          userId: socket.id,
-          username: user.username
-        });
-        
-        // Clean up empty rooms
-        if (room.participants.size === 0) {
-          rooms.delete(user.roomId);
-          console.log(`Room ${user.roomId} deleted (empty)`);
-        }
-      }
-    }
-    
-    users.delete(socket.id);
+    // TODO: Remove user from room
+    // TODO: Notify other participants
+    // TODO: Clean up empty rooms
+    console.log('TODO: Implement disconnect cleanup');
   });
 });
 
