@@ -198,6 +198,4 @@ This is an MVP built for a one-week intensive. Key areas for improvement:
 
 MIT License - feel free to use this for your own interview practice!
 
-## 🎯 MVP Scope
-
 **Happy interviewing!** 🎉 Use this tool to practice coding interviews with friends, simulate real technical interview conditions, and improve your collaborative problem-solving skills.
