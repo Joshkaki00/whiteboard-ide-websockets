@@ -1,215 +1,328 @@
-// Socket.IO client connection
-const socket = io();
-
-// DOM elements
-const landingPage = document.getElementById('landing-page');
-const roomPage = document.getElementById('room-page');
-const createRoomBtn = document.getElementById('create-room-btn');
-const joinRoomBtn = document.getElementById('join-room-btn');
-const roomCodeInput = document.getElementById('room-code-input');
-const leaveRoomBtn = document.getElementById('leave-room-btn');
-const currentRoomCode = document.getElementById('current-room-code');
-const userRole = document.getElementById('user-role');
-const userCount = document.getElementById('user-count');
-const loading = document.getElementById('loading');
-const errorMessage = document.getElementById('error-message');
-const errorText = document.querySelector('.error-text');
-const closeError = document.querySelector('.close-error');
-const connectionStatus = document.getElementById('connection-status');
-const roomStatus = document.getElementById('room-status');
-
-// Application state
-let currentRoom = null;
-let isConnected = false;
-
-// Utility functions
-function showPage(pageId) {
-    document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
-    document.getElementById(pageId).classList.add('active');
-}
-
-function showLoading() {
-    loading.classList.remove('hidden');
-}
-
-function hideLoading() {
-    loading.classList.add('hidden');
-}
-
-function showError(message) {
-    errorText.textContent = message;
-    errorMessage.classList.remove('hidden');
-    setTimeout(() => {
-        hideError();
-    }, 5000);
-}
-
-function hideError() {
-    errorMessage.classList.add('hidden');
-}
-
-function updateConnectionStatus(connected) {
-    isConnected = connected;
-    const statusDot = connectionStatus.querySelector('.status-dot');
-    const statusText = connectionStatus.querySelector('.status-dot').nextSibling;
-    
-    if (connected) {
-        statusDot.classList.add('connected');
-        statusDot.classList.remove('disconnected');
-        statusText.textContent = ' Connected to server';
-    } else {
-        statusDot.classList.add('disconnected');
-        statusDot.classList.remove('connected');
-        statusText.textContent = ' Disconnected from server';
-    }
-}
-
-function updateRoomInfo(roomCode, role, count = 1) {
-    currentRoomCode.textContent = roomCode;
-    userRole.textContent = role;
-    userCount.textContent = `${count}/2 users`;
-    
-    // Update role badge color
-    if (role === 'interviewer') {
-        userRole.style.background = '#667eea';
-    } else {
-        userRole.style.background = '#48bb78';
-    }
-}
-
-// Socket.IO event handlers
-socket.on('connect', () => {
-    console.log('Connected to server');
-    updateConnectionStatus(true);
-});
-
-socket.on('disconnect', () => {
-    console.log('Disconnected from server');
-    updateConnectionStatus(false);
-    showError('Connection lost. Attempting to reconnect...');
-});
-
-socket.on('connect_error', (error) => {
-    console.error('Connection error:', error);
-    updateConnectionStatus(false);
-    showError('Failed to connect to server');
-    hideLoading();
-});
-
-socket.on('user-joined', (data) => {
-    console.log('User joined:', data);
-    userCount.textContent = `${data.userCount}/2 users`;
-    
-    // Show notification
-    showError(`Another user joined the room! (${data.userCount}/2)`);
-    setTimeout(() => {
-        hideError();
-    }, 3000);
-});
-
-socket.on('user-left', (data) => {
-    console.log('User left:', data);
-    userCount.textContent = `${data.userCount}/2 users`;
-    showError(`User left the room (${data.userCount}/2)`);
-    setTimeout(() => {
-        hideError();
-    }, 3000);
-});
-
-// Button event handlers
-createRoomBtn.addEventListener('click', () => {
-    showLoading();
-    
-    socket.emit('create-room', (response) => {
-        hideLoading();
+// TypeScript-style client code (will be plain JS but with TS patterns)
+class InterviewApp {
+    constructor() {
+        this.socket = null;
+        this.currentRoom = null;
+        this.isDrawing = false;
+        this.lastDrawPoint = null;
         
-        if (response.success) {
-            currentRoom = response.roomCode;
-            updateRoomInfo(response.roomCode, response.role, 1);
-            showPage('room-page');
-            console.log('Room created:', response.roomCode);
-        } else {
-            showError(response.error || 'Failed to create room');
-        }
-    });
-});
+        this.initializeElements();
+        this.setupEventListeners();
+        this.connectSocket();
+    }
 
-joinRoomBtn.addEventListener('click', () => {
-    const roomCode = roomCodeInput.value.trim().toUpperCase();
-    
-    if (!roomCode) {
-        showError('Please enter a room code');
-        return;
-    }
-    
-    if (roomCode.length !== 6) {
-        showError('Room code must be 6 characters');
-        return;
-    }
-    
-    showLoading();
-    
-    socket.emit('join-room', roomCode, (response) => {
-        hideLoading();
+    initializeElements() {
+        // Landing page elements
+        this.landingPage = document.getElementById('landing-page');
+        this.interviewRoom = document.getElementById('interview-room');
+        this.createRoomBtn = document.getElementById('create-room-btn');
+        this.joinRoomBtn = document.getElementById('join-room-btn');
+        this.roomCodeInput = document.getElementById('room-code-input');
+        this.statusMessage = document.getElementById('status-message');
         
-        if (response.success) {
-            currentRoom = response.roomCode;
-            updateRoomInfo(response.roomCode, response.role, response.userCount);
-            showPage('room-page');
-            roomCodeInput.value = '';
-            console.log('Joined room:', response.roomCode);
-        } else {
-            showError(response.error || 'Failed to join room');
+        // Room elements
+        this.roomIdDisplay = document.getElementById('room-id-display');
+        this.participantsCount = document.getElementById('participants-count');
+        this.leaveRoomBtn = document.getElementById('leave-room-btn');
+        
+        // Code editor
+        this.codeEditor = document.getElementById('code-editor');
+        this.typingIndicator = document.getElementById('typing-indicator');
+        
+        // Whiteboard
+        this.whiteboard = document.getElementById('whiteboard');
+        this.whiteboardCtx = this.whiteboard.getContext('2d');
+        this.clearWhiteboardBtn = document.getElementById('clear-whiteboard');
+        this.penColor = document.getElementById('pen-color');
+        this.penSize = document.getElementById('pen-size');
+        
+        // Chat
+        this.chatMessages = document.getElementById('chat-messages');
+        this.chatInput = document.getElementById('chat-input');
+        this.sendChatBtn = document.getElementById('send-chat');
+    }
+
+    setupEventListeners() {
+        // Landing page events
+        this.createRoomBtn.addEventListener('click', () => this.createRoom());
+        this.joinRoomBtn.addEventListener('click', () => this.joinRoom());
+        this.roomCodeInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') this.joinRoom();
+        });
+        
+        // Room events
+        this.leaveRoomBtn.addEventListener('click', () => this.leaveRoom());
+        
+        // Code editor events
+        let codeTimeout;
+        this.codeEditor.addEventListener('input', () => {
+            clearTimeout(codeTimeout);
+            codeTimeout = setTimeout(() => {
+                this.sendCodeChange();
+            }, 300); // Debounce for 300ms
+        });
+        
+        // Whiteboard events
+        this.setupWhiteboardEvents();
+        this.clearWhiteboardBtn.addEventListener('click', () => this.clearWhiteboard());
+        
+        // Chat events
+        this.sendChatBtn.addEventListener('click', () => this.sendChatMessage());
+        this.chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') this.sendChatMessage();
+        });
+    }
+
+    connectSocket() {
+        this.socket = io();
+        
+        this.socket.on('connect', () => {
+            console.log('Connected to server');
+        });
+        
+        this.socket.on('disconnect', () => {
+            console.log('Disconnected from server');
+            this.showStatus('Connection lost. Trying to reconnect...', 'error');
+        });
+        
+        // Room events
+        this.socket.on('room-state', (state) => {
+            this.codeEditor.value = state.codeContent;
+            this.loadWhiteboardData(state.whiteboardData);
+            this.loadChatMessages(state.chatMessages);
+        });
+        
+        this.socket.on('user-joined', (data) => {
+            this.addSystemMessage(`${data.username} joined the room`);
+            this.updateParticipantCount();
+        });
+        
+        this.socket.on('user-left', (data) => {
+            this.addSystemMessage(`${data.username} left the room`);
+            this.updateParticipantCount();
+        });
+        
+        // Code editor events
+        this.socket.on('code-update', (data) => {
+            const cursorPosition = this.codeEditor.selectionStart;
+            this.codeEditor.value = data.content;
+            this.codeEditor.setSelectionRange(cursorPosition, cursorPosition);
+            this.showTypingIndicator(data.userId);
+        });
+        
+        // Whiteboard events
+        this.socket.on('whiteboard-update', (data) => {
+            this.drawOnWhiteboard(data);
+        });
+        
+        // Chat events
+        this.socket.on('chat-update', (message) => {
+            this.addChatMessage(message);
+        });
+    }
+
+    createRoom() {
+        this.socket.emit('create-room', (response) => {
+            if (response.success) {
+                this.currentRoom = response.roomId;
+                this.showInterviewRoom();
+                this.showStatus('Room created successfully!', 'success');
+            } else {
+                this.showStatus('Failed to create room', 'error');
+            }
+        });
+    }
+
+    joinRoom() {
+        const roomCode = this.roomCodeInput.value.trim().toUpperCase();
+        if (!roomCode) {
+            this.showStatus('Please enter a room code', 'error');
+            return;
         }
-    });
-});
-
-leaveRoomBtn.addEventListener('click', () => {
-    if (currentRoom) {
-        socket.disconnect();
-        socket.connect();
-        currentRoom = null;
-        showPage('landing-page');
-        console.log('Left room');
+        
+        this.socket.emit('join-room', roomCode, (response) => {
+            if (response.success) {
+                this.currentRoom = response.roomId;
+                this.showInterviewRoom();
+                this.showStatus('Joined room successfully!', 'success');
+            } else {
+                this.showStatus(response.error || 'Failed to join room', 'error');
+            }
+        });
     }
-});
 
-// Room code input handling
-roomCodeInput.addEventListener('input', (e) => {
-    e.target.value = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
-});
-
-roomCodeInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-        joinRoomBtn.click();
-    }
-});
-
-// Error message close handler
-closeError.addEventListener('click', hideError);
-
-// Test connection on page load
-window.addEventListener('load', () => {
-    // Test ping to server
-    socket.emit('ping', (response) => {
-        if (response === 'pong') {
-            console.log('Server connection test successful');
+    leaveRoom() {
+        if (this.currentRoom) {
+            this.socket.disconnect();
+            this.socket.connect();
+            this.currentRoom = null;
+            this.showLandingPage();
+            this.resetRoom();
         }
-    });
-});
-
-// Prevent accidental page refresh in room
-window.addEventListener('beforeunload', (e) => {
-    if (currentRoom) {
-        e.preventDefault();
-        e.returnValue = 'You are currently in an interview room. Are you sure you want to leave?';
     }
-});
 
-// Debug helpers (remove in production)
-window.debugApp = {
-    socket,
-    currentRoom,
-    showError,
-    showPage
-};
+    showLandingPage() {
+        this.landingPage.classList.add('active');
+        this.interviewRoom.classList.remove('active');
+    }
+
+    showInterviewRoom() {
+        this.landingPage.classList.remove('active');
+        this.interviewRoom.classList.add('active');
+        this.roomIdDisplay.textContent = `Room: ${this.currentRoom}`;
+        this.updateParticipantCount();
+    }
+
+    resetRoom() {
+        this.codeEditor.value = '';
+        this.clearWhiteboard();
+        this.chatMessages.innerHTML = '';
+        this.roomCodeInput.value = '';
+    }
+
+    updateParticipantCount() {
+        // This is a simplified version - in a real app you'd track this properly
+        this.participantsCount.textContent = '1-2 participants';
+    }
+
+    showStatus(message, type) {
+        this.statusMessage.textContent = message;
+        this.statusMessage.className = `status-message ${type}`;
+        
+        setTimeout(() => {
+            this.statusMessage.textContent = '';
+            this.statusMessage.className = 'status-message';
+        }, 3000);
+    }
+
+    sendCodeChange() {
+        if (this.currentRoom) {
+            this.socket.emit('code-change', {
+                content: this.codeEditor.value
+            });
+        }
+    }
+
+    showTypingIndicator(userId) {
+        this.typingIndicator.textContent = 'Partner is typing...';
+        setTimeout(() => {
+            this.typingIndicator.textContent = '';
+        }, 2000);
+    }
+
+    setupWhiteboardEvents() {
+        this.whiteboard.addEventListener('mousedown', (e) => {
+            this.isDrawing = true;
+            this.lastDrawPoint = this.getMousePos(e);
+        });
+        
+        this.whiteboard.addEventListener('mousemove', (e) => {
+            if (!this.isDrawing) return;
+            
+            const currentPoint = this.getMousePos(e);
+            const drawData = {
+                type: 'draw',
+                from: this.lastDrawPoint,
+                to: currentPoint,
+                color: this.penColor.value,
+                size: parseInt(this.penSize.value)
+            };
+            
+            this.drawOnWhiteboard(drawData);
+            this.socket.emit('whiteboard-change', drawData);
+            
+            this.lastDrawPoint = currentPoint;
+        });
+        
+        this.whiteboard.addEventListener('mouseup', () => {
+            this.isDrawing = false;
+        });
+        
+        this.whiteboard.addEventListener('mouseout', () => {
+            this.isDrawing = false;
+        });
+    }
+
+    getMousePos(e) {
+        const rect = this.whiteboard.getBoundingClientRect();
+        return {
+            x: e.clientX - rect.left,
+            y: e.clientY - rect.top
+        };
+    }
+
+    drawOnWhiteboard(data) {
+        if (data.type === 'draw') {
+            this.whiteboardCtx.strokeStyle = data.color;
+            this.whiteboardCtx.lineWidth = data.size;
+            this.whiteboardCtx.lineCap = 'round';
+            
+            this.whiteboardCtx.beginPath();
+            this.whiteboardCtx.moveTo(data.from.x, data.from.y);
+            this.whiteboardCtx.lineTo(data.to.x, data.to.y);
+            this.whiteboardCtx.stroke();
+        }
+    }
+
+    clearWhiteboard() {
+        this.whiteboardCtx.clearRect(0, 0, this.whiteboard.width, this.whiteboard.height);
+        if (this.currentRoom) {
+            this.socket.emit('whiteboard-change', { type: 'clear' });
+        }
+    }
+
+    loadWhiteboardData(data) {
+        this.clearWhiteboard();
+        data.forEach(item => {
+            if (item.type === 'draw') {
+                this.drawOnWhiteboard(item);
+            }
+        });
+    }
+
+    sendChatMessage() {
+        const message = this.chatInput.value.trim();
+        if (!message || !this.currentRoom) return;
+        
+        this.socket.emit('chat-message', { message });
+        this.chatInput.value = '';
+    }
+
+    addChatMessage(message) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `chat-message ${message.userId === this.socket.id ? 'own' : 'other'}`;
+        
+        messageDiv.innerHTML = `
+            <div class="chat-username">${message.username}</div>
+            <div class="chat-text">${this.escapeHtml(message.message)}</div>
+            <div class="chat-timestamp">${new Date(message.timestamp).toLocaleTimeString()}</div>
+        `;
+        
+        this.chatMessages.appendChild(messageDiv);
+        this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
+    }
+
+    loadChatMessages(messages) {
+        this.chatMessages.innerHTML = '';
+        messages.forEach(message => this.addChatMessage(message));
+    }
+
+    addSystemMessage(text) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'system-message';
+        messageDiv.textContent = text;
+        this.chatMessages.appendChild(messageDiv);
+        this.chatMessages.scrollTop = this.chatMessages.scrollHeight;
+    }
+
+    escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+}
+
+// Initialize the app when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    new InterviewApp();
+});
