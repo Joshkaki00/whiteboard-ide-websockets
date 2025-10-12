@@ -261,6 +261,35 @@ header p {
     color: #4a5568;
 }
 
+.room-controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.timer-section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #f7fafc;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+}
+
+#session-timer {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #2d3748;
+    min-width: 50px;
+}
+
+#user-role-display {
+    color: #667eea;
+    font-weight: 500;
+}
+
 .room-layout {
     flex: 1;
     display: grid;
