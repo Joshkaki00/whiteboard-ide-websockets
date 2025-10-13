@@ -40,30 +40,29 @@
 
         <!-- Interview Room -->
         <div id="interview-room" class="page">
+            <!-- Room Header with integrated timer -->
             <div class="room-header">
-                <div class="room-info">
-                    <span id="room-id-display">Room: </span>
-                    <span id="participants-count">1 participant</span>
-                    <span id="user-role-display">• Candidate</span>
+                <div class="room-title">
+                    <span id="room-id-display">Room: ABC123</span>
+                    <span class="separator">|</span>
+                    <span id="problem-title-display">Problem: Two Sum</span>
+                    <span class="separator">|</span>
+                    <span id="timer-display">Timer: 25:30</span>
                 </div>
-                <div class="room-controls">
-                    <div class="timer-section">
-                        <span id="session-timer">00:00</span>
-                        <button id="timer-toggle" class="btn btn-sm">Start Timer</button>
-                    </div>
-                    <button id="share-room-btn" class="btn btn-sm">Share Link</button>
-                    <button id="leave-room-btn" class="btn btn-danger">Leave Room</button>
-                </div>
+                <button id="leave-room-btn" class="header-btn">✕</button>
             </div>
 
-            <div class="room-layout">
-                <!-- Problem & Code Section -->
-                <div class="code-section">
-                    <!-- Problem Statement -->
-                    <div class="problem-section">
-                        <div class="section-header">
-                            <h3>📋 Problem</h3>
-                            <div class="problem-controls">
+            <!-- Desktop Layout -->
+            <div class="room-layout desktop-layout">
+                <!-- Left Sidebar: Problem & Participants -->
+                <div class="left-sidebar">
+                    <!-- Problem Section -->
+                    <div class="problem-panel">
+                        <div class="panel-header">
+                            <h3>Problem</h3>
+                        </div>
+                        <div class="problem-content">
+                            <div class="problem-info">
                                 <select id="problem-selector" class="problem-select">
                                     <option value="two-sum">Two Sum (Easy)</option>
                                     <option value="reverse-linked-list">Reverse Linked List (Easy)</option>
@@ -74,65 +73,112 @@
                                 </select>
                                 <span id="problem-difficulty" class="difficulty easy">Easy</span>
                             </div>
-                        </div>
-                        <div id="problem-content" class="problem-content">
-                            <h4>Two Sum</h4>
-                            <p>Given an array of integers <code>nums</code> and an integer <code>target</code>, return indices of the two numbers such that they add up to <code>target</code>.</p>
-                            <p><strong>Example:</strong></p>
-                            <pre>Input: nums = [2,7,11,15], target = 9
-Output: [0,1]
-Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].</pre>
+                            <div id="problem-description" class="problem-text">
+                                <h4>Two Sum</h4>
+                                <p>Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.</p>
+                                <div class="problem-example">
+                                    <strong>Example:</strong><br>
+                                    Input: nums = [2,7,11,15], target = 9<br>
+                                    Output: [0,1]
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
-                    <!-- Code Editor -->
-                    <div class="editor-section">
-                        <div class="section-header">
-                            <h3>📝 Solution</h3>
-                            <div class="editor-info">
-                                <span id="typing-indicator"></span>
-                                <select id="language-selector" class="language-select">
-                                    <option value="javascript">JavaScript</option>
-                                    <option value="python">Python</option>
-                                    <option value="java">Java</option>
-                                    <option value="cpp">C++</option>
-                                </select>
+                    <!-- Participants Section -->
+                    <div class="participants-panel">
+                        <div class="panel-header">
+                            <h3>Users</h3>
+                        </div>
+                        <div class="participants-list">
+                            <div class="participant">
+                                <span class="participant-name">You (Candidate)</span>
+                                <span class="participant-status">●</span>
                             </div>
                         </div>
-                        <textarea 
-                            id="code-editor" 
-                            placeholder="// Start typing your solution here...
+                        
+                        <!-- New Problem Button -->
+                        <button id="new-problem-btn" class="new-problem-btn">New Problem</button>
+                    </div>
+                </div>
+
+                <!-- Center: Code Editor -->
+                <div class="code-panel">
+                    <div class="panel-header">
+                        <h3>Shared Code Editor</h3>
+                        <div class="editor-controls">
+                            <select id="language-selector" class="language-select">
+                                <option value="javascript">JavaScript</option>
+                                <option value="python">Python</option>
+                                <option value="java">Java</option>
+                                <option value="cpp">C++</option>
+                            </select>
+                        </div>
+                    </div>
+                    <textarea 
+                        id="code-editor" 
+                        placeholder="// Start typing your solution here...
 function twoSum(nums, target) {
     
 }"
-                            spellcheck="false"
-                        ></textarea>
+                        spellcheck="false"
+                    ></textarea>
+                    
+                    <!-- Collaborative Whiteboard -->
+                    <div class="whiteboard-container">
+                        <div class="whiteboard-header">
+                            <span>Collaborative Whiteboard</span>
+                            <div class="whiteboard-controls">
+                                <input type="color" id="pen-color" value="#000000">
+                                <input type="range" id="pen-size" min="1" max="10" value="2">
+                                <button id="clear-whiteboard" class="btn-sm">Clear</button>
+                            </div>
+                        </div>
+                        <canvas id="whiteboard" width="500" height="200"></canvas>
                     </div>
                 </div>
 
-                <!-- Whiteboard Section -->
-                <div class="whiteboard-section">
-                    <div class="section-header">
-                        <h3>🎨 Whiteboard</h3>
-                        <div class="whiteboard-controls">
-                            <button id="clear-whiteboard" class="btn btn-sm">Clear</button>
-                            <input type="color" id="pen-color" value="#000000">
-                            <input type="range" id="pen-size" min="1" max="10" value="2">
+                <!-- Right Sidebar: Discussion/Chat -->
+                <div class="right-sidebar">
+                    <div class="discussion-panel">
+                        <div class="panel-header">
+                            <h3>Discussion</h3>
+                        </div>
+                        <div id="chat-messages" class="discussion-messages"></div>
+                        <div class="discussion-input">
+                            <input type="text" id="chat-input" placeholder="Type a message...">
+                            <button id="send-chat" class="send-btn">Send</button>
                         </div>
                     </div>
-                    <canvas id="whiteboard" width="400" height="300"></canvas>
                 </div>
+            </div>
 
-                <!-- Chat Section -->
-                <div class="chat-section">
-                    <div class="section-header">
-                        <h3>💬 Chat</h3>
+            <!-- Tablet Layout -->
+            <div class="room-layout tablet-layout" style="display: none;">
+                <!-- Problem Section -->
+                <div class="tablet-problem">
+                    <div class="panel-header">
+                        <h3>Problem</h3>
+                        <select id="problem-selector-tablet" class="problem-select">
+                            <option value="two-sum">Two Sum (Easy)</option>
+                        </select>
                     </div>
-                    <div id="chat-messages" class="chat-messages"></div>
-                    <div class="chat-input">
-                        <input type="text" id="chat-input" placeholder="Type a message..." maxlength="200">
-                        <button id="send-chat" class="btn btn-sm">Send</button>
+                </div>
+                
+                <!-- Code Editor -->
+                <div class="tablet-code">
+                    <div class="panel-header">
+                        <h3>Code Editor</h3>
                     </div>
+                    <textarea id="code-editor-tablet" placeholder="// Code here..."></textarea>
+                </div>
+                
+                <!-- Chat -->
+                <div class="tablet-chat">
+                    <div class="panel-header">
+                        <h3>Chat</h3>
+                    </div>
+                    <div class="chat-content"></div>
                 </div>
             </div>
         </div>
