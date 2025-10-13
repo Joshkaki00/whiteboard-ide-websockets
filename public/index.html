@@ -10,55 +10,28 @@
     <div id="app">
         <!-- Landing Page -->
         <div id="landing-page" class="page active">
-            <div class="container">
-                <header>
-                    <h1>🚀 Leetcode Interview Assistant</h1>
-                    <p>Practice real technical interviews with friends • No signup required</p>
-                </header>
+            <div class="landing-container">
+                <div class="landing-header">
+                    <h1>Interview Practice Assistant</h1>
+                </div>
                 
-                <!-- Role Selection -->
-                <div class="role-selection">
-                    <h3>Choose Your Role</h3>
-                    <div class="role-buttons">
-                        <button id="interviewer-btn" class="role-btn" data-role="interviewer">
-                            <span class="role-icon">👔</span>
-                            <span class="role-title">Interviewer</span>
-                            <span class="role-desc">Ask questions & guide the session</span>
-                        </button>
-                        <button id="candidate-btn" class="role-btn" data-role="candidate">
-                            <span class="role-icon">💻</span>
-                            <span class="role-title">Candidate</span>
-                            <span class="role-desc">Solve problems & show your skills</span>
-                        </button>
+                <!-- Visual Placeholder -->
+                <div class="visual-placeholder">
+                    <div class="placeholder-content">
+                        <div class="placeholder-icon">💻</div>
+                        <div class="placeholder-text">Real-time collaborative coding</div>
                     </div>
                 </div>
                 
-                <div class="actions">
-                    <button id="create-room-btn" class="btn btn-primary">Create New Interview Room</button>
-                    <div class="join-room">
-                        <input type="text" id="room-code-input" placeholder="Enter room code or link" maxlength="50">
-                        <button id="join-room-btn" class="btn btn-secondary">Join Session</button>
-                    </div>
+                <!-- Action Buttons -->
+                <div class="landing-actions">
+                    <button id="create-room-btn" class="action-btn primary">Create Room</button>
+                    <button id="join-room-btn" class="action-btn secondary">Join Room</button>
                 </div>
                 
-                <!-- Quick Features Preview -->
-                <div class="features-preview">
-                    <div class="feature">
-                        <span class="feature-icon">⚡</span>
-                        <span>Instant start</span>
-                    </div>
-                    <div class="feature">
-                        <span class="feature-icon">🔄</span>
-                        <span>Real-time sync</span>
-                    </div>
-                    <div class="feature">
-                        <span class="feature-icon">📝</span>
-                        <span>Built-in problems</span>
-                    </div>
-                    <div class="feature">
-                        <span class="feature-icon">⏱️</span>
-                        <span>Interview timer</span>
-                    </div>
+                <!-- Room Code Input (Hidden by default) -->
+                <div id="room-code-section" class="room-code-input" style="display: none;">
+                    <input type="text" id="room-code-input" placeholder="Room Code" maxlength="8">
                 </div>
                 
                 <div id="status-message" class="status-message"></div>
