@@ -51,28 +51,20 @@ class InterviewApp {
     }
 
     setupEventListeners() {
-        // TODO: Add event listeners for role selection
-        // document.querySelectorAll('.role-btn').forEach(btn => {
-        //     btn.addEventListener('click', () => this.selectRole(btn.dataset.role));
-        // });
-        
-        // TODO: Add event listeners for landing page
-        // this.createRoomBtn.addEventListener('click', () => this.createRoom());
-        // this.joinRoomBtn.addEventListener('click', () => this.joinRoom());
+        // TODO: Add event listeners for landing page actions
+        // this.createRoomBtn.addEventListener('click', () => this.handleCreateRoom());
+        // this.joinRoomBtn.addEventListener('click', () => this.handleJoinRoom());
         // this.roomCodeInput.addEventListener('keypress', (e) => {
-        //     if (e.key === 'Enter') this.joinRoom();
+        //     if (e.key === 'Enter') this.submitRoomCode();
         // });
         
         // TODO: Add event listeners for room interface
         // this.leaveRoomBtn.addEventListener('click', () => this.leaveRoom());
-        // this.shareRoomBtn.addEventListener('click', () => this.shareRoom());
         
         // TODO: Add event listeners for problem selection
         // this.problemSelector.addEventListener('change', () => this.changeProblem());
         // this.languageSelector.addEventListener('change', () => this.changeLanguage());
-        
-        // TODO: Add event listeners for timer
-        // this.timerToggle.addEventListener('click', () => this.toggleTimer());
+        // this.newProblemBtn.addEventListener('click', () => this.selectNewProblem());
         
         // TODO: Add event listeners for code editor
         // let codeTimeout;
@@ -93,7 +85,42 @@ class InterviewApp {
         //     if (e.key === 'Enter') this.sendChatMessage();
         // });
         
-        console.log('TODO: Setup event listeners');
+        console.log('TODO: Setup event listeners for wireframe-based UI');
+    }
+
+    handleCreateRoom() {
+        // TODO: Show loading state
+        // TODO: Create room and navigate to interview interface
+        console.log('TODO: Handle create room');
+    }
+
+    handleJoinRoom() {
+        // TODO: Show room code input
+        // TODO: Focus on input field
+        console.log('TODO: Handle join room - show input');
+    }
+
+    submitRoomCode() {
+        // TODO: Get room code from input
+        // TODO: Validate and join room
+        // TODO: Navigate to interview interface
+        console.log('TODO: Submit room code and join');
+    }
+
+    selectNewProblem() {
+        // TODO: Show problem selection modal or cycle to next problem
+        // TODO: Update problem content and reset code editor
+        console.log('TODO: Select new problem');
+    }
+
+    updateRoomHeader() {
+        // TODO: Update room ID, problem title, and timer in header
+        console.log('TODO: Update room header display');
+    }
+
+    updateParticipantsList() {
+        // TODO: Update participants list in left sidebar
+        console.log('TODO: Update participants list');
     }
 
     selectRole(role) {
