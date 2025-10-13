@@ -246,67 +246,330 @@ body {
     border: 1px solid #fc8181;
 }
 
-/* Interview room styles */
+/* Interview room styles - Wireframe based */
 #interview-room {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background: #f8f9fa;
 }
 
+/* Room Header */
 .room-header {
-    background: white;
-    padding: 1rem 2rem;
+    background: #f7fafc;
+    padding: 0.75rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    z-index: 10;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 0.875rem;
 }
 
-.room-info {
+.room-title {
     display: flex;
-    gap: 2rem;
-    font-weight: 600;
-    color: #4a5568;
-}
-
-.room-controls {
-    display: flex;
+    align-items: center;
     gap: 1rem;
-    align-items: center;
-}
-
-.timer-section {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: #f7fafc;
-    border-radius: 6px;
-    border: 1px solid #e2e8f0;
-}
-
-#session-timer {
-    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: #2d3748;
-    min-width: 50px;
-}
-
-#user-role-display {
-    color: #667eea;
+    color: #4a5568;
     font-weight: 500;
 }
 
-.room-layout {
+.separator {
+    color: #d1d5db;
+}
+
+.header-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #6b7280;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.header-btn:hover {
+    color: #374151;
+}
+
+/* Desktop Layout - 3 Panel */
+.desktop-layout {
     flex: 1;
     display: grid;
-    grid-template-columns: 1fr 400px 300px;
-    grid-template-rows: 1fr;
+    grid-template-columns: 280px 1fr 280px;
     gap: 1px;
-    background: #e2e8f0;
+    background: #e5e7eb;
     overflow: hidden;
+}
+
+/* Left Sidebar */
+.left-sidebar {
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.problem-panel {
+    flex: 1;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.participants-panel {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Center Code Panel */
+.code-panel {
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Right Sidebar */
+.right-sidebar {
+    background: white;
+}
+
+.discussion-panel {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Panel Headers */
+.panel-header {
+    padding: 0.75rem 1rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.panel-header h3 {
+    margin: 0;
+    font-size: 0.875rem;
+}
+
+/* Problem Content */
+.problem-content {
+    padding: 1rem;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.problem-info {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.problem-select {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+.difficulty {
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.625rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.difficulty.easy {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.difficulty.medium {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.difficulty.hard {
+    background: #fecaca;
+    color: #991b1b;
+}
+
+.problem-text h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #111827;
+}
+
+.problem-text p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #4b5563;
+    margin-bottom: 0.75rem;
+}
+
+.problem-example {
+    background: #f3f4f6;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    color: #374151;
+    margin-top: 0.5rem;
+}
+
+/* Participants */
+.participants-list {
+    padding: 1rem;
+    flex: 1;
+}
+
+.participant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    font-size: 0.875rem;
+}
+
+.participant-name {
+    color: #374151;
+}
+
+.participant-status {
+    color: #10b981;
+    font-size: 0.75rem;
+}
+
+.new-problem-btn {
+    margin: 1rem;
+    padding: 0.5rem;
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    color: #374151;
+}
+
+.new-problem-btn:hover {
+    background: #e5e7eb;
+}
+
+/* Code Editor */
+.editor-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.language-select {
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+#code-editor {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    resize: none;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    background: #1f2937;
+    color: #f9fafb;
+    outline: none;
+}
+
+/* Whiteboard */
+.whiteboard-container {
+    border-top: 1px solid #e5e7eb;
+    background: white;
+}
+
+.whiteboard-header {
+    padding: 0.5rem 1rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.whiteboard-controls {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.whiteboard-controls input[type="color"] {
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 2px;
+}
+
+.whiteboard-controls input[type="range"] {
+    width: 60px;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.625rem;
+    border: 1px solid #d1d5db;
+    background: #f9fafb;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#whiteboard {
+    display: block;
+    border-bottom: 1px solid #e5e7eb;
+    cursor: crosshair;
+}
+
+/* Discussion/Chat */
+.discussion-messages {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    font-size: 0.875rem;
+}
+
+.discussion-input {
+    padding: 1rem;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.discussion-input input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+.send-btn {
+    padding: 0.5rem 1rem;
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    color: #374151;
+}
+
+.send-btn:hover {
+    background: #e5e7eb;
 }
 
 /* Problem Section */
