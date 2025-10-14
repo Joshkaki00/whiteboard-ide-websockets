@@ -13,8 +13,13 @@ const io = new Server(server, {
   }
 });
 
-// Serve static files
-app.use(express.static(path.join(__dirname, '../public')));
+// Serve static files from Vite build output in production
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, '../dist-client')));
+} else {
+  // In development, Vite dev server handles static files
+  console.log('Development mode: Vite dev server will handle static files on port 5173');
+}
 
 // Types for our application
 interface Room {
