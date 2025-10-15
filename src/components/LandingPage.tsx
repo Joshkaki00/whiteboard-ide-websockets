@@ -11,6 +11,8 @@ export default function LandingPage({ onJoinRoom }: LandingPageProps) {
   const [roomCode, setRoomCode] = useState('')
   const [statusMessage, setStatusMessage] = useState('')
   const [isLoading, setIsLoading] = useState(false)
+  const [xp] = useState(420) // Mock XP
+  const [level] = useState(7) // Mock level
 
   const handleCreateRoom = async () => {
     if (!isConnected) {
