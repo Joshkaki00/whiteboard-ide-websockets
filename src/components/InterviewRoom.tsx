@@ -70,6 +70,52 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
           </div>
 
           <div className="flex items-center gap-4">
+            {/* View Mode Switcher */}
+            <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1">
+              <button
+                onClick={() => setViewMode('code')}
+                className={`px-3 py-1 text-xs rounded-md transition-colors ${
+                  viewMode === 'code' 
+                    ? 'bg-white text-purple-600 font-semibold shadow-sm' 
+                    : 'text-gray-600 hover:text-gray-800'
+                }`}
+                title="Code Editor Only"
+              >
+                <svg className="w-4 h-4 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+                Code
+              </button>
+              <button
+                onClick={() => setViewMode('hybrid')}
+                className={`px-3 py-1 text-xs rounded-md transition-colors ${
+                  viewMode === 'hybrid' 
+                    ? 'bg-white text-purple-600 font-semibold shadow-sm' 
+                    : 'text-gray-600 hover:text-gray-800'
+                }`}
+                title="Split View (Code + Whiteboard)"
+              >
+                <svg className="w-4 h-4 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
+                </svg>
+                Hybrid
+              </button>
+              <button
+                onClick={() => setViewMode('whiteboard')}
+                className={`px-3 py-1 text-xs rounded-md transition-colors ${
+                  viewMode === 'whiteboard' 
+                    ? 'bg-white text-purple-600 font-semibold shadow-sm' 
+                    : 'text-gray-600 hover:text-gray-800'
+                }`}
+                title="Whiteboard Only"
+              >
+                <svg className="w-4 h-4 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                </svg>
+                Board
+              </button>
+            </div>
+
             <Timer initialMinutes={45} />
             
             <button
