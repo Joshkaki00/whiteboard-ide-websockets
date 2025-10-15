@@ -7,10 +7,10 @@ export interface LeetCodeProblem {
   examples: string[]
   constraints: string[]
   starterCode: {
-    javascript: string
-    python: string
-    java: string
-    cpp: string
+    javascript: string;
+    python: string;
+    java: string;
+    cpp: string;
   }
 }
 
