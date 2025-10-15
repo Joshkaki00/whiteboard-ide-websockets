@@ -1,228 +1,73 @@
-# 🚀 Leetcode Interview Assistant
+# React + TypeScript + Vite
 
-A real-time collaborative coding interview practice tool that emulates the experience of technical interviews at tech companies. Built with TypeScript, Socket.IO, and vanilla web technologies.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## ✨ Features
+Currently, two official plugins are available:
 
-### 🤝 **Real-time Collaboration**
-- **Shared Code Editor**: Write code together with live synchronization
-- **Interactive Whiteboard**: Draw diagrams, explain algorithms, and visualize solutions
-- **Live Chat**: Communicate during the interview session
-- **Room System**: Create private rooms with shareable codes (max 2 participants)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-### 💻 **Technical Interview Experience**
-- **Clean Code Environment**: Dark-themed monospace editor optimized for coding
-- **Whiteboard Drawing**: HTML5 Canvas with customizable pen colors and sizes
-- **Real-time Updates**: Sub-second synchronization across all features
-- **Professional UI**: Modern, responsive design that works on all devices
+## React Compiler
 
-### 🔧 **Developer Features**
-- **TypeScript**: Full type safety on server-side with TypeScript patterns on client
-- **Socket.IO v4**: Robust WebSocket communication with fallback support
-- **Hot Reload**: Development server with automatic recompilation
-- **Cross-platform**: Works on desktop, tablet, and mobile devices
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 🚀 Quick Start
+## Expanding the ESLint configuration
 
-### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-### Installation
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-1. **Clone and install dependencies**
-   ```bash
-   git clone <your-repo-url>
-   cd fall-2025-intensive
-   npm install
-   ```
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-2. **Build the TypeScript server**
-   ```bash
-   npm run build
-   ```
-
-3. **Start the development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open your browser**
-   - Navigate to `http://localhost:3000`
-   - Create a new room or join an existing one
-   - Share the room code with your interview partner
-
-## 📋 Available Scripts
-
-- `npm run build` - Compile TypeScript to JavaScript
-- `npm run dev` - Start development server with hot reload
-- `npm start` - Run the production server
-- `npm run clean` - Remove compiled files
-
-## 🏗️ Architecture
-
-### Server (TypeScript)
-```
-src/
-├── server.ts          # Main Socket.IO server with room management
-└── types/             # TypeScript type definitions
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
 
-### Client (Vanilla JS/HTML/CSS)
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-public/
-├── index.html         # Single-page application
-├── app.js            # Client-side Socket.IO logic
-└── style.css         # Responsive UI styling
-```
-
-### Key Technologies
-- **Backend**: Node.js + Express + Socket.IO + TypeScript
-- **Frontend**: Vanilla JavaScript + HTML5 Canvas + CSS Grid
-- **Real-time**: Socket.IO with event-driven architecture
-- **Development**: TypeScript compiler + Nodemon + Concurrently
-
-## 🎯 Usage Guide
-
-### Creating an Interview Session
-
-1. **Host creates a room**:
-   - Click "Create New Room"
-   - Share the generated 8-character room code
-   - Wait for participant to join
-
-2. **Participant joins**:
-   - Enter the room code
-   - Click "Join Room"
-   - Start collaborating immediately
-
-### During the Interview
-
-#### **Code Editor**
-- Type in the shared textarea
-- Changes sync automatically with 300ms debouncing
-- See typing indicators when your partner is coding
-- Cursor position is preserved during updates
-
-#### **Whiteboard**
-- Draw with mouse/touch
-- Change pen color and size using controls
-- Click "Clear" to reset the whiteboard
-- All drawing actions sync in real-time
-
-#### **Chat**
-- Send messages to communicate
-- See system notifications for join/leave events
-- Messages include timestamps and usernames
-- Auto-scroll to latest messages
-
-## 🔧 Socket.IO Events
-
-### Client → Server
-- `create-room` - Create a new interview room
-- `join-room` - Join existing room with code
-- `code-change` - Send code editor updates
-- `whiteboard-change` - Send drawing data
-- `chat-message` - Send chat messages
-
-### Server → Client
-- `room-state` - Initial room state for new participants
-- `user-joined` / `user-left` - Participant notifications
-- `code-update` - Receive code changes from partner
-- `whiteboard-update` - Receive drawing updates
-- `chat-update` - Receive new chat messages
-
-## 🎨 Customization
-
-### Styling
-- Modify `public/style.css` for UI customization
-- CSS Grid layout adapts automatically to screen sizes
-- Dark theme optimized for coding sessions
-
-### Features
-- Add syntax highlighting with Prism.js
-- Implement problem templates in `server.ts`
-- Add timer functionality for timed interviews
-- Extend whiteboard with shapes and text tools
-
-## 🚢 Deployment
-
-### Development
-```bash
-npm run dev  # Runs on http://localhost:3000
-```
-
-### Production
-1. **Build the project**:
-   ```bash
-   npm run build
-   ```
-
-2. **Start production server**:
-   ```bash
-   npm start
-   ```
-
-### Environment Variables
-```bash
-PORT=3000  # Server port (default: 3000)
-```
-
-## 🧪 Testing Your Setup
-
-1. **Open two browser tabs** to `http://localhost:3000`
-2. **Create a room** in the first tab
-3. **Join with the room code** in the second tab
-4. **Test all features**:
-   - Type in the code editor (should sync)
-   - Draw on the whiteboard (should appear on both)
-   - Send chat messages (should appear instantly)
-
-## 🤝 Contributing
-
-We welcome contributions to make this interview practice tool even better! Please follow these guidelines to ensure a smooth contribution process.
-
-### Getting Started
-1. **Fork the repository** and clone your fork locally
-2. **Create a feature branch** from `main`: `git checkout -b feature/your-feature-name`
-3. **Install dependencies**: `npm install`
-4. **Run the development server**: `npm run dev`
-
-### Development Guidelines
-- **Code Style**: Follow existing TypeScript/JavaScript patterns
-- **Testing**: Test all features locally before submitting
-- **Commits**: Use clear, descriptive commit messages
-- **Documentation**: Update README.md if adding new features
-
-### Pull Request Process
-1. **Ensure your code builds**: `npm run build` should complete without errors
-2. **Test thoroughly**: Verify real-time features work across multiple browser tabs
-3. **Create a PR** with a clear description of changes
-4. **Link any related issues** in your PR description
-
-### What to Contribute
-- 🐛 Bug fixes and performance improvements
-- ✨ New interview features (timers, problem templates, etc.)
-- 🎨 UI/UX enhancements
-- 📚 Documentation improvements
-- 🧪 Test coverage additions
-
-### Code of Conduct
-- Be respectful and constructive in all interactions
-- Focus on improving the interview practice experience
-- Help maintain a welcoming environment for all skill levels
-
-## 📄 License
-
-This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
-
-### What this means:
-- ✅ You can freely use, modify, and distribute this software
-- ✅ You can use it for commercial purposes
-- ✅ You must include the original copyright and license notice
-- ⚠️ Any derivative work must also be licensed under GPL v3.0
-- ⚠️ You must disclose the source code of any distributed modifications
-
-For more information about GPL v3.0, visit: https://www.gnu.org/licenses/gpl-3.0.en.html
-
-**Happy interviewing!** 🎉 Use this tool to practice coding interviews with friends, simulate real technical interview conditions, and improve your collaborative problem-solving skills.
