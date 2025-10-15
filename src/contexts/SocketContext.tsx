@@ -70,6 +70,15 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       setParticipantCount(data.participantCount)
     })
 
+    newSocket.on('code-update', (data: { code: string, userId: string }) => {
+      setCodeContent(data.code)
+    })
+  
+    newSocket.on('language-update', (data: { language: string, code: string }) => {
+      setCurrentLanguage(data.language)
+      setCodeContent(data.code)
+    })
+
     setSocket(newSocket)
 
     return () => {
