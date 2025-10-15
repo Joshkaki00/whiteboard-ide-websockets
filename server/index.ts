@@ -15,6 +15,15 @@ app.get('/', (req, res) => {
   res.send('Socket.IO server is running!')
 })
 
+app.get('/health', (req, res) => {
+  res.json({
+    status: 'healthy',
+    uptime: process.uptime(),
+    timestamp: new Date().toISOString(),
+    rooms: rooms.size
+  })
+})
+
 interface Room {
   id: string
   participants: Set<string>
