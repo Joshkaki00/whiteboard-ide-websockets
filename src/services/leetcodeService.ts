@@ -105,18 +105,141 @@ const PROBLEM_BANK: Record<string, LeetCodeProblem> = {
   }
 }
 
-export const getLeetCodeProblem = async (slug: string): Promise<LeetCodeProblem | null> => {
-  // For now, return from our bank
-  // In production, you could fetch from LeetCode's GraphQL API
-  return PROBLEM_BANK[slug] || null
+// LeetCode GraphQL API endpoint (public, no auth needed for problem list)
+const LEETCODE_API = 'https://leetcode.com/graphql'
+
+// Cache for problem list (avoid repeated API calls)
+let problemListCache: any[] | null = null
+let cacheTimestamp = 0
+const CACHE_DURATION = 3600000 // 1 hour
+
+export const fetchAllLeetCodeProblems = async (): Promise<any[]> => {
+  // Return cached data if recent
+  if (problemListCache && Date.now() - cacheTimestamp < CACHE_DURATION) {
+    return problemListCache
+  }
+
+  try {
+    const response = await fetch(LEETCODE_API, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        query: `
+          query problemsetQuestionList {
+            problemsetQuestionList: questionList(
+              categorySlug: ""
+              limit: -1
+              skip: 0
+              filters: {}
+            ) {
+              total: totalNum
+              questions: data {
+                acRate
+                difficulty
+                freqBar
+                frontendQuestionId: questionFrontendId
+                isFavor
+                paidOnly: isPaidOnly
+                status
+                title
+                titleSlug
+                topicTags {
+                  name
+                  slug
+                }
+              }
+            }
+          }
+        `
+      })
+    })
+
+    const data = await response.json()
+    const problems = data?.data?.problemsetQuestionList?.questions || []
+    
+    // Filter out premium problems
+    const freeProblems = problems.filter((p: any) => !p.paidOnly)
+    
+    problemListCache = freeProblems
+    cacheTimestamp = Date.now()
+    
+    return freeProblems
+  } catch (error) {
+    console.error('Failed to fetch LeetCode problems:', error)
+    // Fallback to local bank
+    return Object.values(PROBLEM_BANK).map(p => ({
+      frontendQuestionId: p.id,
+      title: p.title,
+      titleSlug: p.titleSlug,
+      difficulty: p.difficulty,
+      paidOnly: false,
+      topicTags: []
+    }))
+  }
 }
 
-export const getRandomProblem = (): LeetCodeProblem => {
-  const slugs = Object.keys(PROBLEM_BANK)
-  const randomSlug = slugs[Math.floor(Math.random() * slugs.length)]
-  return PROBLEM_BANK[randomSlug]
+export const getLeetCodeProblem = async (slug: string): Promise<LeetCodeProblem | null> => {
+  // First check local bank
+  if (PROBLEM_BANK[slug]) {
+    return PROBLEM_BANK[slug]
+  }
+
+  // For problems not in bank, return a simplified version
+  try {
+    const allProblems = await fetchAllLeetCodeProblems()
+    const problem = allProblems.find((p: any) => p.titleSlug === slug)
+    
+    if (!problem) return null
+
+    return {
+      id: problem.frontendQuestionId,
+      title: problem.title,
+      titleSlug: problem.titleSlug,
+      difficulty: problem.difficulty,
+      description: `This problem is available on LeetCode. Visit https://leetcode.com/problems/${slug}/ for full details.`,
+      examples: ['Please see LeetCode for examples'],
+      constraints: ['Please see LeetCode for constraints'],
+      starterCode: {
+        javascript: `// Starter code not available\n// Visit LeetCode for starter code`,
+        python: `# Starter code not available\n# Visit LeetCode for starter code`,
+        java: `// Starter code not available\n// Visit LeetCode for starter code`,
+        cpp: `// Starter code not available\n// Visit LeetCode for starter code`
+      },
+      isPremium: problem.paidOnly,
+      topicTags: problem.topicTags?.map((t: any) => t.name) || [],
+      acRate: problem.acRate
+    }
+  } catch (error) {
+    console.error('Failed to fetch problem:', error)
+    return null
+  }
+}
+
+export const getRandomProblem = async (): Promise<LeetCodeProblem> => {
+  const allProblems = await fetchAllLeetCodeProblems()
+  const randomIndex = Math.floor(Math.random() * allProblems.length)
+  const problem = allProblems[randomIndex]
+  
+  return await getLeetCodeProblem(problem.titleSlug) || PROBLEM_BANK['two-sum']
 }
 
 export const getAllProblems = (): LeetCodeProblem[] => {
+  // Return local bank for immediate display
+  // Component will call fetchAllLeetCodeProblems() for full list
   return Object.values(PROBLEM_BANK)
+}
+
+export const searchProblems = async (query: string, limit = 50): Promise<any[]> => {
+  const allProblems = await fetchAllLeetCodeProblems()
+  const lowerQuery = query.toLowerCase()
+  
+  return allProblems
+    .filter((p: any) => 
+      p.title.toLowerCase().includes(lowerQuery) ||
+      p.difficulty.toLowerCase().includes(lowerQuery) ||
+      p.topicTags?.some((t: any) => t.name.toLowerCase().includes(lowerQuery))
+    )
+    .slice(0, limit)
 }
