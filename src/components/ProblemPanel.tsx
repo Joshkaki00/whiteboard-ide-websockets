@@ -1,37 +1,114 @@
+import { useState, useEffect } from 'react'
+import { LeetCodeProblem, getLeetCodeProblem } from '../services/leetcodeService'
+
 interface ProblemPanelProps {
+  problemSlug: string
   compact?: boolean
 }
 
-export default function ProblemPanel({ compact }: ProblemPanelProps) {
-  // TODO: Add problem selection logic, Socket.IO integration for problem sync
+export default function ProblemPanel({ problemSlug, compact }: ProblemPanelProps) {
+  const [problem, setProblem] = useState<LeetCodeProblem | null>(null)
+  const [activeTab, setActiveTab] = useState<'description' | 'examples' | 'constraints'>('description')
+
+  useEffect(() => {
+    const loadProblem = async () => {
+      const data = await getLeetCodeProblem(problemSlug)
+      setProblem(data)
+    }
+    loadProblem()
+  }, [problemSlug])
+
+  if (!problem) {
+    return (
+      <div className="flex flex-col flex-1 bg-white">
+        <div className="panel-header">
+          <h3>Loading Problem...</h3>
+        </div>
+      </div>
+    )
+  }
+
+  const getDifficultyColor = (difficulty: string) => {
+    switch (difficulty) {
+      case 'Easy': return 'text-green-600 bg-green-50'
+      case 'Medium': return 'text-yellow-600 bg-yellow-50'
+      case 'Hard': return 'text-red-600 bg-red-50'
+      default: return 'text-gray-600 bg-gray-50'
+    }
+  }
 
   return (
-    <div className="h-full flex flex-col">
-      <div className="panel-header">
-        <h3>Problem</h3>
-      </div>
-      <div className="p-4 overflow-y-auto flex-1">
-        <div className="flex gap-2 items-center mb-4">
-          <select className="flex-1 py-2 px-3 border border-gray-300 rounded text-xs">
-            <option value="two-sum">Two Sum (Easy)</option>
-            <option value="reverse-linked-list">Reverse Linked List (Easy)</option>
-            <option value="valid-parentheses">Valid Parentheses (Easy)</option>
-          </select>
-          <span className="difficulty-easy">easy</span>
+    <div className="flex flex-col flex-1 bg-white border-r border-gray-200">
+      <div className="panel-header border-b border-gray-200">
+        <div className="flex items-center gap-3">
+          <h3 className="font-semibold text-gray-800">{problem.title}</h3>
+          <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(problem.difficulty)}`}>
+            {problem.difficulty}
+          </span>
         </div>
-        
-        {!compact && (
-          <div className="problem-text">
-            <h4 className="text-base mb-2 text-gray-900">Two Sum</h4>
-            <p className="text-sm leading-relaxed text-gray-600 mb-3">
-              Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
-            </p>
-            <div className="bg-gray-100 p-3 rounded text-xs font-mono text-gray-700 mt-2">
-              <strong>Example:</strong><br />
-              Input: nums = [2,7,11,15], target = 9<br />
-              Output: [0,1]<br />
-              Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
-            </div>
+      </div>
+
+      {/* Tabs */}
+      <div className="flex border-b border-gray-200 bg-gray-50">
+        <button
+          onClick={() => setActiveTab('description')}
+          className={`px-4 py-2 text-sm font-medium transition-colors ${
+            activeTab === 'description' 
+              ? 'text-blue-600 border-b-2 border-blue-600 bg-white' 
+              : 'text-gray-600 hover:text-gray-800'
+          }`}
+        >
+          Description
+        </button>
+        <button
+          onClick={() => setActiveTab('examples')}
+          className={`px-4 py-2 text-sm font-medium transition-colors ${
+            activeTab === 'examples' 
+              ? 'text-blue-600 border-b-2 border-blue-600 bg-white' 
+              : 'text-gray-600 hover:text-gray-800'
+          }`}
+        >
+          Examples
+        </button>
+        <button
+          onClick={() => setActiveTab('constraints')}
+          className={`px-4 py-2 text-sm font-medium transition-colors ${
+            activeTab === 'constraints' 
+              ? 'text-blue-600 border-b-2 border-blue-600 bg-white' 
+              : 'text-gray-600 hover:text-gray-800'
+          }`}
+        >
+          Constraints
+        </button>
+      </div>
+
+      {/* Content */}
+      <div className="flex-1 overflow-y-auto p-4">
+        {activeTab === 'description' && (
+          <div className="prose prose-sm max-w-none">
+            <p className="text-gray-700 leading-relaxed whitespace-pre-wrap">{problem.description}</p>
+          </div>
+        )}
+
+        {activeTab === 'examples' && (
+          <div className="space-y-4">
+            {problem.examples.map((example, idx) => (
+              <div key={idx} className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                <div className="text-xs font-semibold text-gray-500 mb-2">Example {idx + 1}</div>
+                <pre className="text-sm text-gray-800 whitespace-pre-wrap font-mono">{example}</pre>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {activeTab === 'constraints' && (
+          <div className="space-y-2">
+            {problem.constraints.map((constraint, idx) => (
+              <div key={idx} className="flex items-start gap-2">
+                <span className="text-blue-500 mt-1">•</span>
+                <span className="text-sm text-gray-700">{constraint}</span>
+              </div>
+            ))}
           </div>
         )}
       </div>
