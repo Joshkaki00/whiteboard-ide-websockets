@@ -19,7 +19,7 @@ export default function InterviewRoom({ roomId, onLeaveRoom, problemTitle }: Int
         <div className="flex items-center gap-4 text-gray-600 font-medium">
           <span>Room: {roomId}</span>
           <span className="text-gray-300">|</span>
-          <span>Problem: {problemTitle}</span>
+          <span>Problem: {problemTitle || 'Loading...'}</span>
           <span className="text-gray-300">|</span>
           <span>Timer: 25:30</span>
         </div>

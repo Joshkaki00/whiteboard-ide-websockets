@@ -8,6 +8,7 @@ type AppState = 'landing' | 'room'
 function App() {
   const [currentPage, setCurrentPage] = useState<AppState>('landing')
   const [roomId, setRoomId] = useState<string>('')
+  const [currentProblem, setCurrentProblem] = useState<string>('Two Sum')
 
   const handleJoinRoom = (id: string) => {
     setRoomId(id)
@@ -26,7 +27,11 @@ function App() {
           <LandingPage onJoinRoom={handleJoinRoom} />
         )}
         {currentPage === 'room' && (
-          <InterviewRoom roomId={roomId} onLeaveRoom={handleLeaveRoom} />
+          <InterviewRoom 
+            roomId={roomId} 
+            onLeaveRoom={handleLeaveRoom}
+            problemTitle={currentProblem}  // Pass the dynamic problem
+          />
         )}
       </div>
     </SocketProvider>
