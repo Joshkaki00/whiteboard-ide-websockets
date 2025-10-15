@@ -43,13 +43,15 @@ io.on('connection', (socket) => {
     const room: Room = {
       id: roomId,
       participants: new Set([socket.id]),
-      messages: []
+      messages: [],
+      codeContent: `function twoSum(nums, target) {\n    \n}`,
+      currentLanguage: 'javascript',
+      currentProblem: 'two-sum'
     }
     rooms.set(roomId, room)
     socket.join(roomId)
     
     callback({ success: true, roomId })
-    console.log(`Room created: ${roomId}`)
   })
 
   socket.on('join-room', (data: { roomId: string }, callback) => {
