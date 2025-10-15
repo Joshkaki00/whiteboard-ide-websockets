@@ -1,44 +1,29 @@
 # Dockerfile for Fly.io deployment
-FROM node:20-alpine AS base
+FROM node:20-alpine
 
-# Install dependencies only when needed
-FROM base AS deps
-WORKDIR /app
-
-# Copy package files
-COPY package*.json ./
-
-# Install dependencies (including devDependencies for build)
-RUN npm ci
-
-# Builder stage
-FROM base AS builder
-WORKDIR /app
-
-# Copy dependencies from deps stage
-COPY --from=deps /app/node_modules ./node_modules
-
-# Copy source files
-COPY . .
-
-# Production dependencies only
-FROM base AS runner
+# Set working directory
 WORKDIR /app
 
 # Set to production environment
 ENV NODE_ENV=production
 ENV PORT=8080
 
-# Copy package files and install production deps
+# Copy package files
 COPY package*.json ./
-RUN npm ci --only=production
 
-# Copy server code
+# Install production dependencies
+RUN npm ci --omit=dev
+
+# Copy server code only
 COPY server ./server
 
 # Expose port
 EXPOSE 8080
 
-# Start the server
-CMD ["node", "--loader", "tsx", "server/index.ts"]
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=40s \
+  CMD node -e "require('http').get('http://localhost:8080/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"
+
+# Start the server using tsx
+CMD ["npx", "tsx", "server/index.ts"]
 
