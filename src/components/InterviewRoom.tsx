@@ -16,7 +16,20 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
   const [showProblemSelector, setShowProblemSelector] = useState(false)
   const [currentProblemSlug, setCurrentProblemSlug] = useState('two-sum')
   const [viewMode, setViewMode] = useState<'code' | 'hybrid' | 'whiteboard'>('hybrid')
+  const [searchQuery, setSearchQuery] = useState('')
   const problems = getAllProblems()
+  
+  const filteredProblems = problems.filter(problem =>
+    problem.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    problem.difficulty.toLowerCase().includes(searchQuery.toLowerCase())
+  )
+  
+  const handleRandomProblem = () => {
+    const randomProblem = problems[Math.floor(Math.random() * problems.length)]
+    setCurrentProblemSlug(randomProblem.titleSlug)
+    setShowProblemSelector(false)
+    setSearchQuery('')
+  }
   
   return (
     <div className="h-screen flex flex-col bg-gray-50">
