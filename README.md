@@ -198,40 +198,84 @@ fall-2025-intensive/
 - **Phone (<768px)**: Blocked with upgrade message
 - **Breakpoint Tool**: Custom `useMediaQuery` hook
 
-## 🛠️ Development Workflow
+## 🛠️ Development
 
-### Hot Reload Development
+### Local Development
 ```bash
-npm run dev  # Starts Vite dev server on http://localhost:5173
+# Install dependencies
+npm install
+
+# Start dev servers (frontend + backend)
+npm run dev
+
+# Frontend only
+npm run dev:client
+
+# Backend only
+npm run dev:server
 ```
 
-### Component Development
-- All components are currently **stubbed** (no functionality)
-- Each component has clear **TODO comments** for implementation
-- TypeScript interfaces define expected props and data structures
+### Testing Real-Time Features
 
-### Adding New Features
-1. Components are ready for state management integration
-2. Socket.IO client can be added for real-time features
-3. Event handlers are stubbed and ready for implementation
+1. **Open two browser windows** at `http://localhost:5173`
+2. **Create room** in first window
+3. **Copy room code** (8 characters)
+4. **Join room** in second window
+5. **Test features**:
+   - Type in chat → should appear in both windows
+   - Edit code → should sync in real-time
+   - Change language → both users see new starter code
+   - Start timer → synced across users
+   - Draw on whiteboard → appears for both
 
-## 🎯 Interview Experience Goals
+### Load Testing
 
-When complete, this tool will provide:
-- **Real-time collaboration** between interviewer and candidate
-- **Synchronized code editing** with live updates
-- **Interactive whiteboard** for algorithm explanation
-- **Problem bank** with classic interview questions
-- **Timer functionality** for timed coding sessions
-- **Multi-language support** (JavaScript, Python, Java, C++)
+Test server performance:
+```bash
+npm run loadtest
+```
 
-## 🧪 Testing Your Setup
+This will:
+- Create 50 concurrent connections
+- Each sends 10 messages
+- Reports performance metrics
 
-1. **Start the dev server**: `npm run dev`
-2. **Visit**: `http://localhost:5173`
-3. **Verify**: Complete wireframe loads with all panels visible
-4. **Check responsive**: Resize browser to test tablet/mobile layouts
-5. **Inspect styling**: All Tailwind classes should render correctly
+### Environment Variables
+
+**Development** (`.env.development`):
+```env
+VITE_SERVER_URL=http://localhost:3001
+```
+
+**Production** (`.env.production`):
+```env
+VITE_SERVER_URL=https://your-backend-url.com
+```
+
+## 🚀 Deployment
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for comprehensive deployment instructions.
+
+### Quick Deploy to GitHub Pages
+
+1. **Push to main branch**:
+   ```bash
+   git add .
+   git commit -m "Deploy updates"
+   git push origin main
+   ```
+
+2. **GitHub Actions auto-deploys** to:
+   `https://joshkaki00.github.io/whiteboard-ide-websockets/`
+
+3. **Deploy backend** separately (Railway, Render, etc.)
+
+4. **Update `.env.production`** with backend URL
+
+### Manual Deploy
+```bash
+npm run deploy
+```
 
 ## 🤝 Contributing
 
