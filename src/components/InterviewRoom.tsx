@@ -17,18 +17,69 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
   const [currentProblemSlug, setCurrentProblemSlug] = useState('two-sum')
   const [viewMode, setViewMode] = useState<'code' | 'hybrid' | 'whiteboard'>('hybrid')
   const [searchQuery, setSearchQuery] = useState('')
-  const problems = getAllProblems()
+  const [allProblems, setAllProblems] = useState<any[]>([])
+  const [filteredProblems, setFilteredProblems] = useState<any[]>([])
+  const [isLoading, setIsLoading] = useState(false)
+  const [isSearching, setIsSearching] = useState(false)
+  const localProblems = getAllProblems()
   
-  const filteredProblems = problems.filter(problem =>
-    problem.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    problem.difficulty.toLowerCase().includes(searchQuery.toLowerCase())
-  )
+  // Load all LeetCode problems when selector opens
+  useEffect(() => {
+    if (showProblemSelector && allProblems.length === 0) {
+      loadAllProblems()
+    }
+  }, [showProblemSelector])
   
-  const handleRandomProblem = () => {
-    const randomProblem = problems[Math.floor(Math.random() * problems.length)]
-    setCurrentProblemSlug(randomProblem.titleSlug)
-    setShowProblemSelector(false)
-    setSearchQuery('')
+  // Search with debounce
+  useEffect(() => {
+    if (!searchQuery) {
+      setFilteredProblems(allProblems.slice(0, 50))
+      return
+    }
+    
+    setIsSearching(true)
+    const timer = setTimeout(async () => {
+      const results = await searchProblems(searchQuery, 50)
+      setFilteredProblems(results)
+      setIsSearching(false)
+    }, 300)
+    
+    return () => clearTimeout(timer)
+  }, [searchQuery, allProblems])
+  
+  const loadAllProblems = async () => {
+    setIsLoading(true)
+    try {
+      const problems = await fetchAllLeetCodeProblems()
+      setAllProblems(problems)
+      setFilteredProblems(problems.slice(0, 50))
+    } catch (error) {
+      console.error('Failed to load problems:', error)
+      setAllProblems(localProblems)
+      setFilteredProblems(localProblems)
+    } finally {
+      setIsLoading(false)
+    }
+  }
+  
+  const handleRandomProblem = async () => {
+    setIsLoading(true)
+    try {
+      const randomProblem = await getRandomProblem()
+      setCurrentProblemSlug(randomProblem.titleSlug)
+      setShowProblemSelector(false)
+      setSearchQuery('')
+    } catch (error) {
+      console.error('Failed to get random problem:', error)
+    } finally {
+      setIsLoading(false)
+    }
+  }
+  
+  const getCurrentProblemTitle = () => {
+    const problem = allProblems.find(p => p.titleSlug === currentProblemSlug) ||
+                    localProblems.find(p => p.titleSlug === currentProblemSlug)
+    return problem?.title || 'Two Sum'
   }
   
   return (
