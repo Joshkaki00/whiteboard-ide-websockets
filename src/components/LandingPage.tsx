@@ -140,7 +140,7 @@ export default function LandingPage({ onJoinRoom }: LandingPageProps) {
             <button 
               onClick={handleSubmitRoomCode}
               disabled={isLoading}
-              className="mt-2 w-full btn btn-primary disabled:opacity-50"
+              className="mt-2 w-full btn-primary disabled:opacity-50"
             >
               {isLoading ? 'Joining...' : 'Join Room'}
             </button>
