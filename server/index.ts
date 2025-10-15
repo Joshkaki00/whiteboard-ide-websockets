@@ -40,20 +40,25 @@ const rooms = new Map<string, Room>()
 io.on('connection', (socket) => {
   console.log('User connected:', socket.id)
 
-  socket.on('create-room', (callback) => {
+  socket.on('create-room', (data: { problemSlug?: string }, callback) => {
     const roomId = Math.random().toString(36).substring(2, 10).toUpperCase()
+    const problemSlug = data.problemSlug || 'two-sum'
+    
     const room: Room = {
       id: roomId,
       participants: new Set([socket.id]),
       messages: [],
-      codeContent: `function twoSum(nums, target) {\n    \n}`,
+      codeContent: `function twoSum(nums, target) {\n    // Your code here\n}`,
       currentLanguage: 'javascript',
-      currentProblem: 'two-sum'
+      currentProblem: problemSlug,
+      timerStartedAt: null,
+      timerDuration: 2700 // 45 minutes default
     }
     rooms.set(roomId, room)
     socket.join(roomId)
     
-    callback({ success: true, roomId })
+    callback({ success: true, roomId, problemSlug })
+    console.log(`Room created: ${roomId} with problem ${problemSlug}`)
   })
 
   socket.on('join-room', (data: { roomId: string }, callback) => {
