@@ -103,8 +103,8 @@ export default function ProblemPanel({ problemSlug, compact }: ProblemPanelProps
 
         {activeTab === 'constraints' && (
           <div className="space-y-2">
-            {problem.constraints.map((constraint, idx) => (
-              <div key={idx} className="flex items-start gap-2">
+            {problem.constraints.map((constraint) => (
+              <div key={constraint.substring(0, 30)} className="...">
                 <span className="text-blue-500 mt-1">•</span>
                 <span className="text-sm text-gray-700">{constraint}</span>
               </div>
