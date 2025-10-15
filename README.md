@@ -1,6 +1,10 @@
-# 🚀 Interview Practice Assistant
+# 🚀 CodePair - Real-Time Interview Practice Platform
 
-A modern React-based interview practice tool for technical coding interviews. Built with React, TypeScript, Vite, and Tailwind CSS.
+A modern, gamified interview practice tool for technical coding interviews with real-time collaboration. Built with React, TypeScript, Vite, Socket.IO, and Tailwind CSS.
+
+**🌐 Live Demo**: [https://joshkaki00.github.io/whiteboard-ide-websockets/](https://joshkaki00.github.io/whiteboard-ide-websockets/)
+
+**📖 Deployment Guide**: [DEPLOYMENT.md](DEPLOYMENT.md)
 
 ## ✨ Current Features
 
