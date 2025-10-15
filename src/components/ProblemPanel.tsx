@@ -92,8 +92,8 @@ export default function ProblemPanel({ problemSlug, compact }: ProblemPanelProps
 
         {activeTab === 'examples' && (
           <div className="space-y-4">
-            {problem.examples.map((example, idx) => (
-              <div key={idx} className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+            {problem.examples.map((example) => (
+              <div key={example.substring(0, 20)} className="bg-gray-50 border border-gray-200 rounded-lg p-4">
                 <div className="text-xs font-semibold text-gray-500 mb-2">Example {idx + 1}</div>
                 <pre className="text-sm text-gray-800 whitespace-pre-wrap font-mono">{example}</pre>
               </div>
