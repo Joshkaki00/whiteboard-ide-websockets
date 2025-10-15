@@ -21,17 +21,66 @@ export default function InterviewRoom({ roomId, onLeaveRoom, problemTitle }: Int
   return (
     <div className="h-screen flex flex-col bg-gray-50">
       {/* Room Header */}
-      <div className="bg-gray-50 py-3 px-6 flex justify-between items-center border-b border-gray-200 text-sm">
-        <div className="flex items-center gap-4 text-gray-600 font-medium">
-          <span>Room: {roomId}</span>
-          <span className="text-gray-300">|</span>
-          <span>Problem: {problemTitle || 'Loading...'}</span>
-          <span className="text-gray-300">|</span>
-          <span>Timer: 25:30</span>
+      <div className="bg-white border-b border-gray-200 px-6 py-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <div>
+              <div className="flex items-center gap-2">
+                <div className="status-dot status-online"></div>
+                <h2 className="text-lg font-semibold text-gray-800">Room: {roomId}</h2>
+              </div>
+              <button 
+                onClick={() => setShowProblemSelector(!showProblemSelector)}
+                className="text-sm text-purple-600 hover:text-purple-700 font-medium mt-1 flex items-center gap-1"
+              >
+                {problems.find(p => p.titleSlug === currentProblemSlug)?.title || 'Two Sum'}
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Problem Selector Dropdown */}
+            {showProblemSelector && (
+              <div className="absolute top-16 left-6 bg-white border border-gray-200 rounded-lg shadow-xl z-50 w-80">
+                <div className="p-2">
+                  {problems.map((problem) => (
+                    <button
+                      key={problem.titleSlug}
+                      onClick={() => {
+                        setCurrentProblemSlug(problem.titleSlug)
+                        setShowProblemSelector(false)
+                      }}
+                      className="w-full text-left px-4 py-3 hover:bg-purple-50 rounded-md transition-colors"
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="font-medium text-gray-800">{problem.title}</span>
+                        <span className={`px-2 py-1 rounded-full text-xs ${
+                          problem.difficulty === 'Easy' ? 'bg-green-100 text-green-700' :
+                          problem.difficulty === 'Medium' ? 'bg-yellow-100 text-yellow-700' :
+                          'bg-red-100 text-red-700'
+                        }`}>
+                          {problem.difficulty}
+                        </span>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          <div className="flex items-center gap-4">
+            <Timer initialMinutes={45} />
+            
+            <button
+              onClick={onLeaveRoom}
+              className="btn-secondary"
+            >
+              Leave Room
+            </button>
+          </div>
         </div>
-        <button onClick={onLeaveRoom} className="bg-transparent border-none text-lg text-gray-500 cursor-pointer p-1 hover:text-gray-700">
-          <span>✕</span>
-        </button>
       </div>
 
       {/* Desktop Layout */}
