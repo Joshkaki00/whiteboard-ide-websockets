@@ -14,6 +14,9 @@ interface InterviewRoomProps {
 }
 
 export default function InterviewRoom({ roomId, onLeaveRoom, problemTitle }: InterviewRoomProps) {
+  const [showProblemSelector, setShowProblemSelector] = useState(false)
+  const [currentProblemSlug, setCurrentProblemSlug] = useState('two-sum')
+  const problems = getAllProblems()
   
   return (
     <div className="h-screen flex flex-col bg-gray-50">
