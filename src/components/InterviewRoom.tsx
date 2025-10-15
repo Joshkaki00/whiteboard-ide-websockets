@@ -59,7 +59,7 @@ export default function InterviewRoom({ roomId, onLeaveRoom, problemTitle }: Int
         </div>
         
         <div className="bg-white flex flex-col">
-          <CodeEditor compact />
+          <CodeEditor roomId={roomId} compact />  {/* Add roomId */}
         </div>
         
         <div className="bg-white">
