@@ -48,7 +48,19 @@ const rooms = new Map<string, Room>()
 io.on('connection', (socket) => {
   console.log('User connected:', socket.id)
 
-  socket.on('create-room', (data: { problemSlug?: string }, callback) => {
+  socket.on('create-room', (dataOrCallback?: any, callbackOrUndefined?: any) => {
+    // Handle both (callback) and (data, callback) signatures
+    let data: { problemSlug?: string } = {}
+    let callback: Function
+    
+    if (typeof dataOrCallback === 'function') {
+      callback = dataOrCallback
+      data = {}
+    } else {
+      data = dataOrCallback || {}
+      callback = callbackOrUndefined
+    }
+    
     const roomId = Math.random().toString(36).substring(2, 10).toUpperCase()
     const problemSlug = data.problemSlug || 'two-sum'
     
@@ -65,7 +77,9 @@ io.on('connection', (socket) => {
     rooms.set(roomId, room)
     socket.join(roomId)
     
-    callback({ success: true, roomId, problemSlug })
+    if (callback) {
+      callback({ success: true, roomId, problemSlug })
+    }
     console.log(`Room created: ${roomId} with problem ${problemSlug}`)
   })
 
