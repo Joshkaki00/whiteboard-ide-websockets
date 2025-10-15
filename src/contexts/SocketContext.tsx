@@ -38,6 +38,8 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   const [isConnected, setIsConnected] = useState(false)
   const [messages, setMessages] = useState<ChatMessage[]>([])
   const [participantCount, setParticipantCount] = useState(0)
+  const [codeContent, setCodeContent] = useState('')
+  const [currentLanguage, setCurrentLanguage] = useState('javascript')
 
   useEffect(() => {
     const newSocket = io('http://localhost:3001')
