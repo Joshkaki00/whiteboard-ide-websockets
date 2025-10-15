@@ -60,26 +60,19 @@ io.on('connection', (socket) => {
       callback({ success: false, error: 'Room not found' })
       return
     }
-
-    if (room.participants.size >= 2) {
-      callback({ success: false, error: 'Room is full' })
-      return
-    }
-
+  
     room.participants.add(socket.id)
     socket.join(data.roomId)
     
-    // Send existing messages to new participant
-    socket.emit('room-messages', room.messages)
-    
-    // Notify room about new participant
-    socket.to(data.roomId).emit('user-joined', { 
-      userId: socket.id,
-      participantCount: room.participants.size 
+    // Send full room state including code
+    callback({ 
+      success: true, 
+      roomId: data.roomId, 
+      messages: room.messages,
+      codeContent: room.codeContent,  // Add this
+      currentLanguage: room.currentLanguage,  // Add this
+      currentProblem: room.currentProblem  // Add this
     })
-    
-    callback({ success: true, roomId: data.roomId, messages: room.messages })
-    console.log(`User ${socket.id} joined room ${data.roomId}`)
   })
 
   socket.on('send-message', (data: { roomId: string, message: string, username: string }) => {
