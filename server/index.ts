@@ -23,6 +23,8 @@ interface Room {
   codeContent: string
   currentLanguage: string
   currentProblem: string
+  timerStartedAt: Date | null
+  timerDuration: number  //(in seconds)
 }
 
 interface ChatMessage {
