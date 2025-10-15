@@ -109,28 +109,64 @@ A modern, gamified interview practice tool for technical coding interviews with 
 
 ## 🏗️ Architecture
 
-### Frontend Structure
+### Project Structure
 ```
-src/
-├── components/
-│   ├── LandingPage.tsx      # Room creation/joining interface
-│   ├── InterviewRoom.tsx    # Main interview layout
-│   ├── ProblemPanel.tsx     # Problem display and selection
-│   ├── CodeEditor.tsx       # Shared code editing area
-│   ├── Whiteboard.tsx       # Drawing canvas component
-│   ├── ChatPanel.tsx        # Messaging interface
-│   └── ParticipantsPanel.tsx # User list and controls
-├── App.tsx                  # Main app component
-├── main.tsx                 # React entry point
-└── index.css               # Tailwind CSS imports
+fall-2025-intensive/
+├── src/                        # Frontend React app
+│   ├── components/
+│   │   ├── LandingPage.tsx     # Gamified room creation/joining
+│   │   ├── InterviewRoom.tsx   # Main interview layout
+│   │   ├── ProblemPanel.tsx    # LeetCode problem display
+│   │   ├── CodeEditor.tsx      # Synchronized code editing
+│   │   ├── Whiteboard.tsx      # Drawing canvas
+│   │   ├── ChatPanel.tsx       # Real-time messaging
+│   │   ├── Timer.tsx           # Interview timer
+│   │   ├── MobileBlocker.tsx   # Phone blocker screen
+│   │   └── ParticipantsPanel.tsx
+│   ├── contexts/
+│   │   └── SocketContext.tsx   # Socket.IO context provider
+│   ├── hooks/
+│   │   └── useMediaQuery.ts    # Responsive breakpoint hooks
+│   ├── services/
+│   │   └── leetcodeService.ts  # Problem bank management
+│   ├── App.tsx                 # Main app routing
+│   └── index.css              # Tailwind CSS + custom components
+├── server/
+│   └── index.ts               # Socket.IO backend server
+├── tests/
+│   └── loadtest.js            # Socket.IO load testing
+├── .github/
+│   └── workflows/
+│       └── deploy.yml         # GitHub Actions auto-deploy
+└── vite.config.ts             # Vite configuration
 ```
 
-### Key Technologies
-- **React 19**: Modern component-based UI
-- **TypeScript**: Full type safety throughout
-- **Vite 7**: Lightning-fast build tool and dev server
-- **Tailwind CSS**: Utility-first styling with custom components
-- **ESLint**: Code quality and consistency
+### System Architecture
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                  GitHub Pages (Frontend)                 │
+│         https://joshkaki00.github.io/...               │
+│                                                          │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐            │
+│  │ Landing  │→ │ Interview │→ │ Problem  │            │
+│  │  Page    │  │   Room    │  │  Solving │            │
+│  └──────────┘  └──────────┘  └──────────┘            │
+└──────────────────────┬──────────────────────────────────┘
+                       │ Socket.IO WebSocket
+                       ↓
+┌─────────────────────────────────────────────────────────┐
+│             Backend Server (Socket.IO)                   │
+│         (Railway/Render/Self-hosted)                    │
+│                                                          │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐            │
+│  │  Room    │  │   Code   │  │   Chat   │            │
+│  │  Manager │  │   Sync   │  │  System  │            │
+│  └──────────┘  └──────────┘  └──────────┘            │
+│                                                          │
+│  In-Memory Storage (no database required)               │
+└─────────────────────────────────────────────────────────┘
+```
 
 ## 🎨 Design System
 
