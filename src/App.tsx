@@ -1,31 +1,14 @@
-import { useState } from 'react'
 import LandingPage from './components/LandingPage'
-import InterviewRoom from './components/InterviewRoom'
-
-type AppState = 'landing' | 'room'
+// import InterviewRoom from './components/InterviewRoom'
 
 function App() {
-  const [currentPage, setCurrentPage] = useState<AppState>('landing')
-  const [roomId, setRoomId] = useState<string>('')
-
-  const handleJoinRoom = (id: string) => {
-    setRoomId(id)
-    setCurrentPage('room')
-  }
-
-  const handleLeaveRoom = () => {
-    setRoomId('')
-    setCurrentPage('landing')
-  }
+  // TODO: Add state management and routing logic
+  const showLanding = true
 
   return (
     <div className="min-h-screen">
-      {currentPage === 'landing' && (
-        <LandingPage onJoinRoom={handleJoinRoom} />
-      )}
-      {currentPage === 'room' && (
-        <InterviewRoom roomId={roomId} onLeaveRoom={handleLeaveRoom} />
-      )}
+      {showLanding && <LandingPage />}
+      {/* {!showLanding && <InterviewRoom />} */}
     </div>
   )
 }
