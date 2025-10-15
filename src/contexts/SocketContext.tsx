@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState, useMemo } from 'react'
 import { io, Socket } from 'socket.io-client'
 
 interface ChatMessage {
