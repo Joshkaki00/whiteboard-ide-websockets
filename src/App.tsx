@@ -8,9 +8,14 @@ import InterviewRoom from './components/InterviewRoom'
 type AppState = 'landing' | 'room'
 
 function App() {
+  const isTabletOrLarger = useIsTabletOrLarger()
   const [currentPage, setCurrentPage] = useState<AppState>('landing')
   const [roomId, setRoomId] = useState<string>('')
-  const [currentProblem, setCurrentProblem] = useState<string>('Two Sum')
+
+  // Block mobile devices
+  if (!isTabletOrLarger) {
+    return <MobileBlocker />
+  }
 
   const handleJoinRoom = (id: string) => {
     setRoomId(id)
