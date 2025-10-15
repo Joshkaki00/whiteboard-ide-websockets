@@ -132,7 +132,7 @@ export default function LandingPage({ onJoinRoom }: LandingPageProps) {
               type="text"
               value={roomCode}
               onChange={(e) => setRoomCode(e.target.value.toUpperCase())}
-              onKeyPress={(e) => e.key === 'Enter' && handleSubmitRoomCode()}
+              onKeyDown={(e) => e.key === 'Enter' && handleSubmitRoomCode()}
               placeholder="ROOM CODE"
               maxLength={8}
               className="w-full py-3 px-4 border border-gray-300 rounded text-sm text-center uppercase tracking-wider focus:outline-none focus:border-gray-500"
