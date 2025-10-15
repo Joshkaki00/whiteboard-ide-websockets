@@ -1,5 +1,5 @@
 interface CodeEditorProps {
-  compact?: boolean
+  readonly compact?: boolean
 }
 
 export default function CodeEditor({ compact }: CodeEditorProps) {
@@ -7,7 +7,7 @@ export default function CodeEditor({ compact }: CodeEditorProps) {
   return (
     <div className="flex flex-col flex-1">
       <div className="panel-header">
-        <h3>Shared Code Editor</h3>
+        <h3>{compact ? "Code" : "Shared Code Editor"}</h3>
         <div className="flex gap-2">
           <select className="py-1 px-2 border border-gray-300 rounded text-xs">
             <option value="javascript">JavaScript</option>
