@@ -42,7 +42,7 @@ export default function InterviewRoom({ roomId, onLeaveRoom, problemTitle }: Int
 
         {/* Center Code Panel */}
         <div className="bg-white flex flex-col">
-          <CodeEditor />
+          <CodeEditor roomId={roomId} />  {/* Add roomId */}
           <Whiteboard />
         </div>
 
