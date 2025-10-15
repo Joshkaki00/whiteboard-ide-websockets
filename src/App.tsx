@@ -37,7 +37,6 @@ function App() {
           <InterviewRoom 
             roomId={roomId} 
             onLeaveRoom={handleLeaveRoom}
-            problemTitle={currentProblem}  // Pass the dynamic problem
           />
         )}
       </div>
