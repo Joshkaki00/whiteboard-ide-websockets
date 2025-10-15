@@ -150,20 +150,22 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     }
   }
 
+  const value = useMemo(() => ({
+    socket,
+    isConnected,
+    createRoom,
+    joinRoom,
+    sendMessage,
+    sendCodeChange,
+    changeLanguage,
+    messages,
+    participantCount,
+    codeContent,
+    currentLanguage
+  }), [socket, isConnected, messages, participantCount, codeContent, currentLanguage])
+
   return (
-    <SocketContext.Provider value={{
-      socket,
-      isConnected,
-      createRoom,
-      joinRoom,
-      sendMessage,
-      sendCodeChange,
-      changeLanguage,
-      messages,
-      participantCount,
-      codeContent,
-      currentLanguage
-    }}>
+    <SocketContext.Provider value={value}>
       {children}
     </SocketContext.Provider>
   )}
