@@ -80,22 +80,6 @@ src/
 - **Tailwind CSS**: Utility-first styling with custom components
 - **ESLint**: Code quality and consistency
 
-## 🎯 Current Status
-
-### ✅ **Completed (Day 1)**
-- Complete visual wireframe and layout
-- Responsive design (desktop 3-panel, tablet/mobile stacked)
-- All UI components with proper styling
-- TypeScript interfaces and component structure
-- Tailwind CSS integration with custom design system
-
-### 🚧 **Next Steps (Days 2-7)**
-- **Day 2-3**: Add Socket.IO for real-time collaboration
-- **Day 4**: Implement code editor synchronization
-- **Day 5**: Add whiteboard drawing functionality
-- **Day 6**: Integrate chat messaging system
-- **Day 7**: Polish, testing, and deployment
-
 ## 🎨 Design System
 
 ### Custom Tailwind Components
@@ -153,7 +137,46 @@ When complete, this tool will provide:
 
 ## 🤝 Contributing
 
-This is a rapid prototyping project following an agile 7-day development cycle:
+We welcome contributions to improve this interview practice tool! Please follow these guidelines to ensure a safe and collaborative development environment.
+
+### Before Contributing
+
+1. **Fork the repository** and create your feature branch from `main`
+2. **Install dependencies** and verify the project runs locally
+3. **Check existing issues** to avoid duplicate work
+4. **Open an issue** for major changes to discuss implementation
+
+### Development Guidelines
+
+- **Follow TypeScript best practices** - maintain type safety
+- **Use existing Tailwind components** - follow the established design system
+- **Test responsive layouts** - ensure features work on all screen sizes
+- **Write descriptive commit messages** - use conventional commit format
+- **Keep components focused** - maintain single responsibility principle
+
+### Pull Request Process
+
+1. **Update documentation** if you change component interfaces
+2. **Run linting** with `npm run lint` before submitting
+3. **Build successfully** with `npm run build`
+4. **Provide clear descriptions** of changes and testing performed
+5. **Request review** from maintainers
+
+### Security Considerations
+
+- **Never commit sensitive data** (API keys, secrets, personal info)
+- **Sanitize user inputs** in any new form components
+- **Follow secure coding practices** for authentication features
+- **Report security vulnerabilities** privately to maintainers
+
+### Code Style
+
+- Use the existing ESLint configuration
+- Follow the established component structure in `src/components/`
+- Maintain consistency with existing naming conventions
+- Add TODO comments for incomplete functionality
+
+Questions? Open an issue or reach out to the maintainers!
 
 ### Development Guidelines
 - **TypeScript**: Maintain type safety throughout
@@ -161,15 +184,7 @@ This is a rapid prototyping project following an agile 7-day development cycle:
 - **Tailwind CSS**: Use utility classes and custom components
 - **Responsive-first**: Ensure all features work across devices
 
-### Next Implementation Priorities
-1. Socket.IO integration for real-time features
-2. State management for room and user data
-3. Backend API for problem management
-4. Drawing synchronization for whiteboard
-5. Code execution environment (future enhancement)
-
 ## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
 
 **Happy coding!** 🎉 This wireframe provides a solid foundation for building a comprehensive technical interview practice platform.
