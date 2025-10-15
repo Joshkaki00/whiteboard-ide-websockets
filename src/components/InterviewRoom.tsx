@@ -145,7 +145,15 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
 
                 {/* Problems List */}
                 <div className="max-h-96 overflow-y-auto p-2">
-                  {filteredProblems.length === 0 ? (
+                  {isLoading ? (
+                    <div className="text-center py-12">
+                      <svg className="w-8 h-8 mx-auto mb-3 text-purple-600 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                      </svg>
+                      <p className="text-sm text-gray-600">Loading LeetCode problems...</p>
+                      <p className="text-xs text-gray-400 mt-1">~3000 free problems</p>
+                    </div>
+                  ) : filteredProblems.length === 0 ? (
                     <div className="text-center py-8 text-gray-400">
                       <svg className="w-12 h-12 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
