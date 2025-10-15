@@ -67,38 +67,45 @@ A modern, gamified interview practice tool for technical coding interviews with 
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js (v16 or higher)
+- Node.js 20 or higher
 - npm or yarn
 
 ### Installation
 
-1. **Clone and install dependencies**
+1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
-   cd fall-2025-intensive
+   git clone https://github.com/Joshkaki00/whiteboard-ide-websockets.git
+   cd whiteboard-ide-websockets
+   ```
+
+2. **Install dependencies**
+   ```bash
    npm install
    ```
 
-2. **Install Tailwind Vite plugin**
-   ```bash
-   npm install @tailwindcss/vite
-   ```
-
-3. **Start the development server**
+3. **Start both servers**
    ```bash
    npm run dev
    ```
+   This will start:
+   - Frontend dev server on `http://localhost:5173`
+   - Backend Socket.IO server on `http://localhost:3001`
 
 4. **Open your browser**
    - Navigate to `http://localhost:5173`
-   - View the complete interview interface wireframe
+   - Create a room or join with a room code
+   - Open another browser window to test real-time collaboration!
 
 ## 📋 Available Scripts
 
-- `npm run dev` - Start Vite development server with hot reload
+- `npm run dev` - Start both frontend and backend servers
+- `npm run dev:client` - Start only the Vite dev server
+- `npm run dev:server` - Start only the Socket.IO server
 - `npm run build` - Build for production
-- `npm run preview` - Preview production build locally
-- `npm run lint` - Run ESLint for code quality
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run loadtest` - Run Socket.IO load tests
+- `npm run deploy` - Deploy frontend to GitHub Pages
 
 ## 🏗️ Architecture
 
