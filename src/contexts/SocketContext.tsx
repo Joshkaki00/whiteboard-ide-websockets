@@ -110,18 +110,21 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
         resolve(false)
         return
       }
-
+  
       socket.emit('join-room', { roomId }, (response: { 
         success: boolean, 
         error?: string,
-        messages?: ChatMessage[] 
+        messages?: ChatMessage[],
+        codeContent?: string,
+        currentLanguage?: string
       }) => {
-        if (response.success && response.messages) {
-          setMessages(response.messages)
+        if (response.success) {
+          setMessages(response.messages || [])
+          setCodeContent(response.codeContent || '')
+          setCurrentLanguage(response.currentLanguage || 'javascript')
           setParticipantCount(2)
           resolve(true)
         } else {
-          console.error('Failed to join room:', response.error)
           resolve(false)
         }
       })
