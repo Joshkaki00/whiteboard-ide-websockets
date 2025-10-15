@@ -25,10 +25,10 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
   
   // Load all LeetCode problems when selector opens
   useEffect(() => {
-    if (showProblemSelector && allProblems.length === 0) {
+    if (showProblemSelector && allProblems.length === 0 && !isLoading) {
       loadAllProblems()
     }
-  }, [showProblemSelector])
+  }, [showProblemSelector, allProblems.length, isLoading])
   
   // Search with debounce
   useEffect(() => {
