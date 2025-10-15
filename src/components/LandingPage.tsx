@@ -94,22 +94,35 @@ export default function LandingPage({ onJoinRoom }: LandingPageProps) {
         </span>
       </div>
         
-        {/* Action Buttons */}
-        <div className="flex flex-col gap-3 mb-6">
-          <button 
-            onClick={handleCreateRoom}
-            disabled={!isConnected || isLoading}
-            className="py-3 px-6 border border-gray-400 rounded bg-gray-200 text-gray-700 text-sm cursor-pointer transition-all duration-200 hover:bg-gray-100 hover:border-gray-400 disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            {isLoading ? 'Creating...' : 'Create Room'}
-          </button>
-          <button 
-            onClick={handleJoinRoom}
-            disabled={!isConnected}
-            className="py-3 px-6 border border-gray-300 rounded bg-gray-50 text-gray-700 text-sm cursor-pointer transition-all duration-200 hover:bg-gray-100 hover:border-gray-400 disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            Join Room
-          </button>
+          {/* Action Cards */}
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
+            {/* Create Room Card */}
+            <div className="game-card p-6">
+              <div className="text-4xl mb-3">🎮</div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">Start New Session</h3>
+              <p className="text-sm text-gray-600 mb-4">Create a room and invite your partner</p>
+              <button 
+                onClick={handleCreateRoom}
+                disabled={!isConnected || isLoading}
+                className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isLoading ? 'Creating...' : 'Create Room'}
+              </button>
+            </div>
+
+          {/* Join Room Card */}
+          <div className="game-card p-6">
+            <div className="text-4xl mb-3">🤝</div>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">Join Session</h3>
+            <p className="text-sm text-gray-600 mb-4">Enter a room code to join</p>
+            <button 
+              onClick={handleJoinRoom}
+              disabled={!isConnected}
+              className="btn-secondary w-full disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              Join Room
+            </button>
+          </div>
         </div>
         
         {/* Room Code Input */}
