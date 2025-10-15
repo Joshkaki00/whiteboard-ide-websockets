@@ -213,6 +213,42 @@ io.on('connection', (socket) => {
     })
   })
 
+  // Whiteboard synchronization
+  socket.on('whiteboard-draw', (data: { 
+    roomId: string, 
+    x: number, 
+    y: number, 
+    prevX: number, 
+    prevY: number, 
+    color: string, 
+    lineWidth: number 
+  }) => {
+    const room = rooms.get(data.roomId)
+    if (!room || !room.participants.has(socket.id)) {
+      return
+    }
+
+    // Broadcast drawing to all OTHER participants
+    socket.to(data.roomId).emit('whiteboard-draw', {
+      x: data.x,
+      y: data.y,
+      prevX: data.prevX,
+      prevY: data.prevY,
+      color: data.color,
+      lineWidth: data.lineWidth
+    })
+  })
+
+  socket.on('whiteboard-clear', (data: { roomId: string }) => {
+    const room = rooms.get(data.roomId)
+    if (!room || !room.participants.has(socket.id)) {
+      return
+    }
+
+    // Broadcast clear to all OTHER participants
+    socket.to(data.roomId).emit('whiteboard-clear')
+  })
+
   socket.on('disconnect', () => {
     // Remove user from all rooms
     rooms.forEach((room, roomId) => {
