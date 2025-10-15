@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react'
 import { LeetCodeProblem, getLeetCodeProblem } from '../services/leetcodeService'
 
 interface ProblemPanelProps {
-  problemSlug: string
-  compact?: boolean
+  readonly problemSlug: string
+  readonly compact?: boolean
 }
 
 export default function ProblemPanel({ problemSlug, compact }: ProblemPanelProps) {
