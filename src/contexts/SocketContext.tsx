@@ -157,10 +157,13 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       createRoom,
       joinRoom,
       sendMessage,
+      sendCodeChange,
+      changeLanguage,
       messages,
-      participantCount
+      participantCount,
+      codeContent,
+      currentLanguage
     }}>
       {children}
     </SocketContext.Provider>
-  )
-}
+  )}
