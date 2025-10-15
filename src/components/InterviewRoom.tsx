@@ -1,41 +1,24 @@
-import { useState } from 'react'
 import ProblemPanel from './ProblemPanel'
 import CodeEditor from './CodeEditor'
 import Whiteboard from './Whiteboard'
 import ChatPanel from './ChatPanel'
 import ParticipantsPanel from './ParticipantsPanel'
 
-interface InterviewRoomProps {
-  roomId: string
-  onLeaveRoom: () => void
-}
-
-export default function InterviewRoom({ roomId, onLeaveRoom }: InterviewRoomProps) {
-  const [currentProblem, setCurrentProblem] = useState('two-sum')
-  const [currentLanguage, setCurrentLanguage] = useState('javascript')
-  const [timerSeconds, setTimerSeconds] = useState(1530) // 25:30
-
-  const formatTime = (seconds: number) => {
-    const mins = Math.floor(seconds / 60)
-    const secs = seconds % 60
-    return `${mins}:${secs.toString().padStart(2, '0')}`
-  }
-
+export default function InterviewRoom() {
+  // TODO: Add room state management, Socket.IO integration, timer logic
+  
   return (
     <div className="h-screen flex flex-col bg-gray-50">
       {/* Room Header */}
       <div className="bg-gray-50 py-3 px-6 flex justify-between items-center border-b border-gray-200 text-sm">
         <div className="flex items-center gap-4 text-gray-600 font-medium">
-          <span>Room: {roomId}</span>
+          <span>Room: ABC123</span>
           <span className="text-gray-300">|</span>
           <span>Problem: Two Sum</span>
           <span className="text-gray-300">|</span>
-          <span>Timer: {formatTime(timerSeconds)}</span>
+          <span>Timer: 25:30</span>
         </div>
-        <button 
-          onClick={onLeaveRoom}
-          className="bg-transparent border-none text-lg text-gray-500 cursor-pointer p-1 hover:text-gray-700"
-        >
+        <button className="bg-transparent border-none text-lg text-gray-500 cursor-pointer p-1 hover:text-gray-700">
           ✕
         </button>
       </div>
@@ -45,10 +28,7 @@ export default function InterviewRoom({ roomId, onLeaveRoom }: InterviewRoomProp
         {/* Left Sidebar */}
         <div className="bg-white flex flex-col">
           <div className="flex-1 border-b border-gray-300">
-            <ProblemPanel 
-              currentProblem={currentProblem}
-              onProblemChange={setCurrentProblem}
-            />
+            <ProblemPanel />
           </div>
           <div className="h-48">
             <ParticipantsPanel />
@@ -57,10 +37,7 @@ export default function InterviewRoom({ roomId, onLeaveRoom }: InterviewRoomProp
 
         {/* Center Code Panel */}
         <div className="bg-white flex flex-col">
-          <CodeEditor 
-            language={currentLanguage}
-            onLanguageChange={setCurrentLanguage}
-          />
+          <CodeEditor />
           <Whiteboard />
         </div>
 
@@ -73,19 +50,11 @@ export default function InterviewRoom({ roomId, onLeaveRoom }: InterviewRoomProp
       {/* Tablet/Mobile Layout */}
       <div className="flex-1 lg:hidden grid grid-rows-[200px_1fr_150px] gap-px bg-gray-300">
         <div className="bg-white">
-          <ProblemPanel 
-            currentProblem={currentProblem}
-            onProblemChange={setCurrentProblem}
-            compact
-          />
+          <ProblemPanel compact />
         </div>
         
         <div className="bg-white flex flex-col">
-          <CodeEditor 
-            language={currentLanguage}
-            onLanguageChange={setCurrentLanguage}
-            compact
-          />
+          <CodeEditor compact />
         </div>
         
         <div className="bg-white">
