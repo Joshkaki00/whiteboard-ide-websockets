@@ -95,6 +95,22 @@ io.on('connection', (socket) => {
     io.to(data.roomId).emit('new-message', chatMessage)
   })
 
+  socket.on('code-change', (data: { roomId: string, code: string }) => {
+    const room = rooms.get(data.roomId)
+    if (!room || !room.participants.has(socket.id)) {
+      return
+    }
+  
+    // Update room's code content
+    room.codeContent = data.code
+    
+    // Broadcast to all OTHER participants (not sender)
+    socket.to(data.roomId).emit('code-update', {
+      code: data.code,
+      userId: socket.id
+    })
+  })
+
   socket.on('disconnect', () => {
     // Remove user from all rooms
     rooms.forEach((room, roomId) => {
