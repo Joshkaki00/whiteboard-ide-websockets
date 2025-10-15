@@ -15,6 +15,7 @@ interface InterviewRoomProps {
 export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps) {
   const [showProblemSelector, setShowProblemSelector] = useState(false)
   const [currentProblemSlug, setCurrentProblemSlug] = useState('two-sum')
+  const [viewMode, setViewMode] = useState<'code' | 'hybrid' | 'whiteboard'>('hybrid')
   const problems = getAllProblems()
   
   return (
