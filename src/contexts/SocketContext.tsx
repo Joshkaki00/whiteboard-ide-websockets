@@ -15,8 +15,12 @@ interface SocketContextType {
   createRoom: () => Promise<string | null>
   joinRoom: (roomId: string) => Promise<boolean>
   sendMessage: (roomId: string, message: string, username: string) => void
+  sendCodeChange: (roomId: string, code: string) => void  // Add this
+  changeLanguage: (roomId: string, language: string) => void  // Add this
   messages: ChatMessage[]
   participantCount: number
+  codeContent: string  // Add this
+  currentLanguage: string  // Add this
 }
 
 const SocketContext = createContext<SocketContextType | undefined>(undefined)
