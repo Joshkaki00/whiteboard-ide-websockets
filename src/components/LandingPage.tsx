@@ -60,25 +60,39 @@ export default function LandingPage({ onJoinRoom }: LandingPageProps) {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen p-8 bg-gradient-to-br from-interview-primary to-interview-secondary">
-      <div className="bg-white rounded-lg p-8 shadow-xl text-center max-w-md w-full border-2 border-gray-200">
-        <div className="text-xl mb-8 text-gray-800 font-medium bg-gray-50 p-3 rounded border border-gray-200">
-          <h1>Interview Practice Assistant</h1>
-        </div>
-        
-        {/* Connection Status */}
-        <div className={`mb-4 text-sm ${isConnected ? 'text-green-600' : 'text-red-600'}`}>
-          {isConnected ? '● Connected' : '● Disconnected'}
-        </div>
-        
-        {/* Visual Placeholder */}
-        <div className="my-8 py-12 px-8 border-2 border-gray-200 rounded-lg bg-gray-50 relative">
-          <div className="absolute top-5 left-5 right-5 bottom-5 bg-gradient-to-br from-transparent via-gray-300 to-transparent opacity-30"></div>
-          <div className="relative z-10 text-gray-500">
-            <div className="text-3xl mb-2">💻</div>
-            <div className="text-sm">Real-time collaborative coding</div>
-          </div>
-        </div>
+    <div className="flex items-center justify-center min-h-screen p-8 bg-gradient-to-br from-purple-600 to-blue-600">
+    <div className="bg-white rounded-2xl p-8 shadow-2xl text-center max-w-2xl w-full">
+      {/* Achievement Badge & XP Counter */}
+      <div className="flex justify-center gap-3 mb-6">
+        <span className="achievement-badge">
+          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+          Level {level} Coder
+        </span>
+        <span className="xp-counter">
+          <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" />
+          </svg>
+          {xp} XP
+        </span>
+      </div>
+
+      {/* Hero Title */}
+      <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-4">
+        CodePair
+      </h1>
+      <p className="text-xl text-gray-600 mb-6">
+        Level up your coding skills with real-time collaborative interviews 🚀
+      </p>
+      
+      {/* Connection Status */}
+      <div className="flex items-center justify-center gap-2 mb-8">
+        <div className={`status-dot ${isConnected ? 'status-online' : 'status-offline'}`}></div>
+        <span className={`text-sm font-medium ${isConnected ? 'text-green-600' : 'text-gray-500'}`}>
+          {isConnected ? 'Connected to server' : 'Connecting...'}
+        </span>
+      </div>
         
         {/* Action Buttons */}
         <div className="flex flex-col gap-3 mb-6">
