@@ -12,6 +12,9 @@ export interface LeetCodeProblem {
     java: string;
     cpp: string;
   }
+  isPremium?: boolean;
+  topicTags?: string[];
+  acRate?: number;
 }
 
 // Hardcoded problems with real LeetCode data structure
@@ -193,7 +196,7 @@ export const getLeetCodeProblem = async (slug: string): Promise<LeetCodeProblem 
     
     if (!problem) return null
 
-    return {
+    const result: LeetCodeProblem = {
       id: problem.frontendQuestionId,
       title: problem.title,
       titleSlug: problem.titleSlug,
@@ -211,6 +214,7 @@ export const getLeetCodeProblem = async (slug: string): Promise<LeetCodeProblem 
       topicTags: problem.topicTags?.map((t: any) => t.name) || [],
       acRate: problem.acRate
     }
+    return result
   } catch (error) {
     console.error('Failed to fetch problem:', error)
     return null
