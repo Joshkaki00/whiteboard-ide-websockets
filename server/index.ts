@@ -111,6 +111,31 @@ io.on('connection', (socket) => {
     })
   })
 
+  socket.on('language-change', (data: { roomId: string, language: string }) => {
+    const room = rooms.get(data.roomId)
+    if (!room || !room.participants.has(socket.id)) {
+      return
+    }
+  
+    room.currentLanguage = data.language
+    
+    // Update starter code based on language
+    const starterCodes: Record<string, string> = {
+      javascript: `function twoSum(nums, target) {\n    \n}`,
+      python: `def two_sum(nums, target):\n    pass`,
+      java: `public int[] twoSum(int[] nums, int target) {\n    \n}`,
+      cpp: `vector<int> twoSum(vector<int>& nums, int target) {\n    \n}`
+    }
+    
+    room.codeContent = starterCodes[data.language] || starterCodes.javascript
+    
+    // Broadcast to all participants including sender
+    io.to(data.roomId).emit('language-update', {
+      language: data.language,
+      code: room.codeContent
+    })
+  })
+
   socket.on('disconnect', () => {
     // Remove user from all rooms
     rooms.forEach((room, roomId) => {
