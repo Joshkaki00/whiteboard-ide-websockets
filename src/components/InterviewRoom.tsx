@@ -142,8 +142,18 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
 
         {/* Center Code Panel */}
         <div className="bg-white flex flex-col">
-          <CodeEditor roomId={roomId} />  {/* Add roomId */}
-          <Whiteboard />
+          {viewMode === 'code' && (
+            <CodeEditor roomId={roomId} />
+          )}
+          {viewMode === 'hybrid' && (
+            <>
+              <CodeEditor roomId={roomId} />
+              <Whiteboard roomId={roomId} />
+            </>
+          )}
+          {viewMode === 'whiteboard' && (
+            <Whiteboard roomId={roomId} />
+          )}
         </div>
 
         {/* Right Sidebar */}
@@ -159,7 +169,18 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
         </div>
         
         <div className="bg-white flex flex-col">
-          <CodeEditor roomId={roomId} compact />  {/* Add roomId */}
+          {viewMode === 'code' && (
+            <CodeEditor roomId={roomId} compact />
+          )}
+          {viewMode === 'hybrid' && (
+            <div className="grid grid-rows-2 h-full">
+              <CodeEditor roomId={roomId} compact />
+              <Whiteboard roomId={roomId} />
+            </div>
+          )}
+          {viewMode === 'whiteboard' && (
+            <Whiteboard roomId={roomId} />
+          )}
         </div>
         
         <div className="bg-white">
