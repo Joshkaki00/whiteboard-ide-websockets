@@ -10,10 +10,9 @@ import ParticipantsPanel from './ParticipantsPanel'
 interface InterviewRoomProps {
   readonly roomId: string;
   readonly onLeaveRoom: () => void;
-  readonly problemTitle?: string;
 }
 
-export default function InterviewRoom({ roomId, onLeaveRoom, problemTitle }: InterviewRoomProps) {
+export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps) {
   const [showProblemSelector, setShowProblemSelector] = useState(false)
   const [currentProblemSlug, setCurrentProblemSlug] = useState('two-sum')
   const problems = getAllProblems()

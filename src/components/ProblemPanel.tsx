@@ -9,7 +9,7 @@ interface ProblemPanelProps {
 export default function ProblemPanel({ problemSlug, compact }: ProblemPanelProps) {
   const [problem, setProblem] = useState<LeetCodeProblem | null>(null)
   const [activeTab, setActiveTab] = useState<'description' | 'examples' | 'constraints'>('description')
-
+;
   useEffect(() => {
     const loadProblem = async () => {
       const data = await getLeetCodeProblem(problemSlug)
