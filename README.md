@@ -6,22 +6,63 @@ A modern, gamified interview practice tool for technical coding interviews with 
 
 **📖 Deployment Guide**: [DEPLOYMENT.md](DEPLOYMENT.md)
 
-## ✨ Current Features
+## ✨ Features
 
-### 🎨 **Complete UI Wireframe**
-- **Landing Page**: Clean interface for room creation/joining
-- **Interview Room**: Professional 3-panel layout with responsive design
-- **Problem Panel**: Displays coding problems with difficulty levels
-- **Code Editor**: Syntax-highlighted editor with language selection
-- **Whiteboard**: Canvas area for drawing and explanations
-- **Chat Interface**: Messaging panel for communication
-- **Participants List**: Shows connected users
+### 🎮 **Gamified Experience**
+- **XP System**: Track your coding progress with experience points
+- **Level System**: Advance through coder levels
+- **Achievement Badges**: Earn rewards for milestones
+- **Professional Slack-like UI**: Clean, modern interface with smooth animations
+
+### 🤝 **Real-Time Collaboration**
+- **Room Creation/Joining**: 8-character room codes for easy sharing
+- **Live Chat**: Real-time messaging between participants
+- **Synchronized Code Editing**: See changes as your partner types
+- **Participant Tracking**: Know when users join/leave
+- **Connection Status**: Visual indicators for server connection
+
+### 💻 **Code Editor**
+- **Multi-Language Support**: JavaScript, Python, Java, C++
+- **Language Switching**: Change languages mid-session with starter code
+- **Syntax Highlighting**: Dark-themed code editor
+- **Live Synchronization**: Changes sync in real-time across users
+- **Cursor Position Preservation**: Smart cursor handling during updates
+
+### 📚 **Problem Bank**
+- **4 LeetCode Problems**: Curated interview questions
+  - Two Sum (Easy)
+  - Valid Parentheses (Easy)
+  - Merge Two Sorted Lists (Easy)
+  - Best Time to Buy and Sell Stock (Easy)
+- **Problem Switcher**: Change problems mid-session
+- **Tabbed Interface**: Description, Examples, Constraints
+- **Difficulty Badges**: Color-coded Easy/Medium/Hard indicators
+
+### ⏱️ **Timer Functionality**
+- **45-Minute Timer**: Default interview duration
+- **Start/Pause/Reset**: Full control over timing
+- **Color-Coded Urgency**: Visual feedback as time runs out
+- **Synced Across Users**: Timer state shared in real-time
+
+### 🎨 **Whiteboard**
+- **Drawing Canvas**: Sketch algorithms and data structures
+- **Multiple Tools**: Freehand drawing, shapes, text
+- **Color Palette**: Customizable drawing colors
+- **Clear Function**: Reset canvas when needed
+
+### 📱 **Responsive Design**
+- **Desktop (1024px+)**: 3-column layout with full features
+- **Tablet (768px-1023px)**: 2x2 grid optimized layout
+- **Mobile Blocker**: Friendly message for phones (not supported)
+- **Breakpoint-Aware**: Smooth transitions between layouts
 
 ### 💻 **Technical Stack**
 - **Frontend**: React 19 + TypeScript
-- **Build Tool**: Vite 7 for fast development
-- **Styling**: Tailwind CSS with custom components
-- **Development**: Hot reload with instant updates
+- **Backend**: Node.js + Express + Socket.IO
+- **Build Tool**: Vite 7 for lightning-fast development
+- **Styling**: Tailwind CSS 4 with custom components
+- **Real-Time**: Socket.IO for WebSocket communication
+- **Type Safety**: Full TypeScript coverage
 
 ## 🚀 Quick Start
 
