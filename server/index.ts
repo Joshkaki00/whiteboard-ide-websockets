@@ -121,6 +121,35 @@ io.on('connection', (socket) => {
     callback({ success: true })
   })
 
+  socket.on('start-timer', (data: { roomId: string, duration: number }) => {
+    const room = rooms.get(data.roomId)
+    if (!room) return
+  
+    room.timerStartedAt = new Date()
+    room.timerDuration = data.duration
+  
+    io.to(data.roomId).emit('timer-started', {
+      startedAt: room.timerStartedAt,
+      duration: room.timerDuration
+    })
+  })
+  
+  socket.on('pause-timer', (data: { roomId: string }) => {
+    const room = rooms.get(data.roomId)
+    if (!room) return
+  
+    io.to(data.roomId).emit('timer-paused')
+  })
+  
+  socket.on('reset-timer', (data: { roomId: string }) => {
+    const room = rooms.get(data.roomId)
+    if (!room) return
+  
+    room.timerStartedAt = null
+  
+    io.to(data.roomId).emit('timer-reset')
+  })
+
   socket.on('code-change', (data: { roomId: string, code: string }) => {
     const room = rooms.get(data.roomId)
     if (!room || !room.participants.has(socket.id)) {
