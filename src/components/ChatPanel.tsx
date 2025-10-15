@@ -6,7 +6,7 @@ interface ChatPanelProps {
   compact?: boolean
 }
 
-export default function ChatPanel({ roomId, compact }: ChatPanelProps) {
+export default function ChatPanel({ roomId }: ChatPanelProps) {
   const { sendMessage, messages, participantCount } = useSocket()
   const [inputMessage, setInputMessage] = useState('')
   const [username] = useState(`User${Math.floor(Math.random() * 1000)}`)
