@@ -4,22 +4,27 @@ import Whiteboard from './Whiteboard'
 import ChatPanel from './ChatPanel'
 import ParticipantsPanel from './ParticipantsPanel'
 
-export default function InterviewRoom() {
-  // TODO: Add room state management, Socket.IO integration, timer logic
+interface InterviewRoomProps {
+  roomId: string
+  onLeaveRoom: () => void
+  problemTitle?: string
+}
+
+export default function InterviewRoom({ roomId, onLeaveRoom, problemTitle }: InterviewRoomProps) {
   
   return (
     <div className="h-screen flex flex-col bg-gray-50">
       {/* Room Header */}
       <div className="bg-gray-50 py-3 px-6 flex justify-between items-center border-b border-gray-200 text-sm">
         <div className="flex items-center gap-4 text-gray-600 font-medium">
-          <span>Room: ABC123</span>
+          <span>Room: {roomId}</span>
           <span className="text-gray-300">|</span>
-          <span>Problem: Two Sum</span>
+          <span>Problem: {problemTitle}</span>
           <span className="text-gray-300">|</span>
           <span>Timer: 25:30</span>
         </div>
-        <button className="bg-transparent border-none text-lg text-gray-500 cursor-pointer p-1 hover:text-gray-700">
-          ✕
+        <button onClick={onLeaveRoom} className="bg-transparent border-none text-lg text-gray-500 cursor-pointer p-1 hover:text-gray-700">
+          <span>✕</span>
         </button>
       </div>
 
@@ -43,7 +48,7 @@ export default function InterviewRoom() {
 
         {/* Right Sidebar */}
         <div className="bg-white">
-          <ChatPanel />
+          <ChatPanel roomId={roomId} />
         </div>
       </div>
 
@@ -58,7 +63,7 @@ export default function InterviewRoom() {
         </div>
         
         <div className="bg-white">
-          <ChatPanel compact />
+          <ChatPanel roomId={roomId} compact />
         </div>
       </div>
     </div>
