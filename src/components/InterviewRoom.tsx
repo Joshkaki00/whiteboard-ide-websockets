@@ -87,9 +87,9 @@ export default function InterviewRoom({ roomId, onLeaveRoom, problemTitle }: Int
       <div className="flex-1 hidden lg:grid lg:grid-cols-[280px_1fr_280px] gap-px bg-gray-300 overflow-hidden">
         {/* Left Sidebar */}
         <div className="bg-white flex flex-col">
-          <div className="flex-1 border-b border-gray-300">
-            <ProblemPanel />
-          </div>
+        <div className="hidden lg:block lg:w-1/3 bg-white border-r border-gray-200">
+          <ProblemPanel problemSlug={currentProblemSlug} />
+        </div>
           <div className="h-48">
             <ParticipantsPanel />
           </div>
