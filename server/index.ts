@@ -102,6 +102,25 @@ io.on('connection', (socket) => {
     io.to(data.roomId).emit('new-message', chatMessage)
   })
 
+  socket.on('change-problem', (data: { roomId: string, problemSlug: string, starterCode: string }, callback) => {
+    const room = rooms.get(data.roomId)
+    if (!room || !room.participants.has(socket.id)) {
+      callback({ success: false, error: 'Unauthorized' })
+      return
+    }
+  
+    room.currentProblem = data.problemSlug
+    room.codeContent = data.starterCode
+  
+    // Broadcast to all participants
+    io.to(data.roomId).emit('problem-changed', {
+      problemSlug: data.problemSlug,
+      code: data.starterCode
+    })
+  
+    callback({ success: true })
+  })
+
   socket.on('code-change', (data: { roomId: string, code: string }) => {
     const room = rooms.get(data.roomId)
     if (!room || !room.participants.has(socket.id)) {
