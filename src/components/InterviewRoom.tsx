@@ -5,9 +5,9 @@ import ChatPanel from './ChatPanel'
 import ParticipantsPanel from './ParticipantsPanel'
 
 interface InterviewRoomProps {
-  roomId: string
-  onLeaveRoom: () => void
-  problemTitle?: string
+  readonly roomId: string;
+  readonly onLeaveRoom: () => void;
+  readonly problemTitle?: string;
 }
 
 export default function InterviewRoom({ roomId, onLeaveRoom, problemTitle }: InterviewRoomProps) {

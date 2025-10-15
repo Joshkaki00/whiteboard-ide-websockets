@@ -3,7 +3,6 @@ interface CodeEditorProps {
 }
 
 export default function CodeEditor({ compact }: CodeEditorProps) {
-  // TODO: Add code synchronization, language switching, Socket.IO integration
 
   return (
     <div className="flex flex-col flex-1">
