@@ -170,23 +170,33 @@ fall-2025-intensive/
 
 ## 🎨 Design System
 
-### Custom Tailwind Components
-- `.btn` - Primary button styling with hover effects
-- `.panel-header` - Consistent panel headers across components
-- `.difficulty-easy/medium/hard` - Problem difficulty badges
-- `.code-editor` - Dark-themed code editing area
+### Gamified Components
+- `.game-card` - Hover-animated cards with border effects
+- `.achievement-badge` - Gradient badges for XP/levels
+- `.xp-counter` - Lightning bolt XP display
+- `.status-dot` - Animated online/offline indicators
+- `.btn-primary` - Purple gradient action buttons
+- `.btn-secondary` - White bordered secondary buttons
+
+### Slack-Inspired Elements
+- `.panel-header` - Clean section headers
+- `.progress-bar` - Animated progress indicators
+- `.glass` - Glassmorphism backgrounds
+- `.glow` - Subtle glow effects
 
 ### Color Palette
-- **Primary**: `#667eea` (Interview blue)
-- **Secondary**: `#764ba2` (Purple gradient)
-- **Success**: `#48bb78` (Green actions)
-- **Danger**: `#f56565` (Red warnings)
+- **Primary**: `#9333ea` → `#3b82f6` (Purple to Blue gradient)
+- **Success**: `#10b981` (Green for online status)
+- **Warning**: `#f59e0b` (Yellow for timer warnings)
+- **Danger**: `#ef4444` (Red for critical alerts)
+- **Neutrals**: Gray scale for backgrounds and text
 
-## 📱 Responsive Design
+## 📱 Responsive Strategy
 
-- **Desktop (1024px+)**: 3-panel layout with full feature visibility
-- **Tablet (768-1024px)**: Stacked layout with condensed panels
-- **Mobile (<768px)**: Single-column layout optimized for touch
+- **Desktop (1024px+)**: 3-column layout (Problem | Code+Whiteboard | Chat)
+- **Tablet (768px-1023px)**: 2x2 grid layout
+- **Phone (<768px)**: Blocked with upgrade message
+- **Breakpoint Tool**: Custom `useMediaQuery` hook
 
 ## 🛠️ Development Workflow
 
