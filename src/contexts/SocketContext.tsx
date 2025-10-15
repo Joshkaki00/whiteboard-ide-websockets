@@ -137,6 +137,19 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     }
   }
 
+  const sendCodeChange = (roomId: string, code: string) => {
+    if (socket) {
+      setCodeContent(code)  // Update local state immediately
+      socket.emit('code-change', { roomId, code })
+    }
+  }
+  
+  const changeLanguage = (roomId: string, language: string) => {
+    if (socket) {
+      socket.emit('language-change', { roomId, language })
+    }
+  }
+
   return (
     <SocketContext.Provider value={{
       socket,
