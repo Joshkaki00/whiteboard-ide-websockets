@@ -3,10 +3,9 @@ import { type LeetCodeProblem, getLeetCodeProblem } from '../services/leetcodeSe
 
 interface ProblemPanelProps {
   readonly problemSlug: string
-  readonly compact?: boolean
 }
 
-export default function ProblemPanel({ problemSlug, compact }: ProblemPanelProps) {
+export default function ProblemPanel({ problemSlug}: ProblemPanelProps) {
   const [problem, setProblem] = useState<LeetCodeProblem | null>(null)
   const [activeTab, setActiveTab] = useState<'description' | 'examples' | 'constraints'>('description')
 ;
