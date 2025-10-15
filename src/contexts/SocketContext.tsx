@@ -42,7 +42,7 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   const [currentLanguage, setCurrentLanguage] = useState('javascript')
 
   useEffect(() => {
-    const newSocket = io('http://localhost:3001')
+    const newSocket = io(import.meta.env.VITE_SERVER_URL || 'http://localhost:3001')
     
     newSocket.on('connect', () => {
       setIsConnected(true)

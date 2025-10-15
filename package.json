@@ -9,7 +9,10 @@
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "loadtest": "node tests/loadtest.js"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.14",
