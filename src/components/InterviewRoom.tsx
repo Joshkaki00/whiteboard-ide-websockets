@@ -26,6 +26,7 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
   // Load all LeetCode problems when selector opens
   useEffect(() => {
     if (showProblemSelector && allProblems.length === 0 && !isLoading) {
+      setIsLoading(true)
       loadAllProblems()
     }
   }, [showProblemSelector, allProblems.length, isLoading])
@@ -33,7 +34,7 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
   // Search with debounce
   useEffect(() => {
     if (!searchQuery) {
-      setFilteredProblems(allProblems.slice(0, 50))
+      setFilteredProblems(allProblems.length > 0 ? allProblems.slice(0, 50) : [])
       return
     }
     
