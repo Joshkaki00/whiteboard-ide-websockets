@@ -1,39 +1,184 @@
-import { useRef } from 'react'
+import { useRef, useEffect, useState } from 'react'
+import { useSocket } from '../contexts/SocketContext'
 
-export default function Whiteboard() {
+interface WhiteboardProps {
+  roomId: string
+}
+
+interface DrawingData {
+  x: number
+  y: number
+  prevX: number
+  prevY: number
+  color: string
+  lineWidth: number
+}
+
+export default function Whiteboard({ roomId }: WhiteboardProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  
-  // TODO: Add drawing functionality, Socket.IO synchronization for collaborative drawing
+  const [isDrawing, setIsDrawing] = useState(false)
+  const [color, setColor] = useState('#000000')
+  const [lineWidth, setLineWidth] = useState(2)
+  const [context, setContext] = useState<CanvasRenderingContext2D | null>(null)
+  const lastPosRef = useRef<{ x: number; y: number } | null>(null)
+  const { socket } = useSocket()
+
+  // Initialize canvas
+  useEffect(() => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+
+    // Set canvas size to match display size
+    const rect = canvas.getBoundingClientRect()
+    canvas.width = rect.width
+    canvas.height = rect.height
+
+    ctx.lineCap = 'round'
+    ctx.lineJoin = 'round'
+    setContext(ctx)
+  }, [])
+
+  // Listen for remote drawing
+  useEffect(() => {
+    if (!socket) return
+
+    socket.on('whiteboard-draw', (data: DrawingData) => {
+      drawLine(data.prevX, data.prevY, data.x, data.y, data.color, data.lineWidth)
+    })
+
+    socket.on('whiteboard-clear', () => {
+      clearCanvas()
+    })
+
+    return () => {
+      socket.off('whiteboard-draw')
+      socket.off('whiteboard-clear')
+    }
+  }, [socket, context])
+
+  const drawLine = (x1: number, y1: number, x2: number, y2: number, strokeColor: string, strokeWidth: number) => {
+    if (!context) return
+
+    context.beginPath()
+    context.moveTo(x1, y1)
+    context.lineTo(x2, y2)
+    context.strokeStyle = strokeColor
+    context.lineWidth = strokeWidth
+    context.stroke()
+    context.closePath()
+  }
+
+  const getMousePos = (e: React.MouseEvent<HTMLCanvasElement>) => {
+    const canvas = canvasRef.current
+    if (!canvas) return { x: 0, y: 0 }
+
+    const rect = canvas.getBoundingClientRect()
+    return {
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top
+    }
+  }
+
+  const handleMouseDown = (e: React.MouseEvent<HTMLCanvasElement>) => {
+    setIsDrawing(true)
+    const pos = getMousePos(e)
+    lastPosRef.current = pos
+  }
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLCanvasElement>) => {
+    if (!isDrawing || !lastPosRef.current) return
+
+    const pos = getMousePos(e)
+
+    // Draw locally
+    drawLine(lastPosRef.current.x, lastPosRef.current.y, pos.x, pos.y, color, lineWidth)
+
+    // Send to other users
+    if (socket) {
+      socket.emit('whiteboard-draw', {
+        roomId,
+        x: pos.x,
+        y: pos.y,
+        prevX: lastPosRef.current.x,
+        prevY: lastPosRef.current.y,
+        color,
+        lineWidth
+      })
+    }
+
+    lastPosRef.current = pos
+  }
+
+  const handleMouseUp = () => {
+    setIsDrawing(false)
+    lastPosRef.current = null
+  }
+
+  const handleMouseLeave = () => {
+    setIsDrawing(false)
+    lastPosRef.current = null
+  }
+
+  const clearCanvas = () => {
+    if (!context || !canvasRef.current) return
+    context.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height)
+  }
+
+  const handleClear = () => {
+    clearCanvas()
+    if (socket) {
+      socket.emit('whiteboard-clear', { roomId })
+    }
+  }
 
   return (
-    <div className="border-t border-gray-300 bg-white">
-      <div className="py-2 px-4 bg-gray-50 border-b border-gray-300 flex justify-between items-center text-xs text-gray-500">
-        <span>Collaborative Whiteboard</span>
+    <div className="flex flex-col flex-1 bg-white">
+      <div className="panel-header border-b border-gray-200">
+        <h3>Collaborative Whiteboard</h3>
         <div className="flex gap-2 items-center">
-          <input
-            type="color"
-            defaultValue="#000000"
-            className="w-5 h-5 border-none rounded-sm"
-          />
-          <input
-            type="range"
-            min="1"
-            max="10"
-            defaultValue="2"
-            className="w-16"
-          />
-          <button className="btn-sm py-1 px-2 text-xs border border-gray-300 bg-gray-50 rounded cursor-pointer hover:bg-gray-200">
+          <div className="flex items-center gap-1">
+            <span className="text-xs text-gray-600">Color:</span>
+            <input
+              type="color"
+              value={color}
+              onChange={(e) => setColor(e.target.value)}
+              className="w-6 h-6 border border-gray-300 rounded cursor-pointer"
+            />
+          </div>
+          <div className="flex items-center gap-1">
+            <span className="text-xs text-gray-600">Size:</span>
+            <input
+              type="range"
+              min="1"
+              max="10"
+              value={lineWidth}
+              onChange={(e) => setLineWidth(Number(e.target.value))}
+              className="w-16"
+            />
+            <span className="text-xs text-gray-600 w-4">{lineWidth}</span>
+          </div>
+          <button 
+            onClick={handleClear}
+            className="btn-secondary text-xs py-1 px-3"
+          >
             Clear
           </button>
         </div>
       </div>
-      <canvas
-        ref={canvasRef}
-        className="block border-b border-gray-300 cursor-crosshair w-full"
-        style={{ height: '200px' }}
-        width={500}
-        height={200}
-      />
+      <div className="flex-1 overflow-hidden">
+        <canvas
+          ref={canvasRef}
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseLeave}
+          className="w-full h-full cursor-crosshair"
+          style={{ touchAction: 'none' }}
+        />
+      </div>
     </div>
   )
 }
