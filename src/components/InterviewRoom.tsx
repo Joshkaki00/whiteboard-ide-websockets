@@ -177,7 +177,10 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
                         <div className="flex items-center justify-between gap-3">
                           <div className="flex-1 min-w-0">
                             <div className="font-medium text-gray-800 truncate">{problem.title}</div>
-                            <div className="text-xs text-gray-500 mt-0.5">#{problem.id}</div>
+                            <div className="text-xs text-gray-500 mt-0.5">
+                              #{problem.frontendQuestionId || problem.id}
+                              {problem.paidOnly && <span className="ml-2 text-orange-500">🔒 Premium</span>}
+                            </div>
                           </div>
                           <span className={`px-2 py-1 rounded-full text-xs font-medium whitespace-nowrap ${
                             problem.difficulty === 'Easy' ? 'bg-green-100 text-green-700' :
@@ -194,7 +197,10 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
 
                 {/* Footer Stats */}
                 <div className="p-2 border-t border-gray-200 bg-gray-50 text-xs text-gray-500 flex items-center justify-between">
-                  <span>{filteredProblems.length} of {problems.length} problems</span>
+                  <span>
+                    {isSearching ? 'Searching...' : `${filteredProblems.length} of ${allProblems.length || 'Loading'} problems`}
+                    {allProblems.length > 0 && <span className="ml-2 text-green-600">✓ Free</span>}
+                  </span>
                   <button
                     onClick={() => {
                       setShowProblemSelector(false)
