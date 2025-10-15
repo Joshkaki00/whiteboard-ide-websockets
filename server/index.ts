@@ -20,6 +20,9 @@ interface Room {
   id: string
   participants: Set<string>
   messages: ChatMessage[]
+  codeContent: string
+  currentLanguage: string
+  currentProblem: string
 }
 
 interface ChatMessage {
