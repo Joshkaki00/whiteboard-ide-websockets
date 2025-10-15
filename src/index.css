@@ -1,1 +1,81 @@
 @import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-gray-50 font-sans antialiased;
+  }
+}
+
+@layer components {
+  /* Gamified Card Style */
+  .game-card {
+    @apply bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-purple-400 transition-all duration-300 hover:shadow-xl hover:scale-105;
+  }
+
+  /* Achievement Badge */
+  .achievement-badge {
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r from-yellow-400 to-orange-500 text-white shadow-md;
+  }
+
+  /* Progress Bar */
+  .progress-bar {
+    @apply w-full h-2 bg-gray-200 rounded-full overflow-hidden;
+  }
+
+  .progress-bar-fill {
+    @apply h-full bg-gradient-to-r from-purple-500 to-blue-500 transition-all duration-500;
+  }
+
+  /* Slack-like Panel Header */
+  .panel-header {
+    @apply flex items-center justify-between px-4 py-3 bg-white border-b border-gray-200;
+  }
+
+  .panel-header h3 {
+    @apply text-sm font-semibold text-gray-800;
+  }
+
+  /* Code Editor Styles */
+  .code-editor {
+    @apply w-full h-full p-4 font-mono text-sm bg-gray-900 text-gray-100 border-none outline-none resize-none;
+  }
+
+  /* Slack-like Button */
+  .btn-primary {
+    @apply px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-lg transition-all duration-200 shadow-md hover:shadow-lg active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-white hover:bg-gray-50 text-gray-800 font-medium rounded-lg border border-gray-300 transition-all duration-200 hover:border-purple-400 active:scale-95;
+  }
+
+  /* Gamified Status Indicator */
+  .status-dot {
+    @apply w-2 h-2 rounded-full animate-pulse;
+  }
+
+  .status-online {
+    @apply bg-green-500;
+  }
+
+  .status-offline {
+    @apply bg-gray-400;
+  }
+
+  /* XP Counter */
+  .xp-counter {
+    @apply inline-flex items-center gap-1 px-2 py-1 bg-blue-100 text-blue-700 rounded-md text-xs font-semibold;
+  }
+}
+
+@layer utilities {
+  /* Glassmorphism */
+  .glass {
+    @apply bg-white/80 backdrop-blur-lg;
+  }
+
+  /* Glow effect */
+  .glow {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+  }
+}
