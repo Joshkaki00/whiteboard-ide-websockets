@@ -47,27 +47,37 @@ export default function ChatPanel({ roomId }: ChatPanelProps) {
         </span>
       </div>
       
-      <div className="flex-1 p-4 overflow-y-auto text-sm">
+      <div className="flex-1 p-4 overflow-y-auto text-sm bg-gray-50">
         {messages.length === 0 ? (
-          <div className="text-center text-gray-500 italic">
-            No messages yet. Start the conversation!
+          <div className="text-center text-gray-400 italic mt-8">
+            💬 No messages yet. Start the conversation!
           </div>
         ) : (
           messages.map((msg) => (
             <div 
               key={msg.id}
-              className={`mb-3 p-2 rounded-lg ${
+              className={`mb-3 ${
                 msg.username === username
-                  ? 'bg-teal-50 ml-8'
-                  : 'bg-gray-100 mr-8'
+                  ? 'flex justify-end'
+                  : 'flex justify-start'
               }`}
             >
-              <div className="font-semibold text-sm text-gray-600 mb-1">
-                {msg.username}
-              </div>
-              <div className="text-gray-800">{msg.message}</div>
-              <div className="text-xs text-gray-400 mt-1">
-                {new Date(msg.timestamp).toLocaleTimeString()}
+              <div className={`max-w-[80%] p-3 rounded-lg shadow-sm ${
+                msg.username === username
+                  ? 'bg-purple-100 border border-purple-200'
+                  : 'bg-white border border-gray-200'
+              }`}>
+                <div className={`text-xs font-semibold mb-1 ${
+                  msg.username === username
+                    ? 'text-purple-700'
+                    : 'text-gray-600'
+                }`}>
+                  {msg.username}
+                </div>
+                <div className="text-gray-800 break-words">{msg.message}</div>
+                <div className="text-xs text-gray-400 mt-1">
+                  {new Date(msg.timestamp).toLocaleTimeString()}
+                </div>
               </div>
             </div>
           ))
@@ -75,21 +85,23 @@ export default function ChatPanel({ roomId }: ChatPanelProps) {
         <div ref={messagesEndRef} />
       </div>
       
-      <div className="p-4 border-t border-gray-300 flex gap-2">
+      <div className="p-4 border-t border-gray-200 bg-white flex gap-2">
         <input
           type="text"
           value={inputMessage}
           onChange={(e) => setInputMessage(e.target.value)}
-          onKeyPress={handleKeyPress}
+          onKeyDown={handleKeyPress}
           placeholder="Type a message..."
-          className="flex-1 py-2 px-3 border border-gray-300 rounded text-xs focus:outline-none focus:border-gray-500"
+          className="flex-1 py-2 px-4 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
         />
         <button
           onClick={handleSendMessage}
           disabled={!inputMessage.trim()}
-          className="py-2 px-4 bg-gray-100 border border-gray-300 rounded text-xs cursor-pointer text-gray-700 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="py-2 px-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-purple-600"
         >
-          Send
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+          </svg>
         </button>
       </div>
     </div>
