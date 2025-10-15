@@ -130,35 +130,43 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
       </div>
 
       {/* Desktop Layout */}
-      <div className="flex-1 hidden lg:grid lg:grid-cols-[280px_1fr_280px] gap-px bg-gray-300 overflow-hidden">
-        {/* Left Sidebar */}
-        <div className="bg-white flex flex-col">
-          <div className="hidden lg:block lg:w-1/3 bg-white border-r border-gray-200">
+      <div className="flex-1 hidden lg:flex gap-0 overflow-hidden">
+        {/* Left Sidebar: Problem + Participants */}
+        <div className="w-[320px] bg-white border-r border-gray-200 flex flex-col">
+          <div className="flex-1 overflow-auto">
             <ProblemPanel problemSlug={currentProblemSlug} />
           </div>
-          <div className="h-48">
+          <div className="h-48 border-t border-gray-200">
             <ParticipantsPanel />
           </div>
         </div>
 
-        {/* Center Code Panel */}
-        <div className="bg-white flex flex-col">
+        {/* Center Panel: Code + Whiteboard */}
+        <div className="flex-1 bg-white flex flex-col overflow-hidden">
           {viewMode === 'code' && (
-            <CodeEditor roomId={roomId} />
+            <div className="flex-1 overflow-hidden">
+              <CodeEditor roomId={roomId} />
+            </div>
           )}
           {viewMode === 'hybrid' && (
             <>
-              <CodeEditor roomId={roomId} />
-              <Whiteboard roomId={roomId} />
+              <div className="flex-1 overflow-hidden">
+                <CodeEditor roomId={roomId} />
+              </div>
+              <div className="h-[300px] border-t border-gray-200">
+                <Whiteboard roomId={roomId} />
+              </div>
             </>
           )}
           {viewMode === 'whiteboard' && (
-            <Whiteboard roomId={roomId} />
+            <div className="flex-1 overflow-hidden">
+              <Whiteboard roomId={roomId} />
+            </div>
           )}
         </div>
 
-        {/* Right Sidebar */}
-        <div className="bg-white">
+        {/* Right Sidebar: Chat */}
+        <div className="w-[320px] bg-white border-l border-gray-200">
           <ChatPanel roomId={roomId} />
         </div>
       </div>
