@@ -55,29 +55,89 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
 
             {/* Problem Selector Dropdown */}
             {showProblemSelector && (
-              <div className="absolute top-16 left-6 bg-white border border-gray-200 rounded-lg shadow-xl z-50 w-80">
-                <div className="p-2">
-                  {problems.map((problem) => (
+              <div className="absolute top-16 left-6 bg-white border border-gray-200 rounded-lg shadow-xl z-50 w-96">
+                {/* Search Header */}
+                <div className="p-3 border-b border-gray-200">
+                  <div className="flex gap-2">
+                    <div className="flex-1 relative">
+                      <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                      </svg>
+                      <input
+                        type="text"
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        placeholder="Search problems..."
+                        className="w-full pl-9 pr-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500"
+                        autoFocus
+                      />
+                    </div>
                     <button
-                      key={problem.titleSlug}
-                      onClick={() => {
-                        setCurrentProblemSlug(problem.titleSlug)
-                        setShowProblemSelector(false)
-                      }}
-                      className="w-full text-left px-4 py-3 hover:bg-purple-50 rounded-md transition-colors"
+                      onClick={handleRandomProblem}
+                      className="px-3 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-1"
+                      title="Random Problem"
                     >
-                      <div className="flex items-center justify-between">
-                        <span className="font-medium text-gray-800">{problem.title}</span>
-                        <span className={`px-2 py-1 rounded-full text-xs ${
-                          problem.difficulty === 'Easy' ? 'bg-green-100 text-green-700' :
-                          problem.difficulty === 'Medium' ? 'bg-yellow-100 text-yellow-700' :
-                          'bg-red-100 text-red-700'
-                        }`}>
-                          {problem.difficulty}
-                        </span>
-                      </div>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                      </svg>
+                      Random
                     </button>
-                  ))}
+                  </div>
+                </div>
+
+                {/* Problems List */}
+                <div className="max-h-96 overflow-y-auto p-2">
+                  {filteredProblems.length === 0 ? (
+                    <div className="text-center py-8 text-gray-400">
+                      <svg className="w-12 h-12 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <p className="text-sm">No problems found</p>
+                      <p className="text-xs mt-1">Try a different search term</p>
+                    </div>
+                  ) : (
+                    filteredProblems.map((problem) => (
+                      <button
+                        key={problem.titleSlug}
+                        onClick={() => {
+                          setCurrentProblemSlug(problem.titleSlug)
+                          setShowProblemSelector(false)
+                          setSearchQuery('')
+                        }}
+                        className={`w-full text-left px-4 py-3 hover:bg-purple-50 rounded-md transition-colors ${
+                          currentProblemSlug === problem.titleSlug ? 'bg-purple-50 border border-purple-200' : ''
+                        }`}
+                      >
+                        <div className="flex items-center justify-between gap-3">
+                          <div className="flex-1 min-w-0">
+                            <div className="font-medium text-gray-800 truncate">{problem.title}</div>
+                            <div className="text-xs text-gray-500 mt-0.5">#{problem.id}</div>
+                          </div>
+                          <span className={`px-2 py-1 rounded-full text-xs font-medium whitespace-nowrap ${
+                            problem.difficulty === 'Easy' ? 'bg-green-100 text-green-700' :
+                            problem.difficulty === 'Medium' ? 'bg-yellow-100 text-yellow-700' :
+                            'bg-red-100 text-red-700'
+                          }`}>
+                            {problem.difficulty}
+                          </span>
+                        </div>
+                      </button>
+                    ))
+                  )}
+                </div>
+
+                {/* Footer Stats */}
+                <div className="p-2 border-t border-gray-200 bg-gray-50 text-xs text-gray-500 flex items-center justify-between">
+                  <span>{filteredProblems.length} of {problems.length} problems</span>
+                  <button
+                    onClick={() => {
+                      setShowProblemSelector(false)
+                      setSearchQuery('')
+                    }}
+                    className="text-purple-600 hover:text-purple-700 font-medium"
+                  >
+                    Close
+                  </button>
                 </div>
               </div>
             )}
