@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { LeetCodeProblem, getLeetCodeProblem } from '../services/leetcodeService'
+import { type LeetCodeProblem, getLeetCodeProblem } from '../services/leetcodeService'
 
 interface ProblemPanelProps {
   readonly problemSlug: string
