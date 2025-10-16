@@ -65,7 +65,7 @@ const getTemplateForProblem = (problem) => {
   
   if (topics.includes('Tree') || topics.includes('Binary Tree') || topics.includes('Binary Search Tree')) {
     return {
-      description: `Solve this tree problem using traversal and recursion.\n\n**Topics:** ${topics}\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples`,
+      description: `Solve this tree problem using traversal and recursion.\n\nTOPICS: ${topics}\n\nKEY CONCEPTS:\n• Tree traversal (DFS/BFS)\n• Recursion with base cases\n• Left and right subtrees\n• Null checks\n\nAPPROACH:\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples`,
       examples: [
         { input: 'root = [4,2,7,1,3,6,9]', output: '[4,7,2,9,6,3,1] (if inverted) or relevant result', explanation: 'Tree structure:\n       4\n      / \\\n     2   7\n    / \\ / \\\n   1  3 6  9\nDraw this and trace your algorithm!' },
         { input: 'root = [2,1,3]', output: '3 (if max depth) or relevant result', explanation: 'Simple 3-node tree. Height = 2. Test your recursion logic.' },
