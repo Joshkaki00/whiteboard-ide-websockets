@@ -10,7 +10,13 @@ const __dirname = path.dirname(__filename);
 
 // Read the basic problems list
 const basicProblems = JSON.parse(fs.readFileSync(path.join(__dirname, '../src/data/leetcode-problems.json'), 'utf8'));
-const extendedProblems = JSON.parse(fs.readFileSync(path.join(__dirname, '../src/data/leetcode-problems-extended.json'), 'utf8'));
+
+// Try to read existing extended problems, or start fresh
+let extendedProblems = [];
+const extendedPath = path.join(__dirname, '../src/data/leetcode-problems-extended.json');
+if (fs.existsSync(extendedPath)) {
+  extendedProblems = JSON.parse(fs.readFileSync(extendedPath, 'utf8'));
+}
 
 // Get slugs that already have full details
 const extendedSlugs = new Set(extendedProblems.map(p => p.titleSlug));
