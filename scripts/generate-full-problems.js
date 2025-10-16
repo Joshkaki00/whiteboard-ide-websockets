@@ -53,7 +53,7 @@ const getTemplateForProblem = (problem) => {
   
   if (topics.includes('Dynamic Programming') || topics.includes('Memoization')) {
     return {
-      description: `Solve this DP problem by breaking it into subproblems.\n\n**Topics:** ${topics}\n\n**Key Concepts:**\n- Overlapping subproblems\n- Optimal substructure\n- Memoization or tabulation\n- State definition\n\n**Approach:**\n1. Define dp[i] meaning\n2. Find base cases\n3. Write recurrence relation\n4. Draw DP table on whiteboard!`,
+      description: `Solve this DP problem by breaking it into subproblems.\n\nTOPICS: ${topics}\n\nKEY CONCEPTS:\n• Overlapping subproblems\n• Optimal substructure\n• Memoization or tabulation\n• State definition\n\nAPPROACH:\n1. Define dp[i] meaning\n2. Find base cases\n3. Write recurrence relation\n4. Draw DP table on whiteboard!`,
       examples: [
         { input: 'n = 5', output: '8 (example for Fibonacci-like problems)', explanation: 'If Fibonacci: dp = [0,1,1,2,3,5,8]. Draw the DP table showing how each value builds on previous ones.' },
         { input: 'n = 3', output: '3 or 5 (depends on problem)', explanation: 'Small input to trace through. dp[3] = some combination of dp[2] and dp[1]. Work it out!' },
