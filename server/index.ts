@@ -120,13 +120,16 @@ io.on('connection', (socket) => {
     
     const room: Room = {
       id: roomId,
+      creator: socket.id,
       participants: new Set([socket.id]),
       messages: [],
       codeContent: `function twoSum(nums, target) {\n    // Your code here\n}`,
       currentLanguage: 'javascript',
       currentProblem: problemSlug,
       timerStartedAt: null,
-      timerDuration: 2700 // 45 minutes default
+      timerDuration: 2700, // 45 minutes default
+      viewMode: 'hybrid',
+      viewModeLocked: false
     }
     rooms.set(roomId, room)
     socket.join(roomId)
@@ -147,14 +150,17 @@ io.on('connection', (socket) => {
     room.participants.add(socket.id)
     socket.join(data.roomId)
     
-    // Send full room state including code
+    // Send full room state including code and view settings
     callback({ 
       success: true, 
       roomId: data.roomId, 
       messages: room.messages,
-      codeContent: room.codeContent,  // Add this
-      currentLanguage: room.currentLanguage,  // Add this
-      currentProblem: room.currentProblem  // Add this
+      codeContent: room.codeContent,
+      currentLanguage: room.currentLanguage,
+      currentProblem: room.currentProblem,
+      viewMode: room.viewMode,
+      viewModeLocked: room.viewModeLocked,
+      isCreator: socket.id === room.creator
     })
   })
 
