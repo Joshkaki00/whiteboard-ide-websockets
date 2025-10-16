@@ -32,16 +32,29 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
     if (!ctx) return
 
     const resizeCanvas = () => {
-      // Save current canvas content
-      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
+      // Save current canvas content only if canvas has size
+      let imageData: ImageData | null = null
+      if (canvas.width > 0 && canvas.height > 0) {
+        try {
+          imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
+        } catch (e) {
+          // Ignore errors on first load
+        }
+      }
       
       // Set canvas size to match display size
       const rect = canvas.getBoundingClientRect()
       canvas.width = rect.width
       canvas.height = rect.height
 
-      // Restore canvas content
-      ctx.putImageData(imageData, 0, 0)
+      // Restore canvas content if we saved it
+      if (imageData) {
+        try {
+          ctx.putImageData(imageData, 0, 0)
+        } catch (e) {
+          // Ignore if dimensions changed
+        }
+      }
       
       ctx.lineCap = 'round'
       ctx.lineJoin = 'round'
