@@ -245,13 +245,23 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
             <div className="flex items-center gap-2">
               <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1">
                 <button
-                  onClick={() => isCreator && changeViewMode(roomId, 'hybrid')}
+                  onClick={() => {
+                    if (isCreator || !viewModeLocked) {
+                      changeViewMode(roomId, 'hybrid')
+                    }
+                  }}
+                  onTouchEnd={(e) => {
+                    e.preventDefault()
+                    if (isCreator || !viewModeLocked) {
+                      changeViewMode(roomId, 'hybrid')
+                    }
+                  }}
                   disabled={!isCreator && viewModeLocked}
                   className={`px-3 py-1 text-xs rounded-md transition-colors ${
                     viewMode === 'hybrid' 
                       ? 'bg-white text-purple-600 font-semibold shadow-sm' 
                       : 'text-gray-600 hover:text-gray-800'
-                  } ${(!isCreator && viewModeLocked) ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  } ${(!isCreator && viewModeLocked) ? 'opacity-50 cursor-not-allowed' : 'active:scale-95'}`}
                   title="Split View (Code + Whiteboard)"
                 >
                   <svg className="w-4 h-4 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -260,13 +270,23 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
                   Hybrid
                 </button>
                 <button
-                  onClick={() => isCreator && changeViewMode(roomId, 'whiteboard')}
+                  onClick={() => {
+                    if (isCreator || !viewModeLocked) {
+                      changeViewMode(roomId, 'whiteboard')
+                    }
+                  }}
+                  onTouchEnd={(e) => {
+                    e.preventDefault()
+                    if (isCreator || !viewModeLocked) {
+                      changeViewMode(roomId, 'whiteboard')
+                    }
+                  }}
                   disabled={!isCreator && viewModeLocked}
                   className={`px-3 py-1 text-xs rounded-md transition-colors ${
                     viewMode === 'whiteboard' 
                       ? 'bg-white text-purple-600 font-semibold shadow-sm' 
                       : 'text-gray-600 hover:text-gray-800'
-                  } ${(!isCreator && viewModeLocked) ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  } ${(!isCreator && viewModeLocked) ? 'opacity-50 cursor-not-allowed' : 'active:scale-95'}`}
                   title="Whiteboard Only"
                 >
                   <svg className="w-4 h-4 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
