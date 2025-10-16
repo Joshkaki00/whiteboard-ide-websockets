@@ -84,11 +84,15 @@ export default function ResizablePanel({
     >
       {children}
       <div
-        onMouseDown={handleMouseDown}
-        className={`absolute top-0 ${direction === 'right' ? 'right-0' : 'left-0'} w-1 h-full cursor-col-resize hover:bg-purple-500 transition-colors z-10 group`}
+        onMouseDown={handleStart}
+        onTouchStart={(e) => {
+          e.preventDefault()
+          handleStart()
+        }}
+        className={`absolute top-0 ${direction === 'right' ? 'right-0' : 'left-0'} w-2 h-full cursor-col-resize bg-purple-300 bg-opacity-0 hover:bg-opacity-50 active:bg-opacity-100 transition-colors z-10`}
         style={{ touchAction: 'none' }}
       >
-        <div className="absolute inset-0 -mx-1" />
+        <div className="absolute inset-0 -mx-2" />
       </div>
     </div>
   )
