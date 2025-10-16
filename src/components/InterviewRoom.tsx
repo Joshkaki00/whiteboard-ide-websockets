@@ -351,10 +351,10 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
         <div className="flex-1 bg-white flex flex-col overflow-hidden">
           {viewMode === 'hybrid' && (
             <>
-              <div className="flex-[2] overflow-hidden border-b border-gray-200">
+              <div style={{ height: '66%' }} className="overflow-hidden border-b border-gray-200">
                 <CodeEditor roomId={roomId} />
               </div>
-              <div className="flex-1 overflow-hidden">
+              <div style={{ height: '34%' }} className="overflow-hidden">
                 <Whiteboard roomId={roomId} />
               </div>
             </>
