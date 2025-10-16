@@ -23,7 +23,7 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
   const lastPosRef = useRef<{ x: number; y: number } | null>(null)
   const { socket } = useSocket()
 
-  // Initialize canvas
+  // Initialize canvas and handle resize
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
@@ -31,14 +31,28 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
     const ctx = canvas.getContext('2d')
     if (!ctx) return
 
-    // Set canvas size to match display size
-    const rect = canvas.getBoundingClientRect()
-    canvas.width = rect.width
-    canvas.height = rect.height
+    const resizeCanvas = () => {
+      // Save current canvas content
+      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
+      
+      // Set canvas size to match display size
+      const rect = canvas.getBoundingClientRect()
+      canvas.width = rect.width
+      canvas.height = rect.height
 
-    ctx.lineCap = 'round'
-    ctx.lineJoin = 'round'
+      // Restore canvas content
+      ctx.putImageData(imageData, 0, 0)
+      
+      ctx.lineCap = 'round'
+      ctx.lineJoin = 'round'
+    }
+
+    resizeCanvas()
     setContext(ctx)
+
+    // Handle window resize
+    window.addEventListener('resize', resizeCanvas)
+    return () => window.removeEventListener('resize', resizeCanvas)
   }, [])
 
   // Listen for remote drawing
