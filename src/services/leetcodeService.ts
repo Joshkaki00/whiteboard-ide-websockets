@@ -199,7 +199,7 @@ export const getLeetCodeProblem = async (slug: string): Promise<LeetCodeProblem 
     id: problem.id || problem.frontendQuestionId,
     title: problem.title,
     titleSlug: problem.titleSlug,
-    difficulty: problem.difficulty,
+    difficulty: (problem.difficulty as 'Easy' | 'Medium' | 'Hard'),
     description: `# ${problem.title}\n\n## 📋 Problem\n\nThis is a **${problem.difficulty}** level problem focusing on: **${topics}**\n\n### 🔗 Full Description\nFor complete problem details, examples, and constraints, visit:\n**[LeetCode Problem #${problem.id}](https://leetcode.com/problems/${slug}/)**\n\n### 💡 Approach Hints\n${hint || 'Think about the data structures and algorithms that fit the problem category.'}\n\n### 🎨 Use the Whiteboard!\n- Draw out examples\n- Sketch data structures\n- Visualize your algorithm\n- Explain your approach to your partner\n\n### 📊 Stats\n- **Difficulty:** ${problem.difficulty}\n- **Acceptance Rate:** ${problem.acRate?.toFixed(1) || 'N/A'}%\n- **Topics:** ${topics}\n\n---\n\n**💬 Tip:** Use the chat to discuss your approach with your partner before coding!`,
     examples: [
       'Visit LeetCode for detailed examples with explanations:\nhttps://leetcode.com/problems/' + slug + '/'
