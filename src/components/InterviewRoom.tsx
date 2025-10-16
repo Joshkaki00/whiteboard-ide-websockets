@@ -14,7 +14,7 @@ interface InterviewRoomProps {
 }
 
 export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps) {
-  const { viewMode, viewModeLocked, isCreator, changeViewMode, toggleViewLock } = useSocket()
+  const { socket, viewMode, viewModeLocked, isCreator, changeViewMode, toggleViewLock } = useSocket()
   const [showProblemSelector, setShowProblemSelector] = useState(false)
   const [currentProblemSlug, setCurrentProblemSlug] = useState('two-sum')
   const [searchQuery, setSearchQuery] = useState('')
@@ -23,6 +23,21 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
   const [isLoading, setIsLoading] = useState(false)
   const [isSearching, setIsSearching] = useState(false)
   const localProblems = getAllProblems()
+  
+  // Listen for problem changes from interviewer
+  useEffect(() => {
+    if (!socket) return
+    
+    const handleProblemChanged = (data: { problemSlug: string, code: string }) => {
+      setCurrentProblemSlug(data.problemSlug)
+    }
+    
+    socket.on('problem-changed', handleProblemChanged)
+    
+    return () => {
+      socket.off('problem-changed', handleProblemChanged)
+    }
+  }, [socket])
   
   // Load all LeetCode problems when selector opens
   useEffect(() => {
