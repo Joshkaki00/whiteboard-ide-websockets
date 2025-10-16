@@ -227,7 +227,10 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseLeave}
-          className="w-full h-full cursor-crosshair"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+          className="w-full h-full cursor-crosshair touch-none"
           style={{ touchAction: 'none' }}
         />
       </div>
