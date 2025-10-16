@@ -11,14 +11,15 @@ export default function CodeEditor({ roomId, compact }: CodeEditorProps) {
   const textareaRef = useRef<HTMLTextAreaElement>(null)
   const isUserTyping = useRef(false)
 
-  // Sync code content from server
+  // Preserve cursor position when code updates
   useEffect(() => {
     if (textareaRef.current && !isUserTyping.current) {
       const textarea = textareaRef.current
       const cursorPos = textarea.selectionStart
-      textarea.value = codeContent
-      // Restore cursor position
-      textarea.setSelectionRange(cursorPos, cursorPos)
+      // Restore cursor position after React updates the value
+      setTimeout(() => {
+        textarea.setSelectionRange(cursorPos, cursorPos)
+      }, 0)
     }
   }, [codeContent])
 
