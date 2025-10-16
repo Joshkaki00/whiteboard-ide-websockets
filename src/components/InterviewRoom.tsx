@@ -91,19 +91,27 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
             <div>
-              <div className="flex items-center gap-2">
-                <div className="status-dot status-online"></div>
-                <h2 className="text-lg font-semibold text-gray-800">Room: {roomId}</h2>
-              </div>
-              <button 
-                onClick={() => setShowProblemSelector(!showProblemSelector)}
-                className="text-sm text-purple-600 hover:text-purple-700 font-medium mt-1 flex items-center gap-1"
-              >
-                {getCurrentProblemTitle()}
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
+                  <div className="flex items-center gap-2">
+                    <div className="status-dot status-online"></div>
+                    <h2 className="text-lg font-semibold text-gray-800">Room: {roomId}</h2>
+                  </div>
+                  <button 
+                    onClick={() => isCreator && setShowProblemSelector(!showProblemSelector)}
+                    disabled={!isCreator}
+                    className={`text-sm font-medium mt-1 flex items-center gap-1 ${
+                      isCreator 
+                        ? 'text-purple-600 hover:text-purple-700 cursor-pointer' 
+                        : 'text-gray-500 cursor-not-allowed'
+                    }`}
+                    title={isCreator ? 'Change problem' : 'Only the interviewer can change problems'}
+                  >
+                    {getCurrentProblemTitle()}
+                    {isCreator && (
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    )}
+                  </button>
             </div>
 
             {/* Problem Selector Dropdown */}
