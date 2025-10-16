@@ -112,6 +112,7 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       socket.emit('create-room', (response: { success: boolean, roomId?: string }) => {
         if (response.success && response.roomId) {
           setParticipantCount(1)
+          setIsCreator(true)
           resolve(response.roomId)
         } else {
           resolve(null)
