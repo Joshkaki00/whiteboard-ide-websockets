@@ -102,8 +102,7 @@ const getTemplateForProblem = (problem) => {
 const newProblems = basicProblems
   .filter(p => !extendedSlugs.has(p.titleSlug) && !p.paidOnly)
   .map(p => {
-    const mainTopic = p.topicTags[0] || 'Array';
-    const template = templates[mainTopic] || templates['Array'];
+    const template = getTemplateForProblem(p);
     const topics = p.topicTags.join(', ');
     
     return {
