@@ -108,64 +108,16 @@ const PROBLEM_BANK: Record<string, LeetCodeProblem> = {
   }
 }
 
-// Use our backend proxy to avoid CORS issues
-const LEETCODE_API = `${import.meta.env.VITE_SERVER_URL || 'http://localhost:3001'}/api/leetcode/problems`
+// Import curated problem list
+import problemsData from '../data/leetcode-problems.json'
 
-// Cache for problem list (avoid repeated API calls)
-let problemListCache: any[] | null = null
-let cacheTimestamp = 0
-const CACHE_DURATION = 3600000 // 1 hour
+// Cache the full problem list
+let problemListCache: any[] = problemsData.filter(p => !p.paidOnly)
 
 export const fetchAllLeetCodeProblems = async (): Promise<any[]> => {
-  // Return cached data if recent
-  if (problemListCache && Date.now() - cacheTimestamp < CACHE_DURATION) {
-    return problemListCache
-  }
-
-  try {
-    console.log('🚀 Fetching LeetCode problems via proxy...')
-    const response = await fetch(LEETCODE_API, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      }
-    })
-
-    console.log('📡 Response status:', response.status)
-    
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`)
-    }
-
-    const data = await response.json()
-    console.log('📊 Data received:', data?.data?.problemsetQuestionList?.total, 'problems')
-    
-    const problems = data?.data?.problemsetQuestionList?.questions || []
-    
-    if (problems.length === 0) {
-      throw new Error('No problems returned from API')
-    }
-    
-    // Filter out premium problems
-    const freeProblems = problems.filter((p: any) => !p.paidOnly)
-    console.log('✅ Free problems:', freeProblems.length)
-    
-    problemListCache = freeProblems
-    cacheTimestamp = Date.now()
-    
-    return freeProblems
-  } catch (error) {
-    console.error('❌ Failed to fetch LeetCode problems:', error)
-    // Fallback to local bank
-    return Object.values(PROBLEM_BANK).map(p => ({
-      frontendQuestionId: p.id,
-      title: p.title,
-      titleSlug: p.titleSlug,
-      difficulty: p.difficulty,
-      paidOnly: false,
-      topicTags: []
-    }))
-  }
+  console.log('📚 Loading', problemListCache.length, 'curated LeetCode problems...')
+  // Return immediately - no API call needed!
+  return Promise.resolve(problemListCache)
 }
 
 export const getLeetCodeProblem = async (slug: string): Promise<LeetCodeProblem | null> => {
