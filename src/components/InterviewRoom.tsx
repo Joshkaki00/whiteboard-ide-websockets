@@ -378,24 +378,34 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
       </div>
 
       {/* Tablet/Mobile Layout */}
-      <div className="flex-1 lg:hidden grid grid-rows-[200px_1fr_150px] gap-px bg-gray-300">
-        <div className="lg:hidden grid grid-cols-2 gap-4 p-4">
+      <div className="flex-1 lg:hidden flex flex-col overflow-hidden">
+        {/* Top Panel: Problem */}
+        <div className="h-48 flex-shrink-0 bg-white border-b border-gray-200 overflow-hidden">
           <ProblemPanel problemSlug={currentProblemSlug} compact />
         </div>
         
-        <div className="bg-white flex flex-col">
+        {/* Middle Panel: Code/Whiteboard */}
+        <div className="flex-1 bg-white flex flex-col overflow-hidden">
           {viewMode === 'hybrid' && (
-            <div className="grid grid-rows-2 h-full">
-              <CodeEditor roomId={roomId} compact />
+            <>
+              <div style={{ height: `${codeEditorHeight}%` }} className="overflow-hidden">
+                <CodeEditor roomId={roomId} compact />
+              </div>
+              <VerticalResizer onResize={setCodeEditorHeight} />
+              <div style={{ height: `${100 - codeEditorHeight}%` }} className="overflow-hidden">
+                <Whiteboard roomId={roomId} />
+              </div>
+            </>
+          )}
+          {viewMode === 'whiteboard' && (
+            <div className="flex-1 overflow-hidden">
               <Whiteboard roomId={roomId} />
             </div>
           )}
-          {viewMode === 'whiteboard' && (
-            <Whiteboard roomId={roomId} />
-          )}
         </div>
         
-        <div className="bg-white">
+        {/* Bottom Panel: Chat */}
+        <div className="h-56 flex-shrink-0 bg-white border-t border-gray-200 overflow-hidden">
           <ChatPanel roomId={roomId} compact />
         </div>
       </div>
