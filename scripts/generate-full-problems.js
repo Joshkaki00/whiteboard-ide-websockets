@@ -74,15 +74,28 @@ const getTemplateForProblem = (problem) => {
       constraints: ['0 <= number of nodes <= 10⁴', '-1000 <= Node.val <= 1000', 'Tree can be empty']
     };
   }
-  'Linked List': {
-    description: (title) => `Work through this linked list problem using pointer manipulation and careful traversal.\n\n**Key Concepts:**\n- Pointer manipulation (slow/fast, previous/current)\n- Dummy nodes for easier edge case handling\n- In-place vs new list creation\n- Cycle detection techniques\n\n**Approach:**\n1. Draw the linked list on the whiteboard\n2. Consider using a dummy head\n3. Track multiple pointers if needed\n4. Watch for null pointer issues\n5. Test with edge cases (empty, single node)`,
-    examples: [
-      { input: 'head = [1,2,3,4,5]', output: 'Modified list', explanation: 'Draw the linked list: 1 -> 2 -> 3 -> 4 -> 5 -> null\nTrace your pointer movements on the whiteboard.' },
-      { input: 'head = []', output: 'null', explanation: 'Empty list - handle this edge case carefully to avoid null pointer errors.' },
-      { input: 'head = [1]', output: 'Single node result', explanation: 'Single node: 1 -> null. What happens with just one element?' }
-    ],
-    constraints: ['0 <= list length <= 5000', '-5000 <= Node.val <= 5000', 'List can be empty (null head)']
+  
+  if (topics.includes('Linked List')) {
+    return {
+      description: `Work through this linked list problem with pointer manipulation.\n\n**Topics:** ${topics}\n\n**Key Concepts:**\n- Pointer manipulation\n- Dummy nodes\n- In-place vs new list\n- Null checks\n\n**Approach:**\n1. Draw list on whiteboard\n2. Consider dummy head\n3. Track pointers carefully\n4. Test edge cases`,
+      examples: [
+        { input: 'head = [1,2,3,4,5]', output: '[5,4,3,2,1] (if reversed) or relevant result', explanation: 'Draw: 1 -> 2 -> 3 -> 4 -> 5 -> null\nIf reversing: 5 -> 4 -> 3 -> 2 -> 1 -> null\nTrace pointer movements step by step!' },
+        { input: 'head = [1,2]', output: '[2,1] or relevant result', explanation: 'Two nodes: 1 -> 2 -> null. Simplest non-trivial case.' },
+        { input: 'head = []', output: 'null', explanation: 'Empty list returns null. Guard against null pointer errors!' }
+      ],
+      constraints: ['0 <= list length <= 5000', '-1000 <= Node.val <= 1000', 'List can be empty']
+    };
   }
+  
+  // Default fallback
+  return {
+    description: `Solve this problem using appropriate algorithms and data structures.\n\n**Topics:** ${topics}\n\n**Approach:**\n1. Understand the problem\n2. Draw examples\n3. Find patterns\n4. Code solution`,
+    examples: [
+      { input: 'Input example 1', output: 'Expected output 1', explanation: 'Work through this example on the whiteboard step by step.' },
+      { input: 'Input example 2', output: 'Expected output 2', explanation: 'Another test case to verify your approach.' }
+    ],
+    constraints: ['See problem constraints', 'Consider edge cases', 'Think about time/space complexity']
+  };
 };
 
 // Generate full problem entries for all basic problems
