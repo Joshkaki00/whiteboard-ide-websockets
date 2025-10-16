@@ -50,15 +50,18 @@ const getTemplateForProblem = (problem) => {
       constraints: ['0 <= s.length <= 10⁵', 's consists of lowercase/uppercase letters', 'May contain spaces or special characters']
     };
   }
-  'Dynamic Programming': {
-    description: (title) => `This dynamic programming problem tests your ability to break problems into subproblems and build solutions incrementally.\n\n**Key Concepts:**\n- Overlapping subproblems\n- Optimal substructure\n- Memoization (top-down) vs Tabulation (bottom-up)\n- State definition and transitions\n\n**Approach:**\n1. Define what dp[i] represents\n2. Find the base cases\n3. Write the recurrence relation\n4. Decide: recursive with memo or iterative?\n5. Draw the dp table on the whiteboard!`,
-    examples: [
-      { input: 'n = 5', output: 'Optimal solution for n=5', explanation: 'Draw a DP table on the whiteboard. Start with base cases (n=0, n=1) and build up to n=5.' },
-      { input: 'n = 1', output: 'Base case result', explanation: 'Base cases are crucial in DP - this is where your recursion/iteration stops.' },
-      { input: 'n = 0', output: 'Base case result', explanation: 'n=0 is often your starting point. What\'s the answer for zero?' }
-    ],
-    constraints: ['1 <= n <= 1000', 'Values fit in 32-bit integer', 'Draw the DP table to visualize subproblem relationships']
-  },
+  
+  if (topics.includes('Dynamic Programming') || topics.includes('Memoization')) {
+    return {
+      description: `Solve this DP problem by breaking it into subproblems.\n\n**Topics:** ${topics}\n\n**Key Concepts:**\n- Overlapping subproblems\n- Optimal substructure\n- Memoization or tabulation\n- State definition\n\n**Approach:**\n1. Define dp[i] meaning\n2. Find base cases\n3. Write recurrence relation\n4. Draw DP table on whiteboard!`,
+      examples: [
+        { input: 'n = 5', output: '8 (example for Fibonacci-like problems)', explanation: 'If Fibonacci: dp = [0,1,1,2,3,5,8]. Draw the DP table showing how each value builds on previous ones.' },
+        { input: 'n = 3', output: '3 or 5 (depends on problem)', explanation: 'Small input to trace through. dp[3] = some combination of dp[2] and dp[1]. Work it out!' },
+        { input: 'n = 1', output: '1 (base case)', explanation: 'Base case: dp[1] = 1. This is your starting point.' }
+      ],
+      constraints: ['1 <= n <= 1000', 'Result fits in 32-bit integer', 'May need O(n) space for DP table']
+    };
+  }
   'Tree': {
     description: (title) => `Solve this tree problem using traversal techniques and recursive thinking.\n\n**Key Concepts:**\n- Tree traversal (pre/in/post-order, level-order)\n- Recursion with base cases\n- DFS vs BFS approach\n- Parent-child relationships\n\n**Approach:**\n1. Draw the tree structure on the whiteboard\n2. Identify the base case (null node or leaf)\n3. Define what to return at each node\n4. Consider if you need helper functions\n5. Test with small examples`,
     examples: [
