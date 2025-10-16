@@ -16,7 +16,7 @@ interface InterviewRoomProps {
 }
 
 export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps) {
-  const { socket, viewMode, viewModeLocked, isCreator, changeViewMode, toggleViewLock } = useSocket()
+  const { socket, viewMode, viewModeLocked, isCreator, changeViewMode, toggleViewLock, currentLanguage } = useSocket()
   const [showProblemSelector, setShowProblemSelector] = useState(false)
   const [currentProblemSlug, setCurrentProblemSlug] = useState('two-sum')
   const [searchQuery, setSearchQuery] = useState('')
