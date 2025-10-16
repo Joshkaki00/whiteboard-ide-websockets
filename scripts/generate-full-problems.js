@@ -38,15 +38,18 @@ const getTemplateForProblem = (problem) => {
       constraints: ['1 <= nums.length <= 10⁴', '-10⁴ <= nums[i] <= 10⁴', 'All elements may or may not be unique']
     };
   }
-  'String': {
-    description: (title) => `Work through this string manipulation problem that tests pattern recognition and efficient string processing.\n\n**Key Concepts:**\n- String traversal (forward, backward, two pointers)\n- Character frequency counting\n- Substring patterns\n- String building vs in-place modification\n\n**Approach:**\n1. Draw out examples on the whiteboard\n2. Look for patterns or repeating structures\n3. Consider if you need a hash map for character tracking\n4. Think about time/space tradeoffs`,
-    examples: [
-      { input: 's = "hello"', output: 'Depends on operation', explanation: 'Write out the string and trace through character by character on the whiteboard.' },
-      { input: 's = ""', output: 'Handle empty string', explanation: 'Empty string is a critical edge case - what should happen?' },
-      { input: 's = "a"', output: 'Handle single character', explanation: 'Single character strings are another edge case to consider.' }
-    ],
-    constraints: ['0 <= s.length <= 5 × 10⁴', 's consists of printable ASCII characters', 'Consider: empty strings, single characters, all same character, palindromes']
-  },
+  
+  if (topics.includes('String') || topics.includes('Sliding Window')) {
+    return {
+      description: `Work through this string problem using efficient traversal techniques.\n\n**Topics:** ${topics}\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases`,
+      examples: [
+        { input: 's = "racecar"', output: 'true (if palindrome check) or relevant result', explanation: 'Palindrome example - reads same forwards and backwards. Draw pointers moving from both ends.' },
+        { input: 's = "hello"', output: 'Result based on problem', explanation: 'Regular string with distinct characters. Trace through your algorithm character by character.' },
+        { input: 's = "a"', output: 'true or single char result', explanation: 'Single character is always valid for most string operations.' }
+      ],
+      constraints: ['0 <= s.length <= 10⁵', 's consists of lowercase/uppercase letters', 'May contain spaces or special characters']
+    };
+  }
   'Dynamic Programming': {
     description: (title) => `This dynamic programming problem tests your ability to break problems into subproblems and build solutions incrementally.\n\n**Key Concepts:**\n- Overlapping subproblems\n- Optimal substructure\n- Memoization (top-down) vs Tabulation (bottom-up)\n- State definition and transitions\n\n**Approach:**\n1. Define what dp[i] represents\n2. Find the base cases\n3. Write the recurrence relation\n4. Decide: recursive with memo or iterative?\n5. Draw the dp table on the whiteboard!`,
     examples: [
