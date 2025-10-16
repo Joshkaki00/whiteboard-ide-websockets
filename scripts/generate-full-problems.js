@@ -94,8 +94,9 @@ const newProblems = basicProblems
     };
   });
 
-// Combine with existing extended problems
-const allProblems = [...extendedProblems, ...newProblems];
+// Keep ONLY the first 25 detailed problems, regenerate the rest with new templates
+const detailedProblems = extendedProblems.slice(0, 25);
+const allProblems = [...detailedProblems, ...newProblems];
 
 // Write to file
 const outputPath = path.join(__dirname, '../src/data/leetcode-problems-extended.json');
