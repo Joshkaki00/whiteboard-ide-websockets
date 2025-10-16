@@ -191,10 +191,16 @@ io.on('connection', (socket) => {
       return
     }
   
+    // Only creator can change the problem
+    if (socket.id !== room.creator) {
+      callback({ success: false, error: 'Only the interviewer can change problems' })
+      return
+    }
+  
     room.currentProblem = data.problemSlug
     room.codeContent = data.starterCode
   
-    // Broadcast to all participants
+    // Broadcast to all participants including creator
     io.to(data.roomId).emit('problem-changed', {
       problemSlug: data.problemSlug,
       code: data.starterCode
