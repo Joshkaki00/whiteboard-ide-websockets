@@ -593,6 +593,148 @@
       "-30 <= nums[i] <= 30",
       "The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer"
     ]
+  },
+  {
+    "id": "7",
+    "title": "Reverse Integer",
+    "titleSlug": "reverse-integer",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 28.5,
+    "topicTags": ["Math"],
+    "description": "Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-2³¹, 2³¹ - 1], then return 0.\n\nAssume the environment does not allow you to store 64-bit integers (signed or unsigned).",
+    "examples": [
+      {
+        "input": "x = 123",
+        "output": "321",
+        "explanation": "The digits are reversed from 123 to 321."
+      },
+      {
+        "input": "x = -123",
+        "output": "-321",
+        "explanation": "Negative sign is preserved while reversing digits."
+      },
+      {
+        "input": "x = 120",
+        "output": "21",
+        "explanation": "Trailing zeros are removed after reversal."
+      }
+    ],
+    "constraints": [
+      "-2³¹ <= x <= 2³¹ - 1"
+    ]
+  },
+  {
+    "id": "62",
+    "title": "Unique Paths",
+    "titleSlug": "unique-paths",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 63.9,
+    "topicTags": ["Math", "Dynamic Programming", "Combinatorics"],
+    "description": "There is a robot on an m x n grid. The robot is initially located at the top-left corner (i.e., grid[0][0]). The robot tries to move to the bottom-right corner (i.e., grid[m - 1][n - 1]). The robot can only move either down or right at any point in time.\n\nGiven the two integers m and n, return the number of possible unique paths that the robot can take to reach the bottom-right corner.\n\nThe test cases are generated so that the answer will be less than or equal to 2 × 10⁹.",
+    "examples": [
+      {
+        "input": "m = 3, n = 7",
+        "output": "28",
+        "explanation": "There are 28 unique paths from top-left to bottom-right."
+      },
+      {
+        "input": "m = 3, n = 2",
+        "output": "3",
+        "explanation": "From top-left corner, there are 3 ways to reach bottom-right: 1. Right -> Down -> Down, 2. Down -> Down -> Right, 3. Down -> Right -> Down"
+      }
+    ],
+    "constraints": [
+      "1 <= m, n <= 100"
+    ]
+  },
+  {
+    "id": "198",
+    "title": "House Robber",
+    "titleSlug": "house-robber",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 50.2,
+    "topicTags": ["Array", "Dynamic Programming"],
+    "description": "You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night.\n\nGiven an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.",
+    "examples": [
+      {
+        "input": "nums = [1,2,3,1]",
+        "output": "4",
+        "explanation": "Rob house 1 (money = 1) and then rob house 3 (money = 3). Total amount you can rob = 1 + 3 = 4."
+      },
+      {
+        "input": "nums = [2,7,9,3,1]",
+        "output": "12",
+        "explanation": "Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (money = 1). Total amount you can rob = 2 + 9 + 1 = 12."
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 100",
+      "0 <= nums[i] <= 400"
+    ]
+  },
+  {
+    "id": "207",
+    "title": "Course Schedule",
+    "titleSlug": "course-schedule",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 46.5,
+    "topicTags": ["Depth-First Search", "Breadth-First Search", "Graph", "Topological Sort"],
+    "description": "There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [aᵢ, bᵢ] indicates that you must take course bᵢ first if you want to take course aᵢ.\n\nFor example, the pair [0, 1], indicates that to take course 0 you have to first take course 1.\n\nReturn true if you can finish all courses. Otherwise, return false.",
+    "examples": [
+      {
+        "input": "numCourses = 2, prerequisites = [[1,0]]",
+        "output": "true",
+        "explanation": "There are a total of 2 courses to take. To take course 1 you should have finished course 0. So it is possible."
+      },
+      {
+        "input": "numCourses = 2, prerequisites = [[1,0],[0,1]]",
+        "output": "false",
+        "explanation": "There are a total of 2 courses to take. To take course 1 you should have finished course 0, and to take course 0 you should also have finished course 1. So it is impossible."
+      }
+    ],
+    "constraints": [
+      "1 <= numCourses <= 2000",
+      "0 <= prerequisites.length <= 5000",
+      "prerequisites[i].length == 2",
+      "0 <= aᵢ, bᵢ < numCourses",
+      "All the pairs prerequisites[i] are unique"
+    ]
+  },
+  {
+    "id": "322",
+    "title": "Coin Change",
+    "titleSlug": "coin-change",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 43.9,
+    "topicTags": ["Array", "Dynamic Programming", "Breadth-First Search"],
+    "description": "You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.\n\nReturn the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.\n\nYou may assume that you have an infinite number of each kind of coin.",
+    "examples": [
+      {
+        "input": "coins = [1,2,5], amount = 11",
+        "output": "3",
+        "explanation": "11 = 5 + 5 + 1"
+      },
+      {
+        "input": "coins = [2], amount = 3",
+        "output": "-1",
+        "explanation": "Amount 3 cannot be made with only coins of denomination 2."
+      },
+      {
+        "input": "coins = [1], amount = 0",
+        "output": "0",
+        "explanation": "Zero coins are needed for amount 0."
+      }
+    ],
+    "constraints": [
+      "1 <= coins.length <= 12",
+      "1 <= coins[i] <= 2³¹ - 1",
+      "0 <= amount <= 10⁴"
+    ]
   }
 ]
 
