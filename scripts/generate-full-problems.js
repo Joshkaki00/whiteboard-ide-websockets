@@ -113,7 +113,7 @@ const newProblems = basicProblems
       paidOnly: false,
       acRate: p.acRate,
       topicTags: p.topicTags,
-      description: `# ${p.title}\n\n${template.description}\n\n### 📊 Problem Stats\n- **Difficulty:** ${p.difficulty}\n- **Acceptance Rate:** ${p.acRate?.toFixed(1)}%\n- **Topics:** ${topics}\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!`,
+      description: `${template.description}\n\n📊 PROBLEM STATS:\n• Difficulty: ${p.difficulty}\n• Acceptance Rate: ${p.acRate?.toFixed(1)}%\n• Topics: ${topics}\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!`,
       examples: template.examples.map((ex, i) => ({
         input: ex.input,
         output: ex.output,
