@@ -103,14 +103,9 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
     if (!canvas) return { x: 0, y: 0 }
 
     const rect = canvas.getBoundingClientRect()
-    
-    // Scale coordinates to match canvas internal dimensions
-    const scaleX = canvas.width / rect.width
-    const scaleY = canvas.height / rect.height
-    
     return {
-      x: (e.clientX - rect.left) * scaleX,
-      y: (e.clientY - rect.top) * scaleY
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top
     }
   }
 
@@ -119,15 +114,10 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
     if (!canvas) return { x: 0, y: 0 }
 
     const rect = canvas.getBoundingClientRect()
-    const touch = e.touches[0] || e.changedTouches[0]
-    
-    // Scale coordinates to match canvas internal dimensions
-    const scaleX = canvas.width / rect.width
-    const scaleY = canvas.height / rect.height
-    
+    const touch = e.touches[0]
     return {
-      x: (touch.clientX - rect.left) * scaleX,
-      y: (touch.clientY - rect.top) * scaleY
+      x: touch.clientX - rect.left,
+      y: touch.clientY - rect.top
     }
   }
 
@@ -176,7 +166,6 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
   // Touch event handlers
   const handleTouchStart = (e: React.TouchEvent<HTMLCanvasElement>) => {
     e.preventDefault()
-    e.stopPropagation()
     setIsDrawing(true)
     const pos = getTouchPos(e)
     lastPosRef.current = pos
@@ -185,7 +174,6 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
   const handleTouchMove = (e: React.TouchEvent<HTMLCanvasElement>) => {
     if (!isDrawing || !lastPosRef.current) return
     e.preventDefault()
-    e.stopPropagation()
 
     const pos = getTouchPos(e)
 
@@ -208,16 +196,7 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
     lastPosRef.current = pos
   }
 
-  const handleTouchEnd = (e: React.TouchEvent<HTMLCanvasElement>) => {
-    e.preventDefault()
-    e.stopPropagation()
-    setIsDrawing(false)
-    lastPosRef.current = null
-  }
-
-  const handleTouchCancel = (e: React.TouchEvent<HTMLCanvasElement>) => {
-    e.preventDefault()
-    e.stopPropagation()
+  const handleTouchEnd = () => {
     setIsDrawing(false)
     lastPosRef.current = null
   }
@@ -278,7 +257,6 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
-          onTouchCancel={handleTouchCancel}
           className="w-full h-full cursor-crosshair touch-none"
           style={{ touchAction: 'none' }}
         />
