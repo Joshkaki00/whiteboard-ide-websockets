@@ -82,13 +82,44 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
     }
   }
   
+  const handleProblemSelect = async (problemSlug: string) => {
+    if (!socket || !isCreator) return
+    
+    setIsLoading(true)
+    try {
+      // Get the problem to fetch starter code
+      const problem = await getLeetCodeProblem(problemSlug)
+      if (!problem) return
+      
+      // Get starter code for current language
+      const starterCode = problem.starterCode[currentLanguage as keyof typeof problem.starterCode] || problem.starterCode.javascript
+      
+      // Emit socket event to sync with all participants
+      socket.emit('change-problem', { 
+        roomId, 
+        problemSlug, 
+        starterCode 
+      }, (response: { success: boolean, error?: string }) => {
+        if (response.success) {
+          setCurrentProblemSlug(problemSlug)
+          setShowProblemSelector(false)
+          setSearchQuery('')
+        } else {
+          console.error('Failed to change problem:', response.error)
+        }
+      })
+    } catch (error) {
+      console.error('Failed to select problem:', error)
+    } finally {
+      setIsLoading(false)
+    }
+  }
+  
   const handleRandomProblem = async () => {
     setIsLoading(true)
     try {
       const randomProblem = await getRandomProblem()
-      setCurrentProblemSlug(randomProblem.titleSlug)
-      setShowProblemSelector(false)
-      setSearchQuery('')
+      await handleProblemSelect(randomProblem.titleSlug)
     } catch (error) {
       console.error('Failed to get random problem:', error)
     } finally {
