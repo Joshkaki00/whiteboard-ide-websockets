@@ -107,6 +107,7 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
       }, (response: { success: boolean, error?: string }) => {
         if (response.success) {
           setCurrentProblemSlug(problemSlug)
+          setCurrentProblemTitle(problem.title)
           setShowProblemSelector(false)
           setSearchQuery('')
         } else {
