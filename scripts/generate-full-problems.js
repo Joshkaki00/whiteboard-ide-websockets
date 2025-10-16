@@ -29,7 +29,7 @@ const getTemplateForProblem = (problem) => {
   // Default array template
   if (topics.includes('Array') || topics.includes('Sorting') || topics.includes('Two Pointers')) {
     return {
-      description: `Solve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** ${topics}\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization`,
+      description: `Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: ${topics}\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization`,
       examples: [
         { input: 'nums = [5, 2, 8, 1, 9]', output: '[1, 2, 5, 8, 9] (or depends on problem)', explanation: 'Trace through your algorithm with this example. What happens at each step?' },
         { input: 'nums = [1]', output: '[1] or single element result', explanation: 'Single element - does your algorithm handle this correctly?' },
