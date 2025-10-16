@@ -214,8 +214,8 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
   }
 
   return (
-    <div className="flex flex-col flex-1 bg-white">
-      <div className="panel-header border-b border-gray-200">
+    <div className="flex flex-col h-full bg-white">
+      <div className="panel-header border-b border-gray-200 flex-shrink-0">
         <h3>Collaborative Whiteboard</h3>
         <div className="flex gap-2 items-center">
           <div className="flex items-center gap-1">
@@ -247,7 +247,7 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
           </button>
         </div>
       </div>
-      <div className="flex-1 overflow-hidden">
+      <div className="flex-1 min-h-0">
         <canvas
           ref={canvasRef}
           onMouseDown={handleMouseDown}
