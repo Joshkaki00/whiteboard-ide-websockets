@@ -300,7 +300,7 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
               )}
             </div>
 
-            <Timer initialMinutes={30} />
+            <Timer roomId={roomId} initialMinutes={30} />
             
             <button
               onClick={onLeaveRoom}

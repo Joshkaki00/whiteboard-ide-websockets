@@ -56,7 +56,7 @@ export default function CodeEditor({ roomId, compact }: CodeEditorProps) {
       </div>
       <textarea
         ref={textareaRef}
-        defaultValue={codeContent}
+        value={codeContent}
         onChange={handleCodeChange}
         className="code-editor"
         placeholder="// Start typing your solution here..."
