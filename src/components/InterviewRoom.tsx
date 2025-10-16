@@ -24,6 +24,7 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
   const [filteredProblems, setFilteredProblems] = useState<any[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const [isSearching, setIsSearching] = useState(false)
+  const [codeEditorHeight, setCodeEditorHeight] = useState(66)
   const localProblems = getAllProblems()
   
   // Listen for problem changes from interviewer
