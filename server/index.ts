@@ -8,8 +8,11 @@ app.use(express.json())
 const server = createServer(app)
 const io = new Server(server, {
   cors: {
-    origin: process.env.CORS_ORIGIN || "http://localhost:5173",
-    methods: ["GET", "POST"]
+    origin: process.env.CORS_ORIGIN 
+      ? [process.env.CORS_ORIGIN, "http://localhost:5173"]
+      : "http://localhost:5173",
+    methods: ["GET", "POST"],
+    credentials: true
   }
 })
 
