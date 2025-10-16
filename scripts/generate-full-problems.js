@@ -77,7 +77,7 @@ const getTemplateForProblem = (problem) => {
   
   if (topics.includes('Linked List')) {
     return {
-      description: `Work through this linked list problem with pointer manipulation.\n\n**Topics:** ${topics}\n\n**Key Concepts:**\n- Pointer manipulation\n- Dummy nodes\n- In-place vs new list\n- Null checks\n\n**Approach:**\n1. Draw list on whiteboard\n2. Consider dummy head\n3. Track pointers carefully\n4. Test edge cases`,
+      description: `Work through this linked list problem with pointer manipulation.\n\nTOPICS: ${topics}\n\nKEY CONCEPTS:\n• Pointer manipulation\n• Dummy nodes\n• In-place vs new list\n• Null checks\n\nAPPROACH:\n1. Draw list on whiteboard\n2. Consider dummy head\n3. Track pointers carefully\n4. Test edge cases`,
       examples: [
         { input: 'head = [1,2,3,4,5]', output: '[5,4,3,2,1] (if reversed) or relevant result', explanation: 'Draw: 1 -> 2 -> 3 -> 4 -> 5 -> null\nIf reversing: 5 -> 4 -> 3 -> 2 -> 1 -> null\nTrace pointer movements step by step!' },
         { input: 'head = [1,2]', output: '[2,1] or relevant result', explanation: 'Two nodes: 1 -> 2 -> null. Simplest non-trivial case.' },
