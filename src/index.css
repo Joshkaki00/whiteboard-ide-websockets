@@ -3,6 +3,20 @@
 @layer base {
   body {
     @apply bg-gray-50 font-sans antialiased;
+    /* Remove 300ms tap delay on mobile */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Make all buttons and interactive elements more responsive on touch */
+  button, a, input, textarea, select {
+    touch-action: manipulation;
+  }
+  
+  /* Prevent text selection while drawing on whiteboard */
+  canvas {
+    -webkit-user-select: none;
+    user-select: none;
   }
 }
 
