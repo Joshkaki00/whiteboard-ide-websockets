@@ -218,50 +218,63 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
           </div>
 
           <div className="flex items-center gap-4">
-            {/* View Mode Switcher */}
-            <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1">
-              <button
-                onClick={() => setViewMode('code')}
-                className={`px-3 py-1 text-xs rounded-md transition-colors ${
-                  viewMode === 'code' 
-                    ? 'bg-white text-purple-600 font-semibold shadow-sm' 
-                    : 'text-gray-600 hover:text-gray-800'
-                }`}
-                title="Code Editor Only"
-              >
-                <svg className="w-4 h-4 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                </svg>
-                Code
-              </button>
-              <button
-                onClick={() => setViewMode('hybrid')}
-                className={`px-3 py-1 text-xs rounded-md transition-colors ${
-                  viewMode === 'hybrid' 
-                    ? 'bg-white text-purple-600 font-semibold shadow-sm' 
-                    : 'text-gray-600 hover:text-gray-800'
-                }`}
-                title="Split View (Code + Whiteboard)"
-              >
-                <svg className="w-4 h-4 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
-                </svg>
-                Hybrid
-              </button>
-              <button
-                onClick={() => setViewMode('whiteboard')}
-                className={`px-3 py-1 text-xs rounded-md transition-colors ${
-                  viewMode === 'whiteboard' 
-                    ? 'bg-white text-purple-600 font-semibold shadow-sm' 
-                    : 'text-gray-600 hover:text-gray-800'
-                }`}
-                title="Whiteboard Only"
-              >
-                <svg className="w-4 h-4 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-                </svg>
-                Board
-              </button>
+            {/* View Mode Switcher - Controlled by creator */}
+            <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1">
+                <button
+                  onClick={() => isCreator && changeViewMode(roomId, 'hybrid')}
+                  disabled={!isCreator && viewModeLocked}
+                  className={`px-3 py-1 text-xs rounded-md transition-colors ${
+                    viewMode === 'hybrid' 
+                      ? 'bg-white text-purple-600 font-semibold shadow-sm' 
+                      : 'text-gray-600 hover:text-gray-800'
+                  } ${(!isCreator && viewModeLocked) ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  title="Split View (Code + Whiteboard)"
+                >
+                  <svg className="w-4 h-4 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
+                  </svg>
+                  Hybrid
+                </button>
+                <button
+                  onClick={() => isCreator && changeViewMode(roomId, 'whiteboard')}
+                  disabled={!isCreator && viewModeLocked}
+                  className={`px-3 py-1 text-xs rounded-md transition-colors ${
+                    viewMode === 'whiteboard' 
+                      ? 'bg-white text-purple-600 font-semibold shadow-sm' 
+                      : 'text-gray-600 hover:text-gray-800'
+                  } ${(!isCreator && viewModeLocked) ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  title="Whiteboard Only"
+                >
+                  <svg className="w-4 h-4 inline-block mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                  </svg>
+                  Board
+                </button>
+              </div>
+
+              {/* Lock/Unlock button - Creator only */}
+              {isCreator && (
+                <button
+                  onClick={() => toggleViewLock(roomId, !viewModeLocked)}
+                  className={`p-1.5 rounded-md transition-colors ${
+                    viewModeLocked 
+                      ? 'bg-red-100 text-red-600 hover:bg-red-200' 
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  }`}
+                  title={viewModeLocked ? 'Unlock view mode (allow partner to change)' : 'Lock view mode (prevent partner from changing)'}
+                >
+                  {viewModeLocked ? (
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                  ) : (
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                    </svg>
+                  )}
+                </button>
+              )}
             </div>
 
             <Timer initialMinutes={45} />
