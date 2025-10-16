@@ -247,7 +247,14 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
           </button>
         </div>
       </div>
-      <div className="flex-1 min-h-0">
+      <div 
+        className="flex-1 min-h-0 select-none"
+        style={{ 
+          WebkitUserSelect: 'none',
+          WebkitTouchCallout: 'none',
+          userSelect: 'none'
+        }}
+      >
         <canvas
           ref={canvasRef}
           onMouseDown={handleMouseDown}
@@ -257,8 +264,13 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
-          className="w-full h-full cursor-crosshair touch-none"
-          style={{ touchAction: 'none' }}
+          onContextMenu={(e) => e.preventDefault()}
+          className="w-full h-full cursor-crosshair touch-none select-none"
+          style={{ 
+            touchAction: 'none',
+            WebkitUserSelect: 'none',
+            userSelect: 'none'
+          }}
         />
       </div>
     </div>
