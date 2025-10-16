@@ -343,8 +343,8 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
           )}
         </div>
 
-        {/* Right Sidebar: Chat - Resizable */}
-        <div className="min-w-[250px] max-w-[500px] w-[320px] bg-white border-l border-gray-200 resize-x overflow-auto" style={{ resize: 'horizontal' }}>
+        {/* Right Sidebar: Chat */}
+        <div className="w-[320px] bg-white border-l border-gray-200 overflow-auto">
           <ChatPanel roomId={roomId} />
         </div>
       </div>
