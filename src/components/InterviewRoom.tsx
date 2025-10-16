@@ -338,9 +338,6 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
         </div>
         
         <div className="bg-white flex flex-col">
-          {viewMode === 'code' && (
-            <CodeEditor roomId={roomId} compact />
-          )}
           {viewMode === 'hybrid' && (
             <div className="grid grid-rows-2 h-full">
               <CodeEditor roomId={roomId} compact />
