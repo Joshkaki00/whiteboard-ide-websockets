@@ -129,40 +129,59 @@ export const fetchAllLeetCodeProblems = async (): Promise<any[]> => {
 }
 
 export const getLeetCodeProblem = async (slug: string): Promise<LeetCodeProblem | null> => {
-  // First check local bank
+  // First check local bank for problems with full details
   if (PROBLEM_BANK[slug]) {
     return PROBLEM_BANK[slug]
   }
 
-  // For problems not in bank, return a simplified version
-  try {
-    const allProblems = await fetchAllLeetCodeProblems()
-    const problem = allProblems.find((p: any) => p.titleSlug === slug)
-    
-    if (!problem) return null
-
-    const result: LeetCodeProblem = {
-      id: problem.frontendQuestionId,
-      title: problem.title,
-      titleSlug: problem.titleSlug,
-      difficulty: problem.difficulty,
-      description: `This problem is available on LeetCode. Visit https://leetcode.com/problems/${slug}/ for full details.`,
-      examples: ['Please see LeetCode for examples'],
-      constraints: ['Please see LeetCode for constraints'],
+  // Check extended problem list (has descriptions, examples, constraints)
+  const extendedProblem = problemsDataExtended.find((p: any) => p.titleSlug === slug)
+  if (extendedProblem) {
+    return {
+      id: extendedProblem.id,
+      title: extendedProblem.title,
+      titleSlug: extendedProblem.titleSlug,
+      difficulty: extendedProblem.difficulty,
+      description: extendedProblem.description,
+      examples: extendedProblem.examples.map((ex: any) => 
+        `Input: ${ex.input}\nOutput: ${ex.output}\nExplanation: ${ex.explanation}`
+      ),
+      constraints: extendedProblem.constraints,
       starterCode: {
-        javascript: `// Starter code not available\n// Visit LeetCode for starter code`,
-        python: `# Starter code not available\n# Visit LeetCode for starter code`,
-        java: `// Starter code not available\n// Visit LeetCode for starter code`,
-        cpp: `// Starter code not available\n// Visit LeetCode for starter code`
+        javascript: `// Write your solution here\nfunction solve() {\n    // Your code\n}`,
+        python: `# Write your solution here\ndef solve():\n    # Your code\n    pass`,
+        java: `// Write your solution here\nclass Solution {\n    public void solve() {\n        // Your code\n    }\n}`,
+        cpp: `// Write your solution here\nclass Solution {\npublic:\n    void solve() {\n        // Your code\n    }\n};`
       },
-      isPremium: problem.paidOnly,
-      topicTags: problem.topicTags?.map((t: any) => t.name) || [],
-      acRate: problem.acRate
+      isPremium: extendedProblem.paidOnly,
+      topicTags: extendedProblem.topicTags || [],
+      acRate: extendedProblem.acRate
     }
-    return result
-  } catch (error) {
-    console.error('Failed to fetch problem:', error)
-    return null
+  }
+
+  // For problems in basic list only, show simplified view
+  const allProblems = await fetchAllLeetCodeProblems()
+  const problem = allProblems.find((p: any) => p.titleSlug === slug)
+  
+  if (!problem) return null
+
+  return {
+    id: problem.id || problem.frontendQuestionId,
+    title: problem.title,
+    titleSlug: problem.titleSlug,
+    difficulty: problem.difficulty,
+    description: `📝 **${problem.title}**\n\n🔗 Full problem details available on LeetCode:\nhttps://leetcode.com/problems/${slug}/\n\n💡 **Why use CodePair instead?**\n✅ Real-time collaboration with your partner\n✅ Integrated whiteboard for drawing your approach\n✅ Shared code editor with syntax highlighting\n✅ Chat to discuss strategies\n✅ Perfect for mock interviews!\n\n**Topics:** ${problem.topicTags?.join(', ') || 'See LeetCode'}\n**Acceptance Rate:** ${problem.acRate || 'N/A'}%`,
+    examples: ['See LeetCode for full examples'],
+    constraints: ['See LeetCode for constraints'],
+    starterCode: {
+      javascript: `// Write your solution here\nfunction solve() {\n    // Your code\n}`,
+      python: `# Write your solution here\ndef solve():\n    # Your code\n    pass`,
+      java: `// Write your solution here\nclass Solution {\n    public void solve() {\n        // Your code\n    }\n}`,
+      cpp: `// Write your solution here\nclass Solution {\npublic:\n    void solve() {\n        // Your code\n    }\n};`
+    },
+    isPremium: problem.paidOnly,
+    topicTags: problem.topicTags || [],
+    acRate: problem.acRate
   }
 }
 
