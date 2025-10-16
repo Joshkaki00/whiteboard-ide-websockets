@@ -20,9 +20,11 @@ const templates = {
   'Array': {
     description: (title) => `Solve this array manipulation problem that tests your understanding of efficient iteration and data structure usage.\n\nThis problem requires you to work with array elements and apply algorithmic thinking to find the optimal solution.\n\n**Key Concepts:**\n- Array traversal and indexing\n- Pattern recognition\n- Time/space complexity optimization\n\n**Approach:**\n1. Understand the input constraints\n2. Consider edge cases (empty array, single element, etc.)\n3. Think about whether you need multiple passes\n4. Consider if sorting or hash maps could help`,
     examples: [
-      { input: 'See problem for specific examples', output: 'See problem for expected output', explanation: 'Work through examples on the whiteboard with your partner!' }
+      { input: 'arr = [1, 2, 3, 4, 5]', output: 'Depends on operation', explanation: 'Draw the array on the whiteboard and trace through your algorithm step by step.' },
+      { input: 'arr = []', output: 'Handle empty case', explanation: 'Always consider edge cases - what if the input is empty?' },
+      { input: 'arr = [1]', output: 'Handle single element', explanation: 'Single element is another important edge case to consider.' }
     ],
-    constraints: ['See problem for specific constraints', 'Consider edge cases: empty input, single element, duplicates, negative numbers']
+    constraints: ['1 <= arr.length <= 10⁴', '-10⁹ <= arr[i] <= 10⁹', 'Consider edge cases: empty input, single element, duplicates, negative numbers']
   },
   'String': {
     description: (title) => `Work through this string manipulation problem that tests pattern recognition and efficient string processing.\n\n**Key Concepts:**\n- String traversal (forward, backward, two pointers)\n- Character frequency counting\n- Substring patterns\n- String building vs in-place modification\n\n**Approach:**\n1. Draw out examples on the whiteboard\n2. Look for patterns or repeating structures\n3. Consider if you need a hash map for character tracking\n4. Think about time/space tradeoffs`,
