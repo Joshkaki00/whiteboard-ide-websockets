@@ -16,7 +16,7 @@
     "start": "tsx server/index.ts",
     "server:status": "flyctl status",
     "server:stop": "flyctl scale count 0",
-    "server:start": "flyctl scale count 1",
+    "server:start": "flyctl scale count 2",
     "server:logs": "flyctl logs"
   },
   "dependencies": {
