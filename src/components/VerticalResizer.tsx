@@ -9,14 +9,14 @@ export default function VerticalResizer({ onResize }: VerticalResizerProps) {
   const resizerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMove = (clientY: number) => {
       if (!isDragging || !resizerRef.current) return
 
       const parent = resizerRef.current.parentElement
       if (!parent) return
 
       const parentRect = parent.getBoundingClientRect()
-      const newTopHeight = ((e.clientY - parentRect.top) / parentRect.height) * 100
+      const newTopHeight = ((clientY - parentRect.top) / parentRect.height) * 100
 
       // Constrain between 20% and 80%
       if (newTopHeight >= 20 && newTopHeight <= 80) {
@@ -24,7 +24,18 @@ export default function VerticalResizer({ onResize }: VerticalResizerProps) {
       }
     }
 
-    const handleMouseUp = () => {
+    const handleMouseMove = (e: MouseEvent) => {
+      handleMove(e.clientY)
+    }
+
+    const handleTouchMove = (e: TouchEvent) => {
+      e.preventDefault()
+      if (e.touches.length > 0) {
+        handleMove(e.touches[0].clientY)
+      }
+    }
+
+    const handleEnd = () => {
       setIsDragging(false)
       document.body.style.cursor = ''
       document.body.style.userSelect = ''
@@ -32,18 +43,22 @@ export default function VerticalResizer({ onResize }: VerticalResizerProps) {
 
     if (isDragging) {
       document.addEventListener('mousemove', handleMouseMove)
-      document.addEventListener('mouseup', handleMouseUp)
+      document.addEventListener('mouseup', handleEnd)
+      document.addEventListener('touchmove', handleTouchMove, { passive: false })
+      document.addEventListener('touchend', handleEnd)
       document.body.style.cursor = 'row-resize'
       document.body.style.userSelect = 'none'
     }
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove)
-      document.removeEventListener('mouseup', handleMouseUp)
+      document.removeEventListener('mouseup', handleEnd)
+      document.removeEventListener('touchmove', handleTouchMove)
+      document.removeEventListener('touchend', handleEnd)
     }
   }, [isDragging, onResize])
 
-  const handleMouseDown = () => {
+  const handleStart = () => {
     setIsDragging(true)
   }
 
