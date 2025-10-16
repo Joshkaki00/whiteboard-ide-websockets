@@ -89,7 +89,7 @@ const getTemplateForProblem = (problem) => {
   
   // Default fallback
   return {
-    description: `Solve this problem using appropriate algorithms and data structures.\n\n**Topics:** ${topics}\n\n**Approach:**\n1. Understand the problem\n2. Draw examples\n3. Find patterns\n4. Code solution`,
+    description: `Solve this problem using appropriate algorithms and data structures.\n\nTOPICS: ${topics}\n\nAPPROACH:\n1. Understand the problem\n2. Draw examples\n3. Find patterns\n4. Code solution`,
     examples: [
       { input: 'Input example 1', output: 'Expected output 1', explanation: 'Work through this example on the whiteboard step by step.' },
       { input: 'Input example 2', output: 'Expected output 2', explanation: 'Another test case to verify your approach.' }
