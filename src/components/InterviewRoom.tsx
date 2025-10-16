@@ -225,7 +225,11 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
                       <button
                         key={problem.titleSlug}
                         onClick={() => handleProblemSelect(problem.titleSlug)}
-                        className={`w-full text-left px-4 py-3 hover:bg-purple-50 rounded-md transition-colors ${
+                        onTouchEnd={(e) => {
+                          e.preventDefault()
+                          handleProblemSelect(problem.titleSlug)
+                        }}
+                        className={`w-full text-left px-4 py-3 hover:bg-purple-50 active:bg-purple-100 rounded-md transition-colors ${
                           currentProblemSlug === problem.titleSlug ? 'bg-purple-50 border border-purple-200' : ''
                         }`}
                       >
