@@ -6,6 +6,7 @@ import CodeEditor from './CodeEditor'
 import Whiteboard from './Whiteboard'
 import ChatPanel from './ChatPanel'
 import ParticipantsPanel from './ParticipantsPanel'
+import { useSocket } from '../contexts/SocketContext'
 
 interface InterviewRoomProps {
   readonly roomId: string;
@@ -13,9 +14,9 @@ interface InterviewRoomProps {
 }
 
 export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps) {
+  const { viewMode, viewModeLocked, isCreator, changeViewMode, toggleViewLock } = useSocket()
   const [showProblemSelector, setShowProblemSelector] = useState(false)
   const [currentProblemSlug, setCurrentProblemSlug] = useState('two-sum')
-  const [viewMode, setViewMode] = useState<'code' | 'hybrid' | 'whiteboard'>('hybrid')
   const [searchQuery, setSearchQuery] = useState('')
   const [allProblems, setAllProblems] = useState<any[]>([])
   const [filteredProblems, setFilteredProblems] = useState<any[]>([])
