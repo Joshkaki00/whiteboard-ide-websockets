@@ -108,8 +108,8 @@ const PROBLEM_BANK: Record<string, LeetCodeProblem> = {
   }
 }
 
-// LeetCode GraphQL API endpoint (public, no auth needed for problem list)
-const LEETCODE_API = 'https://leetcode.com/graphql'
+// Use our backend proxy to avoid CORS issues
+const LEETCODE_API = `${import.meta.env.VITE_SERVER_URL || 'http://localhost:3001'}/api/leetcode/problems`
 
 // Cache for problem list (avoid repeated API calls)
 let problemListCache: any[] | null = null
@@ -123,42 +123,12 @@ export const fetchAllLeetCodeProblems = async (): Promise<any[]> => {
   }
 
   try {
-    console.log('🚀 Fetching LeetCode problems from API...')
+    console.log('🚀 Fetching LeetCode problems via proxy...')
     const response = await fetch(LEETCODE_API, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Referer': 'https://leetcode.com',
-      },
-      body: JSON.stringify({
-        query: `
-          query problemsetQuestionList {
-            problemsetQuestionList: questionList(
-              categorySlug: ""
-              limit: -1
-              skip: 0
-              filters: {}
-            ) {
-              total: totalNum
-              questions: data {
-                acRate
-                difficulty
-                freqBar
-                frontendQuestionId: questionFrontendId
-                isFavor
-                paidOnly: isPaidOnly
-                status
-                title
-                titleSlug
-                topicTags {
-                  name
-                  slug
-                }
-              }
-            }
-          }
-        `
-      })
+      }
     })
 
     console.log('📡 Response status:', response.status)
