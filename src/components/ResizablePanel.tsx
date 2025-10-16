@@ -20,7 +20,7 @@ export default function ResizablePanel({
   const panelRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMove = (clientX: number) => {
       if (!isResizing || !panelRef.current) return
 
       const panel = panelRef.current
@@ -28,9 +28,9 @@ export default function ResizablePanel({
       
       let newWidth: number
       if (direction === 'right') {
-        newWidth = e.clientX - rect.left
+        newWidth = clientX - rect.left
       } else {
-        newWidth = rect.right - e.clientX
+        newWidth = rect.right - clientX
       }
 
       if (newWidth >= minWidth && newWidth <= maxWidth) {
@@ -38,7 +38,18 @@ export default function ResizablePanel({
       }
     }
 
-    const handleMouseUp = () => {
+    const handleMouseMove = (e: MouseEvent) => {
+      handleMove(e.clientX)
+    }
+
+    const handleTouchMove = (e: TouchEvent) => {
+      e.preventDefault()
+      if (e.touches.length > 0) {
+        handleMove(e.touches[0].clientX)
+      }
+    }
+
+    const handleEnd = () => {
       setIsResizing(false)
       document.body.style.cursor = ''
       document.body.style.userSelect = ''
@@ -46,18 +57,22 @@ export default function ResizablePanel({
 
     if (isResizing) {
       document.addEventListener('mousemove', handleMouseMove)
-      document.addEventListener('mouseup', handleMouseUp)
+      document.addEventListener('mouseup', handleEnd)
+      document.addEventListener('touchmove', handleTouchMove, { passive: false })
+      document.addEventListener('touchend', handleEnd)
       document.body.style.cursor = 'col-resize'
       document.body.style.userSelect = 'none'
     }
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove)
-      document.removeEventListener('mouseup', handleMouseUp)
+      document.removeEventListener('mouseup', handleEnd)
+      document.removeEventListener('touchmove', handleTouchMove)
+      document.removeEventListener('touchend', handleEnd)
     }
   }, [isResizing, minWidth, maxWidth, direction])
 
-  const handleMouseDown = () => {
+  const handleStart = () => {
     setIsResizing(true)
   }
 
