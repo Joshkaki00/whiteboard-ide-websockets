@@ -108,14 +108,22 @@ const PROBLEM_BANK: Record<string, LeetCodeProblem> = {
   }
 }
 
-// Import curated problem list
-import problemsData from '../data/leetcode-problems.json'
+// Import curated problem list with full descriptions
+import problemsDataExtended from '../data/leetcode-problems-extended.json'
+import problemsDataBasic from '../data/leetcode-problems.json'
 
-// Cache the full problem list
-let problemListCache: any[] = problemsData.filter(p => !p.paidOnly)
+// Combine both datasets - extended problems have full details, basic ones just have metadata
+const extendedSlugs = new Set(problemsDataExtended.map(p => p.titleSlug))
+const basicProblemsFiltered = problemsDataBasic.filter(p => !extendedSlugs.has(p.titleSlug) && !p.paidOnly)
+
+// Cache the full problem list (extended + basic)
+let problemListCache: any[] = [
+  ...problemsDataExtended.filter(p => !p.paidOnly),
+  ...basicProblemsFiltered
+]
 
 export const fetchAllLeetCodeProblems = async (): Promise<any[]> => {
-  console.log('📚 Loading', problemListCache.length, 'curated LeetCode problems...')
+  console.log('📚 Loaded', problemListCache.length, 'curated problems (' + problemsDataExtended.length + ' with full details)')
   // Return immediately - no API call needed!
   return Promise.resolve(problemListCache)
 }
