@@ -15,12 +15,17 @@ interface SocketContextType {
   createRoom: () => Promise<string | null>
   joinRoom: (roomId: string) => Promise<boolean>
   sendMessage: (roomId: string, message: string, username: string) => void
-  sendCodeChange: (roomId: string, code: string) => void  // Add this
-  changeLanguage: (roomId: string, language: string) => void  // Add this
+  sendCodeChange: (roomId: string, code: string) => void
+  changeLanguage: (roomId: string, language: string) => void
+  changeViewMode: (roomId: string, viewMode: 'hybrid' | 'whiteboard') => void
+  toggleViewLock: (roomId: string, locked: boolean) => void
   messages: ChatMessage[]
   participantCount: number
-  codeContent: string  // Add this
-  currentLanguage: string  // Add this
+  codeContent: string
+  currentLanguage: string
+  viewMode: 'hybrid' | 'whiteboard'
+  viewModeLocked: boolean
+  isCreator: boolean
 }
 
 const SocketContext = createContext<SocketContextType | undefined>(undefined)
@@ -40,6 +45,9 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   const [participantCount, setParticipantCount] = useState(0)
   const [codeContent, setCodeContent] = useState('')
   const [currentLanguage, setCurrentLanguage] = useState('javascript')
+  const [viewMode, setViewMode] = useState<'hybrid' | 'whiteboard'>('hybrid')
+  const [viewModeLocked, setViewModeLocked] = useState(false)
+  const [isCreator, setIsCreator] = useState(false)
 
   useEffect(() => {
     const newSocket = io(import.meta.env.VITE_SERVER_URL || 'http://localhost:3001')
