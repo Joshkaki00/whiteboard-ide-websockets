@@ -77,6 +77,7 @@ app.post('/api/leetcode/problems', async (req, res) => {
 
 interface Room {
   id: string
+  creator: string
   participants: Set<string>
   messages: ChatMessage[]
   codeContent: string
@@ -84,6 +85,8 @@ interface Room {
   currentProblem: string
   timerStartedAt: Date | null
   timerDuration: number  //(in seconds)
+  viewMode: 'hybrid' | 'whiteboard'
+  viewModeLocked: boolean
 }
 
 interface ChatMessage {
