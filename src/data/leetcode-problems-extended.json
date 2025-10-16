@@ -10,7 +10,7 @@
       "Array",
       "Hash Table"
     ],
-    "description": "# Two Sum\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Hash Table\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 49.3%\n- **Topics:** Array, Hash Table\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Hash Table\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 49.3%\n• Topics: Array, Hash Table\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -46,7 +46,7 @@
       "Math",
       "Recursion"
     ],
-    "description": "# Add Two Numbers\n\nWork through this linked list problem with pointer manipulation.\n\n**Topics:** Linked List, Math, Recursion\n\n**Key Concepts:**\n- Pointer manipulation\n- Dummy nodes\n- In-place vs new list\n- Null checks\n\n**Approach:**\n1. Draw list on whiteboard\n2. Consider dummy head\n3. Track pointers carefully\n4. Test edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 41.5%\n- **Topics:** Linked List, Math, Recursion\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Work through this linked list problem with pointer manipulation.\n\nTOPICS: Linked List, Math, Recursion\n\nKEY CONCEPTS:\n• Pointer manipulation\n• Dummy nodes\n• In-place vs new list\n• Null checks\n\nAPPROACH:\n1. Draw list on whiteboard\n2. Consider dummy head\n3. Track pointers carefully\n4. Test edge cases\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 41.5%\n• Topics: Linked List, Math, Recursion\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "head = [1,2,3,4,5]",
@@ -82,7 +82,7 @@
       "String",
       "Sliding Window"
     ],
-    "description": "# Longest Substring Without Repeating Characters\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** Hash Table, String, Sliding Window\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 34.2%\n- **Topics:** Hash Table, String, Sliding Window\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Work through this string problem using efficient traversal techniques.\n\nTOPICS: Hash Table, String, Sliding Window\n\nKEY CONCEPTS:\n• String traversal patterns\n• Character frequency counting\n• Two pointers or sliding window\n• String immutability\n\nAPPROACH:\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 34.2%\n• Topics: Hash Table, String, Sliding Window\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "s = \"racecar\"",
@@ -117,7 +117,7 @@
       "String",
       "Dynamic Programming"
     ],
-    "description": "# Longest Palindromic Substring\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** String, Dynamic Programming\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 33.1%\n- **Topics:** String, Dynamic Programming\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Work through this string problem using efficient traversal techniques.\n\nTOPICS: String, Dynamic Programming\n\nKEY CONCEPTS:\n• String traversal patterns\n• Character frequency counting\n• Two pointers or sliding window\n• String immutability\n\nAPPROACH:\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 33.1%\n• Topics: String, Dynamic Programming\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "s = \"racecar\"",
@@ -151,7 +151,7 @@
     "topicTags": [
       "Math"
     ],
-    "description": "# Reverse Integer\n\nSolve this problem using appropriate algorithms and data structures.\n\n**Topics:** Math\n\n**Approach:**\n1. Understand the problem\n2. Draw examples\n3. Find patterns\n4. Code solution\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 28.5%\n- **Topics:** Math\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this problem using appropriate algorithms and data structures.\n\nTOPICS: Math\n\nAPPROACH:\n1. Understand the problem\n2. Draw examples\n3. Find patterns\n4. Code solution\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 28.5%\n• Topics: Math\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "Input example 1",
@@ -180,7 +180,7 @@
     "topicTags": [
       "Math"
     ],
-    "description": "# Palindrome Number\n\nSolve this problem using appropriate algorithms and data structures.\n\n**Topics:** Math\n\n**Approach:**\n1. Understand the problem\n2. Draw examples\n3. Find patterns\n4. Code solution\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 54.2%\n- **Topics:** Math\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this problem using appropriate algorithms and data structures.\n\nTOPICS: Math\n\nAPPROACH:\n1. Understand the problem\n2. Draw examples\n3. Find patterns\n4. Code solution\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 54.2%\n• Topics: Math\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "Input example 1",
@@ -211,7 +211,7 @@
       "Two Pointers",
       "Greedy"
     ],
-    "description": "# Container With Most Water\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Two Pointers, Greedy\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 54.8%\n- **Topics:** Array, Two Pointers, Greedy\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Two Pointers, Greedy\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 54.8%\n• Topics: Array, Two Pointers, Greedy\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -247,7 +247,7 @@
       "Math",
       "String"
     ],
-    "description": "# Roman to Integer\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** Hash Table, Math, String\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 59.1%\n- **Topics:** Hash Table, Math, String\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Work through this string problem using efficient traversal techniques.\n\nTOPICS: Hash Table, Math, String\n\nKEY CONCEPTS:\n• String traversal patterns\n• Character frequency counting\n• Two pointers or sliding window\n• String immutability\n\nAPPROACH:\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 59.1%\n• Topics: Hash Table, Math, String\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "s = \"racecar\"",
@@ -282,7 +282,7 @@
       "String",
       "Trie"
     ],
-    "description": "# Longest Common Prefix\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** String, Trie\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 42.3%\n- **Topics:** String, Trie\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Work through this string problem using efficient traversal techniques.\n\nTOPICS: String, Trie\n\nKEY CONCEPTS:\n• String traversal patterns\n• Character frequency counting\n• Two pointers or sliding window\n• String immutability\n\nAPPROACH:\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 42.3%\n• Topics: String, Trie\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "s = \"racecar\"",
@@ -318,7 +318,7 @@
       "Two Pointers",
       "Sorting"
     ],
-    "description": "# 3Sum\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Two Pointers, Sorting\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 33.5%\n- **Topics:** Array, Two Pointers, Sorting\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Two Pointers, Sorting\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 33.5%\n• Topics: Array, Two Pointers, Sorting\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -354,7 +354,7 @@
       "String",
       "Backtracking"
     ],
-    "description": "# Letter Combinations of a Phone Number\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** Hash Table, String, Backtracking\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 58.9%\n- **Topics:** Hash Table, String, Backtracking\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Work through this string problem using efficient traversal techniques.\n\nTOPICS: Hash Table, String, Backtracking\n\nKEY CONCEPTS:\n• String traversal patterns\n• Character frequency counting\n• Two pointers or sliding window\n• String immutability\n\nAPPROACH:\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 58.9%\n• Topics: Hash Table, String, Backtracking\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "s = \"racecar\"",
@@ -389,7 +389,7 @@
       "Linked List",
       "Two Pointers"
     ],
-    "description": "# Remove Nth Node From End of List\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Linked List, Two Pointers\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 43.1%\n- **Topics:** Linked List, Two Pointers\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Linked List, Two Pointers\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 43.1%\n• Topics: Linked List, Two Pointers\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -424,7 +424,7 @@
       "String",
       "Stack"
     ],
-    "description": "# Valid Parentheses\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** String, Stack\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 40.8%\n- **Topics:** String, Stack\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Work through this string problem using efficient traversal techniques.\n\nTOPICS: String, Stack\n\nKEY CONCEPTS:\n• String traversal patterns\n• Character frequency counting\n• Two pointers or sliding window\n• String immutability\n\nAPPROACH:\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 40.8%\n• Topics: String, Stack\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "s = \"racecar\"",
@@ -459,7 +459,7 @@
       "Linked List",
       "Recursion"
     ],
-    "description": "# Merge Two Sorted Lists\n\nWork through this linked list problem with pointer manipulation.\n\n**Topics:** Linked List, Recursion\n\n**Key Concepts:**\n- Pointer manipulation\n- Dummy nodes\n- In-place vs new list\n- Null checks\n\n**Approach:**\n1. Draw list on whiteboard\n2. Consider dummy head\n3. Track pointers carefully\n4. Test edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 63.5%\n- **Topics:** Linked List, Recursion\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Work through this linked list problem with pointer manipulation.\n\nTOPICS: Linked List, Recursion\n\nKEY CONCEPTS:\n• Pointer manipulation\n• Dummy nodes\n• In-place vs new list\n• Null checks\n\nAPPROACH:\n1. Draw list on whiteboard\n2. Consider dummy head\n3. Track pointers carefully\n4. Test edge cases\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 63.5%\n• Topics: Linked List, Recursion\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "head = [1,2,3,4,5]",
@@ -495,7 +495,7 @@
       "Dynamic Programming",
       "Backtracking"
     ],
-    "description": "# Generate Parentheses\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** String, Dynamic Programming, Backtracking\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 73.9%\n- **Topics:** String, Dynamic Programming, Backtracking\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Work through this string problem using efficient traversal techniques.\n\nTOPICS: String, Dynamic Programming, Backtracking\n\nKEY CONCEPTS:\n• String traversal patterns\n• Character frequency counting\n• Two pointers or sliding window\n• String immutability\n\nAPPROACH:\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 73.9%\n• Topics: String, Dynamic Programming, Backtracking\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "s = \"racecar\"",
@@ -532,7 +532,7 @@
       "Heap (Priority Queue)",
       "Merge Sort"
     ],
-    "description": "# Merge k Sorted Lists\n\nWork through this linked list problem with pointer manipulation.\n\n**Topics:** Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort\n\n**Key Concepts:**\n- Pointer manipulation\n- Dummy nodes\n- In-place vs new list\n- Null checks\n\n**Approach:**\n1. Draw list on whiteboard\n2. Consider dummy head\n3. Track pointers carefully\n4. Test edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Hard\n- **Acceptance Rate:** 51.8%\n- **Topics:** Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Work through this linked list problem with pointer manipulation.\n\nTOPICS: Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort\n\nKEY CONCEPTS:\n• Pointer manipulation\n• Dummy nodes\n• In-place vs new list\n• Null checks\n\nAPPROACH:\n1. Draw list on whiteboard\n2. Consider dummy head\n3. Track pointers carefully\n4. Test edge cases\n\n📊 PROBLEM STATS:\n• Difficulty: Hard\n• Acceptance Rate: 51.8%\n• Topics: Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "head = [1,2,3,4,5]",
@@ -567,7 +567,7 @@
       "Array",
       "Two Pointers"
     ],
-    "description": "# Remove Duplicates from Sorted Array\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Two Pointers\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 53.4%\n- **Topics:** Array, Two Pointers\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Two Pointers\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 53.4%\n• Topics: Array, Two Pointers\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -602,7 +602,7 @@
       "Array",
       "Binary Search"
     ],
-    "description": "# Search in Rotated Sorted Array\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Binary Search\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 40.1%\n- **Topics:** Array, Binary Search\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Binary Search\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 40.1%\n• Topics: Array, Binary Search\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -637,7 +637,7 @@
       "Array",
       "Binary Search"
     ],
-    "description": "# Find First and Last Position of Element in Sorted Array\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Binary Search\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 43.9%\n- **Topics:** Array, Binary Search\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Binary Search\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 43.9%\n• Topics: Array, Binary Search\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -672,7 +672,7 @@
       "Array",
       "Backtracking"
     ],
-    "description": "# Combination Sum\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Backtracking\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 71.2%\n- **Topics:** Array, Backtracking\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Backtracking\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 71.2%\n• Topics: Array, Backtracking\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -710,7 +710,7 @@
       "Stack",
       "Monotonic Stack"
     ],
-    "description": "# Trapping Rain Water\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Hard\n- **Acceptance Rate:** 60.5%\n- **Topics:** Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Hard\n• Acceptance Rate: 60.5%\n• Topics: Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -745,7 +745,7 @@
       "Array",
       "Backtracking"
     ],
-    "description": "# Permutations\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Backtracking\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 77.4%\n- **Topics:** Array, Backtracking\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Backtracking\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 77.4%\n• Topics: Array, Backtracking\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -781,7 +781,7 @@
       "Math",
       "Matrix"
     ],
-    "description": "# Rotate Image\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Math, Matrix\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 72.8%\n- **Topics:** Array, Math, Matrix\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Math, Matrix\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 72.8%\n• Topics: Array, Math, Matrix\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -818,7 +818,7 @@
       "String",
       "Sorting"
     ],
-    "description": "# Group Anagrams\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Hash Table, String, Sorting\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 67.8%\n- **Topics:** Array, Hash Table, String, Sorting\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Hash Table, String, Sorting\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 67.8%\n• Topics: Array, Hash Table, String, Sorting\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -854,7 +854,7 @@
       "Divide and Conquer",
       "Dynamic Programming"
     ],
-    "description": "# Maximum Subarray\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Divide and Conquer, Dynamic Programming\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 50.3%\n- **Topics:** Array, Divide and Conquer, Dynamic Programming\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Divide and Conquer, Dynamic Programming\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 50.3%\n• Topics: Array, Divide and Conquer, Dynamic Programming\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -890,7 +890,7 @@
       "Matrix",
       "Simulation"
     ],
-    "description": "# Spiral Matrix\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Matrix, Simulation\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 46.8%\n- **Topics:** Array, Matrix, Simulation\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Matrix, Simulation\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 46.8%\n• Topics: Array, Matrix, Simulation\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -926,7 +926,7 @@
       "Dynamic Programming",
       "Greedy"
     ],
-    "description": "# Jump Game\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Dynamic Programming, Greedy\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 38.9%\n- **Topics:** Array, Dynamic Programming, Greedy\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Dynamic Programming, Greedy\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 38.9%\n• Topics: Array, Dynamic Programming, Greedy\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -961,7 +961,7 @@
       "Array",
       "Sorting"
     ],
-    "description": "# Merge Intervals\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Sorting\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 46.9%\n- **Topics:** Array, Sorting\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Sorting\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 46.9%\n• Topics: Array, Sorting\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -997,7 +997,7 @@
       "Dynamic Programming",
       "Combinatorics"
     ],
-    "description": "# Unique Paths\n\nSolve this DP problem by breaking it into subproblems.\n\n**Topics:** Math, Dynamic Programming, Combinatorics\n\n**Key Concepts:**\n- Overlapping subproblems\n- Optimal substructure\n- Memoization or tabulation\n- State definition\n\n**Approach:**\n1. Define dp[i] meaning\n2. Find base cases\n3. Write recurrence relation\n4. Draw DP table on whiteboard!\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 63.9%\n- **Topics:** Math, Dynamic Programming, Combinatorics\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this DP problem by breaking it into subproblems.\n\nTOPICS: Math, Dynamic Programming, Combinatorics\n\nKEY CONCEPTS:\n• Overlapping subproblems\n• Optimal substructure\n• Memoization or tabulation\n• State definition\n\nAPPROACH:\n1. Define dp[i] meaning\n2. Find base cases\n3. Write recurrence relation\n4. Draw DP table on whiteboard!\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 63.9%\n• Topics: Math, Dynamic Programming, Combinatorics\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "n = 5",
@@ -1033,7 +1033,7 @@
       "Dynamic Programming",
       "Memoization"
     ],
-    "description": "# Climbing Stairs\n\nSolve this DP problem by breaking it into subproblems.\n\n**Topics:** Math, Dynamic Programming, Memoization\n\n**Key Concepts:**\n- Overlapping subproblems\n- Optimal substructure\n- Memoization or tabulation\n- State definition\n\n**Approach:**\n1. Define dp[i] meaning\n2. Find base cases\n3. Write recurrence relation\n4. Draw DP table on whiteboard!\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 52.3%\n- **Topics:** Math, Dynamic Programming, Memoization\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this DP problem by breaking it into subproblems.\n\nTOPICS: Math, Dynamic Programming, Memoization\n\nKEY CONCEPTS:\n• Overlapping subproblems\n• Optimal substructure\n• Memoization or tabulation\n• State definition\n\nAPPROACH:\n1. Define dp[i] meaning\n2. Find base cases\n3. Write recurrence relation\n4. Draw DP table on whiteboard!\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 52.3%\n• Topics: Math, Dynamic Programming, Memoization\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "n = 5",
@@ -1069,7 +1069,7 @@
       "Two Pointers",
       "Sorting"
     ],
-    "description": "# Sort Colors\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Two Pointers, Sorting\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 60.9%\n- **Topics:** Array, Two Pointers, Sorting\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Two Pointers, Sorting\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 60.9%\n• Topics: Array, Two Pointers, Sorting\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -1105,7 +1105,7 @@
       "String",
       "Sliding Window"
     ],
-    "description": "# Minimum Window Substring\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** Hash Table, String, Sliding Window\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Hard\n- **Acceptance Rate:** 41.7%\n- **Topics:** Hash Table, String, Sliding Window\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Work through this string problem using efficient traversal techniques.\n\nTOPICS: Hash Table, String, Sliding Window\n\nKEY CONCEPTS:\n• String traversal patterns\n• Character frequency counting\n• Two pointers or sliding window\n• String immutability\n\nAPPROACH:\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n📊 PROBLEM STATS:\n• Difficulty: Hard\n• Acceptance Rate: 41.7%\n• Topics: Hash Table, String, Sliding Window\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "s = \"racecar\"",
@@ -1141,7 +1141,7 @@
       "Backtracking",
       "Bit Manipulation"
     ],
-    "description": "# Subsets\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Backtracking, Bit Manipulation\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 77.6%\n- **Topics:** Array, Backtracking, Bit Manipulation\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Backtracking, Bit Manipulation\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 77.6%\n• Topics: Array, Backtracking, Bit Manipulation\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -1177,7 +1177,7 @@
       "Backtracking",
       "Matrix"
     ],
-    "description": "# Word Search\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Backtracking, Matrix\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 40.8%\n- **Topics:** Array, Backtracking, Matrix\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Backtracking, Matrix\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 40.8%\n• Topics: Array, Backtracking, Matrix\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -1213,7 +1213,7 @@
       "Stack",
       "Monotonic Stack"
     ],
-    "description": "# Largest Rectangle in Histogram\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Stack, Monotonic Stack\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Hard\n- **Acceptance Rate:** 43.5%\n- **Topics:** Array, Stack, Monotonic Stack\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Stack, Monotonic Stack\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Hard\n• Acceptance Rate: 43.5%\n• Topics: Array, Stack, Monotonic Stack\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -1248,7 +1248,7 @@
       "String",
       "Dynamic Programming"
     ],
-    "description": "# Decode Ways\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** String, Dynamic Programming\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 33.7%\n- **Topics:** String, Dynamic Programming\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Work through this string problem using efficient traversal techniques.\n\nTOPICS: String, Dynamic Programming\n\nKEY CONCEPTS:\n• String traversal patterns\n• Character frequency counting\n• Two pointers or sliding window\n• String immutability\n\nAPPROACH:\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 33.7%\n• Topics: String, Dynamic Programming\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "s = \"racecar\"",
@@ -1285,7 +1285,7 @@
       "Depth-First Search",
       "Binary Tree"
     ],
-    "description": "# Binary Tree Inorder Traversal\n\nSolve this tree problem using traversal and recursion.\n\n**Topics:** Stack, Tree, Depth-First Search, Binary Tree\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 75.2%\n- **Topics:** Stack, Tree, Depth-First Search, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this tree problem using traversal and recursion.\n\nTOPICS: Stack, Tree, Depth-First Search, Binary Tree\n\nKEY CONCEPTS:\n• Tree traversal (DFS/BFS)\n• Recursion with base cases\n• Left and right subtrees\n• Null checks\n\nAPPROACH:\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 75.2%\n• Topics: Stack, Tree, Depth-First Search, Binary Tree\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "root = [4,2,7,1,3,6,9]",
@@ -1322,7 +1322,7 @@
       "Binary Search Tree",
       "Binary Tree"
     ],
-    "description": "# Validate Binary Search Tree\n\nSolve this tree problem using traversal and recursion.\n\n**Topics:** Tree, Depth-First Search, Binary Search Tree, Binary Tree\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 32.9%\n- **Topics:** Tree, Depth-First Search, Binary Search Tree, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this tree problem using traversal and recursion.\n\nTOPICS: Tree, Depth-First Search, Binary Search Tree, Binary Tree\n\nKEY CONCEPTS:\n• Tree traversal (DFS/BFS)\n• Recursion with base cases\n• Left and right subtrees\n• Null checks\n\nAPPROACH:\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 32.9%\n• Topics: Tree, Depth-First Search, Binary Search Tree, Binary Tree\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "root = [4,2,7,1,3,6,9]",
@@ -1359,7 +1359,7 @@
       "Breadth-First Search",
       "Binary Tree"
     ],
-    "description": "# Same Tree\n\nSolve this tree problem using traversal and recursion.\n\n**Topics:** Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 59.8%\n- **Topics:** Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this tree problem using traversal and recursion.\n\nTOPICS: Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\nKEY CONCEPTS:\n• Tree traversal (DFS/BFS)\n• Recursion with base cases\n• Left and right subtrees\n• Null checks\n\nAPPROACH:\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 59.8%\n• Topics: Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "root = [4,2,7,1,3,6,9]",
@@ -1396,7 +1396,7 @@
       "Breadth-First Search",
       "Binary Tree"
     ],
-    "description": "# Symmetric Tree\n\nSolve this tree problem using traversal and recursion.\n\n**Topics:** Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 56.4%\n- **Topics:** Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this tree problem using traversal and recursion.\n\nTOPICS: Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\nKEY CONCEPTS:\n• Tree traversal (DFS/BFS)\n• Recursion with base cases\n• Left and right subtrees\n• Null checks\n\nAPPROACH:\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 56.4%\n• Topics: Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "root = [4,2,7,1,3,6,9]",
@@ -1432,7 +1432,7 @@
       "Breadth-First Search",
       "Binary Tree"
     ],
-    "description": "# Binary Tree Level Order Traversal\n\nSolve this tree problem using traversal and recursion.\n\n**Topics:** Tree, Breadth-First Search, Binary Tree\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 66.2%\n- **Topics:** Tree, Breadth-First Search, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this tree problem using traversal and recursion.\n\nTOPICS: Tree, Breadth-First Search, Binary Tree\n\nKEY CONCEPTS:\n• Tree traversal (DFS/BFS)\n• Recursion with base cases\n• Left and right subtrees\n• Null checks\n\nAPPROACH:\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 66.2%\n• Topics: Tree, Breadth-First Search, Binary Tree\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "root = [4,2,7,1,3,6,9]",
@@ -1469,7 +1469,7 @@
       "Breadth-First Search",
       "Binary Tree"
     ],
-    "description": "# Maximum Depth of Binary Tree\n\nSolve this tree problem using traversal and recursion.\n\n**Topics:** Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 75.1%\n- **Topics:** Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this tree problem using traversal and recursion.\n\nTOPICS: Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\nKEY CONCEPTS:\n• Tree traversal (DFS/BFS)\n• Recursion with base cases\n• Left and right subtrees\n• Null checks\n\nAPPROACH:\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 75.1%\n• Topics: Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "root = [4,2,7,1,3,6,9]",
@@ -1507,7 +1507,7 @@
       "Tree",
       "Binary Tree"
     ],
-    "description": "# Construct Binary Tree from Preorder and Inorder Traversal\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Hash Table, Divide and Conquer, Tree, Binary Tree\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 64.5%\n- **Topics:** Array, Hash Table, Divide and Conquer, Tree, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Hash Table, Divide and Conquer, Tree, Binary Tree\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 64.5%\n• Topics: Array, Hash Table, Divide and Conquer, Tree, Binary Tree\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -1542,7 +1542,7 @@
       "Array",
       "Dynamic Programming"
     ],
-    "description": "# Best Time to Buy and Sell Stock\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Dynamic Programming\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 54.2%\n- **Topics:** Array, Dynamic Programming\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Dynamic Programming\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 54.2%\n• Topics: Array, Dynamic Programming\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -1579,7 +1579,7 @@
       "Depth-First Search",
       "Binary Tree"
     ],
-    "description": "# Binary Tree Maximum Path Sum\n\nSolve this DP problem by breaking it into subproblems.\n\n**Topics:** Dynamic Programming, Tree, Depth-First Search, Binary Tree\n\n**Key Concepts:**\n- Overlapping subproblems\n- Optimal substructure\n- Memoization or tabulation\n- State definition\n\n**Approach:**\n1. Define dp[i] meaning\n2. Find base cases\n3. Write recurrence relation\n4. Draw DP table on whiteboard!\n\n### 📊 Problem Stats\n- **Difficulty:** Hard\n- **Acceptance Rate:** 39.8%\n- **Topics:** Dynamic Programming, Tree, Depth-First Search, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this DP problem by breaking it into subproblems.\n\nTOPICS: Dynamic Programming, Tree, Depth-First Search, Binary Tree\n\nKEY CONCEPTS:\n• Overlapping subproblems\n• Optimal substructure\n• Memoization or tabulation\n• State definition\n\nAPPROACH:\n1. Define dp[i] meaning\n2. Find base cases\n3. Write recurrence relation\n4. Draw DP table on whiteboard!\n\n📊 PROBLEM STATS:\n• Difficulty: Hard\n• Acceptance Rate: 39.8%\n• Topics: Dynamic Programming, Tree, Depth-First Search, Binary Tree\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "n = 5",
@@ -1614,7 +1614,7 @@
       "Two Pointers",
       "String"
     ],
-    "description": "# Valid Palindrome\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Two Pointers, String\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 45.9%\n- **Topics:** Two Pointers, String\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Two Pointers, String\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 45.9%\n• Topics: Two Pointers, String\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -1650,7 +1650,7 @@
       "Hash Table",
       "Union Find"
     ],
-    "description": "# Longest Consecutive Sequence\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Hash Table, Union Find\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 48.7%\n- **Topics:** Array, Hash Table, Union Find\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Hash Table, Union Find\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 48.7%\n• Topics: Array, Hash Table, Union Find\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -1687,7 +1687,7 @@
       "Breadth-First Search",
       "Graph"
     ],
-    "description": "# Clone Graph\n\nSolve this problem using appropriate algorithms and data structures.\n\n**Topics:** Hash Table, Depth-First Search, Breadth-First Search, Graph\n\n**Approach:**\n1. Understand the problem\n2. Draw examples\n3. Find patterns\n4. Code solution\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 54.9%\n- **Topics:** Hash Table, Depth-First Search, Breadth-First Search, Graph\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this problem using appropriate algorithms and data structures.\n\nTOPICS: Hash Table, Depth-First Search, Breadth-First Search, Graph\n\nAPPROACH:\n1. Understand the problem\n2. Draw examples\n3. Find patterns\n4. Code solution\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 54.9%\n• Topics: Hash Table, Depth-First Search, Breadth-First Search, Graph\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "Input example 1",
@@ -1721,7 +1721,7 @@
       "Trie",
       "Memoization"
     ],
-    "description": "# Word Break\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Hash Table, String, Dynamic Programming, Trie, Memoization\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 46.7%\n- **Topics:** Array, Hash Table, String, Dynamic Programming, Trie, Memoization\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Hash Table, String, Dynamic Programming, Trie, Memoization\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 46.7%\n• Topics: Array, Hash Table, String, Dynamic Programming, Trie, Memoization\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -1757,7 +1757,7 @@
       "Linked List",
       "Two Pointers"
     ],
-    "description": "# Linked List Cycle\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Hash Table, Linked List, Two Pointers\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 49.2%\n- **Topics:** Hash Table, Linked List, Two Pointers\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Hash Table, Linked List, Two Pointers\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 49.2%\n• Topics: Hash Table, Linked List, Two Pointers\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -1794,7 +1794,7 @@
       "Stack",
       "Recursion"
     ],
-    "description": "# Reorder List\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Linked List, Two Pointers, Stack, Recursion\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 56.7%\n- **Topics:** Linked List, Two Pointers, Stack, Recursion\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Linked List, Two Pointers, Stack, Recursion\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 56.7%\n• Topics: Linked List, Two Pointers, Stack, Recursion\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -1829,7 +1829,7 @@
       "Array",
       "Dynamic Programming"
     ],
-    "description": "# Maximum Product Subarray\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Dynamic Programming\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 35.1%\n- **Topics:** Array, Dynamic Programming\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Dynamic Programming\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 35.1%\n• Topics: Array, Dynamic Programming\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -1864,7 +1864,7 @@
       "Array",
       "Binary Search"
     ],
-    "description": "# Find Minimum in Rotated Sorted Array\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Binary Search\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 50.3%\n- **Topics:** Array, Binary Search\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Binary Search\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 50.3%\n• Topics: Array, Binary Search\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -1899,7 +1899,7 @@
       "Array",
       "Dynamic Programming"
     ],
-    "description": "# House Robber\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Dynamic Programming\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 50.2%\n- **Topics:** Array, Dynamic Programming\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Dynamic Programming\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 50.2%\n• Topics: Array, Dynamic Programming\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -1937,7 +1937,7 @@
       "Union Find",
       "Matrix"
     ],
-    "description": "# Number of Islands\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Depth-First Search, Breadth-First Search, Union Find, Matrix\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 58.1%\n- **Topics:** Array, Depth-First Search, Breadth-First Search, Union Find, Matrix\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Depth-First Search, Breadth-First Search, Union Find, Matrix\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 58.1%\n• Topics: Array, Depth-First Search, Breadth-First Search, Union Find, Matrix\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -1972,7 +1972,7 @@
       "Linked List",
       "Recursion"
     ],
-    "description": "# Reverse Linked List\n\nWork through this linked list problem with pointer manipulation.\n\n**Topics:** Linked List, Recursion\n\n**Key Concepts:**\n- Pointer manipulation\n- Dummy nodes\n- In-place vs new list\n- Null checks\n\n**Approach:**\n1. Draw list on whiteboard\n2. Consider dummy head\n3. Track pointers carefully\n4. Test edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 75.4%\n- **Topics:** Linked List, Recursion\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Work through this linked list problem with pointer manipulation.\n\nTOPICS: Linked List, Recursion\n\nKEY CONCEPTS:\n• Pointer manipulation\n• Dummy nodes\n• In-place vs new list\n• Null checks\n\nAPPROACH:\n1. Draw list on whiteboard\n2. Consider dummy head\n3. Track pointers carefully\n4. Test edge cases\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 75.4%\n• Topics: Linked List, Recursion\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "head = [1,2,3,4,5]",
@@ -2009,7 +2009,7 @@
       "Graph",
       "Topological Sort"
     ],
-    "description": "# Course Schedule\n\nSolve this problem using appropriate algorithms and data structures.\n\n**Topics:** Depth-First Search, Breadth-First Search, Graph, Topological Sort\n\n**Approach:**\n1. Understand the problem\n2. Draw examples\n3. Find patterns\n4. Code solution\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 46.5%\n- **Topics:** Depth-First Search, Breadth-First Search, Graph, Topological Sort\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this problem using appropriate algorithms and data structures.\n\nTOPICS: Depth-First Search, Breadth-First Search, Graph, Topological Sort\n\nAPPROACH:\n1. Understand the problem\n2. Draw examples\n3. Find patterns\n4. Code solution\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 46.5%\n• Topics: Depth-First Search, Breadth-First Search, Graph, Topological Sort\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "Input example 1",
@@ -2041,7 +2041,7 @@
       "Design",
       "Trie"
     ],
-    "description": "# Implement Trie (Prefix Tree)\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** Hash Table, String, Design, Trie\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 65.4%\n- **Topics:** Hash Table, String, Design, Trie\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Work through this string problem using efficient traversal techniques.\n\nTOPICS: Hash Table, String, Design, Trie\n\nKEY CONCEPTS:\n• String traversal patterns\n• Character frequency counting\n• Two pointers or sliding window\n• String immutability\n\nAPPROACH:\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 65.4%\n• Topics: Hash Table, String, Design, Trie\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "s = \"racecar\"",
@@ -2078,7 +2078,7 @@
       "Graph",
       "Topological Sort"
     ],
-    "description": "# Course Schedule II\n\nSolve this problem using appropriate algorithms and data structures.\n\n**Topics:** Depth-First Search, Breadth-First Search, Graph, Topological Sort\n\n**Approach:**\n1. Understand the problem\n2. Draw examples\n3. Find patterns\n4. Code solution\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 48.9%\n- **Topics:** Depth-First Search, Breadth-First Search, Graph, Topological Sort\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this problem using appropriate algorithms and data structures.\n\nTOPICS: Depth-First Search, Breadth-First Search, Graph, Topological Sort\n\nAPPROACH:\n1. Understand the problem\n2. Draw examples\n3. Find patterns\n4. Code solution\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 48.9%\n• Topics: Depth-First Search, Breadth-First Search, Graph, Topological Sort\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "Input example 1",
@@ -2111,7 +2111,7 @@
       "Trie",
       "Matrix"
     ],
-    "description": "# Word Search II\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, String, Backtracking, Trie, Matrix\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Hard\n- **Acceptance Rate:** 37.8%\n- **Topics:** Array, String, Backtracking, Trie, Matrix\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, String, Backtracking, Trie, Matrix\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Hard\n• Acceptance Rate: 37.8%\n• Topics: Array, String, Backtracking, Trie, Matrix\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -2149,7 +2149,7 @@
       "Heap (Priority Queue)",
       "Quickselect"
     ],
-    "description": "# Kth Largest Element in an Array\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Divide and Conquer, Sorting, Heap (Priority Queue), Quickselect\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 67.2%\n- **Topics:** Array, Divide and Conquer, Sorting, Heap (Priority Queue), Quickselect\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Divide and Conquer, Sorting, Heap (Priority Queue), Quickselect\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 67.2%\n• Topics: Array, Divide and Conquer, Sorting, Heap (Priority Queue), Quickselect\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -2185,7 +2185,7 @@
       "Hash Table",
       "Sorting"
     ],
-    "description": "# Contains Duplicate\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Hash Table, Sorting\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 61.8%\n- **Topics:** Array, Hash Table, Sorting\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Hash Table, Sorting\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 61.8%\n• Topics: Array, Hash Table, Sorting\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -2222,7 +2222,7 @@
       "Breadth-First Search",
       "Binary Tree"
     ],
-    "description": "# Invert Binary Tree\n\nSolve this tree problem using traversal and recursion.\n\n**Topics:** Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 75.9%\n- **Topics:** Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this tree problem using traversal and recursion.\n\nTOPICS: Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\nKEY CONCEPTS:\n• Tree traversal (DFS/BFS)\n• Recursion with base cases\n• Left and right subtrees\n• Null checks\n\nAPPROACH:\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 75.9%\n• Topics: Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "root = [4,2,7,1,3,6,9]",
@@ -2259,7 +2259,7 @@
       "Binary Search Tree",
       "Binary Tree"
     ],
-    "description": "# Kth Smallest Element in a BST\n\nSolve this tree problem using traversal and recursion.\n\n**Topics:** Tree, Depth-First Search, Binary Search Tree, Binary Tree\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 72.5%\n- **Topics:** Tree, Depth-First Search, Binary Search Tree, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this tree problem using traversal and recursion.\n\nTOPICS: Tree, Depth-First Search, Binary Search Tree, Binary Tree\n\nKEY CONCEPTS:\n• Tree traversal (DFS/BFS)\n• Recursion with base cases\n• Left and right subtrees\n• Null checks\n\nAPPROACH:\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 72.5%\n• Topics: Tree, Depth-First Search, Binary Search Tree, Binary Tree\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "root = [4,2,7,1,3,6,9]",
@@ -2296,7 +2296,7 @@
       "Stack",
       "Recursion"
     ],
-    "description": "# Palindrome Linked List\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Linked List, Two Pointers, Stack, Recursion\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 51.8%\n- **Topics:** Linked List, Two Pointers, Stack, Recursion\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Linked List, Two Pointers, Stack, Recursion\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 51.8%\n• Topics: Linked List, Two Pointers, Stack, Recursion\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -2333,7 +2333,7 @@
       "Binary Search Tree",
       "Binary Tree"
     ],
-    "description": "# Lowest Common Ancestor of a Binary Search Tree\n\nSolve this tree problem using traversal and recursion.\n\n**Topics:** Tree, Depth-First Search, Binary Search Tree, Binary Tree\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 63.1%\n- **Topics:** Tree, Depth-First Search, Binary Search Tree, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this tree problem using traversal and recursion.\n\nTOPICS: Tree, Depth-First Search, Binary Search Tree, Binary Tree\n\nKEY CONCEPTS:\n• Tree traversal (DFS/BFS)\n• Recursion with base cases\n• Left and right subtrees\n• Null checks\n\nAPPROACH:\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 63.1%\n• Topics: Tree, Depth-First Search, Binary Search Tree, Binary Tree\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "root = [4,2,7,1,3,6,9]",
@@ -2369,7 +2369,7 @@
       "Depth-First Search",
       "Binary Tree"
     ],
-    "description": "# Lowest Common Ancestor of a Binary Tree\n\nSolve this tree problem using traversal and recursion.\n\n**Topics:** Tree, Depth-First Search, Binary Tree\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 60.5%\n- **Topics:** Tree, Depth-First Search, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this tree problem using traversal and recursion.\n\nTOPICS: Tree, Depth-First Search, Binary Tree\n\nKEY CONCEPTS:\n• Tree traversal (DFS/BFS)\n• Recursion with base cases\n• Left and right subtrees\n• Null checks\n\nAPPROACH:\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 60.5%\n• Topics: Tree, Depth-First Search, Binary Tree\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "root = [4,2,7,1,3,6,9]",
@@ -2404,7 +2404,7 @@
       "Array",
       "Prefix Sum"
     ],
-    "description": "# Product of Array Except Self\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Prefix Sum\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 66.2%\n- **Topics:** Array, Prefix Sum\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Prefix Sum\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 66.2%\n• Topics: Array, Prefix Sum\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -2440,7 +2440,7 @@
       "String",
       "Sorting"
     ],
-    "description": "# Valid Anagram\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Hash Table, String, Sorting\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 63.8%\n- **Topics:** Hash Table, String, Sorting\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Hash Table, String, Sorting\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 63.8%\n• Topics: Hash Table, String, Sorting\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -2478,7 +2478,7 @@
       "Bit Manipulation",
       "Sorting"
     ],
-    "description": "# Missing Number\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Hash Table, Math, Bit Manipulation, Sorting\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 64.3%\n- **Topics:** Array, Hash Table, Math, Bit Manipulation, Sorting\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Hash Table, Math, Bit Manipulation, Sorting\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 64.3%\n• Topics: Array, Hash Table, Math, Bit Manipulation, Sorting\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -2516,7 +2516,7 @@
       "Heap (Priority Queue)",
       "Data Stream"
     ],
-    "description": "# Find Median from Data Stream\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Two Pointers, Design, Sorting, Heap (Priority Queue), Data Stream\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Hard\n- **Acceptance Rate:** 51.8%\n- **Topics:** Two Pointers, Design, Sorting, Heap (Priority Queue), Data Stream\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Two Pointers, Design, Sorting, Heap (Priority Queue), Data Stream\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Hard\n• Acceptance Rate: 51.8%\n• Topics: Two Pointers, Design, Sorting, Heap (Priority Queue), Data Stream\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -2555,7 +2555,7 @@
       "Design",
       "Binary Tree"
     ],
-    "description": "# Serialize and Deserialize Binary Tree\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** String, Tree, Depth-First Search, Breadth-First Search, Design, Binary Tree\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Hard\n- **Acceptance Rate:** 57.2%\n- **Topics:** String, Tree, Depth-First Search, Breadth-First Search, Design, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Work through this string problem using efficient traversal techniques.\n\nTOPICS: String, Tree, Depth-First Search, Breadth-First Search, Design, Binary Tree\n\nKEY CONCEPTS:\n• String traversal patterns\n• Character frequency counting\n• Two pointers or sliding window\n• String immutability\n\nAPPROACH:\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n📊 PROBLEM STATS:\n• Difficulty: Hard\n• Acceptance Rate: 57.2%\n• Topics: String, Tree, Depth-First Search, Breadth-First Search, Design, Binary Tree\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "s = \"racecar\"",
@@ -2591,7 +2591,7 @@
       "Binary Search",
       "Dynamic Programming"
     ],
-    "description": "# Longest Increasing Subsequence\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Binary Search, Dynamic Programming\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 54.2%\n- **Topics:** Array, Binary Search, Dynamic Programming\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Binary Search, Dynamic Programming\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 54.2%\n• Topics: Array, Binary Search, Dynamic Programming\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -2627,7 +2627,7 @@
       "Dynamic Programming",
       "Breadth-First Search"
     ],
-    "description": "# Coin Change\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Dynamic Programming, Breadth-First Search\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 43.9%\n- **Topics:** Array, Dynamic Programming, Breadth-First Search\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Dynamic Programming, Breadth-First Search\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 43.9%\n• Topics: Array, Dynamic Programming, Breadth-First Search\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -2668,7 +2668,7 @@
       "Counting",
       "Quickselect"
     ],
-    "description": "# Top K Frequent Elements\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Hash Table, Divide and Conquer, Sorting, Heap (Priority Queue), Bucket Sort, Counting, Quickselect\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 65.1%\n- **Topics:** Array, Hash Table, Divide and Conquer, Sorting, Heap (Priority Queue), Bucket Sort, Counting, Quickselect\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Hash Table, Divide and Conquer, Sorting, Heap (Priority Queue), Bucket Sort, Counting, Quickselect\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 65.1%\n• Topics: Array, Hash Table, Divide and Conquer, Sorting, Heap (Priority Queue), Bucket Sort, Counting, Quickselect\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -2703,7 +2703,7 @@
       "Math",
       "Bit Manipulation"
     ],
-    "description": "# Sum of Two Integers\n\nSolve this problem using appropriate algorithms and data structures.\n\n**Topics:** Math, Bit Manipulation\n\n**Approach:**\n1. Understand the problem\n2. Draw examples\n3. Find patterns\n4. Code solution\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 50.8%\n- **Topics:** Math, Bit Manipulation\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this problem using appropriate algorithms and data structures.\n\nTOPICS: Math, Bit Manipulation\n\nAPPROACH:\n1. Understand the problem\n2. Draw examples\n3. Find patterns\n4. Code solution\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 50.8%\n• Topics: Math, Bit Manipulation\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "Input example 1",
@@ -2735,7 +2735,7 @@
       "Breadth-First Search",
       "Matrix"
     ],
-    "description": "# Pacific Atlantic Water Flow\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Depth-First Search, Breadth-First Search, Matrix\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 55.1%\n- **Topics:** Array, Depth-First Search, Breadth-First Search, Matrix\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Depth-First Search, Breadth-First Search, Matrix\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 55.1%\n• Topics: Array, Depth-First Search, Breadth-First Search, Matrix\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -2771,7 +2771,7 @@
       "String",
       "Sliding Window"
     ],
-    "description": "# Longest Repeating Character Replacement\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** Hash Table, String, Sliding Window\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 52.9%\n- **Topics:** Hash Table, String, Sliding Window\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Work through this string problem using efficient traversal techniques.\n\nTOPICS: Hash Table, String, Sliding Window\n\nKEY CONCEPTS:\n• String traversal patterns\n• Character frequency counting\n• Two pointers or sliding window\n• String immutability\n\nAPPROACH:\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 52.9%\n• Topics: Hash Table, String, Sliding Window\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "s = \"racecar\"",
@@ -2808,7 +2808,7 @@
       "Greedy",
       "Sorting"
     ],
-    "description": "# Non-overlapping Intervals\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Dynamic Programming, Greedy, Sorting\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 51.7%\n- **Topics:** Array, Dynamic Programming, Greedy, Sorting\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Dynamic Programming, Greedy, Sorting\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 51.7%\n• Topics: Array, Dynamic Programming, Greedy, Sorting\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -2848,7 +2848,7 @@
       "Binary Search Tree",
       "Binary Tree"
     ],
-    "description": "# Serialize and Deserialize BST\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** String, Tree, Depth-First Search, Breadth-First Search, Design, Binary Search Tree, Binary Tree\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 58.7%\n- **Topics:** String, Tree, Depth-First Search, Breadth-First Search, Design, Binary Search Tree, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Work through this string problem using efficient traversal techniques.\n\nTOPICS: String, Tree, Depth-First Search, Breadth-First Search, Design, Binary Search Tree, Binary Tree\n\nKEY CONCEPTS:\n• String traversal patterns\n• Character frequency counting\n• Two pointers or sliding window\n• String immutability\n\nAPPROACH:\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 58.7%\n• Topics: String, Tree, Depth-First Search, Breadth-First Search, Design, Binary Search Tree, Binary Tree\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "s = \"racecar\"",
@@ -2883,7 +2883,7 @@
       "Array",
       "Dynamic Programming"
     ],
-    "description": "# Coin Change II\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Dynamic Programming\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 64.8%\n- **Topics:** Array, Dynamic Programming\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Dynamic Programming\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 64.8%\n• Topics: Array, Dynamic Programming\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -2919,7 +2919,7 @@
       "Depth-First Search",
       "Binary Tree"
     ],
-    "description": "# Diameter of Binary Tree\n\nSolve this tree problem using traversal and recursion.\n\n**Topics:** Tree, Depth-First Search, Binary Tree\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 58.1%\n- **Topics:** Tree, Depth-First Search, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this tree problem using traversal and recursion.\n\nTOPICS: Tree, Depth-First Search, Binary Tree\n\nKEY CONCEPTS:\n• Tree traversal (DFS/BFS)\n• Recursion with base cases\n• Left and right subtrees\n• Null checks\n\nAPPROACH:\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 58.1%\n• Topics: Tree, Depth-First Search, Binary Tree\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "root = [4,2,7,1,3,6,9]",
@@ -2957,7 +2957,7 @@
       "Binary Tree",
       "Hash Function"
     ],
-    "description": "# Subtree of Another Tree\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** Tree, Depth-First Search, String Matching, Binary Tree, Hash Function\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 47.2%\n- **Topics:** Tree, Depth-First Search, String Matching, Binary Tree, Hash Function\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Work through this string problem using efficient traversal techniques.\n\nTOPICS: Tree, Depth-First Search, String Matching, Binary Tree, Hash Function\n\nKEY CONCEPTS:\n• String traversal patterns\n• Character frequency counting\n• Two pointers or sliding window\n• String immutability\n\nAPPROACH:\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 47.2%\n• Topics: Tree, Depth-First Search, String Matching, Binary Tree, Hash Function\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "s = \"racecar\"",
@@ -2992,7 +2992,7 @@
       "String",
       "Dynamic Programming"
     ],
-    "description": "# Palindromic Substrings\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** String, Dynamic Programming\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 68.3%\n- **Topics:** String, Dynamic Programming\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Work through this string problem using efficient traversal techniques.\n\nTOPICS: String, Dynamic Programming\n\nKEY CONCEPTS:\n• String traversal patterns\n• Character frequency counting\n• Two pointers or sliding window\n• String immutability\n\nAPPROACH:\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 68.3%\n• Topics: String, Dynamic Programming\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "s = \"racecar\"",
@@ -3027,7 +3027,7 @@
       "Array",
       "Binary Search"
     ],
-    "description": "# Binary Search\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Binary Search\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 59.7%\n- **Topics:** Array, Binary Search\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Binary Search\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 59.7%\n• Topics: Array, Binary Search\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -3063,7 +3063,7 @@
       "Stack",
       "Monotonic Stack"
     ],
-    "description": "# Daily Temperatures\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Stack, Monotonic Stack\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 66.8%\n- **Topics:** Array, Stack, Monotonic Stack\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Stack, Monotonic Stack\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 66.8%\n• Topics: Array, Stack, Monotonic Stack\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -3100,7 +3100,7 @@
       "Sorting",
       "Monotonic Stack"
     ],
-    "description": "# Car Fleet\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Stack, Sorting, Monotonic Stack\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 50.1%\n- **Topics:** Array, Stack, Sorting, Monotonic Stack\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Stack, Sorting, Monotonic Stack\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 50.1%\n• Topics: Array, Stack, Sorting, Monotonic Stack\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -3135,7 +3135,7 @@
       "Array",
       "Binary Search"
     ],
-    "description": "# Koko Eating Bananas\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Binary Search\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 55.7%\n- **Topics:** Array, Binary Search\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Binary Search\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 55.7%\n• Topics: Array, Binary Search\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -3172,7 +3172,7 @@
       "Binary Search",
       "Design"
     ],
-    "description": "# Time Based Key-Value Store\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** Hash Table, String, Binary Search, Design\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 53.9%\n- **Topics:** Hash Table, String, Binary Search, Design\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Work through this string problem using efficient traversal techniques.\n\nTOPICS: Hash Table, String, Binary Search, Design\n\nKEY CONCEPTS:\n• String traversal patterns\n• Character frequency counting\n• Two pointers or sliding window\n• String immutability\n\nAPPROACH:\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 53.9%\n• Topics: Hash Table, String, Binary Search, Design\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "s = \"racecar\"",
@@ -3207,7 +3207,7 @@
       "Array",
       "Heap (Priority Queue)"
     ],
-    "description": "# Last Stone Weight\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Heap (Priority Queue)\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 65.3%\n- **Topics:** Array, Heap (Priority Queue)\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Heap (Priority Queue)\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Easy\n• Acceptance Rate: 65.3%\n• Topics: Array, Heap (Priority Queue)\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
@@ -3242,7 +3242,7 @@
       "String",
       "Dynamic Programming"
     ],
-    "description": "# Longest Common Subsequence\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** String, Dynamic Programming\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 58.9%\n- **Topics:** String, Dynamic Programming\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Work through this string problem using efficient traversal techniques.\n\nTOPICS: String, Dynamic Programming\n\nKEY CONCEPTS:\n• String traversal patterns\n• Character frequency counting\n• Two pointers or sliding window\n• String immutability\n\nAPPROACH:\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 58.9%\n• Topics: String, Dynamic Programming\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "s = \"racecar\"",
@@ -3279,7 +3279,7 @@
       "Graph",
       "Minimum Spanning Tree"
     ],
-    "description": "# Min Cost to Connect All Points\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Union Find, Graph, Minimum Spanning Tree\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 70.5%\n- **Topics:** Array, Union Find, Graph, Minimum Spanning Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "description": "Solve this array problem efficiently using the right data structures and algorithms.\n\nTOPICS: Array, Union Find, Graph, Minimum Spanning Tree\n\nKEY CONCEPTS:\n• Array traversal and indexing\n• Time/space complexity\n• Edge case handling\n\nAPPROACH:\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n📊 PROBLEM STATS:\n• Difficulty: Medium\n• Acceptance Rate: 70.5%\n• Topics: Array, Union Find, Graph, Minimum Spanning Tree\n\n🎨 INTERVIEW TIP:\nUse the whiteboard to:\n• Sketch out your approach\n• Draw examples and edge cases\n• Explain your thinking to your interviewer\n• Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
     "examples": [
       {
         "input": "nums = [5, 2, 8, 1, 9]",
