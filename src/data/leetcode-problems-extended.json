@@ -1,0 +1,598 @@
+[
+  {
+    "id": "1",
+    "title": "Two Sum",
+    "titleSlug": "two-sum",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 49.3,
+    "topicTags": ["Array", "Hash Table"],
+    "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\n\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\n\nYou can return the answer in any order.",
+    "examples": [
+      {
+        "input": "nums = [2,7,11,15], target = 9",
+        "output": "[0,1]",
+        "explanation": "Because nums[0] + nums[1] == 9, we return [0, 1]."
+      },
+      {
+        "input": "nums = [3,2,4], target = 6",
+        "output": "[1,2]",
+        "explanation": "Because nums[1] + nums[2] == 6, we return [1, 2]."
+      },
+      {
+        "input": "nums = [3,3], target = 6",
+        "output": "[0,1]",
+        "explanation": "Because nums[0] + nums[1] == 6, we return [0, 1]."
+      }
+    ],
+    "constraints": [
+      "2 <= nums.length <= 10⁴",
+      "-10⁹ <= nums[i] <= 10⁹",
+      "-10⁹ <= target <= 10⁹",
+      "Only one valid answer exists."
+    ]
+  },
+  {
+    "id": "20",
+    "title": "Valid Parentheses",
+    "titleSlug": "valid-parentheses",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 40.8,
+    "topicTags": ["String", "Stack"],
+    "description": "Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.\n\nAn input string is valid if:\n1. Open brackets must be closed by the same type of brackets.\n2. Open brackets must be closed in the correct order.\n3. Every close bracket has a corresponding open bracket of the same type.",
+    "examples": [
+      {
+        "input": "s = \"()\"",
+        "output": "true",
+        "explanation": "The string has matching parentheses."
+      },
+      {
+        "input": "s = \"()[]{}\"",
+        "output": "true",
+        "explanation": "All brackets are properly closed and in the correct order."
+      },
+      {
+        "input": "s = \"(]\"",
+        "output": "false",
+        "explanation": "Mismatched bracket types."
+      },
+      {
+        "input": "s = \"([)]\"",
+        "output": "false",
+        "explanation": "Brackets are not closed in the correct order."
+      }
+    ],
+    "constraints": [
+      "1 <= s.length <= 10⁴",
+      "s consists of parentheses only '()[]{}'"
+    ]
+  },
+  {
+    "id": "21",
+    "title": "Merge Two Sorted Lists",
+    "titleSlug": "merge-two-sorted-lists",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 63.5,
+    "topicTags": ["Linked List", "Recursion"],
+    "description": "You are given the heads of two sorted linked lists list1 and list2.\n\nMerge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.\n\nReturn the head of the merged linked list.",
+    "examples": [
+      {
+        "input": "list1 = [1,2,4], list2 = [1,3,4]",
+        "output": "[1,1,2,3,4,4]",
+        "explanation": "The merged list contains all elements in sorted order."
+      },
+      {
+        "input": "list1 = [], list2 = []",
+        "output": "[]",
+        "explanation": "Both lists are empty."
+      },
+      {
+        "input": "list1 = [], list2 = [0]",
+        "output": "[0]",
+        "explanation": "First list is empty, return second list."
+      }
+    ],
+    "constraints": [
+      "The number of nodes in both lists is in the range [0, 50]",
+      "-100 <= Node.val <= 100",
+      "Both list1 and list2 are sorted in non-decreasing order"
+    ]
+  },
+  {
+    "id": "121",
+    "title": "Best Time to Buy and Sell Stock",
+    "titleSlug": "best-time-to-buy-and-sell-stock",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 54.2,
+    "topicTags": ["Array", "Dynamic Programming"],
+    "description": "You are given an array prices where prices[i] is the price of a given stock on the iᵗʰ day.\n\nYou want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.\n\nReturn the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.",
+    "examples": [
+      {
+        "input": "prices = [7,1,5,3,6,4]",
+        "output": "5",
+        "explanation": "Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5. Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell."
+      },
+      {
+        "input": "prices = [7,6,4,3,1]",
+        "output": "0",
+        "explanation": "In this case, no transactions are done and the max profit = 0."
+      }
+    ],
+    "constraints": [
+      "1 <= prices.length <= 10⁵",
+      "0 <= prices[i] <= 10⁴"
+    ]
+  },
+  {
+    "id": "125",
+    "title": "Valid Palindrome",
+    "titleSlug": "valid-palindrome",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 45.9,
+    "topicTags": ["Two Pointers", "String"],
+    "description": "A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.\n\nGiven a string s, return true if it is a palindrome, or false otherwise.",
+    "examples": [
+      {
+        "input": "s = \"A man, a plan, a canal: Panama\"",
+        "output": "true",
+        "explanation": "\"amanaplanacanalpanama\" is a palindrome."
+      },
+      {
+        "input": "s = \"race a car\"",
+        "output": "false",
+        "explanation": "\"raceacar\" is not a palindrome."
+      },
+      {
+        "input": "s = \" \"",
+        "output": "true",
+        "explanation": "s is an empty string \"\" after removing non-alphanumeric characters. Since an empty string reads the same forward and backward, it is a palindrome."
+      }
+    ],
+    "constraints": [
+      "1 <= s.length <= 2 * 10⁵",
+      "s consists only of printable ASCII characters"
+    ]
+  },
+  {
+    "id": "206",
+    "title": "Reverse Linked List",
+    "titleSlug": "reverse-linked-list",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 75.4,
+    "topicTags": ["Linked List", "Recursion"],
+    "description": "Given the head of a singly linked list, reverse the list, and return the reversed list.",
+    "examples": [
+      {
+        "input": "head = [1,2,3,4,5]",
+        "output": "[5,4,3,2,1]",
+        "explanation": "The list is reversed from 1->2->3->4->5 to 5->4->3->2->1."
+      },
+      {
+        "input": "head = [1,2]",
+        "output": "[2,1]",
+        "explanation": "The two-node list is reversed."
+      },
+      {
+        "input": "head = []",
+        "output": "[]",
+        "explanation": "Empty list remains empty."
+      }
+    ],
+    "constraints": [
+      "The number of nodes in the list is the range [0, 5000]",
+      "-5000 <= Node.val <= 5000"
+    ]
+  },
+  {
+    "id": "226",
+    "title": "Invert Binary Tree",
+    "titleSlug": "invert-binary-tree",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 75.9,
+    "topicTags": ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
+    "description": "Given the root of a binary tree, invert the tree, and return its root.\n\nInverting a binary tree means swapping the left and right children of every node in the tree.",
+    "examples": [
+      {
+        "input": "root = [4,2,7,1,3,6,9]",
+        "output": "[4,7,2,9,6,3,1]",
+        "explanation": "The tree is inverted by swapping left and right children at every level."
+      },
+      {
+        "input": "root = [2,1,3]",
+        "output": "[2,3,1]",
+        "explanation": "Simple inversion of a three-node tree."
+      },
+      {
+        "input": "root = []",
+        "output": "[]",
+        "explanation": "Empty tree remains empty."
+      }
+    ],
+    "constraints": [
+      "The number of nodes in the tree is in the range [0, 100]",
+      "-100 <= Node.val <= 100"
+    ]
+  },
+  {
+    "id": "242",
+    "title": "Valid Anagram",
+    "titleSlug": "valid-anagram",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 63.8,
+    "topicTags": ["Hash Table", "String", "Sorting"],
+    "description": "Given two strings s and t, return true if t is an anagram of s, and false otherwise.\n\nAn Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.",
+    "examples": [
+      {
+        "input": "s = \"anagram\", t = \"nagaram\"",
+        "output": "true",
+        "explanation": "Both strings contain the same characters with the same frequencies."
+      },
+      {
+        "input": "s = \"rat\", t = \"car\"",
+        "output": "false",
+        "explanation": "The strings have different characters."
+      }
+    ],
+    "constraints": [
+      "1 <= s.length, t.length <= 5 * 10⁴",
+      "s and t consist of lowercase English letters"
+    ]
+  },
+  {
+    "id": "704",
+    "title": "Binary Search",
+    "titleSlug": "binary-search",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 59.7,
+    "topicTags": ["Array", "Binary Search"],
+    "description": "Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.\n\nYou must write an algorithm with O(log n) runtime complexity.",
+    "examples": [
+      {
+        "input": "nums = [-1,0,3,5,9,12], target = 9",
+        "output": "4",
+        "explanation": "9 exists in nums and its index is 4."
+      },
+      {
+        "input": "nums = [-1,0,3,5,9,12], target = 2",
+        "output": "-1",
+        "explanation": "2 does not exist in nums so return -1."
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ < nums[i], target < 10⁴",
+      "All the integers in nums are unique",
+      "nums is sorted in ascending order"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Longest Substring Without Repeating Characters",
+    "titleSlug": "longest-substring-without-repeating-characters",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 34.2,
+    "topicTags": ["Hash Table", "String", "Sliding Window"],
+    "description": "Given a string s, find the length of the longest substring without repeating characters.",
+    "examples": [
+      {
+        "input": "s = \"abcabcbb\"",
+        "output": "3",
+        "explanation": "The answer is \"abc\", with the length of 3."
+      },
+      {
+        "input": "s = \"bbbbb\"",
+        "output": "1",
+        "explanation": "The answer is \"b\", with the length of 1."
+      },
+      {
+        "input": "s = \"pwwkew\"",
+        "output": "3",
+        "explanation": "The answer is \"wke\", with the length of 3. Notice that the answer must be a substring, \"pwke\" is a subsequence and not a substring."
+      }
+    ],
+    "constraints": [
+      "0 <= s.length <= 5 * 10⁴",
+      "s consists of English letters, digits, symbols and spaces"
+    ]
+  },
+  {
+    "id": "15",
+    "title": "3Sum",
+    "titleSlug": "3sum",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 33.5,
+    "topicTags": ["Array", "Two Pointers", "Sorting"],
+    "description": "Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.\n\nNotice that the solution set must not contain duplicate triplets.",
+    "examples": [
+      {
+        "input": "nums = [-1,0,1,2,-1,-4]",
+        "output": "[[-1,-1,2],[-1,0,1]]",
+        "explanation": "nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.\nnums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.\nnums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.\nThe distinct triplets are [-1,0,1] and [-1,-1,2]."
+      },
+      {
+        "input": "nums = [0,1,1]",
+        "output": "[]",
+        "explanation": "The only possible triplet does not sum up to 0."
+      },
+      {
+        "input": "nums = [0,0,0]",
+        "output": "[[0,0,0]]",
+        "explanation": "The only possible triplet sums up to 0."
+      }
+    ],
+    "constraints": [
+      "3 <= nums.length <= 3000",
+      "-10⁵ <= nums[i] <= 10⁵"
+    ]
+  },
+  {
+    "id": "49",
+    "title": "Group Anagrams",
+    "titleSlug": "group-anagrams",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 67.8,
+    "topicTags": ["Array", "Hash Table", "String", "Sorting"],
+    "description": "Given an array of strings strs, group the anagrams together. You can return the answer in any order.\n\nAn Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.",
+    "examples": [
+      {
+        "input": "strs = [\"eat\",\"tea\",\"tan\",\"ate\",\"nat\",\"bat\"]",
+        "output": "[[\"bat\"],[\"nat\",\"tan\"],[\"ate\",\"eat\",\"tea\"]]",
+        "explanation": "The strings are grouped by their sorted character sequences."
+      },
+      {
+        "input": "strs = [\"\"]",
+        "output": "[[\"\"]]",
+        "explanation": "Single empty string forms one group."
+      },
+      {
+        "input": "strs = [\"a\"]",
+        "output": "[[\"a\"]]",
+        "explanation": "Single character string forms one group."
+      }
+    ],
+    "constraints": [
+      "1 <= strs.length <= 10⁴",
+      "0 <= strs[i].length <= 100",
+      "strs[i] consists of lowercase English letters"
+    ]
+  },
+  {
+    "id": "53",
+    "title": "Maximum Subarray",
+    "titleSlug": "maximum-subarray",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 50.3,
+    "topicTags": ["Array", "Divide and Conquer", "Dynamic Programming"],
+    "description": "Given an integer array nums, find the subarray with the largest sum, and return its sum.",
+    "examples": [
+      {
+        "input": "nums = [-2,1,-3,4,-1,2,1,-5,4]",
+        "output": "6",
+        "explanation": "The subarray [4,-1,2,1] has the largest sum 6."
+      },
+      {
+        "input": "nums = [1]",
+        "output": "1",
+        "explanation": "The subarray [1] has the largest sum 1."
+      },
+      {
+        "input": "nums = [5,4,-1,7,8]",
+        "output": "23",
+        "explanation": "The subarray [5,4,-1,7,8] has the largest sum 23."
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁵",
+      "-10⁴ <= nums[i] <= 10⁴"
+    ]
+  },
+  {
+    "id": "56",
+    "title": "Merge Intervals",
+    "titleSlug": "merge-intervals",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 46.9,
+    "topicTags": ["Array", "Sorting"],
+    "description": "Given an array of intervals where intervals[i] = [startᵢ, endᵢ], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.",
+    "examples": [
+      {
+        "input": "intervals = [[1,3],[2,6],[8,10],[15,18]]",
+        "output": "[[1,6],[8,10],[15,18]]",
+        "explanation": "Since intervals [1,3] and [2,6] overlap, merge them into [1,6]."
+      },
+      {
+        "input": "intervals = [[1,4],[4,5]]",
+        "output": "[[1,5]]",
+        "explanation": "Intervals [1,4] and [4,5] are considered overlapping."
+      }
+    ],
+    "constraints": [
+      "1 <= intervals.length <= 10⁴",
+      "intervals[i].length == 2",
+      "0 <= startᵢ <= endᵢ <= 10⁴"
+    ]
+  },
+  {
+    "id": "70",
+    "title": "Climbing Stairs",
+    "titleSlug": "climbing-stairs",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 52.3,
+    "topicTags": ["Math", "Dynamic Programming", "Memoization"],
+    "description": "You are climbing a staircase. It takes n steps to reach the top.\n\nEach time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?",
+    "examples": [
+      {
+        "input": "n = 2",
+        "output": "2",
+        "explanation": "There are two ways to climb to the top: 1. 1 step + 1 step, 2. 2 steps."
+      },
+      {
+        "input": "n = 3",
+        "output": "3",
+        "explanation": "There are three ways to climb to the top: 1. 1 step + 1 step + 1 step, 2. 1 step + 2 steps, 3. 2 steps + 1 step."
+      }
+    ],
+    "constraints": [
+      "1 <= n <= 45"
+    ]
+  },
+  {
+    "id": "104",
+    "title": "Maximum Depth of Binary Tree",
+    "titleSlug": "maximum-depth-of-binary-tree",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 75.1,
+    "topicTags": ["Tree", "Depth-First Search", "Breadth-First Search", "Binary Tree"],
+    "description": "Given the root of a binary tree, return its maximum depth.\n\nA binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.",
+    "examples": [
+      {
+        "input": "root = [3,9,20,null,null,15,7]",
+        "output": "3",
+        "explanation": "The tree has a maximum depth of 3."
+      },
+      {
+        "input": "root = [1,null,2]",
+        "output": "2",
+        "explanation": "The tree has a maximum depth of 2."
+      }
+    ],
+    "constraints": [
+      "The number of nodes in the tree is in the range [0, 10⁴]",
+      "-100 <= Node.val <= 100"
+    ]
+  },
+  {
+    "id": "141",
+    "title": "Linked List Cycle",
+    "titleSlug": "linked-list-cycle",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 49.2,
+    "topicTags": ["Hash Table", "Linked List", "Two Pointers"],
+    "description": "Given head, the head of a linked list, determine if the linked list has a cycle in it.\n\nThere is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer is connected to. Note that pos is not passed as a parameter.\n\nReturn true if there is a cycle in the linked list. Otherwise, return false.",
+    "examples": [
+      {
+        "input": "head = [3,2,0,-4], pos = 1",
+        "output": "true",
+        "explanation": "There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed)."
+      },
+      {
+        "input": "head = [1,2], pos = 0",
+        "output": "true",
+        "explanation": "There is a cycle in the linked list, where the tail connects to the 0th node."
+      },
+      {
+        "input": "head = [1], pos = -1",
+        "output": "false",
+        "explanation": "There is no cycle in the linked list."
+      }
+    ],
+    "constraints": [
+      "The number of the nodes in the list is in the range [0, 10⁴]",
+      "-10⁵ <= Node.val <= 10⁵",
+      "pos is -1 or a valid index in the linked-list"
+    ]
+  },
+  {
+    "id": "200",
+    "title": "Number of Islands",
+    "titleSlug": "number-of-islands",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 58.1,
+    "topicTags": ["Array", "Depth-First Search", "Breadth-First Search", "Union Find", "Matrix"],
+    "description": "Given an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.\n\nAn island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.",
+    "examples": [
+      {
+        "input": "grid = [[\"1\",\"1\",\"1\",\"1\",\"0\"],[\"1\",\"1\",\"0\",\"1\",\"0\"],[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"0\",\"0\",\"0\",\"0\",\"0\"]]",
+        "output": "1",
+        "explanation": "There is one island formed by the connected '1's."
+      },
+      {
+        "input": "grid = [[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"0\",\"0\",\"1\",\"0\",\"0\"],[\"0\",\"0\",\"0\",\"1\",\"1\"]]",
+        "output": "3",
+        "explanation": "There are three separate islands."
+      }
+    ],
+    "constraints": [
+      "m == grid.length",
+      "n == grid[i].length",
+      "1 <= m, n <= 300",
+      "grid[i][j] is '0' or '1'"
+    ]
+  },
+  {
+    "id": "217",
+    "title": "Contains Duplicate",
+    "titleSlug": "contains-duplicate",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 61.8,
+    "topicTags": ["Array", "Hash Table", "Sorting"],
+    "description": "Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.",
+    "examples": [
+      {
+        "input": "nums = [1,2,3,1]",
+        "output": "true",
+        "explanation": "The value 1 appears twice."
+      },
+      {
+        "input": "nums = [1,2,3,4]",
+        "output": "false",
+        "explanation": "All elements are distinct."
+      },
+      {
+        "input": "nums = [1,1,1,3,3,4,3,2,4,2]",
+        "output": "true",
+        "explanation": "Multiple values appear more than once."
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁵",
+      "-10⁹ <= nums[i] <= 10⁹"
+    ]
+  },
+  {
+    "id": "238",
+    "title": "Product of Array Except Self",
+    "titleSlug": "product-of-array-except-self",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 66.2,
+    "topicTags": ["Array", "Prefix Sum"],
+    "description": "Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].\n\nThe product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.\n\nYou must write an algorithm that runs in O(n) time and without using the division operation.",
+    "examples": [
+      {
+        "input": "nums = [1,2,3,4]",
+        "output": "[24,12,8,6]",
+        "explanation": "answer[0] = 2*3*4 = 24, answer[1] = 1*3*4 = 12, etc."
+      },
+      {
+        "input": "nums = [-1,1,0,-3,3]",
+        "output": "[0,0,9,0,0]",
+        "explanation": "The zero makes most products zero."
+      }
+    ],
+    "constraints": [
+      "2 <= nums.length <= 10⁵",
+      "-30 <= nums[i] <= 30",
+      "The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer"
+    ]
+  }
+]
+
