@@ -41,7 +41,7 @@ const getTemplateForProblem = (problem) => {
   
   if (topics.includes('String') || topics.includes('Sliding Window')) {
     return {
-      description: `Work through this string problem using efficient traversal techniques.\n\n**Topics:** ${topics}\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases`,
+      description: `Work through this string problem using efficient traversal techniques.\n\nTOPICS: ${topics}\n\nKEY CONCEPTS:\n• String traversal patterns\n• Character frequency counting\n• Two pointers or sliding window\n• String immutability\n\nAPPROACH:\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases`,
       examples: [
         { input: 's = "racecar"', output: 'true (if palindrome check) or relevant result', explanation: 'Palindrome example - reads same forwards and backwards. Draw pointers moving from both ends.' },
         { input: 's = "hello"', output: 'Result based on problem', explanation: 'Regular string with distinct characters. Trace through your algorithm character by character.' },
