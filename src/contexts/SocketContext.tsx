@@ -133,12 +133,18 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
         error?: string,
         messages?: ChatMessage[],
         codeContent?: string,
-        currentLanguage?: string
+        currentLanguage?: string,
+        viewMode?: 'hybrid' | 'whiteboard',
+        viewModeLocked?: boolean,
+        isCreator?: boolean
       }) => {
         if (response.success) {
           setMessages(response.messages || [])
           setCodeContent(response.codeContent || '')
           setCurrentLanguage(response.currentLanguage || 'javascript')
+          setViewMode(response.viewMode || 'hybrid')
+          setViewModeLocked(response.viewModeLocked || false)
+          setIsCreator(response.isCreator || false)
           setParticipantCount(2)
           resolve(true)
         } else {
