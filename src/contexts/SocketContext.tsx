@@ -50,16 +50,45 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   const [isCreator, setIsCreator] = useState(false)
 
   useEffect(() => {
-    const newSocket = io(import.meta.env.VITE_SERVER_URL || 'http://localhost:3001')
+    const newSocket = io(import.meta.env.VITE_SERVER_URL || 'http://localhost:3001', {
+      // Reconnection settings
+      reconnection: true,
+      reconnectionDelay: 1000,
+      reconnectionDelayMax: 5000,
+      reconnectionAttempts: Infinity,
+      // Timeout settings
+      timeout: 20000,
+      // Transports
+      transports: ['websocket', 'polling']
+    })
     
     newSocket.on('connect', () => {
       setIsConnected(true)
-      console.log('Connected to server')
+      console.log('Connected to server', newSocket.id)
     })
 
-    newSocket.on('disconnect', () => {
+    newSocket.on('disconnect', (reason) => {
       setIsConnected(false)
-      console.log('Disconnected from server')
+      console.log('Disconnected from server:', reason)
+      
+      // Auto-reconnect on disconnect
+      if (reason === 'io server disconnect') {
+        // Server disconnected, manually reconnect
+        newSocket.connect()
+      }
+    })
+    
+    newSocket.on('reconnect', (attemptNumber) => {
+      console.log('Reconnected after', attemptNumber, 'attempts')
+      setIsConnected(true)
+    })
+    
+    newSocket.on('reconnect_error', (error) => {
+      console.error('Reconnection error:', error)
+    })
+    
+    newSocket.on('reconnect_failed', () => {
+      console.error('Reconnection failed')
     })
 
     newSocket.on('room-messages', (roomMessages: ChatMessage[]) => {
