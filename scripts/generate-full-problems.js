@@ -38,9 +38,11 @@ const templates = {
   'Dynamic Programming': {
     description: (title) => `This dynamic programming problem tests your ability to break problems into subproblems and build solutions incrementally.\n\n**Key Concepts:**\n- Overlapping subproblems\n- Optimal substructure\n- Memoization (top-down) vs Tabulation (bottom-up)\n- State definition and transitions\n\n**Approach:**\n1. Define what dp[i] represents\n2. Find the base cases\n3. Write the recurrence relation\n4. Decide: recursive with memo or iterative?\n5. Draw the dp table on the whiteboard!`,
     examples: [
-      { input: 'See problem for specific examples', output: 'See problem for expected output', explanation: 'Draw the DP table and trace through small examples!' }
+      { input: 'n = 5', output: 'Optimal solution for n=5', explanation: 'Draw a DP table on the whiteboard. Start with base cases (n=0, n=1) and build up to n=5.' },
+      { input: 'n = 1', output: 'Base case result', explanation: 'Base cases are crucial in DP - this is where your recursion/iteration stops.' },
+      { input: 'n = 0', output: 'Base case result', explanation: 'n=0 is often your starting point. What\'s the answer for zero?' }
     ],
-    constraints: ['See problem for specific constraints', 'DP problems often have constraints like: n <= 1000, values within certain ranges']
+    constraints: ['1 <= n <= 1000', 'Values fit in 32-bit integer', 'Draw the DP table to visualize subproblem relationships']
   },
   'Tree': {
     description: (title) => `Solve this tree problem using traversal techniques and recursive thinking.\n\n**Key Concepts:**\n- Tree traversal (pre/in/post-order, level-order)\n- Recursion with base cases\n- DFS vs BFS approach\n- Parent-child relationships\n\n**Approach:**\n1. Draw the tree structure on the whiteboard\n2. Identify the base case (null node or leaf)\n3. Define what to return at each node\n4. Consider if you need helper functions\n5. Test with small examples`,
