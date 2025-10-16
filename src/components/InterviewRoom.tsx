@@ -19,6 +19,7 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
   const { socket, viewMode, viewModeLocked, isCreator, changeViewMode, toggleViewLock, currentLanguage } = useSocket()
   const [showProblemSelector, setShowProblemSelector] = useState(false)
   const [currentProblemSlug, setCurrentProblemSlug] = useState('two-sum')
+  const [currentProblemTitle, setCurrentProblemTitle] = useState('Two Sum')
   const [searchQuery, setSearchQuery] = useState('')
   const [allProblems, setAllProblems] = useState<any[]>([])
   const [filteredProblems, setFilteredProblems] = useState<any[]>([])
