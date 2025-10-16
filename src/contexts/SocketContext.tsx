@@ -173,6 +173,18 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     }
   }
 
+  const changeViewMode = (roomId: string, viewMode: 'hybrid' | 'whiteboard') => {
+    if (socket) {
+      socket.emit('change-view-mode', { roomId, viewMode })
+    }
+  }
+
+  const toggleViewLock = (roomId: string, locked: boolean) => {
+    if (socket) {
+      socket.emit('toggle-view-lock', { roomId, locked })
+    }
+  }
+
   const value = useMemo(() => ({
     socket,
     isConnected,
