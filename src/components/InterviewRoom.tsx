@@ -314,12 +314,12 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
 
       {/* Desktop Layout */}
       <div className="flex-1 hidden lg:flex gap-0 overflow-hidden">
-        {/* Left Sidebar: Problem + Participants - Resizable */}
-        <div className="min-w-[300px] max-w-[600px] w-[320px] bg-white border-r border-gray-200 flex flex-col overflow-hidden resize-x" style={{ resize: 'horizontal' }}>
+        {/* Left Sidebar: Problem + Participants */}
+        <div className="w-[320px] bg-white border-r border-gray-200 flex flex-col overflow-hidden">
           <div className="flex-1 overflow-auto">
             <ProblemPanel problemSlug={currentProblemSlug} />
           </div>
-          <div className="h-48 border-t border-gray-200 resize-y overflow-auto min-h-[100px] max-h-[400px]" style={{ resize: 'vertical' }}>
+          <div className="h-48 border-t border-gray-200 overflow-auto">
             <ParticipantsPanel />
           </div>
         </div>
