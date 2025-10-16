@@ -29,9 +29,11 @@ const templates = {
   'String': {
     description: (title) => `Work through this string manipulation problem that tests pattern recognition and efficient string processing.\n\n**Key Concepts:**\n- String traversal (forward, backward, two pointers)\n- Character frequency counting\n- Substring patterns\n- String building vs in-place modification\n\n**Approach:**\n1. Draw out examples on the whiteboard\n2. Look for patterns or repeating structures\n3. Consider if you need a hash map for character tracking\n4. Think about time/space tradeoffs`,
     examples: [
-      { input: 'See problem for specific examples', output: 'See problem for expected output', explanation: 'Draw the string transformations on the whiteboard!' }
+      { input: 's = "hello"', output: 'Depends on operation', explanation: 'Write out the string and trace through character by character on the whiteboard.' },
+      { input: 's = ""', output: 'Handle empty string', explanation: 'Empty string is a critical edge case - what should happen?' },
+      { input: 's = "a"', output: 'Handle single character', explanation: 'Single character strings are another edge case to consider.' }
     ],
-    constraints: ['See problem for specific constraints', 'Common constraints: string length, character types (lowercase, uppercase, alphanumeric)']
+    constraints: ['0 <= s.length <= 5 × 10⁴', 's consists of printable ASCII characters', 'Consider: empty strings, single characters, all same character, palindromes']
   },
   'Dynamic Programming': {
     description: (title) => `This dynamic programming problem tests your ability to break problems into subproblems and build solutions incrementally.\n\n**Key Concepts:**\n- Overlapping subproblems\n- Optimal substructure\n- Memoization (top-down) vs Tabulation (bottom-up)\n- State definition and transitions\n\n**Approach:**\n1. Define what dp[i] represents\n2. Find the base cases\n3. Write the recurrence relation\n4. Decide: recursive with memo or iterative?\n5. Draw the dp table on the whiteboard!`,
