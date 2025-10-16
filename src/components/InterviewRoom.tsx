@@ -291,12 +291,12 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
 
       {/* Desktop Layout */}
       <div className="flex-1 hidden lg:flex gap-0 overflow-hidden">
-        {/* Left Sidebar: Problem + Participants */}
-        <div className="w-[320px] bg-white border-r border-gray-200 flex flex-col">
+        {/* Left Sidebar: Problem + Participants - Resizable */}
+        <div className="min-w-[300px] max-w-[600px] w-[320px] bg-white border-r border-gray-200 flex flex-col overflow-hidden resize-x" style={{ resize: 'horizontal' }}>
           <div className="flex-1 overflow-auto">
             <ProblemPanel problemSlug={currentProblemSlug} />
           </div>
-          <div className="h-48 border-t border-gray-200">
+          <div className="h-48 border-t border-gray-200 resize-y overflow-auto min-h-[100px] max-h-[400px]" style={{ resize: 'vertical' }}>
             <ParticipantsPanel />
           </div>
         </div>
@@ -305,10 +305,10 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
         <div className="flex-1 bg-white flex flex-col overflow-hidden">
           {viewMode === 'hybrid' && (
             <>
-              <div className="flex-1 overflow-hidden">
+              <div className="flex-1 overflow-hidden resize-y min-h-[200px]" style={{ resize: 'vertical' }}>
                 <CodeEditor roomId={roomId} />
               </div>
-              <div className="h-[300px] border-t border-gray-200">
+              <div className="h-[300px] border-t border-gray-200 overflow-hidden">
                 <Whiteboard roomId={roomId} />
               </div>
             </>
@@ -320,8 +320,8 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
           )}
         </div>
 
-        {/* Right Sidebar: Chat */}
-        <div className="w-[320px] bg-white border-l border-gray-200">
+        {/* Right Sidebar: Chat - Resizable */}
+        <div className="min-w-[250px] max-w-[500px] w-[320px] bg-white border-l border-gray-200 resize-x overflow-auto" style={{ resize: 'horizontal' }}>
           <ChatPanel roomId={roomId} />
         </div>
       </div>
