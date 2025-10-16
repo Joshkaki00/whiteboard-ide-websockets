@@ -82,7 +82,20 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
     }
   }
 
+  const getTouchPos = (e: React.TouchEvent<HTMLCanvasElement>) => {
+    const canvas = canvasRef.current
+    if (!canvas) return { x: 0, y: 0 }
+
+    const rect = canvas.getBoundingClientRect()
+    const touch = e.touches[0]
+    return {
+      x: touch.clientX - rect.left,
+      y: touch.clientY - rect.top
+    }
+  }
+
   const handleMouseDown = (e: React.MouseEvent<HTMLCanvasElement>) => {
+    e.preventDefault()
     setIsDrawing(true)
     const pos = getMousePos(e)
     lastPosRef.current = pos
@@ -90,6 +103,7 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
 
   const handleMouseMove = (e: React.MouseEvent<HTMLCanvasElement>) => {
     if (!isDrawing || !lastPosRef.current) return
+    e.preventDefault()
 
     const pos = getMousePos(e)
 
@@ -118,6 +132,44 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
   }
 
   const handleMouseLeave = () => {
+    setIsDrawing(false)
+    lastPosRef.current = null
+  }
+
+  // Touch event handlers
+  const handleTouchStart = (e: React.TouchEvent<HTMLCanvasElement>) => {
+    e.preventDefault()
+    setIsDrawing(true)
+    const pos = getTouchPos(e)
+    lastPosRef.current = pos
+  }
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLCanvasElement>) => {
+    if (!isDrawing || !lastPosRef.current) return
+    e.preventDefault()
+
+    const pos = getTouchPos(e)
+
+    // Draw locally
+    drawLine(lastPosRef.current.x, lastPosRef.current.y, pos.x, pos.y, color, lineWidth)
+
+    // Send to other users
+    if (socket) {
+      socket.emit('whiteboard-draw', {
+        roomId,
+        x: pos.x,
+        y: pos.y,
+        prevX: lastPosRef.current.x,
+        prevY: lastPosRef.current.y,
+        color,
+        lineWidth
+      })
+    }
+
+    lastPosRef.current = pos
+  }
+
+  const handleTouchEnd = () => {
     setIsDrawing(false)
     lastPosRef.current = null
   }
