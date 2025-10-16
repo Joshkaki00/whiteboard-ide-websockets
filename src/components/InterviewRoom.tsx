@@ -31,8 +31,13 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
   useEffect(() => {
     if (!socket) return
     
-    const handleProblemChanged = (data: { problemSlug: string, code: string }) => {
+    const handleProblemChanged = async (data: { problemSlug: string, code: string }) => {
       setCurrentProblemSlug(data.problemSlug)
+      // Also update the title
+      const problem = await getLeetCodeProblem(data.problemSlug)
+      if (problem) {
+        setCurrentProblemTitle(problem.title)
+      }
     }
     
     socket.on('problem-changed', handleProblemChanged)
