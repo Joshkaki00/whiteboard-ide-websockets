@@ -39,8 +39,8 @@ export default function CodeEditor({ roomId, compact }: CodeEditorProps) {
   }
 
   return (
-    <div className="flex flex-col flex-1">
-      <div className="panel-header">
+    <div className="flex flex-col h-full">
+      <div className="panel-header flex-shrink-0">
         <h3>{compact ? "Code" : "Shared Code Editor"}</h3>
         <div className="flex gap-2">
           <select 
@@ -59,7 +59,7 @@ export default function CodeEditor({ roomId, compact }: CodeEditorProps) {
         ref={textareaRef}
         value={codeContent}
         onChange={handleCodeChange}
-        className="code-editor"
+        className="flex-1 w-full p-4 font-mono text-sm bg-gray-900 text-gray-100 border-none outline-none resize-none"
         placeholder="// Start typing your solution here..."
         spellCheck={false}
       />
