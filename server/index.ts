@@ -13,7 +13,15 @@ const io = new Server(server, {
       : "http://localhost:5173",
     methods: ["GET", "POST"],
     credentials: true
-  }
+  },
+  // Increase timeouts for long-running connections
+  pingTimeout: 60000,        // 60 seconds - time to wait for pong response
+  pingInterval: 25000,       // 25 seconds - how often to send ping
+  upgradeTimeout: 30000,     // 30 seconds - time to wait for upgrade
+  connectTimeout: 45000,     // 45 seconds - connection timeout
+  // Allow reconnection
+  allowEIO3: true,
+  transports: ['websocket', 'polling']
 })
 
 app.get('/', (req, res) => {
