@@ -309,6 +309,29 @@ io.on('connection', (socket) => {
     socket.to(data.roomId).emit('whiteboard-clear')
   })
 
+  // View mode control (creator only)
+  socket.on('change-view-mode', (data: { roomId: string, viewMode: 'hybrid' | 'whiteboard' }) => {
+    const room = rooms.get(data.roomId)
+    if (!room || socket.id !== room.creator) {
+      return
+    }
+
+    room.viewMode = data.viewMode
+    // Broadcast to all participants including creator
+    io.to(data.roomId).emit('view-mode-update', { viewMode: data.viewMode })
+  })
+
+  socket.on('toggle-view-lock', (data: { roomId: string, locked: boolean }) => {
+    const room = rooms.get(data.roomId)
+    if (!room || socket.id !== room.creator) {
+      return
+    }
+
+    room.viewModeLocked = data.locked
+    // Broadcast to all participants including creator
+    io.to(data.roomId).emit('view-lock-update', { locked: data.locked })
+  })
+
   socket.on('disconnect', () => {
     // Remove user from all rooms
     rooms.forEach((room, roomId) => {
