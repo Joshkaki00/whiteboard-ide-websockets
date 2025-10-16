@@ -123,10 +123,12 @@ export const fetchAllLeetCodeProblems = async (): Promise<any[]> => {
   }
 
   try {
+    console.log('🚀 Fetching LeetCode problems from API...')
     const response = await fetch(LEETCODE_API, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Referer': 'https://leetcode.com',
       },
       body: JSON.stringify({
         query: `
@@ -159,18 +161,31 @@ export const fetchAllLeetCodeProblems = async (): Promise<any[]> => {
       })
     })
 
+    console.log('📡 Response status:', response.status)
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`)
+    }
+
     const data = await response.json()
+    console.log('📊 Data received:', data?.data?.problemsetQuestionList?.total, 'problems')
+    
     const problems = data?.data?.problemsetQuestionList?.questions || []
+    
+    if (problems.length === 0) {
+      throw new Error('No problems returned from API')
+    }
     
     // Filter out premium problems
     const freeProblems = problems.filter((p: any) => !p.paidOnly)
+    console.log('✅ Free problems:', freeProblems.length)
     
     problemListCache = freeProblems
     cacheTimestamp = Date.now()
     
     return freeProblems
   } catch (error) {
-    console.error('Failed to fetch LeetCode problems:', error)
+    console.error('❌ Failed to fetch LeetCode problems:', error)
     // Fallback to local bank
     return Object.values(PROBLEM_BANK).map(p => ({
       frontendQuestionId: p.id,
