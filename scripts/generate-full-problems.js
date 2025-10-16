@@ -56,9 +56,11 @@ const templates = {
   'Linked List': {
     description: (title) => `Work through this linked list problem using pointer manipulation and careful traversal.\n\n**Key Concepts:**\n- Pointer manipulation (slow/fast, previous/current)\n- Dummy nodes for easier edge case handling\n- In-place vs new list creation\n- Cycle detection techniques\n\n**Approach:**\n1. Draw the linked list on the whiteboard\n2. Consider using a dummy head\n3. Track multiple pointers if needed\n4. Watch for null pointer issues\n5. Test with edge cases (empty, single node)`,
     examples: [
-      { input: 'See problem for linked list structure', output: 'See problem for expected output', explanation: 'Draw the pointer movements on the whiteboard!' }
+      { input: 'head = [1,2,3,4,5]', output: 'Modified list', explanation: 'Draw the linked list: 1 -> 2 -> 3 -> 4 -> 5 -> null\nTrace your pointer movements on the whiteboard.' },
+      { input: 'head = []', output: 'null', explanation: 'Empty list - handle this edge case carefully to avoid null pointer errors.' },
+      { input: 'head = [1]', output: 'Single node result', explanation: 'Single node: 1 -> null. What happens with just one element?' }
     ],
-    constraints: ['See problem for specific constraints', 'Common: list length, node value ranges, list can be empty']
+    constraints: ['0 <= list length <= 5000', '-5000 <= Node.val <= 5000', 'List can be empty (null head)']
   }
 };
 
