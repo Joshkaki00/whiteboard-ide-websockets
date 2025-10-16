@@ -13,7 +13,11 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "loadtest": "node tests/loadtest.js",
-    "start": "tsx server/index.ts"
+    "start": "tsx server/index.ts",
+    "server:status": "flyctl status",
+    "server:stop": "flyctl scale count 0",
+    "server:start": "flyctl scale count 1",
+    "server:logs": "flyctl logs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.14",
