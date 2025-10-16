@@ -176,6 +176,7 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
   // Touch event handlers
   const handleTouchStart = (e: React.TouchEvent<HTMLCanvasElement>) => {
     e.preventDefault()
+    e.stopPropagation()
     setIsDrawing(true)
     const pos = getTouchPos(e)
     lastPosRef.current = pos
@@ -184,6 +185,7 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
   const handleTouchMove = (e: React.TouchEvent<HTMLCanvasElement>) => {
     if (!isDrawing || !lastPosRef.current) return
     e.preventDefault()
+    e.stopPropagation()
 
     const pos = getTouchPos(e)
 
@@ -206,7 +208,16 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
     lastPosRef.current = pos
   }
 
-  const handleTouchEnd = () => {
+  const handleTouchEnd = (e: React.TouchEvent<HTMLCanvasElement>) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setIsDrawing(false)
+    lastPosRef.current = null
+  }
+
+  const handleTouchCancel = (e: React.TouchEvent<HTMLCanvasElement>) => {
+    e.preventDefault()
+    e.stopPropagation()
     setIsDrawing(false)
     lastPosRef.current = null
   }
