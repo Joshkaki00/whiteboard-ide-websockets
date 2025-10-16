@@ -1,0 +1,3306 @@
+[
+  {
+    "id": "1",
+    "title": "Two Sum",
+    "titleSlug": "two-sum",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 49.3,
+    "topicTags": [
+      "Array",
+      "Hash Table"
+    ],
+    "description": "# Two Sum\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Hash Table\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 49.3%\n- **Topics:** Array, Hash Table\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Add Two Numbers",
+    "titleSlug": "add-two-numbers",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 41.5,
+    "topicTags": [
+      "Linked List",
+      "Math",
+      "Recursion"
+    ],
+    "description": "# Add Two Numbers\n\nWork through this linked list problem with pointer manipulation.\n\n**Topics:** Linked List, Math, Recursion\n\n**Key Concepts:**\n- Pointer manipulation\n- Dummy nodes\n- In-place vs new list\n- Null checks\n\n**Approach:**\n1. Draw list on whiteboard\n2. Consider dummy head\n3. Track pointers carefully\n4. Test edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 41.5%\n- **Topics:** Linked List, Math, Recursion\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "head = [1,2,3,4,5]",
+        "output": "[5,4,3,2,1] (if reversed) or relevant result",
+        "explanation": "Draw: 1 -> 2 -> 3 -> 4 -> 5 -> null\nIf reversing: 5 -> 4 -> 3 -> 2 -> 1 -> null\nTrace pointer movements step by step!"
+      },
+      {
+        "input": "head = [1,2]",
+        "output": "[2,1] or relevant result",
+        "explanation": "Two nodes: 1 -> 2 -> null. Simplest non-trivial case."
+      },
+      {
+        "input": "head = []",
+        "output": "null",
+        "explanation": "Empty list returns null. Guard against null pointer errors!"
+      }
+    ],
+    "constraints": [
+      "0 <= list length <= 5000",
+      "-1000 <= Node.val <= 1000",
+      "List can be empty"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Longest Substring Without Repeating Characters",
+    "titleSlug": "longest-substring-without-repeating-characters",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 34.2,
+    "topicTags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "description": "# Longest Substring Without Repeating Characters\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** Hash Table, String, Sliding Window\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 34.2%\n- **Topics:** Hash Table, String, Sliding Window\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "s = \"racecar\"",
+        "output": "true (if palindrome check) or relevant result",
+        "explanation": "Palindrome example - reads same forwards and backwards. Draw pointers moving from both ends."
+      },
+      {
+        "input": "s = \"hello\"",
+        "output": "Result based on problem",
+        "explanation": "Regular string with distinct characters. Trace through your algorithm character by character."
+      },
+      {
+        "input": "s = \"a\"",
+        "output": "true or single char result",
+        "explanation": "Single character is always valid for most string operations."
+      }
+    ],
+    "constraints": [
+      "0 <= s.length <= 10⁵",
+      "s consists of lowercase/uppercase letters",
+      "May contain spaces or special characters"
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Longest Palindromic Substring",
+    "titleSlug": "longest-palindromic-substring",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 33.1,
+    "topicTags": [
+      "String",
+      "Dynamic Programming"
+    ],
+    "description": "# Longest Palindromic Substring\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** String, Dynamic Programming\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 33.1%\n- **Topics:** String, Dynamic Programming\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "s = \"racecar\"",
+        "output": "true (if palindrome check) or relevant result",
+        "explanation": "Palindrome example - reads same forwards and backwards. Draw pointers moving from both ends."
+      },
+      {
+        "input": "s = \"hello\"",
+        "output": "Result based on problem",
+        "explanation": "Regular string with distinct characters. Trace through your algorithm character by character."
+      },
+      {
+        "input": "s = \"a\"",
+        "output": "true or single char result",
+        "explanation": "Single character is always valid for most string operations."
+      }
+    ],
+    "constraints": [
+      "0 <= s.length <= 10⁵",
+      "s consists of lowercase/uppercase letters",
+      "May contain spaces or special characters"
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Reverse Integer",
+    "titleSlug": "reverse-integer",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 28.5,
+    "topicTags": [
+      "Math"
+    ],
+    "description": "# Reverse Integer\n\nSolve this problem using appropriate algorithms and data structures.\n\n**Topics:** Math\n\n**Approach:**\n1. Understand the problem\n2. Draw examples\n3. Find patterns\n4. Code solution\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 28.5%\n- **Topics:** Math\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "Input example 1",
+        "output": "Expected output 1",
+        "explanation": "Work through this example on the whiteboard step by step."
+      },
+      {
+        "input": "Input example 2",
+        "output": "Expected output 2",
+        "explanation": "Another test case to verify your approach."
+      }
+    ],
+    "constraints": [
+      "See problem constraints",
+      "Consider edge cases",
+      "Think about time/space complexity"
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Palindrome Number",
+    "titleSlug": "palindrome-number",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 54.2,
+    "topicTags": [
+      "Math"
+    ],
+    "description": "# Palindrome Number\n\nSolve this problem using appropriate algorithms and data structures.\n\n**Topics:** Math\n\n**Approach:**\n1. Understand the problem\n2. Draw examples\n3. Find patterns\n4. Code solution\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 54.2%\n- **Topics:** Math\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "Input example 1",
+        "output": "Expected output 1",
+        "explanation": "Work through this example on the whiteboard step by step."
+      },
+      {
+        "input": "Input example 2",
+        "output": "Expected output 2",
+        "explanation": "Another test case to verify your approach."
+      }
+    ],
+    "constraints": [
+      "See problem constraints",
+      "Consider edge cases",
+      "Think about time/space complexity"
+    ]
+  },
+  {
+    "id": "11",
+    "title": "Container With Most Water",
+    "titleSlug": "container-with-most-water",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 54.8,
+    "topicTags": [
+      "Array",
+      "Two Pointers",
+      "Greedy"
+    ],
+    "description": "# Container With Most Water\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Two Pointers, Greedy\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 54.8%\n- **Topics:** Array, Two Pointers, Greedy\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "13",
+    "title": "Roman to Integer",
+    "titleSlug": "roman-to-integer",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 59.1,
+    "topicTags": [
+      "Hash Table",
+      "Math",
+      "String"
+    ],
+    "description": "# Roman to Integer\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** Hash Table, Math, String\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 59.1%\n- **Topics:** Hash Table, Math, String\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "s = \"racecar\"",
+        "output": "true (if palindrome check) or relevant result",
+        "explanation": "Palindrome example - reads same forwards and backwards. Draw pointers moving from both ends."
+      },
+      {
+        "input": "s = \"hello\"",
+        "output": "Result based on problem",
+        "explanation": "Regular string with distinct characters. Trace through your algorithm character by character."
+      },
+      {
+        "input": "s = \"a\"",
+        "output": "true or single char result",
+        "explanation": "Single character is always valid for most string operations."
+      }
+    ],
+    "constraints": [
+      "0 <= s.length <= 10⁵",
+      "s consists of lowercase/uppercase letters",
+      "May contain spaces or special characters"
+    ]
+  },
+  {
+    "id": "14",
+    "title": "Longest Common Prefix",
+    "titleSlug": "longest-common-prefix",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 42.3,
+    "topicTags": [
+      "String",
+      "Trie"
+    ],
+    "description": "# Longest Common Prefix\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** String, Trie\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 42.3%\n- **Topics:** String, Trie\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "s = \"racecar\"",
+        "output": "true (if palindrome check) or relevant result",
+        "explanation": "Palindrome example - reads same forwards and backwards. Draw pointers moving from both ends."
+      },
+      {
+        "input": "s = \"hello\"",
+        "output": "Result based on problem",
+        "explanation": "Regular string with distinct characters. Trace through your algorithm character by character."
+      },
+      {
+        "input": "s = \"a\"",
+        "output": "true or single char result",
+        "explanation": "Single character is always valid for most string operations."
+      }
+    ],
+    "constraints": [
+      "0 <= s.length <= 10⁵",
+      "s consists of lowercase/uppercase letters",
+      "May contain spaces or special characters"
+    ]
+  },
+  {
+    "id": "15",
+    "title": "3Sum",
+    "titleSlug": "3sum",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 33.5,
+    "topicTags": [
+      "Array",
+      "Two Pointers",
+      "Sorting"
+    ],
+    "description": "# 3Sum\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Two Pointers, Sorting\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 33.5%\n- **Topics:** Array, Two Pointers, Sorting\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "17",
+    "title": "Letter Combinations of a Phone Number",
+    "titleSlug": "letter-combinations-of-a-phone-number",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 58.9,
+    "topicTags": [
+      "Hash Table",
+      "String",
+      "Backtracking"
+    ],
+    "description": "# Letter Combinations of a Phone Number\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** Hash Table, String, Backtracking\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 58.9%\n- **Topics:** Hash Table, String, Backtracking\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "s = \"racecar\"",
+        "output": "true (if palindrome check) or relevant result",
+        "explanation": "Palindrome example - reads same forwards and backwards. Draw pointers moving from both ends."
+      },
+      {
+        "input": "s = \"hello\"",
+        "output": "Result based on problem",
+        "explanation": "Regular string with distinct characters. Trace through your algorithm character by character."
+      },
+      {
+        "input": "s = \"a\"",
+        "output": "true or single char result",
+        "explanation": "Single character is always valid for most string operations."
+      }
+    ],
+    "constraints": [
+      "0 <= s.length <= 10⁵",
+      "s consists of lowercase/uppercase letters",
+      "May contain spaces or special characters"
+    ]
+  },
+  {
+    "id": "19",
+    "title": "Remove Nth Node From End of List",
+    "titleSlug": "remove-nth-node-from-end-of-list",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 43.1,
+    "topicTags": [
+      "Linked List",
+      "Two Pointers"
+    ],
+    "description": "# Remove Nth Node From End of List\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Linked List, Two Pointers\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 43.1%\n- **Topics:** Linked List, Two Pointers\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "20",
+    "title": "Valid Parentheses",
+    "titleSlug": "valid-parentheses",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 40.8,
+    "topicTags": [
+      "String",
+      "Stack"
+    ],
+    "description": "# Valid Parentheses\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** String, Stack\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 40.8%\n- **Topics:** String, Stack\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "s = \"racecar\"",
+        "output": "true (if palindrome check) or relevant result",
+        "explanation": "Palindrome example - reads same forwards and backwards. Draw pointers moving from both ends."
+      },
+      {
+        "input": "s = \"hello\"",
+        "output": "Result based on problem",
+        "explanation": "Regular string with distinct characters. Trace through your algorithm character by character."
+      },
+      {
+        "input": "s = \"a\"",
+        "output": "true or single char result",
+        "explanation": "Single character is always valid for most string operations."
+      }
+    ],
+    "constraints": [
+      "0 <= s.length <= 10⁵",
+      "s consists of lowercase/uppercase letters",
+      "May contain spaces or special characters"
+    ]
+  },
+  {
+    "id": "21",
+    "title": "Merge Two Sorted Lists",
+    "titleSlug": "merge-two-sorted-lists",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 63.5,
+    "topicTags": [
+      "Linked List",
+      "Recursion"
+    ],
+    "description": "# Merge Two Sorted Lists\n\nWork through this linked list problem with pointer manipulation.\n\n**Topics:** Linked List, Recursion\n\n**Key Concepts:**\n- Pointer manipulation\n- Dummy nodes\n- In-place vs new list\n- Null checks\n\n**Approach:**\n1. Draw list on whiteboard\n2. Consider dummy head\n3. Track pointers carefully\n4. Test edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 63.5%\n- **Topics:** Linked List, Recursion\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "head = [1,2,3,4,5]",
+        "output": "[5,4,3,2,1] (if reversed) or relevant result",
+        "explanation": "Draw: 1 -> 2 -> 3 -> 4 -> 5 -> null\nIf reversing: 5 -> 4 -> 3 -> 2 -> 1 -> null\nTrace pointer movements step by step!"
+      },
+      {
+        "input": "head = [1,2]",
+        "output": "[2,1] or relevant result",
+        "explanation": "Two nodes: 1 -> 2 -> null. Simplest non-trivial case."
+      },
+      {
+        "input": "head = []",
+        "output": "null",
+        "explanation": "Empty list returns null. Guard against null pointer errors!"
+      }
+    ],
+    "constraints": [
+      "0 <= list length <= 5000",
+      "-1000 <= Node.val <= 1000",
+      "List can be empty"
+    ]
+  },
+  {
+    "id": "22",
+    "title": "Generate Parentheses",
+    "titleSlug": "generate-parentheses",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 73.9,
+    "topicTags": [
+      "String",
+      "Dynamic Programming",
+      "Backtracking"
+    ],
+    "description": "# Generate Parentheses\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** String, Dynamic Programming, Backtracking\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 73.9%\n- **Topics:** String, Dynamic Programming, Backtracking\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "s = \"racecar\"",
+        "output": "true (if palindrome check) or relevant result",
+        "explanation": "Palindrome example - reads same forwards and backwards. Draw pointers moving from both ends."
+      },
+      {
+        "input": "s = \"hello\"",
+        "output": "Result based on problem",
+        "explanation": "Regular string with distinct characters. Trace through your algorithm character by character."
+      },
+      {
+        "input": "s = \"a\"",
+        "output": "true or single char result",
+        "explanation": "Single character is always valid for most string operations."
+      }
+    ],
+    "constraints": [
+      "0 <= s.length <= 10⁵",
+      "s consists of lowercase/uppercase letters",
+      "May contain spaces or special characters"
+    ]
+  },
+  {
+    "id": "23",
+    "title": "Merge k Sorted Lists",
+    "titleSlug": "merge-k-sorted-lists",
+    "difficulty": "Hard",
+    "paidOnly": false,
+    "acRate": 51.8,
+    "topicTags": [
+      "Linked List",
+      "Divide and Conquer",
+      "Heap (Priority Queue)",
+      "Merge Sort"
+    ],
+    "description": "# Merge k Sorted Lists\n\nWork through this linked list problem with pointer manipulation.\n\n**Topics:** Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort\n\n**Key Concepts:**\n- Pointer manipulation\n- Dummy nodes\n- In-place vs new list\n- Null checks\n\n**Approach:**\n1. Draw list on whiteboard\n2. Consider dummy head\n3. Track pointers carefully\n4. Test edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Hard\n- **Acceptance Rate:** 51.8%\n- **Topics:** Linked List, Divide and Conquer, Heap (Priority Queue), Merge Sort\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "head = [1,2,3,4,5]",
+        "output": "[5,4,3,2,1] (if reversed) or relevant result",
+        "explanation": "Draw: 1 -> 2 -> 3 -> 4 -> 5 -> null\nIf reversing: 5 -> 4 -> 3 -> 2 -> 1 -> null\nTrace pointer movements step by step!"
+      },
+      {
+        "input": "head = [1,2]",
+        "output": "[2,1] or relevant result",
+        "explanation": "Two nodes: 1 -> 2 -> null. Simplest non-trivial case."
+      },
+      {
+        "input": "head = []",
+        "output": "null",
+        "explanation": "Empty list returns null. Guard against null pointer errors!"
+      }
+    ],
+    "constraints": [
+      "0 <= list length <= 5000",
+      "-1000 <= Node.val <= 1000",
+      "List can be empty"
+    ]
+  },
+  {
+    "id": "26",
+    "title": "Remove Duplicates from Sorted Array",
+    "titleSlug": "remove-duplicates-from-sorted-array",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 53.4,
+    "topicTags": [
+      "Array",
+      "Two Pointers"
+    ],
+    "description": "# Remove Duplicates from Sorted Array\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Two Pointers\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 53.4%\n- **Topics:** Array, Two Pointers\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "33",
+    "title": "Search in Rotated Sorted Array",
+    "titleSlug": "search-in-rotated-sorted-array",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 40.1,
+    "topicTags": [
+      "Array",
+      "Binary Search"
+    ],
+    "description": "# Search in Rotated Sorted Array\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Binary Search\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 40.1%\n- **Topics:** Array, Binary Search\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "34",
+    "title": "Find First and Last Position of Element in Sorted Array",
+    "titleSlug": "find-first-and-last-position-of-element-in-sorted-array",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 43.9,
+    "topicTags": [
+      "Array",
+      "Binary Search"
+    ],
+    "description": "# Find First and Last Position of Element in Sorted Array\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Binary Search\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 43.9%\n- **Topics:** Array, Binary Search\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "39",
+    "title": "Combination Sum",
+    "titleSlug": "combination-sum",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 71.2,
+    "topicTags": [
+      "Array",
+      "Backtracking"
+    ],
+    "description": "# Combination Sum\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Backtracking\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 71.2%\n- **Topics:** Array, Backtracking\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "42",
+    "title": "Trapping Rain Water",
+    "titleSlug": "trapping-rain-water",
+    "difficulty": "Hard",
+    "paidOnly": false,
+    "acRate": 60.5,
+    "topicTags": [
+      "Array",
+      "Two Pointers",
+      "Dynamic Programming",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "description": "# Trapping Rain Water\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Hard\n- **Acceptance Rate:** 60.5%\n- **Topics:** Array, Two Pointers, Dynamic Programming, Stack, Monotonic Stack\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "46",
+    "title": "Permutations",
+    "titleSlug": "permutations",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 77.4,
+    "topicTags": [
+      "Array",
+      "Backtracking"
+    ],
+    "description": "# Permutations\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Backtracking\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 77.4%\n- **Topics:** Array, Backtracking\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "48",
+    "title": "Rotate Image",
+    "titleSlug": "rotate-image",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 72.8,
+    "topicTags": [
+      "Array",
+      "Math",
+      "Matrix"
+    ],
+    "description": "# Rotate Image\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Math, Matrix\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 72.8%\n- **Topics:** Array, Math, Matrix\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "49",
+    "title": "Group Anagrams",
+    "titleSlug": "group-anagrams",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 67.8,
+    "topicTags": [
+      "Array",
+      "Hash Table",
+      "String",
+      "Sorting"
+    ],
+    "description": "# Group Anagrams\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Hash Table, String, Sorting\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 67.8%\n- **Topics:** Array, Hash Table, String, Sorting\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "53",
+    "title": "Maximum Subarray",
+    "titleSlug": "maximum-subarray",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 50.3,
+    "topicTags": [
+      "Array",
+      "Divide and Conquer",
+      "Dynamic Programming"
+    ],
+    "description": "# Maximum Subarray\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Divide and Conquer, Dynamic Programming\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 50.3%\n- **Topics:** Array, Divide and Conquer, Dynamic Programming\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "54",
+    "title": "Spiral Matrix",
+    "titleSlug": "spiral-matrix",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 46.8,
+    "topicTags": [
+      "Array",
+      "Matrix",
+      "Simulation"
+    ],
+    "description": "# Spiral Matrix\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Matrix, Simulation\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 46.8%\n- **Topics:** Array, Matrix, Simulation\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "55",
+    "title": "Jump Game",
+    "titleSlug": "jump-game",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 38.9,
+    "topicTags": [
+      "Array",
+      "Dynamic Programming",
+      "Greedy"
+    ],
+    "description": "# Jump Game\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Dynamic Programming, Greedy\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 38.9%\n- **Topics:** Array, Dynamic Programming, Greedy\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "56",
+    "title": "Merge Intervals",
+    "titleSlug": "merge-intervals",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 46.9,
+    "topicTags": [
+      "Array",
+      "Sorting"
+    ],
+    "description": "# Merge Intervals\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Sorting\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 46.9%\n- **Topics:** Array, Sorting\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "62",
+    "title": "Unique Paths",
+    "titleSlug": "unique-paths",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 63.9,
+    "topicTags": [
+      "Math",
+      "Dynamic Programming",
+      "Combinatorics"
+    ],
+    "description": "# Unique Paths\n\nSolve this DP problem by breaking it into subproblems.\n\n**Topics:** Math, Dynamic Programming, Combinatorics\n\n**Key Concepts:**\n- Overlapping subproblems\n- Optimal substructure\n- Memoization or tabulation\n- State definition\n\n**Approach:**\n1. Define dp[i] meaning\n2. Find base cases\n3. Write recurrence relation\n4. Draw DP table on whiteboard!\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 63.9%\n- **Topics:** Math, Dynamic Programming, Combinatorics\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "n = 5",
+        "output": "8 (example for Fibonacci-like problems)",
+        "explanation": "If Fibonacci: dp = [0,1,1,2,3,5,8]. Draw the DP table showing how each value builds on previous ones."
+      },
+      {
+        "input": "n = 3",
+        "output": "3 or 5 (depends on problem)",
+        "explanation": "Small input to trace through. dp[3] = some combination of dp[2] and dp[1]. Work it out!"
+      },
+      {
+        "input": "n = 1",
+        "output": "1 (base case)",
+        "explanation": "Base case: dp[1] = 1. This is your starting point."
+      }
+    ],
+    "constraints": [
+      "1 <= n <= 1000",
+      "Result fits in 32-bit integer",
+      "May need O(n) space for DP table"
+    ]
+  },
+  {
+    "id": "70",
+    "title": "Climbing Stairs",
+    "titleSlug": "climbing-stairs",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 52.3,
+    "topicTags": [
+      "Math",
+      "Dynamic Programming",
+      "Memoization"
+    ],
+    "description": "# Climbing Stairs\n\nSolve this DP problem by breaking it into subproblems.\n\n**Topics:** Math, Dynamic Programming, Memoization\n\n**Key Concepts:**\n- Overlapping subproblems\n- Optimal substructure\n- Memoization or tabulation\n- State definition\n\n**Approach:**\n1. Define dp[i] meaning\n2. Find base cases\n3. Write recurrence relation\n4. Draw DP table on whiteboard!\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 52.3%\n- **Topics:** Math, Dynamic Programming, Memoization\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "n = 5",
+        "output": "8 (example for Fibonacci-like problems)",
+        "explanation": "If Fibonacci: dp = [0,1,1,2,3,5,8]. Draw the DP table showing how each value builds on previous ones."
+      },
+      {
+        "input": "n = 3",
+        "output": "3 or 5 (depends on problem)",
+        "explanation": "Small input to trace through. dp[3] = some combination of dp[2] and dp[1]. Work it out!"
+      },
+      {
+        "input": "n = 1",
+        "output": "1 (base case)",
+        "explanation": "Base case: dp[1] = 1. This is your starting point."
+      }
+    ],
+    "constraints": [
+      "1 <= n <= 1000",
+      "Result fits in 32-bit integer",
+      "May need O(n) space for DP table"
+    ]
+  },
+  {
+    "id": "75",
+    "title": "Sort Colors",
+    "titleSlug": "sort-colors",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 60.9,
+    "topicTags": [
+      "Array",
+      "Two Pointers",
+      "Sorting"
+    ],
+    "description": "# Sort Colors\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Two Pointers, Sorting\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 60.9%\n- **Topics:** Array, Two Pointers, Sorting\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "76",
+    "title": "Minimum Window Substring",
+    "titleSlug": "minimum-window-substring",
+    "difficulty": "Hard",
+    "paidOnly": false,
+    "acRate": 41.7,
+    "topicTags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "description": "# Minimum Window Substring\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** Hash Table, String, Sliding Window\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Hard\n- **Acceptance Rate:** 41.7%\n- **Topics:** Hash Table, String, Sliding Window\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "s = \"racecar\"",
+        "output": "true (if palindrome check) or relevant result",
+        "explanation": "Palindrome example - reads same forwards and backwards. Draw pointers moving from both ends."
+      },
+      {
+        "input": "s = \"hello\"",
+        "output": "Result based on problem",
+        "explanation": "Regular string with distinct characters. Trace through your algorithm character by character."
+      },
+      {
+        "input": "s = \"a\"",
+        "output": "true or single char result",
+        "explanation": "Single character is always valid for most string operations."
+      }
+    ],
+    "constraints": [
+      "0 <= s.length <= 10⁵",
+      "s consists of lowercase/uppercase letters",
+      "May contain spaces or special characters"
+    ]
+  },
+  {
+    "id": "78",
+    "title": "Subsets",
+    "titleSlug": "subsets",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 77.6,
+    "topicTags": [
+      "Array",
+      "Backtracking",
+      "Bit Manipulation"
+    ],
+    "description": "# Subsets\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Backtracking, Bit Manipulation\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 77.6%\n- **Topics:** Array, Backtracking, Bit Manipulation\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "79",
+    "title": "Word Search",
+    "titleSlug": "word-search",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 40.8,
+    "topicTags": [
+      "Array",
+      "Backtracking",
+      "Matrix"
+    ],
+    "description": "# Word Search\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Backtracking, Matrix\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 40.8%\n- **Topics:** Array, Backtracking, Matrix\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "84",
+    "title": "Largest Rectangle in Histogram",
+    "titleSlug": "largest-rectangle-in-histogram",
+    "difficulty": "Hard",
+    "paidOnly": false,
+    "acRate": 43.5,
+    "topicTags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "description": "# Largest Rectangle in Histogram\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Stack, Monotonic Stack\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Hard\n- **Acceptance Rate:** 43.5%\n- **Topics:** Array, Stack, Monotonic Stack\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "91",
+    "title": "Decode Ways",
+    "titleSlug": "decode-ways",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 33.7,
+    "topicTags": [
+      "String",
+      "Dynamic Programming"
+    ],
+    "description": "# Decode Ways\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** String, Dynamic Programming\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 33.7%\n- **Topics:** String, Dynamic Programming\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "s = \"racecar\"",
+        "output": "true (if palindrome check) or relevant result",
+        "explanation": "Palindrome example - reads same forwards and backwards. Draw pointers moving from both ends."
+      },
+      {
+        "input": "s = \"hello\"",
+        "output": "Result based on problem",
+        "explanation": "Regular string with distinct characters. Trace through your algorithm character by character."
+      },
+      {
+        "input": "s = \"a\"",
+        "output": "true or single char result",
+        "explanation": "Single character is always valid for most string operations."
+      }
+    ],
+    "constraints": [
+      "0 <= s.length <= 10⁵",
+      "s consists of lowercase/uppercase letters",
+      "May contain spaces or special characters"
+    ]
+  },
+  {
+    "id": "94",
+    "title": "Binary Tree Inorder Traversal",
+    "titleSlug": "binary-tree-inorder-traversal",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 75.2,
+    "topicTags": [
+      "Stack",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "description": "# Binary Tree Inorder Traversal\n\nSolve this tree problem using traversal and recursion.\n\n**Topics:** Stack, Tree, Depth-First Search, Binary Tree\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 75.2%\n- **Topics:** Stack, Tree, Depth-First Search, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "root = [4,2,7,1,3,6,9]",
+        "output": "[4,7,2,9,6,3,1] (if inverted) or relevant result",
+        "explanation": "Tree structure:\n       4\n      / \\\n     2   7\n    / \\ / \\\n   1  3 6  9\nDraw this and trace your algorithm!"
+      },
+      {
+        "input": "root = [2,1,3]",
+        "output": "3 (if max depth) or relevant result",
+        "explanation": "Simple 3-node tree. Height = 2. Test your recursion logic."
+      },
+      {
+        "input": "root = []",
+        "output": "null or 0",
+        "explanation": "Empty tree edge case. What does your function return?"
+      }
+    ],
+    "constraints": [
+      "0 <= number of nodes <= 10⁴",
+      "-1000 <= Node.val <= 1000",
+      "Tree can be empty"
+    ]
+  },
+  {
+    "id": "98",
+    "title": "Validate Binary Search Tree",
+    "titleSlug": "validate-binary-search-tree",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 32.9,
+    "topicTags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "description": "# Validate Binary Search Tree\n\nSolve this tree problem using traversal and recursion.\n\n**Topics:** Tree, Depth-First Search, Binary Search Tree, Binary Tree\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 32.9%\n- **Topics:** Tree, Depth-First Search, Binary Search Tree, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "root = [4,2,7,1,3,6,9]",
+        "output": "[4,7,2,9,6,3,1] (if inverted) or relevant result",
+        "explanation": "Tree structure:\n       4\n      / \\\n     2   7\n    / \\ / \\\n   1  3 6  9\nDraw this and trace your algorithm!"
+      },
+      {
+        "input": "root = [2,1,3]",
+        "output": "3 (if max depth) or relevant result",
+        "explanation": "Simple 3-node tree. Height = 2. Test your recursion logic."
+      },
+      {
+        "input": "root = []",
+        "output": "null or 0",
+        "explanation": "Empty tree edge case. What does your function return?"
+      }
+    ],
+    "constraints": [
+      "0 <= number of nodes <= 10⁴",
+      "-1000 <= Node.val <= 1000",
+      "Tree can be empty"
+    ]
+  },
+  {
+    "id": "100",
+    "title": "Same Tree",
+    "titleSlug": "same-tree",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 59.8,
+    "topicTags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "description": "# Same Tree\n\nSolve this tree problem using traversal and recursion.\n\n**Topics:** Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 59.8%\n- **Topics:** Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "root = [4,2,7,1,3,6,9]",
+        "output": "[4,7,2,9,6,3,1] (if inverted) or relevant result",
+        "explanation": "Tree structure:\n       4\n      / \\\n     2   7\n    / \\ / \\\n   1  3 6  9\nDraw this and trace your algorithm!"
+      },
+      {
+        "input": "root = [2,1,3]",
+        "output": "3 (if max depth) or relevant result",
+        "explanation": "Simple 3-node tree. Height = 2. Test your recursion logic."
+      },
+      {
+        "input": "root = []",
+        "output": "null or 0",
+        "explanation": "Empty tree edge case. What does your function return?"
+      }
+    ],
+    "constraints": [
+      "0 <= number of nodes <= 10⁴",
+      "-1000 <= Node.val <= 1000",
+      "Tree can be empty"
+    ]
+  },
+  {
+    "id": "101",
+    "title": "Symmetric Tree",
+    "titleSlug": "symmetric-tree",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 56.4,
+    "topicTags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "description": "# Symmetric Tree\n\nSolve this tree problem using traversal and recursion.\n\n**Topics:** Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 56.4%\n- **Topics:** Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "root = [4,2,7,1,3,6,9]",
+        "output": "[4,7,2,9,6,3,1] (if inverted) or relevant result",
+        "explanation": "Tree structure:\n       4\n      / \\\n     2   7\n    / \\ / \\\n   1  3 6  9\nDraw this and trace your algorithm!"
+      },
+      {
+        "input": "root = [2,1,3]",
+        "output": "3 (if max depth) or relevant result",
+        "explanation": "Simple 3-node tree. Height = 2. Test your recursion logic."
+      },
+      {
+        "input": "root = []",
+        "output": "null or 0",
+        "explanation": "Empty tree edge case. What does your function return?"
+      }
+    ],
+    "constraints": [
+      "0 <= number of nodes <= 10⁴",
+      "-1000 <= Node.val <= 1000",
+      "Tree can be empty"
+    ]
+  },
+  {
+    "id": "102",
+    "title": "Binary Tree Level Order Traversal",
+    "titleSlug": "binary-tree-level-order-traversal",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 66.2,
+    "topicTags": [
+      "Tree",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "description": "# Binary Tree Level Order Traversal\n\nSolve this tree problem using traversal and recursion.\n\n**Topics:** Tree, Breadth-First Search, Binary Tree\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 66.2%\n- **Topics:** Tree, Breadth-First Search, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "root = [4,2,7,1,3,6,9]",
+        "output": "[4,7,2,9,6,3,1] (if inverted) or relevant result",
+        "explanation": "Tree structure:\n       4\n      / \\\n     2   7\n    / \\ / \\\n   1  3 6  9\nDraw this and trace your algorithm!"
+      },
+      {
+        "input": "root = [2,1,3]",
+        "output": "3 (if max depth) or relevant result",
+        "explanation": "Simple 3-node tree. Height = 2. Test your recursion logic."
+      },
+      {
+        "input": "root = []",
+        "output": "null or 0",
+        "explanation": "Empty tree edge case. What does your function return?"
+      }
+    ],
+    "constraints": [
+      "0 <= number of nodes <= 10⁴",
+      "-1000 <= Node.val <= 1000",
+      "Tree can be empty"
+    ]
+  },
+  {
+    "id": "104",
+    "title": "Maximum Depth of Binary Tree",
+    "titleSlug": "maximum-depth-of-binary-tree",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 75.1,
+    "topicTags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "description": "# Maximum Depth of Binary Tree\n\nSolve this tree problem using traversal and recursion.\n\n**Topics:** Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 75.1%\n- **Topics:** Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "root = [4,2,7,1,3,6,9]",
+        "output": "[4,7,2,9,6,3,1] (if inverted) or relevant result",
+        "explanation": "Tree structure:\n       4\n      / \\\n     2   7\n    / \\ / \\\n   1  3 6  9\nDraw this and trace your algorithm!"
+      },
+      {
+        "input": "root = [2,1,3]",
+        "output": "3 (if max depth) or relevant result",
+        "explanation": "Simple 3-node tree. Height = 2. Test your recursion logic."
+      },
+      {
+        "input": "root = []",
+        "output": "null or 0",
+        "explanation": "Empty tree edge case. What does your function return?"
+      }
+    ],
+    "constraints": [
+      "0 <= number of nodes <= 10⁴",
+      "-1000 <= Node.val <= 1000",
+      "Tree can be empty"
+    ]
+  },
+  {
+    "id": "105",
+    "title": "Construct Binary Tree from Preorder and Inorder Traversal",
+    "titleSlug": "construct-binary-tree-from-preorder-and-inorder-traversal",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 64.5,
+    "topicTags": [
+      "Array",
+      "Hash Table",
+      "Divide and Conquer",
+      "Tree",
+      "Binary Tree"
+    ],
+    "description": "# Construct Binary Tree from Preorder and Inorder Traversal\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Hash Table, Divide and Conquer, Tree, Binary Tree\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 64.5%\n- **Topics:** Array, Hash Table, Divide and Conquer, Tree, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "121",
+    "title": "Best Time to Buy and Sell Stock",
+    "titleSlug": "best-time-to-buy-and-sell-stock",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 54.2,
+    "topicTags": [
+      "Array",
+      "Dynamic Programming"
+    ],
+    "description": "# Best Time to Buy and Sell Stock\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Dynamic Programming\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 54.2%\n- **Topics:** Array, Dynamic Programming\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "124",
+    "title": "Binary Tree Maximum Path Sum",
+    "titleSlug": "binary-tree-maximum-path-sum",
+    "difficulty": "Hard",
+    "paidOnly": false,
+    "acRate": 39.8,
+    "topicTags": [
+      "Dynamic Programming",
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "description": "# Binary Tree Maximum Path Sum\n\nSolve this DP problem by breaking it into subproblems.\n\n**Topics:** Dynamic Programming, Tree, Depth-First Search, Binary Tree\n\n**Key Concepts:**\n- Overlapping subproblems\n- Optimal substructure\n- Memoization or tabulation\n- State definition\n\n**Approach:**\n1. Define dp[i] meaning\n2. Find base cases\n3. Write recurrence relation\n4. Draw DP table on whiteboard!\n\n### 📊 Problem Stats\n- **Difficulty:** Hard\n- **Acceptance Rate:** 39.8%\n- **Topics:** Dynamic Programming, Tree, Depth-First Search, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "n = 5",
+        "output": "8 (example for Fibonacci-like problems)",
+        "explanation": "If Fibonacci: dp = [0,1,1,2,3,5,8]. Draw the DP table showing how each value builds on previous ones."
+      },
+      {
+        "input": "n = 3",
+        "output": "3 or 5 (depends on problem)",
+        "explanation": "Small input to trace through. dp[3] = some combination of dp[2] and dp[1]. Work it out!"
+      },
+      {
+        "input": "n = 1",
+        "output": "1 (base case)",
+        "explanation": "Base case: dp[1] = 1. This is your starting point."
+      }
+    ],
+    "constraints": [
+      "1 <= n <= 1000",
+      "Result fits in 32-bit integer",
+      "May need O(n) space for DP table"
+    ]
+  },
+  {
+    "id": "125",
+    "title": "Valid Palindrome",
+    "titleSlug": "valid-palindrome",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 45.9,
+    "topicTags": [
+      "Two Pointers",
+      "String"
+    ],
+    "description": "# Valid Palindrome\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Two Pointers, String\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 45.9%\n- **Topics:** Two Pointers, String\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "128",
+    "title": "Longest Consecutive Sequence",
+    "titleSlug": "longest-consecutive-sequence",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 48.7,
+    "topicTags": [
+      "Array",
+      "Hash Table",
+      "Union Find"
+    ],
+    "description": "# Longest Consecutive Sequence\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Hash Table, Union Find\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 48.7%\n- **Topics:** Array, Hash Table, Union Find\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "133",
+    "title": "Clone Graph",
+    "titleSlug": "clone-graph",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 54.9,
+    "topicTags": [
+      "Hash Table",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Graph"
+    ],
+    "description": "# Clone Graph\n\nSolve this problem using appropriate algorithms and data structures.\n\n**Topics:** Hash Table, Depth-First Search, Breadth-First Search, Graph\n\n**Approach:**\n1. Understand the problem\n2. Draw examples\n3. Find patterns\n4. Code solution\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 54.9%\n- **Topics:** Hash Table, Depth-First Search, Breadth-First Search, Graph\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "Input example 1",
+        "output": "Expected output 1",
+        "explanation": "Work through this example on the whiteboard step by step."
+      },
+      {
+        "input": "Input example 2",
+        "output": "Expected output 2",
+        "explanation": "Another test case to verify your approach."
+      }
+    ],
+    "constraints": [
+      "See problem constraints",
+      "Consider edge cases",
+      "Think about time/space complexity"
+    ]
+  },
+  {
+    "id": "139",
+    "title": "Word Break",
+    "titleSlug": "word-break",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 46.7,
+    "topicTags": [
+      "Array",
+      "Hash Table",
+      "String",
+      "Dynamic Programming",
+      "Trie",
+      "Memoization"
+    ],
+    "description": "# Word Break\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Hash Table, String, Dynamic Programming, Trie, Memoization\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 46.7%\n- **Topics:** Array, Hash Table, String, Dynamic Programming, Trie, Memoization\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "141",
+    "title": "Linked List Cycle",
+    "titleSlug": "linked-list-cycle",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 49.2,
+    "topicTags": [
+      "Hash Table",
+      "Linked List",
+      "Two Pointers"
+    ],
+    "description": "# Linked List Cycle\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Hash Table, Linked List, Two Pointers\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 49.2%\n- **Topics:** Hash Table, Linked List, Two Pointers\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "143",
+    "title": "Reorder List",
+    "titleSlug": "reorder-list",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 56.7,
+    "topicTags": [
+      "Linked List",
+      "Two Pointers",
+      "Stack",
+      "Recursion"
+    ],
+    "description": "# Reorder List\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Linked List, Two Pointers, Stack, Recursion\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 56.7%\n- **Topics:** Linked List, Two Pointers, Stack, Recursion\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "152",
+    "title": "Maximum Product Subarray",
+    "titleSlug": "maximum-product-subarray",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 35.1,
+    "topicTags": [
+      "Array",
+      "Dynamic Programming"
+    ],
+    "description": "# Maximum Product Subarray\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Dynamic Programming\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 35.1%\n- **Topics:** Array, Dynamic Programming\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "153",
+    "title": "Find Minimum in Rotated Sorted Array",
+    "titleSlug": "find-minimum-in-rotated-sorted-array",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 50.3,
+    "topicTags": [
+      "Array",
+      "Binary Search"
+    ],
+    "description": "# Find Minimum in Rotated Sorted Array\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Binary Search\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 50.3%\n- **Topics:** Array, Binary Search\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "198",
+    "title": "House Robber",
+    "titleSlug": "house-robber",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 50.2,
+    "topicTags": [
+      "Array",
+      "Dynamic Programming"
+    ],
+    "description": "# House Robber\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Dynamic Programming\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 50.2%\n- **Topics:** Array, Dynamic Programming\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "200",
+    "title": "Number of Islands",
+    "titleSlug": "number-of-islands",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 58.1,
+    "topicTags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Union Find",
+      "Matrix"
+    ],
+    "description": "# Number of Islands\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Depth-First Search, Breadth-First Search, Union Find, Matrix\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 58.1%\n- **Topics:** Array, Depth-First Search, Breadth-First Search, Union Find, Matrix\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "206",
+    "title": "Reverse Linked List",
+    "titleSlug": "reverse-linked-list",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 75.4,
+    "topicTags": [
+      "Linked List",
+      "Recursion"
+    ],
+    "description": "# Reverse Linked List\n\nWork through this linked list problem with pointer manipulation.\n\n**Topics:** Linked List, Recursion\n\n**Key Concepts:**\n- Pointer manipulation\n- Dummy nodes\n- In-place vs new list\n- Null checks\n\n**Approach:**\n1. Draw list on whiteboard\n2. Consider dummy head\n3. Track pointers carefully\n4. Test edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 75.4%\n- **Topics:** Linked List, Recursion\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "head = [1,2,3,4,5]",
+        "output": "[5,4,3,2,1] (if reversed) or relevant result",
+        "explanation": "Draw: 1 -> 2 -> 3 -> 4 -> 5 -> null\nIf reversing: 5 -> 4 -> 3 -> 2 -> 1 -> null\nTrace pointer movements step by step!"
+      },
+      {
+        "input": "head = [1,2]",
+        "output": "[2,1] or relevant result",
+        "explanation": "Two nodes: 1 -> 2 -> null. Simplest non-trivial case."
+      },
+      {
+        "input": "head = []",
+        "output": "null",
+        "explanation": "Empty list returns null. Guard against null pointer errors!"
+      }
+    ],
+    "constraints": [
+      "0 <= list length <= 5000",
+      "-1000 <= Node.val <= 1000",
+      "List can be empty"
+    ]
+  },
+  {
+    "id": "207",
+    "title": "Course Schedule",
+    "titleSlug": "course-schedule",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 46.5,
+    "topicTags": [
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Graph",
+      "Topological Sort"
+    ],
+    "description": "# Course Schedule\n\nSolve this problem using appropriate algorithms and data structures.\n\n**Topics:** Depth-First Search, Breadth-First Search, Graph, Topological Sort\n\n**Approach:**\n1. Understand the problem\n2. Draw examples\n3. Find patterns\n4. Code solution\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 46.5%\n- **Topics:** Depth-First Search, Breadth-First Search, Graph, Topological Sort\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "Input example 1",
+        "output": "Expected output 1",
+        "explanation": "Work through this example on the whiteboard step by step."
+      },
+      {
+        "input": "Input example 2",
+        "output": "Expected output 2",
+        "explanation": "Another test case to verify your approach."
+      }
+    ],
+    "constraints": [
+      "See problem constraints",
+      "Consider edge cases",
+      "Think about time/space complexity"
+    ]
+  },
+  {
+    "id": "208",
+    "title": "Implement Trie (Prefix Tree)",
+    "titleSlug": "implement-trie-prefix-tree",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 65.4,
+    "topicTags": [
+      "Hash Table",
+      "String",
+      "Design",
+      "Trie"
+    ],
+    "description": "# Implement Trie (Prefix Tree)\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** Hash Table, String, Design, Trie\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 65.4%\n- **Topics:** Hash Table, String, Design, Trie\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "s = \"racecar\"",
+        "output": "true (if palindrome check) or relevant result",
+        "explanation": "Palindrome example - reads same forwards and backwards. Draw pointers moving from both ends."
+      },
+      {
+        "input": "s = \"hello\"",
+        "output": "Result based on problem",
+        "explanation": "Regular string with distinct characters. Trace through your algorithm character by character."
+      },
+      {
+        "input": "s = \"a\"",
+        "output": "true or single char result",
+        "explanation": "Single character is always valid for most string operations."
+      }
+    ],
+    "constraints": [
+      "0 <= s.length <= 10⁵",
+      "s consists of lowercase/uppercase letters",
+      "May contain spaces or special characters"
+    ]
+  },
+  {
+    "id": "210",
+    "title": "Course Schedule II",
+    "titleSlug": "course-schedule-ii",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 48.9,
+    "topicTags": [
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Graph",
+      "Topological Sort"
+    ],
+    "description": "# Course Schedule II\n\nSolve this problem using appropriate algorithms and data structures.\n\n**Topics:** Depth-First Search, Breadth-First Search, Graph, Topological Sort\n\n**Approach:**\n1. Understand the problem\n2. Draw examples\n3. Find patterns\n4. Code solution\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 48.9%\n- **Topics:** Depth-First Search, Breadth-First Search, Graph, Topological Sort\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "Input example 1",
+        "output": "Expected output 1",
+        "explanation": "Work through this example on the whiteboard step by step."
+      },
+      {
+        "input": "Input example 2",
+        "output": "Expected output 2",
+        "explanation": "Another test case to verify your approach."
+      }
+    ],
+    "constraints": [
+      "See problem constraints",
+      "Consider edge cases",
+      "Think about time/space complexity"
+    ]
+  },
+  {
+    "id": "212",
+    "title": "Word Search II",
+    "titleSlug": "word-search-ii",
+    "difficulty": "Hard",
+    "paidOnly": false,
+    "acRate": 37.8,
+    "topicTags": [
+      "Array",
+      "String",
+      "Backtracking",
+      "Trie",
+      "Matrix"
+    ],
+    "description": "# Word Search II\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, String, Backtracking, Trie, Matrix\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Hard\n- **Acceptance Rate:** 37.8%\n- **Topics:** Array, String, Backtracking, Trie, Matrix\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "215",
+    "title": "Kth Largest Element in an Array",
+    "titleSlug": "kth-largest-element-in-an-array",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 67.2,
+    "topicTags": [
+      "Array",
+      "Divide and Conquer",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Quickselect"
+    ],
+    "description": "# Kth Largest Element in an Array\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Divide and Conquer, Sorting, Heap (Priority Queue), Quickselect\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 67.2%\n- **Topics:** Array, Divide and Conquer, Sorting, Heap (Priority Queue), Quickselect\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "217",
+    "title": "Contains Duplicate",
+    "titleSlug": "contains-duplicate",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 61.8,
+    "topicTags": [
+      "Array",
+      "Hash Table",
+      "Sorting"
+    ],
+    "description": "# Contains Duplicate\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Hash Table, Sorting\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 61.8%\n- **Topics:** Array, Hash Table, Sorting\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "226",
+    "title": "Invert Binary Tree",
+    "titleSlug": "invert-binary-tree",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 75.9,
+    "topicTags": [
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Binary Tree"
+    ],
+    "description": "# Invert Binary Tree\n\nSolve this tree problem using traversal and recursion.\n\n**Topics:** Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 75.9%\n- **Topics:** Tree, Depth-First Search, Breadth-First Search, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "root = [4,2,7,1,3,6,9]",
+        "output": "[4,7,2,9,6,3,1] (if inverted) or relevant result",
+        "explanation": "Tree structure:\n       4\n      / \\\n     2   7\n    / \\ / \\\n   1  3 6  9\nDraw this and trace your algorithm!"
+      },
+      {
+        "input": "root = [2,1,3]",
+        "output": "3 (if max depth) or relevant result",
+        "explanation": "Simple 3-node tree. Height = 2. Test your recursion logic."
+      },
+      {
+        "input": "root = []",
+        "output": "null or 0",
+        "explanation": "Empty tree edge case. What does your function return?"
+      }
+    ],
+    "constraints": [
+      "0 <= number of nodes <= 10⁴",
+      "-1000 <= Node.val <= 1000",
+      "Tree can be empty"
+    ]
+  },
+  {
+    "id": "230",
+    "title": "Kth Smallest Element in a BST",
+    "titleSlug": "kth-smallest-element-in-a-bst",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 72.5,
+    "topicTags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "description": "# Kth Smallest Element in a BST\n\nSolve this tree problem using traversal and recursion.\n\n**Topics:** Tree, Depth-First Search, Binary Search Tree, Binary Tree\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 72.5%\n- **Topics:** Tree, Depth-First Search, Binary Search Tree, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "root = [4,2,7,1,3,6,9]",
+        "output": "[4,7,2,9,6,3,1] (if inverted) or relevant result",
+        "explanation": "Tree structure:\n       4\n      / \\\n     2   7\n    / \\ / \\\n   1  3 6  9\nDraw this and trace your algorithm!"
+      },
+      {
+        "input": "root = [2,1,3]",
+        "output": "3 (if max depth) or relevant result",
+        "explanation": "Simple 3-node tree. Height = 2. Test your recursion logic."
+      },
+      {
+        "input": "root = []",
+        "output": "null or 0",
+        "explanation": "Empty tree edge case. What does your function return?"
+      }
+    ],
+    "constraints": [
+      "0 <= number of nodes <= 10⁴",
+      "-1000 <= Node.val <= 1000",
+      "Tree can be empty"
+    ]
+  },
+  {
+    "id": "234",
+    "title": "Palindrome Linked List",
+    "titleSlug": "palindrome-linked-list",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 51.8,
+    "topicTags": [
+      "Linked List",
+      "Two Pointers",
+      "Stack",
+      "Recursion"
+    ],
+    "description": "# Palindrome Linked List\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Linked List, Two Pointers, Stack, Recursion\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 51.8%\n- **Topics:** Linked List, Two Pointers, Stack, Recursion\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "235",
+    "title": "Lowest Common Ancestor of a Binary Search Tree",
+    "titleSlug": "lowest-common-ancestor-of-a-binary-search-tree",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 63.1,
+    "topicTags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "description": "# Lowest Common Ancestor of a Binary Search Tree\n\nSolve this tree problem using traversal and recursion.\n\n**Topics:** Tree, Depth-First Search, Binary Search Tree, Binary Tree\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 63.1%\n- **Topics:** Tree, Depth-First Search, Binary Search Tree, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "root = [4,2,7,1,3,6,9]",
+        "output": "[4,7,2,9,6,3,1] (if inverted) or relevant result",
+        "explanation": "Tree structure:\n       4\n      / \\\n     2   7\n    / \\ / \\\n   1  3 6  9\nDraw this and trace your algorithm!"
+      },
+      {
+        "input": "root = [2,1,3]",
+        "output": "3 (if max depth) or relevant result",
+        "explanation": "Simple 3-node tree. Height = 2. Test your recursion logic."
+      },
+      {
+        "input": "root = []",
+        "output": "null or 0",
+        "explanation": "Empty tree edge case. What does your function return?"
+      }
+    ],
+    "constraints": [
+      "0 <= number of nodes <= 10⁴",
+      "-1000 <= Node.val <= 1000",
+      "Tree can be empty"
+    ]
+  },
+  {
+    "id": "236",
+    "title": "Lowest Common Ancestor of a Binary Tree",
+    "titleSlug": "lowest-common-ancestor-of-a-binary-tree",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 60.5,
+    "topicTags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "description": "# Lowest Common Ancestor of a Binary Tree\n\nSolve this tree problem using traversal and recursion.\n\n**Topics:** Tree, Depth-First Search, Binary Tree\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 60.5%\n- **Topics:** Tree, Depth-First Search, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "root = [4,2,7,1,3,6,9]",
+        "output": "[4,7,2,9,6,3,1] (if inverted) or relevant result",
+        "explanation": "Tree structure:\n       4\n      / \\\n     2   7\n    / \\ / \\\n   1  3 6  9\nDraw this and trace your algorithm!"
+      },
+      {
+        "input": "root = [2,1,3]",
+        "output": "3 (if max depth) or relevant result",
+        "explanation": "Simple 3-node tree. Height = 2. Test your recursion logic."
+      },
+      {
+        "input": "root = []",
+        "output": "null or 0",
+        "explanation": "Empty tree edge case. What does your function return?"
+      }
+    ],
+    "constraints": [
+      "0 <= number of nodes <= 10⁴",
+      "-1000 <= Node.val <= 1000",
+      "Tree can be empty"
+    ]
+  },
+  {
+    "id": "238",
+    "title": "Product of Array Except Self",
+    "titleSlug": "product-of-array-except-self",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 66.2,
+    "topicTags": [
+      "Array",
+      "Prefix Sum"
+    ],
+    "description": "# Product of Array Except Self\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Prefix Sum\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 66.2%\n- **Topics:** Array, Prefix Sum\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "242",
+    "title": "Valid Anagram",
+    "titleSlug": "valid-anagram",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 63.8,
+    "topicTags": [
+      "Hash Table",
+      "String",
+      "Sorting"
+    ],
+    "description": "# Valid Anagram\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Hash Table, String, Sorting\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 63.8%\n- **Topics:** Hash Table, String, Sorting\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "268",
+    "title": "Missing Number",
+    "titleSlug": "missing-number",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 64.3,
+    "topicTags": [
+      "Array",
+      "Hash Table",
+      "Math",
+      "Bit Manipulation",
+      "Sorting"
+    ],
+    "description": "# Missing Number\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Hash Table, Math, Bit Manipulation, Sorting\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 64.3%\n- **Topics:** Array, Hash Table, Math, Bit Manipulation, Sorting\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "295",
+    "title": "Find Median from Data Stream",
+    "titleSlug": "find-median-from-data-stream",
+    "difficulty": "Hard",
+    "paidOnly": false,
+    "acRate": 51.8,
+    "topicTags": [
+      "Two Pointers",
+      "Design",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Data Stream"
+    ],
+    "description": "# Find Median from Data Stream\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Two Pointers, Design, Sorting, Heap (Priority Queue), Data Stream\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Hard\n- **Acceptance Rate:** 51.8%\n- **Topics:** Two Pointers, Design, Sorting, Heap (Priority Queue), Data Stream\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "297",
+    "title": "Serialize and Deserialize Binary Tree",
+    "titleSlug": "serialize-and-deserialize-binary-tree",
+    "difficulty": "Hard",
+    "paidOnly": false,
+    "acRate": 57.2,
+    "topicTags": [
+      "String",
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Design",
+      "Binary Tree"
+    ],
+    "description": "# Serialize and Deserialize Binary Tree\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** String, Tree, Depth-First Search, Breadth-First Search, Design, Binary Tree\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Hard\n- **Acceptance Rate:** 57.2%\n- **Topics:** String, Tree, Depth-First Search, Breadth-First Search, Design, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "s = \"racecar\"",
+        "output": "true (if palindrome check) or relevant result",
+        "explanation": "Palindrome example - reads same forwards and backwards. Draw pointers moving from both ends."
+      },
+      {
+        "input": "s = \"hello\"",
+        "output": "Result based on problem",
+        "explanation": "Regular string with distinct characters. Trace through your algorithm character by character."
+      },
+      {
+        "input": "s = \"a\"",
+        "output": "true or single char result",
+        "explanation": "Single character is always valid for most string operations."
+      }
+    ],
+    "constraints": [
+      "0 <= s.length <= 10⁵",
+      "s consists of lowercase/uppercase letters",
+      "May contain spaces or special characters"
+    ]
+  },
+  {
+    "id": "300",
+    "title": "Longest Increasing Subsequence",
+    "titleSlug": "longest-increasing-subsequence",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 54.2,
+    "topicTags": [
+      "Array",
+      "Binary Search",
+      "Dynamic Programming"
+    ],
+    "description": "# Longest Increasing Subsequence\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Binary Search, Dynamic Programming\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 54.2%\n- **Topics:** Array, Binary Search, Dynamic Programming\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "322",
+    "title": "Coin Change",
+    "titleSlug": "coin-change",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 43.9,
+    "topicTags": [
+      "Array",
+      "Dynamic Programming",
+      "Breadth-First Search"
+    ],
+    "description": "# Coin Change\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Dynamic Programming, Breadth-First Search\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 43.9%\n- **Topics:** Array, Dynamic Programming, Breadth-First Search\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "347",
+    "title": "Top K Frequent Elements",
+    "titleSlug": "top-k-frequent-elements",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 65.1,
+    "topicTags": [
+      "Array",
+      "Hash Table",
+      "Divide and Conquer",
+      "Sorting",
+      "Heap (Priority Queue)",
+      "Bucket Sort",
+      "Counting",
+      "Quickselect"
+    ],
+    "description": "# Top K Frequent Elements\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Hash Table, Divide and Conquer, Sorting, Heap (Priority Queue), Bucket Sort, Counting, Quickselect\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 65.1%\n- **Topics:** Array, Hash Table, Divide and Conquer, Sorting, Heap (Priority Queue), Bucket Sort, Counting, Quickselect\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "371",
+    "title": "Sum of Two Integers",
+    "titleSlug": "sum-of-two-integers",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 50.8,
+    "topicTags": [
+      "Math",
+      "Bit Manipulation"
+    ],
+    "description": "# Sum of Two Integers\n\nSolve this problem using appropriate algorithms and data structures.\n\n**Topics:** Math, Bit Manipulation\n\n**Approach:**\n1. Understand the problem\n2. Draw examples\n3. Find patterns\n4. Code solution\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 50.8%\n- **Topics:** Math, Bit Manipulation\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "Input example 1",
+        "output": "Expected output 1",
+        "explanation": "Work through this example on the whiteboard step by step."
+      },
+      {
+        "input": "Input example 2",
+        "output": "Expected output 2",
+        "explanation": "Another test case to verify your approach."
+      }
+    ],
+    "constraints": [
+      "See problem constraints",
+      "Consider edge cases",
+      "Think about time/space complexity"
+    ]
+  },
+  {
+    "id": "417",
+    "title": "Pacific Atlantic Water Flow",
+    "titleSlug": "pacific-atlantic-water-flow",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 55.1,
+    "topicTags": [
+      "Array",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Matrix"
+    ],
+    "description": "# Pacific Atlantic Water Flow\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Depth-First Search, Breadth-First Search, Matrix\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 55.1%\n- **Topics:** Array, Depth-First Search, Breadth-First Search, Matrix\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "424",
+    "title": "Longest Repeating Character Replacement",
+    "titleSlug": "longest-repeating-character-replacement",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 52.9,
+    "topicTags": [
+      "Hash Table",
+      "String",
+      "Sliding Window"
+    ],
+    "description": "# Longest Repeating Character Replacement\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** Hash Table, String, Sliding Window\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 52.9%\n- **Topics:** Hash Table, String, Sliding Window\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "s = \"racecar\"",
+        "output": "true (if palindrome check) or relevant result",
+        "explanation": "Palindrome example - reads same forwards and backwards. Draw pointers moving from both ends."
+      },
+      {
+        "input": "s = \"hello\"",
+        "output": "Result based on problem",
+        "explanation": "Regular string with distinct characters. Trace through your algorithm character by character."
+      },
+      {
+        "input": "s = \"a\"",
+        "output": "true or single char result",
+        "explanation": "Single character is always valid for most string operations."
+      }
+    ],
+    "constraints": [
+      "0 <= s.length <= 10⁵",
+      "s consists of lowercase/uppercase letters",
+      "May contain spaces or special characters"
+    ]
+  },
+  {
+    "id": "435",
+    "title": "Non-overlapping Intervals",
+    "titleSlug": "non-overlapping-intervals",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 51.7,
+    "topicTags": [
+      "Array",
+      "Dynamic Programming",
+      "Greedy",
+      "Sorting"
+    ],
+    "description": "# Non-overlapping Intervals\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Dynamic Programming, Greedy, Sorting\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 51.7%\n- **Topics:** Array, Dynamic Programming, Greedy, Sorting\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "449",
+    "title": "Serialize and Deserialize BST",
+    "titleSlug": "serialize-and-deserialize-bst",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 58.7,
+    "topicTags": [
+      "String",
+      "Tree",
+      "Depth-First Search",
+      "Breadth-First Search",
+      "Design",
+      "Binary Search Tree",
+      "Binary Tree"
+    ],
+    "description": "# Serialize and Deserialize BST\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** String, Tree, Depth-First Search, Breadth-First Search, Design, Binary Search Tree, Binary Tree\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 58.7%\n- **Topics:** String, Tree, Depth-First Search, Breadth-First Search, Design, Binary Search Tree, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "s = \"racecar\"",
+        "output": "true (if palindrome check) or relevant result",
+        "explanation": "Palindrome example - reads same forwards and backwards. Draw pointers moving from both ends."
+      },
+      {
+        "input": "s = \"hello\"",
+        "output": "Result based on problem",
+        "explanation": "Regular string with distinct characters. Trace through your algorithm character by character."
+      },
+      {
+        "input": "s = \"a\"",
+        "output": "true or single char result",
+        "explanation": "Single character is always valid for most string operations."
+      }
+    ],
+    "constraints": [
+      "0 <= s.length <= 10⁵",
+      "s consists of lowercase/uppercase letters",
+      "May contain spaces or special characters"
+    ]
+  },
+  {
+    "id": "518",
+    "title": "Coin Change II",
+    "titleSlug": "coin-change-ii",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 64.8,
+    "topicTags": [
+      "Array",
+      "Dynamic Programming"
+    ],
+    "description": "# Coin Change II\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Dynamic Programming\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 64.8%\n- **Topics:** Array, Dynamic Programming\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "543",
+    "title": "Diameter of Binary Tree",
+    "titleSlug": "diameter-of-binary-tree",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 58.1,
+    "topicTags": [
+      "Tree",
+      "Depth-First Search",
+      "Binary Tree"
+    ],
+    "description": "# Diameter of Binary Tree\n\nSolve this tree problem using traversal and recursion.\n\n**Topics:** Tree, Depth-First Search, Binary Tree\n\n**Key Concepts:**\n- Tree traversal (DFS/BFS)\n- Recursion with base cases\n- Left and right subtrees\n- Null checks\n\n**Approach:**\n1. Draw tree on whiteboard\n2. Identify base case (null)\n3. Define what to return\n4. Test with examples\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 58.1%\n- **Topics:** Tree, Depth-First Search, Binary Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "root = [4,2,7,1,3,6,9]",
+        "output": "[4,7,2,9,6,3,1] (if inverted) or relevant result",
+        "explanation": "Tree structure:\n       4\n      / \\\n     2   7\n    / \\ / \\\n   1  3 6  9\nDraw this and trace your algorithm!"
+      },
+      {
+        "input": "root = [2,1,3]",
+        "output": "3 (if max depth) or relevant result",
+        "explanation": "Simple 3-node tree. Height = 2. Test your recursion logic."
+      },
+      {
+        "input": "root = []",
+        "output": "null or 0",
+        "explanation": "Empty tree edge case. What does your function return?"
+      }
+    ],
+    "constraints": [
+      "0 <= number of nodes <= 10⁴",
+      "-1000 <= Node.val <= 1000",
+      "Tree can be empty"
+    ]
+  },
+  {
+    "id": "572",
+    "title": "Subtree of Another Tree",
+    "titleSlug": "subtree-of-another-tree",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 47.2,
+    "topicTags": [
+      "Tree",
+      "Depth-First Search",
+      "String Matching",
+      "Binary Tree",
+      "Hash Function"
+    ],
+    "description": "# Subtree of Another Tree\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** Tree, Depth-First Search, String Matching, Binary Tree, Hash Function\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 47.2%\n- **Topics:** Tree, Depth-First Search, String Matching, Binary Tree, Hash Function\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "s = \"racecar\"",
+        "output": "true (if palindrome check) or relevant result",
+        "explanation": "Palindrome example - reads same forwards and backwards. Draw pointers moving from both ends."
+      },
+      {
+        "input": "s = \"hello\"",
+        "output": "Result based on problem",
+        "explanation": "Regular string with distinct characters. Trace through your algorithm character by character."
+      },
+      {
+        "input": "s = \"a\"",
+        "output": "true or single char result",
+        "explanation": "Single character is always valid for most string operations."
+      }
+    ],
+    "constraints": [
+      "0 <= s.length <= 10⁵",
+      "s consists of lowercase/uppercase letters",
+      "May contain spaces or special characters"
+    ]
+  },
+  {
+    "id": "647",
+    "title": "Palindromic Substrings",
+    "titleSlug": "palindromic-substrings",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 68.3,
+    "topicTags": [
+      "String",
+      "Dynamic Programming"
+    ],
+    "description": "# Palindromic Substrings\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** String, Dynamic Programming\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 68.3%\n- **Topics:** String, Dynamic Programming\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "s = \"racecar\"",
+        "output": "true (if palindrome check) or relevant result",
+        "explanation": "Palindrome example - reads same forwards and backwards. Draw pointers moving from both ends."
+      },
+      {
+        "input": "s = \"hello\"",
+        "output": "Result based on problem",
+        "explanation": "Regular string with distinct characters. Trace through your algorithm character by character."
+      },
+      {
+        "input": "s = \"a\"",
+        "output": "true or single char result",
+        "explanation": "Single character is always valid for most string operations."
+      }
+    ],
+    "constraints": [
+      "0 <= s.length <= 10⁵",
+      "s consists of lowercase/uppercase letters",
+      "May contain spaces or special characters"
+    ]
+  },
+  {
+    "id": "704",
+    "title": "Binary Search",
+    "titleSlug": "binary-search",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 59.7,
+    "topicTags": [
+      "Array",
+      "Binary Search"
+    ],
+    "description": "# Binary Search\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Binary Search\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 59.7%\n- **Topics:** Array, Binary Search\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "739",
+    "title": "Daily Temperatures",
+    "titleSlug": "daily-temperatures",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 66.8,
+    "topicTags": [
+      "Array",
+      "Stack",
+      "Monotonic Stack"
+    ],
+    "description": "# Daily Temperatures\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Stack, Monotonic Stack\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 66.8%\n- **Topics:** Array, Stack, Monotonic Stack\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "853",
+    "title": "Car Fleet",
+    "titleSlug": "car-fleet",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 50.1,
+    "topicTags": [
+      "Array",
+      "Stack",
+      "Sorting",
+      "Monotonic Stack"
+    ],
+    "description": "# Car Fleet\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Stack, Sorting, Monotonic Stack\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 50.1%\n- **Topics:** Array, Stack, Sorting, Monotonic Stack\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "875",
+    "title": "Koko Eating Bananas",
+    "titleSlug": "koko-eating-bananas",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 55.7,
+    "topicTags": [
+      "Array",
+      "Binary Search"
+    ],
+    "description": "# Koko Eating Bananas\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Binary Search\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 55.7%\n- **Topics:** Array, Binary Search\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "981",
+    "title": "Time Based Key-Value Store",
+    "titleSlug": "time-based-key-value-store",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 53.9,
+    "topicTags": [
+      "Hash Table",
+      "String",
+      "Binary Search",
+      "Design"
+    ],
+    "description": "# Time Based Key-Value Store\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** Hash Table, String, Binary Search, Design\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 53.9%\n- **Topics:** Hash Table, String, Binary Search, Design\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "s = \"racecar\"",
+        "output": "true (if palindrome check) or relevant result",
+        "explanation": "Palindrome example - reads same forwards and backwards. Draw pointers moving from both ends."
+      },
+      {
+        "input": "s = \"hello\"",
+        "output": "Result based on problem",
+        "explanation": "Regular string with distinct characters. Trace through your algorithm character by character."
+      },
+      {
+        "input": "s = \"a\"",
+        "output": "true or single char result",
+        "explanation": "Single character is always valid for most string operations."
+      }
+    ],
+    "constraints": [
+      "0 <= s.length <= 10⁵",
+      "s consists of lowercase/uppercase letters",
+      "May contain spaces or special characters"
+    ]
+  },
+  {
+    "id": "1046",
+    "title": "Last Stone Weight",
+    "titleSlug": "last-stone-weight",
+    "difficulty": "Easy",
+    "paidOnly": false,
+    "acRate": 65.3,
+    "topicTags": [
+      "Array",
+      "Heap (Priority Queue)"
+    ],
+    "description": "# Last Stone Weight\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Heap (Priority Queue)\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Easy\n- **Acceptance Rate:** 65.3%\n- **Topics:** Array, Heap (Priority Queue)\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  },
+  {
+    "id": "1143",
+    "title": "Longest Common Subsequence",
+    "titleSlug": "longest-common-subsequence",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 58.9,
+    "topicTags": [
+      "String",
+      "Dynamic Programming"
+    ],
+    "description": "# Longest Common Subsequence\n\nWork through this string problem using efficient traversal techniques.\n\n**Topics:** String, Dynamic Programming\n\n**Key Concepts:**\n- String traversal patterns\n- Character frequency counting\n- Two pointers or sliding window\n- String immutability\n\n**Approach:**\n1. Write examples on whiteboard\n2. Look for patterns\n3. Consider hash maps for frequency\n4. Think about edge cases\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 58.9%\n- **Topics:** String, Dynamic Programming\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "s = \"racecar\"",
+        "output": "true (if palindrome check) or relevant result",
+        "explanation": "Palindrome example - reads same forwards and backwards. Draw pointers moving from both ends."
+      },
+      {
+        "input": "s = \"hello\"",
+        "output": "Result based on problem",
+        "explanation": "Regular string with distinct characters. Trace through your algorithm character by character."
+      },
+      {
+        "input": "s = \"a\"",
+        "output": "true or single char result",
+        "explanation": "Single character is always valid for most string operations."
+      }
+    ],
+    "constraints": [
+      "0 <= s.length <= 10⁵",
+      "s consists of lowercase/uppercase letters",
+      "May contain spaces or special characters"
+    ]
+  },
+  {
+    "id": "1584",
+    "title": "Min Cost to Connect All Points",
+    "titleSlug": "min-cost-to-connect-all-points",
+    "difficulty": "Medium",
+    "paidOnly": false,
+    "acRate": 70.5,
+    "topicTags": [
+      "Array",
+      "Union Find",
+      "Graph",
+      "Minimum Spanning Tree"
+    ],
+    "description": "# Min Cost to Connect All Points\n\nSolve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** Array, Union Find, Graph, Minimum Spanning Tree\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization\n\n### 📊 Problem Stats\n- **Difficulty:** Medium\n- **Acceptance Rate:** 70.5%\n- **Topics:** Array, Union Find, Graph, Minimum Spanning Tree\n\n### 🎨 Interview Tip\nUse the whiteboard to:\n- Sketch out your approach\n- Draw examples and edge cases\n- Explain your thinking to your interviewer\n- Calculate time/space complexity\n\nThis is what makes CodePair better than solo practice!",
+    "examples": [
+      {
+        "input": "nums = [5, 2, 8, 1, 9]",
+        "output": "[1, 2, 5, 8, 9] (or depends on problem)",
+        "explanation": "Trace through your algorithm with this example. What happens at each step?"
+      },
+      {
+        "input": "nums = [1]",
+        "output": "[1] or single element result",
+        "explanation": "Single element - does your algorithm handle this correctly?"
+      },
+      {
+        "input": "nums = []",
+        "output": "[] or appropriate empty result",
+        "explanation": "Empty array edge case - what should be returned?"
+      }
+    ],
+    "constraints": [
+      "1 <= nums.length <= 10⁴",
+      "-10⁴ <= nums[i] <= 10⁴",
+      "All elements may or may not be unique"
+    ]
+  }
+]
