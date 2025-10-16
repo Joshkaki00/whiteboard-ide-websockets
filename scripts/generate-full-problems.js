@@ -1,12 +1,16 @@
 // Script to generate full problem descriptions for all problems
 // This creates placeholder descriptions that are useful and professional
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Read the basic problems list
-const basicProblems = require('../src/data/leetcode-problems.json');
-const extendedProblems = require('../src/data/leetcode-problems-extended.json');
+const basicProblems = JSON.parse(fs.readFileSync(path.join(__dirname, '../src/data/leetcode-problems.json'), 'utf8'));
+const extendedProblems = JSON.parse(fs.readFileSync(path.join(__dirname, '../src/data/leetcode-problems-extended.json'), 'utf8'));
 
 // Get slugs that already have full details
 const extendedSlugs = new Set(extendedProblems.map(p => p.titleSlug));
