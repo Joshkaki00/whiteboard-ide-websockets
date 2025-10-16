@@ -326,37 +326,6 @@ Questions? Open an issue or reach out to the maintainers!
 - **Tailwind CSS**: Use utility classes and custom components
 - **Responsive-first**: Ensure all features work across devices
 
-## 🎯 Roadmap
-
-### ✅ Completed (Week 1 MVP)
-- [x] Real-time room creation/joining
-- [x] Synchronized code editing
-- [x] Live chat messaging
-- [x] 4 LeetCode problems
-- [x] Timer functionality
-- [x] Gamified UI/UX
-- [x] Mobile responsive (tablet+)
-- [x] GitHub Pages deployment
-
-### 🔮 Future Enhancements
-- [ ] Video/audio calls integration
-- [ ] Code execution (sandboxed)
-- [ ] More LeetCode problems (50+)
-- [ ] User accounts & authentication
-- [ ] Session recording/playback
-- [ ] Performance analytics
-- [ ] Whiteboard templates
-- [ ] Problem filtering by difficulty/topic
-- [ ] AI interviewer mode
-- [ ] Team rooms (3+ users)
-
-## 🐛 Known Issues
-
-- Whiteboard drawing not yet synced across users (local only)
-- Problem switching doesn't reset code for existing users
-- Timer doesn't persist on page refresh
-- No persistence (rooms lost on server restart)
-
 ## 📊 Performance
 
 - **Load Tested**: 50 concurrent connections
