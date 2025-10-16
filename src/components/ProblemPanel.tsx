@@ -49,33 +49,45 @@ export default function ProblemPanel({ problemSlug }: ProblemPanelProps) {
       </div>
 
       {/* Tabs */}
-      <div className="flex border-b border-gray-200 bg-gray-50">
+      <div className="flex border-b border-gray-200 bg-gray-50 flex-shrink-0">
         <button
           onClick={() => setActiveTab('description')}
-          className={`px-4 py-2 text-sm font-medium transition-colors ${
+          onTouchEnd={(e) => {
+            e.preventDefault()
+            setActiveTab('description')
+          }}
+          className={`flex-1 px-2 sm:px-4 py-2 text-xs sm:text-sm font-medium transition-colors active:scale-95 ${
             activeTab === 'description' 
               ? 'text-blue-600 border-b-2 border-blue-600 bg-white' 
-              : 'text-gray-600 hover:text-gray-800'
+              : 'text-gray-600 hover:text-gray-800 active:bg-gray-100'
           }`}
         >
           Description
         </button>
         <button
           onClick={() => setActiveTab('examples')}
-          className={`px-4 py-2 text-sm font-medium transition-colors ${
+          onTouchEnd={(e) => {
+            e.preventDefault()
+            setActiveTab('examples')
+          }}
+          className={`flex-1 px-2 sm:px-4 py-2 text-xs sm:text-sm font-medium transition-colors active:scale-95 ${
             activeTab === 'examples' 
               ? 'text-blue-600 border-b-2 border-blue-600 bg-white' 
-              : 'text-gray-600 hover:text-gray-800'
+              : 'text-gray-600 hover:text-gray-800 active:bg-gray-100'
           }`}
         >
           Examples
         </button>
         <button
           onClick={() => setActiveTab('constraints')}
-          className={`px-4 py-2 text-sm font-medium transition-colors ${
+          onTouchEnd={(e) => {
+            e.preventDefault()
+            setActiveTab('constraints')
+          }}
+          className={`flex-1 px-2 sm:px-4 py-2 text-xs sm:text-sm font-medium transition-colors active:scale-95 ${
             activeTab === 'constraints' 
               ? 'text-blue-600 border-b-2 border-blue-600 bg-white' 
-              : 'text-gray-600 hover:text-gray-800'
+              : 'text-gray-600 hover:text-gray-800 active:bg-gray-100'
           }`}
         >
           Constraints
