@@ -1,11 +1,14 @@
 import { useState, useEffect, useRef } from 'react'
+import { useSocket } from '../contexts/SocketContext'
 
 interface TimerProps {
+  roomId: string
   onTimeUp?: () => void
   initialMinutes?: number
 }
 
-export default function Timer({ onTimeUp, initialMinutes = 30 }: TimerProps) {
+export default function Timer({ roomId, onTimeUp, initialMinutes = 30 }: TimerProps) {
+  const { socket } = useSocket()
   const [seconds, setSeconds] = useState(initialMinutes * 60)
   const [isRunning, setIsRunning] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
