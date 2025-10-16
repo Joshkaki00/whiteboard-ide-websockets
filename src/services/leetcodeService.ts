@@ -159,25 +159,59 @@ export const getLeetCodeProblem = async (slug: string): Promise<LeetCodeProblem 
     }
   }
 
-  // For problems in basic list only, show simplified view
+  // For problems in basic list only, show helpful view with link to LeetCode
   const allProblems = await fetchAllLeetCodeProblems()
   const problem = allProblems.find((p: any) => p.titleSlug === slug)
   
   if (!problem) return null
+
+  // Generate helpful description based on topic tags
+  const topics = problem.topicTags?.join(', ') || 'Algorithm'
+  const topicHints: Record<string, string> = {
+    'Array': 'Think about iteration patterns, two pointers, or sliding windows.',
+    'Hash Table': 'Consider using a map/dict for O(1) lookups.',
+    'String': 'Look for patterns, use two pointers, or try sliding window.',
+    'Dynamic Programming': 'Break into subproblems. Can you memoize or use bottom-up DP?',
+    'Tree': 'Consider DFS (recursion) or BFS (queue). What\'s the base case?',
+    'Graph': 'Think about BFS, DFS, or topological sort. Track visited nodes.',
+    'Binary Search': 'Array is sorted - use left/right pointers. When to move which?',
+    'Greedy': 'Make locally optimal choice. Can you prove it works globally?',
+    'Backtracking': 'Explore all possibilities. Remember to undo your choice.',
+    'Linked List': 'Draw it out! Consider fast/slow pointers or dummy nodes.',
+    'Stack': 'LIFO - think about what to push/pop and when.',
+    'Sorting': 'Which sort? Or can you use the sorted property cleverly?',
+    'Two Pointers': 'One from each end? Or both from start? When to move each?',
+    'Sliding Window': 'Expand window to find valid, shrink to optimize.',
+    'Depth-First Search': 'Go deep first. Use recursion or explicit stack.',
+    'Breadth-First Search': 'Level by level. Use a queue.',
+    'Heap (Priority Queue)': 'Need min/max quickly? Heap is O(log n) insert/remove.'
+  }
+  
+  let hint = ''
+  for (const topic of (problem.topicTags || [])) {
+    if (topicHints[topic]) {
+      hint = topicHints[topic]
+      break
+    }
+  }
 
   return {
     id: problem.id || problem.frontendQuestionId,
     title: problem.title,
     titleSlug: problem.titleSlug,
     difficulty: problem.difficulty,
-    description: `📝 **${problem.title}**\n\n🔗 Full problem details available on LeetCode:\nhttps://leetcode.com/problems/${slug}/\n\n💡 **Why use CodePair instead?**\n✅ Real-time collaboration with your partner\n✅ Integrated whiteboard for drawing your approach\n✅ Shared code editor with syntax highlighting\n✅ Chat to discuss strategies\n✅ Perfect for mock interviews!\n\n**Topics:** ${problem.topicTags?.join(', ') || 'See LeetCode'}\n**Acceptance Rate:** ${problem.acRate || 'N/A'}%`,
-    examples: ['See LeetCode for full examples'],
-    constraints: ['See LeetCode for constraints'],
+    description: `# ${problem.title}\n\n## 📋 Problem\n\nThis is a **${problem.difficulty}** level problem focusing on: **${topics}**\n\n### 🔗 Full Description\nFor complete problem details, examples, and constraints, visit:\n**[LeetCode Problem #${problem.id}](https://leetcode.com/problems/${slug}/)**\n\n### 💡 Approach Hints\n${hint || 'Think about the data structures and algorithms that fit the problem category.'}\n\n### 🎨 Use the Whiteboard!\n- Draw out examples\n- Sketch data structures\n- Visualize your algorithm\n- Explain your approach to your partner\n\n### 📊 Stats\n- **Difficulty:** ${problem.difficulty}\n- **Acceptance Rate:** ${problem.acRate?.toFixed(1) || 'N/A'}%\n- **Topics:** ${topics}\n\n---\n\n**💬 Tip:** Use the chat to discuss your approach with your partner before coding!`,
+    examples: [
+      'Visit LeetCode for detailed examples with explanations:\nhttps://leetcode.com/problems/' + slug + '/'
+    ],
+    constraints: [
+      'See full constraints on LeetCode:\nhttps://leetcode.com/problems/' + slug + '/'
+    ],
     starterCode: {
-      javascript: `// Write your solution here\nfunction solve() {\n    // Your code\n}`,
-      python: `# Write your solution here\ndef solve():\n    # Your code\n    pass`,
-      java: `// Write your solution here\nclass Solution {\n    public void solve() {\n        // Your code\n    }\n}`,
-      cpp: `// Write your solution here\nclass Solution {\npublic:\n    void solve() {\n        // Your code\n    }\n};`
+      javascript: `// ${problem.title}\n// Difficulty: ${problem.difficulty}\n// Topics: ${topics}\n\nfunction solve() {\n    // Write your solution here\n    // Use the whiteboard to sketch your approach first!\n}`,
+      python: `# ${problem.title}\n# Difficulty: ${problem.difficulty}\n# Topics: ${topics}\n\ndef solve():\n    # Write your solution here\n    # Use the whiteboard to sketch your approach first!\n    pass`,
+      java: `// ${problem.title}\n// Difficulty: ${problem.difficulty}\n// Topics: ${topics}\n\nclass Solution {\n    public void solve() {\n        // Write your solution here\n        // Use the whiteboard to sketch your approach first!\n    }\n}`,
+      cpp: `// ${problem.title}\n// Difficulty: ${problem.difficulty}\n// Topics: ${topics}\n\nclass Solution {\npublic:\n    void solve() {\n        // Write your solution here\n        // Use the whiteboard to sketch your approach first!\n    }\n};`
     },
     isPremium: problem.paidOnly,
     topicTags: problem.topicTags || [],
