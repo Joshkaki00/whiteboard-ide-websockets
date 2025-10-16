@@ -65,11 +65,15 @@ export default function VerticalResizer({ onResize }: VerticalResizerProps) {
   return (
     <div
       ref={resizerRef}
-      onMouseDown={handleMouseDown}
-      className="h-1 w-full cursor-row-resize hover:bg-purple-500 transition-colors relative z-10 flex-shrink-0"
+      onMouseDown={handleStart}
+      onTouchStart={(e) => {
+        e.preventDefault()
+        handleStart()
+      }}
+      className="h-2 w-full cursor-row-resize bg-purple-300 bg-opacity-0 hover:bg-opacity-50 active:bg-opacity-100 transition-colors relative z-10 flex-shrink-0"
       style={{ touchAction: 'none' }}
     >
-      <div className="absolute inset-0 -my-1" />
+      <div className="absolute inset-0 -my-2" />
     </div>
   )
 }
