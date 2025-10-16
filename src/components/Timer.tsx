@@ -52,19 +52,58 @@ export default function Timer({ roomId, onTimeUp, initialMinutes = 30 }: TimerPr
     return 'text-red-600'
   }
 
+  // Listen for timer sync events
+  useEffect(() => {
+    if (!socket) return
+
+    const handleTimerStarted = () => {
+      setIsRunning(true)
+      setIsPaused(false)
+    }
+
+    const handleTimerPaused = () => {
+      setIsPaused(prev => !prev)
+    }
+
+    const handleTimerReset = () => {
+      setIsRunning(false)
+      setIsPaused(false)
+      setSeconds(initialMinutes * 60)
+    }
+
+    socket.on('timer-started', handleTimerStarted)
+    socket.on('timer-paused', handleTimerPaused)
+    socket.on('timer-reset', handleTimerReset)
+
+    return () => {
+      socket.off('timer-started', handleTimerStarted)
+      socket.off('timer-paused', handleTimerPaused)
+      socket.off('timer-reset', handleTimerReset)
+    }
+  }, [socket, initialMinutes])
+
   const handleStart = () => {
     setIsRunning(true)
     setIsPaused(false)
+    if (socket) {
+      socket.emit('start-timer', { roomId, duration: initialMinutes * 60 })
+    }
   }
 
   const handlePause = () => {
     setIsPaused(!isPaused)
+    if (socket) {
+      socket.emit('pause-timer', { roomId })
+    }
   }
 
   const handleReset = () => {
     setIsRunning(false)
     setIsPaused(false)
     setSeconds(initialMinutes * 60)
+    if (socket) {
+      socket.emit('reset-timer', { roomId })
+    }
   }
 
   return (
