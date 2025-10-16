@@ -103,9 +103,14 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
     if (!canvas) return { x: 0, y: 0 }
 
     const rect = canvas.getBoundingClientRect()
+    
+    // Scale coordinates to match canvas internal dimensions
+    const scaleX = canvas.width / rect.width
+    const scaleY = canvas.height / rect.height
+    
     return {
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top
+      x: (e.clientX - rect.left) * scaleX,
+      y: (e.clientY - rect.top) * scaleY
     }
   }
 
@@ -114,10 +119,15 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
     if (!canvas) return { x: 0, y: 0 }
 
     const rect = canvas.getBoundingClientRect()
-    const touch = e.touches[0]
+    const touch = e.touches[0] || e.changedTouches[0]
+    
+    // Scale coordinates to match canvas internal dimensions
+    const scaleX = canvas.width / rect.width
+    const scaleY = canvas.height / rect.height
+    
     return {
-      x: touch.clientX - rect.left,
-      y: touch.clientY - rect.top
+      x: (touch.clientX - rect.left) * scaleX,
+      y: (touch.clientY - rect.top) * scaleY
     }
   }
 
