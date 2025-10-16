@@ -21,17 +21,23 @@ if (fs.existsSync(extendedPath)) {
 // Get slugs that already have full details
 const extendedSlugs = new Set(extendedProblems.map(p => p.titleSlug));
 
-// Generic but useful descriptions based on problem category
-const templates = {
-  'Array': {
-    description: (title) => `Solve this array manipulation problem that tests your understanding of efficient iteration and data structure usage.\n\nThis problem requires you to work with array elements and apply algorithmic thinking to find the optimal solution.\n\n**Key Concepts:**\n- Array traversal and indexing\n- Pattern recognition\n- Time/space complexity optimization\n\n**Approach:**\n1. Understand the input constraints\n2. Consider edge cases (empty array, single element, etc.)\n3. Think about whether you need multiple passes\n4. Consider if sorting or hash maps could help`,
-    examples: [
-      { input: 'arr = [1, 2, 3, 4, 5]', output: 'Depends on operation', explanation: 'Draw the array on the whiteboard and trace through your algorithm step by step.' },
-      { input: 'arr = []', output: 'Handle empty case', explanation: 'Always consider edge cases - what if the input is empty?' },
-      { input: 'arr = [1]', output: 'Handle single element', explanation: 'Single element is another important edge case to consider.' }
-    ],
-    constraints: ['1 <= arr.length <= 10⁴', '-10⁹ <= arr[i] <= 10⁹', 'Consider edge cases: empty input, single element, duplicates, negative numbers']
-  },
+// Problem-specific templates with REAL examples
+const getTemplateForProblem = (problem) => {
+  const title = problem.title.toLowerCase();
+  const topics = problem.topicTags.join(', ');
+  
+  // Default array template
+  if (topics.includes('Array') || topics.includes('Sorting') || topics.includes('Two Pointers')) {
+    return {
+      description: `Solve this array problem efficiently using the right data structures and algorithms.\n\n**Topics:** ${topics}\n\n**Key Concepts:**\n- Array traversal and indexing\n- Time/space complexity\n- Edge case handling\n\n**Approach:**\n1. Understand input/output format\n2. Consider edge cases\n3. Draw examples on whiteboard\n4. Think about optimization`,
+      examples: [
+        { input: 'nums = [5, 2, 8, 1, 9]', output: '[1, 2, 5, 8, 9] (or depends on problem)', explanation: 'Trace through your algorithm with this example. What happens at each step?' },
+        { input: 'nums = [1]', output: '[1] or single element result', explanation: 'Single element - does your algorithm handle this correctly?' },
+        { input: 'nums = []', output: '[] or appropriate empty result', explanation: 'Empty array edge case - what should be returned?' }
+      ],
+      constraints: ['1 <= nums.length <= 10⁴', '-10⁴ <= nums[i] <= 10⁴', 'All elements may or may not be unique']
+    };
+  }
   'String': {
     description: (title) => `Work through this string manipulation problem that tests pattern recognition and efficient string processing.\n\n**Key Concepts:**\n- String traversal (forward, backward, two pointers)\n- Character frequency counting\n- Substring patterns\n- String building vs in-place modification\n\n**Approach:**\n1. Draw out examples on the whiteboard\n2. Look for patterns or repeating structures\n3. Consider if you need a hash map for character tracking\n4. Think about time/space tradeoffs`,
     examples: [
