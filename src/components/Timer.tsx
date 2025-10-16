@@ -5,7 +5,7 @@ interface TimerProps {
   initialMinutes?: number
 }
 
-export default function Timer({ onTimeUp, initialMinutes = 45 }: TimerProps) {
+export default function Timer({ onTimeUp, initialMinutes = 30 }: TimerProps) {
   const [seconds, setSeconds] = useState(initialMinutes * 60)
   const [isRunning, setIsRunning] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
