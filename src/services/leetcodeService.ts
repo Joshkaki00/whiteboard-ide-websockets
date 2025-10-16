@@ -141,7 +141,7 @@ export const getLeetCodeProblem = async (slug: string): Promise<LeetCodeProblem 
       id: extendedProblem.id,
       title: extendedProblem.title,
       titleSlug: extendedProblem.titleSlug,
-      difficulty: extendedProblem.difficulty,
+      difficulty: (extendedProblem.difficulty as 'Easy' | 'Medium' | 'Hard'),
       description: extendedProblem.description,
       examples: extendedProblem.examples.map((ex: any) => 
         `Input: ${ex.input}\nOutput: ${ex.output}\nExplanation: ${ex.explanation}`
