@@ -166,11 +166,16 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     sendMessage,
     sendCodeChange,
     changeLanguage,
+    changeViewMode,
+    toggleViewLock,
     messages,
     participantCount,
     codeContent,
-    currentLanguage
-  }), [socket, isConnected, messages, participantCount, codeContent, currentLanguage])
+    currentLanguage,
+    viewMode,
+    viewModeLocked,
+    isCreator
+  }), [socket, isConnected, messages, participantCount, codeContent, currentLanguage, viewMode, viewModeLocked, isCreator])
 
   return (
     <SocketContext.Provider value={value}>
