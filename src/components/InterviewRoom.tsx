@@ -134,9 +134,7 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
   }
   
   const getCurrentProblemTitle = () => {
-    const problem = allProblems.find(p => p.titleSlug === currentProblemSlug) ||
-                    localProblems.find(p => p.titleSlug === currentProblemSlug)
-    return problem?.title || 'Two Sum'
+    return currentProblemTitle
   }
   
   return (
