@@ -370,6 +370,8 @@ io.on('connection', (socket) => {
 })
 
 const PORT = process.env.PORT || 3001
-server.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`)
+const HOST = '0.0.0.0' // Listen on all network interfaces (required for Fly.io)
+
+server.listen(PORT, HOST, () => {
+  console.log(`Server running on ${HOST}:${PORT}`)
 })
