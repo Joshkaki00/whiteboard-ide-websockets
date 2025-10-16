@@ -395,6 +395,4 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 
 ---
 
-**Built with ❤️ during Fall 2025 Intensive**
-
 **Happy coding!** 🚀 Now go ace those technical interviews!
