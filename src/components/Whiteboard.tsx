@@ -278,6 +278,7 @@ export default function Whiteboard({ roomId }: WhiteboardProps) {
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
+          onTouchCancel={handleTouchCancel}
           className="w-full h-full cursor-crosshair touch-none"
           style={{ touchAction: 'none' }}
         />
