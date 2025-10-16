@@ -47,9 +47,11 @@ const templates = {
   'Tree': {
     description: (title) => `Solve this tree problem using traversal techniques and recursive thinking.\n\n**Key Concepts:**\n- Tree traversal (pre/in/post-order, level-order)\n- Recursion with base cases\n- DFS vs BFS approach\n- Parent-child relationships\n\n**Approach:**\n1. Draw the tree structure on the whiteboard\n2. Identify the base case (null node or leaf)\n3. Define what to return at each node\n4. Consider if you need helper functions\n5. Test with small examples`,
     examples: [
-      { input: 'See problem for tree structure', output: 'See problem for expected output', explanation: 'Draw the tree on the whiteboard and trace your algorithm!' }
+      { input: 'root = [3,9,20,null,null,15,7]', output: 'Depends on operation', explanation: 'Draw this tree structure on the whiteboard:\n       3\n      / \\\n     9  20\n       /  \\\n      15   7\nTrace through your algorithm node by node.' },
+      { input: 'root = []', output: 'null or default value', explanation: 'Empty tree - what should your function return?' },
+      { input: 'root = [1]', output: 'Single node result', explanation: 'Single node tree is a good edge case to verify your solution.' }
     ],
-    constraints: ['See problem for specific constraints', 'Common: number of nodes, node value ranges, tree can be empty']
+    constraints: ['0 <= number of nodes <= 10⁴', '-100 <= Node.val <= 100', 'Tree can be empty (null root)']
   },
   'Linked List': {
     description: (title) => `Work through this linked list problem using pointer manipulation and careful traversal.\n\n**Key Concepts:**\n- Pointer manipulation (slow/fast, previous/current)\n- Dummy nodes for easier edge case handling\n- In-place vs new list creation\n- Cycle detection techniques\n\n**Approach:**\n1. Draw the linked list on the whiteboard\n2. Consider using a dummy head\n3. Track multiple pointers if needed\n4. Watch for null pointer issues\n5. Test with edge cases (empty, single node)`,
