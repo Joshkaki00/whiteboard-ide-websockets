@@ -87,6 +87,14 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       setCodeContent(data.code)
     })
 
+    newSocket.on('view-mode-update', (data: { viewMode: 'hybrid' | 'whiteboard' }) => {
+      setViewMode(data.viewMode)
+    })
+
+    newSocket.on('view-lock-update', (data: { locked: boolean }) => {
+      setViewModeLocked(data.locked)
+    })
+
     setSocket(newSocket)
 
     return () => {
