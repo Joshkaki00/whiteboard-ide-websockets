@@ -335,15 +335,17 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
 
       {/* Desktop Layout */}
       <div className="flex-1 hidden lg:flex gap-0 overflow-hidden">
-        {/* Left Sidebar: Problem + Participants */}
-        <div className="w-[320px] bg-white border-r border-gray-200 flex flex-col overflow-hidden">
-          <div className="flex-1 overflow-auto">
-            <ProblemPanel problemSlug={currentProblemSlug} />
+        {/* Left Sidebar: Problem + Participants - Resizable */}
+        <ResizablePanel defaultWidth={320} minWidth={250} maxWidth={600} direction="right">
+          <div className="h-full bg-white border-r border-gray-200 flex flex-col overflow-hidden">
+            <div className="flex-1 overflow-auto">
+              <ProblemPanel problemSlug={currentProblemSlug} />
+            </div>
+            <div className="h-48 border-t border-gray-200 overflow-auto">
+              <ParticipantsPanel />
+            </div>
           </div>
-          <div className="h-48 border-t border-gray-200 overflow-auto">
-            <ParticipantsPanel />
-          </div>
-        </div>
+        </ResizablePanel>
 
         {/* Center Panel: Code + Whiteboard */}
         <div className="flex-1 bg-white flex flex-col overflow-hidden">
@@ -364,10 +366,12 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
           )}
         </div>
 
-        {/* Right Sidebar: Chat */}
-        <div className="w-[320px] bg-white border-l border-gray-200 overflow-auto">
-          <ChatPanel roomId={roomId} />
-        </div>
+        {/* Right Sidebar: Chat - Resizable */}
+        <ResizablePanel defaultWidth={320} minWidth={250} maxWidth={500} direction="left">
+          <div className="h-full bg-white border-l border-gray-200 overflow-auto">
+            <ChatPanel roomId={roomId} />
+          </div>
+        </ResizablePanel>
       </div>
 
       {/* Tablet/Mobile Layout */}
