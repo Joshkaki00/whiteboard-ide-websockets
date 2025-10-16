@@ -3,6 +3,8 @@ import { createServer } from 'http'
 import { Server } from 'socket.io'
 
 const app = express()
+app.use(express.json())
+
 const server = createServer(app)
 const io = new Server(server, {
   cors: {
@@ -22,6 +24,55 @@ app.get('/health', (req, res) => {
     timestamp: new Date().toISOString(),
     rooms: rooms.size
   })
+})
+
+// LeetCode API proxy to avoid CORS issues
+app.post('/api/leetcode/problems', async (req, res) => {
+  try {
+    const response = await fetch('https://leetcode.com/graphql', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Referer': 'https://leetcode.com',
+        'User-Agent': 'Mozilla/5.0 (compatible; InterviewApp/1.0)'
+      },
+      body: JSON.stringify({
+        query: `
+          query problemsetQuestionList {
+            problemsetQuestionList: questionList(
+              categorySlug: ""
+              limit: -1
+              skip: 0
+              filters: {}
+            ) {
+              total: totalNum
+              questions: data {
+                acRate
+                difficulty
+                freqBar
+                frontendQuestionId: questionFrontendId
+                isFavor
+                paidOnly: isPaidOnly
+                status
+                title
+                titleSlug
+                topicTags {
+                  name
+                  slug
+                }
+              }
+            }
+          }
+        `
+      })
+    })
+
+    const data = await response.json()
+    res.json(data)
+  } catch (error) {
+    console.error('Error fetching LeetCode problems:', error)
+    res.status(500).json({ error: 'Failed to fetch problems' })
+  }
 })
 
 interface Room {
