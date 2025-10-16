@@ -6,6 +6,7 @@ import CodeEditor from './CodeEditor'
 import Whiteboard from './Whiteboard'
 import ChatPanel from './ChatPanel'
 import ParticipantsPanel from './ParticipantsPanel'
+import ResizablePanel from './ResizablePanel'
 import { useSocket } from '../contexts/SocketContext'
 
 interface InterviewRoomProps {
