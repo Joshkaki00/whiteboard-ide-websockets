@@ -394,7 +394,7 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
               <ProblemPanel problemSlug={currentProblemSlug} />
             </div>
             <div className="h-48 border-t border-gray-200 overflow-auto">
-              <ParticipantsPanel />
+              <ParticipantsPanel roomId={roomId} />
             </div>
           </div>
         </ResizablePanel>
