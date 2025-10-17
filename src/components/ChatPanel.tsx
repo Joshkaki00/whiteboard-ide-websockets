@@ -2,8 +2,8 @@ import { useState, useEffect, useRef } from 'react'
 import { useSocket } from '../contexts/SocketContext'
 
 interface ChatPanelProps {
-  roomId: string
-  compact?: boolean
+  readonly roomId: string
+  readonly compact?: boolean
 }
 
 export default function ChatPanel({ roomId }: ChatPanelProps) {
