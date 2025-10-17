@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { useSocket } from '../contexts/SocketContext'
+import { analytics } from '../services/analytics'
+import FeedbackWidget from './FeedbackWidget'
 
 interface LandingPageProps {
   onJoinRoom: (roomId: string) => void
@@ -25,6 +27,7 @@ export default function LandingPage({ onJoinRoom }: LandingPageProps) {
     setIsLoading(false)
 
     if (newRoomId) {
+      analytics.trackRoomCreated(newRoomId)
       setStatusMessage(`Room created: ${newRoomId}`)
       onJoinRoom(newRoomId)
     } else {
