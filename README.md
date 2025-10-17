@@ -126,6 +126,10 @@ A modern, gamified interview practice tool for technical coding interviews with 
 - `npm run lint` - Run ESLint
 - `npm run loadtest` - Run Socket.IO load tests
 - `npm run deploy` - Deploy frontend to GitHub Pages
+- `npm run server:status` - Check Fly.io server status
+- `npm run server:logs` - View server logs
+- `npm run server:stop` - Stop server instances
+- `npm run server:start` - Start server instances
 
 ## 🏗️ Architecture
 
