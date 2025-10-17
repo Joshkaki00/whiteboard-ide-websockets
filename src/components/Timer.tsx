@@ -2,9 +2,9 @@ import { useState, useEffect, useRef } from 'react'
 import { useSocket } from '../contexts/SocketContext'
 
 interface TimerProps {
-  roomId: string
-  onTimeUp?: () => void
-  initialMinutes?: number
+  readonly roomId: string
+  readonly onTimeUp?: () => void
+  readonly initialMinutes?: number
 }
 
 export default function Timer({ roomId, onTimeUp, initialMinutes = 30 }: TimerProps) {
@@ -16,7 +16,7 @@ export default function Timer({ roomId, onTimeUp, initialMinutes = 30 }: TimerPr
 
   useEffect(() => {
     if (isRunning && !isPaused) {
-      intervalRef.current = window.setInterval(() => {
+      intervalRef.current = globalThis.setInterval(() => {
         setSeconds(prev => {
           if (prev <= 1) {
             if (onTimeUp) onTimeUp()
@@ -26,10 +26,8 @@ export default function Timer({ roomId, onTimeUp, initialMinutes = 30 }: TimerPr
           return prev - 1
         })
       }, 1000)
-    } else {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current)
-      }
+    } else if (intervalRef.current) {
+      clearInterval(intervalRef.current)
     }
 
     return () => {
