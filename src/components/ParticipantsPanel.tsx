@@ -56,6 +56,11 @@ export default function ParticipantsPanel({ roomId }: ParticipantsPanelProps) {
             )}
           </div>
         )}
+
+        {/* Share Room Component */}
+        <div className="mt-4">
+          <ShareRoom roomId={roomId} />
+        </div>
       </div>
     </div>
   )
