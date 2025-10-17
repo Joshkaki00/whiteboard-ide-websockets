@@ -31,13 +31,13 @@ A modern, gamified interview practice tool for technical coding interviews with 
 - **Cursor Position Preservation**: Smart cursor handling during updates
 
 ### 📚 **Problem Bank**
-- **4 LeetCode Problems**: Curated interview questions
-  - Two Sum (Easy)
-  - Valid Parentheses (Easy)
-  - Merge Two Sorted Lists (Easy)
-  - Best Time to Buy and Sell Stock (Easy)
-- **Problem Switcher**: Change problems mid-session
-- **Tabbed Interface**: Description, Examples, Constraints
+- **1000+ LeetCode Problems**: Comprehensive problem library
+  - Full problem descriptions with examples and constraints
+  - Search by title, topic, or difficulty
+  - Random problem generator
+  - Only interviewer can change problems (locked for candidates)
+- **Problem Switcher**: Change problems mid-session (interviewer only)
+- **Detailed Info**: Full descriptions, multiple examples, constraints
 - **Difficulty Badges**: Color-coded Easy/Medium/Hard indicators
 
 ### ⏱️ **Timer Functionality**
