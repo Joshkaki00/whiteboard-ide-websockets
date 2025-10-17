@@ -431,7 +431,7 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
       <div className="flex-1 lg:hidden flex flex-col overflow-hidden">
         {/* Top Panel: Problem */}
         <div className="h-48 flex-shrink-0 bg-white border-b border-gray-200 overflow-hidden">
-          <ProblemPanel problemSlug={currentProblemSlug} compact />
+          <ProblemPanel problemSlug={currentProblemSlug} />
         </div>
         
         {/* Middle Panel: Code/Whiteboard */}
