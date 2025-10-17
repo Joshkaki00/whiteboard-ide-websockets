@@ -241,7 +241,7 @@ curl https://whiteboard-ide-websockets.fly.dev/api/feedback/all
 ✨ **What makes it special:**
 - No signup required
 - Real-time collaboration
-- 1000+ LeetCode problems
+- 100+ LeetCode problems
 - Collaborative whiteboard
 - Built for serious prep
 
