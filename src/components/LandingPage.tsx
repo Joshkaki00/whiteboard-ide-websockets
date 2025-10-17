@@ -309,10 +309,10 @@ export default function LandingPage({ onJoinRoom }: LandingPageProps) {
           <p className="mb-2">CodePair - Collaborative Interview Practice Platform</p>
           <p className="text-sm text-gray-500">Built for developers, by developers 🚀</p>
           <div className="mt-4 flex justify-center gap-6">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+            <a href="https://github.com/Joshkaki00/whiteboard-ide-websockets" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
               GitHub
             </a>
-            <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }} className="hover:text-white transition-colors">
+            <a href="#" onClick={(e) => { e.preventDefault(); globalThis.scrollTo({ top: 0, behavior: 'smooth' }) }} className="hover:text-white transition-colors">
               Back to Top
             </a>
           </div>
