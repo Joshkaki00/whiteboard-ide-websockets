@@ -4,7 +4,9 @@ A modern, gamified interview practice tool for technical coding interviews with 
 
 **🌐 Live Demo**: [https://joshkaki00.github.io/whiteboard-ide-websockets/](https://joshkaki00.github.io/whiteboard-ide-websockets/)
 
-**📖 Deployment Guide**: [DEPLOYMENT.md](DEPLOYMENT.md)
+**📖 User Guide**: [LAUNCH_GUIDE.md](LAUNCH_GUIDE.md)  
+**🚀 Deployment Guide**: [DEPLOYMENT.md](DEPLOYMENT.md)  
+**📊 Analytics Dashboard**: Access at `/analytics` (for admins)
 
 ## ✨ Features
 
