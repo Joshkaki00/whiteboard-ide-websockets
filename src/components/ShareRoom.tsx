@@ -52,9 +52,10 @@ export default function ShareRoom({ roomId }: ShareRoomProps) {
 
       {/* Room Code */}
       <div className="mb-3">
-        <label className="block text-xs text-gray-600 mb-1">Room Code</label>
+        <label htmlFor="room-code-input" className="block text-xs text-gray-600 mb-1">Room Code</label>
         <div className="flex gap-2">
           <input
+            id="room-code-input"
             type="text"
             value={roomId}
             readOnly
@@ -71,9 +72,10 @@ export default function ShareRoom({ roomId }: ShareRoomProps) {
 
       {/* Share URL */}
       <div className="mb-3">
-        <label className="block text-xs text-gray-600 mb-1">Share Link</label>
+        <label htmlFor="share-url-input" className="block text-xs text-gray-600 mb-1">Share Link</label>
         <div className="flex gap-2">
           <input
+            id="share-url-input"
             type="text"
             value={roomUrl}
             readOnly
