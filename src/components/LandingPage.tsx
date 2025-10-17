@@ -56,6 +56,7 @@ export default function LandingPage({ onJoinRoom }: LandingPageProps) {
     setIsLoading(false)
 
     if (success) {
+      analytics.trackRoomJoined(roomCode, false)
       onJoinRoom(roomCode)
     } else {
       setStatusMessage('Failed to join room. Check the room code.')
