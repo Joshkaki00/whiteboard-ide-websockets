@@ -43,6 +43,131 @@ app.get('/health', (req, res) => {
   })
 })
 
+// Analytics endpoint - stores events to a JSON file
+app.post('/api/analytics', (req, res) => {
+  try {
+    const event = {
+      ...req.body,
+      serverTimestamp: new Date().toISOString()
+    }
+    
+    const analyticsDir = path.join(__dirname, 'data')
+    const analyticsFile = path.join(analyticsDir, 'analytics.jsonl')
+    
+    // Create directory if it doesn't exist
+    if (!fs.existsSync(analyticsDir)) {
+      fs.mkdirSync(analyticsDir, { recursive: true })
+    }
+    
+    // Append event as JSON line
+    fs.appendFileSync(analyticsFile, JSON.stringify(event) + '\n')
+    
+    res.json({ success: true })
+  } catch (error) {
+    console.error('Failed to save analytics:', error)
+    res.status(500).json({ error: 'Failed to save analytics' })
+  }
+})
+
+// Feedback endpoint - stores feedback to a JSON file
+app.post('/api/feedback', (req, res) => {
+  try {
+    const feedback = {
+      ...req.body,
+      id: `feedback_${Date.now()}_${Math.random().toString(36).substring(7)}`,
+      serverTimestamp: new Date().toISOString()
+    }
+    
+    const feedbackDir = path.join(__dirname, 'data')
+    const feedbackFile = path.join(feedbackDir, 'feedback.json')
+    
+    // Create directory if it doesn't exist
+    if (!fs.existsSync(feedbackDir)) {
+      fs.mkdirSync(feedbackDir, { recursive: true })
+    }
+    
+    // Read existing feedback
+    let allFeedback: any[] = []
+    if (fs.existsSync(feedbackFile)) {
+      const data = fs.readFileSync(feedbackFile, 'utf-8')
+      allFeedback = JSON.parse(data)
+    }
+    
+    // Add new feedback
+    allFeedback.push(feedback)
+    
+    // Write back
+    fs.writeFileSync(feedbackFile, JSON.stringify(allFeedback, null, 2))
+    
+    console.log('Feedback received:', { rating: feedback.rating, category: feedback.category })
+    res.json({ success: true, id: feedback.id })
+  } catch (error) {
+    console.error('Failed to save feedback:', error)
+    res.status(500).json({ error: 'Failed to save feedback' })
+  }
+})
+
+// Analytics dashboard endpoint - get usage stats
+app.get('/api/analytics/stats', (req, res) => {
+  try {
+    const analyticsFile = path.join(__dirname, 'data', 'analytics.jsonl')
+    
+    if (!fs.existsSync(analyticsFile)) {
+      return res.json({
+        totalEvents: 0,
+        eventsByType: {},
+        roomsCreated: 0,
+        roomsJoined: 0,
+        problemsSelected: 0,
+        uniqueSessions: 0
+      })
+    }
+    
+    const lines = fs.readFileSync(analyticsFile, 'utf-8').split('\n').filter(Boolean)
+    const events = lines.map(line => JSON.parse(line))
+    
+    const eventsByType: Record<string, number> = {}
+    const sessions = new Set()
+    
+    events.forEach(event => {
+      eventsByType[event.event] = (eventsByType[event.event] || 0) + 1
+      if (event.sessionId) sessions.add(event.sessionId)
+    })
+    
+    res.json({
+      totalEvents: events.length,
+      eventsByType,
+      roomsCreated: eventsByType['room_created'] || 0,
+      roomsJoined: eventsByType['room_joined'] || 0,
+      problemsSelected: eventsByType['problem_selected'] || 0,
+      uniqueSessions: sessions.size,
+      lastUpdated: new Date().toISOString()
+    })
+  } catch (error) {
+    console.error('Failed to get analytics stats:', error)
+    res.status(500).json({ error: 'Failed to get analytics stats' })
+  }
+})
+
+// Feedback dashboard endpoint - get all feedback
+app.get('/api/feedback/all', (req, res) => {
+  try {
+    const feedbackFile = path.join(__dirname, 'data', 'feedback.json')
+    
+    if (!fs.existsSync(feedbackFile)) {
+      return res.json([])
+    }
+    
+    const data = fs.readFileSync(feedbackFile, 'utf-8')
+    const feedback = JSON.parse(data)
+    
+    res.json(feedback)
+  } catch (error) {
+    console.error('Failed to get feedback:', error)
+    res.status(500).json({ error: 'Failed to get feedback' })
+  }
+})
+
 // LeetCode API proxy to avoid CORS issues
 app.post('/api/leetcode/problems', async (req, res) => {
   try {
