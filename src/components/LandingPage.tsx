@@ -312,9 +312,12 @@ export default function LandingPage({ onJoinRoom }: LandingPageProps) {
             <a href="https://github.com/Joshkaki00/whiteboard-ide-websockets" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
               GitHub
             </a>
-            <a href="#" onClick={(e) => { e.preventDefault(); globalThis.scrollTo({ top: 0, behavior: 'smooth' }) }} className="hover:text-white transition-colors">
+            <button 
+              onClick={() => globalThis.scrollTo({ top: 0, behavior: 'smooth' })} 
+              className="hover:text-white transition-colors bg-transparent border-none cursor-pointer text-gray-300 text-base"
+            >
               Back to Top
-            </a>
+            </button>
           </div>
         </div>
       </footer>
