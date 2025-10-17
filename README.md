@@ -31,7 +31,7 @@ A modern, gamified interview practice tool for technical coding interviews with 
 - **Cursor Position Preservation**: Smart cursor handling during updates
 
 ### 📚 **Problem Bank**
-- **1000+ LeetCode Problems**: Comprehensive problem library
+- **100+ LeetCode Problems**: Comprehensive problem library
   - Full problem descriptions with examples and constraints
   - Search by title, topic, or difficulty
   - Random problem generator
