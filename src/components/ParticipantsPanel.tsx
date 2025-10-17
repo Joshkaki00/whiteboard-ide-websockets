@@ -2,7 +2,7 @@ import { useSocket } from '../contexts/SocketContext'
 import ShareRoom from './ShareRoom'
 
 interface ParticipantsPanelProps {
-  roomId: string
+  readonly roomId: string
 }
 
 export default function ParticipantsPanel({ roomId }: ParticipantsPanelProps) {

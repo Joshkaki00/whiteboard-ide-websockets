@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from 'react'
 import { useSocket } from '../contexts/SocketContext'
 
 interface WhiteboardProps {
-  roomId: string
+  readonly roomId: string
 }
 
 interface DrawingData {
