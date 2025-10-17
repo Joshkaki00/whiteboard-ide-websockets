@@ -103,10 +103,10 @@ export default function FeedbackWidget({ roomId }: FeedbackWidgetProps) {
 
       <form onSubmit={handleSubmit}>
         {/* Star Rating */}
-        <div className="mb-4">
-          <div className="block text-sm font-medium text-gray-700 mb-2" role="group" aria-label="Rating">
+        <fieldset className="mb-4 border-0 p-0 m-0">
+          <legend className="block text-sm font-medium text-gray-700 mb-2">
             How was your experience?
-          </div>
+          </legend>
           <div className="flex gap-2">
             {[1, 2, 3, 4, 5].map((star) => (
               <button
@@ -120,7 +120,7 @@ export default function FeedbackWidget({ roomId }: FeedbackWidgetProps) {
               </button>
             ))}
           </div>
-        </div>
+        </fieldset>
 
         {/* Category */}
         <div className="mb-4">
