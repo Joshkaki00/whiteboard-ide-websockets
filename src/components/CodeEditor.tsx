@@ -59,7 +59,7 @@ export default function CodeEditor({ roomId, compact }: CodeEditorProps) {
         ref={textareaRef}
         value={codeContent}
         onChange={handleCodeChange}
-        className="flex-1 w-full p-4 text-base bg-black text-white border-none outline-none resize-none"
+        className="flex-1 w-full p-4 text-base bg-white text-black border border-gray-300 outline-none resize-none focus:ring-2 focus:ring-purple-500"
         style={{
           fontFamily: "'Consolas', 'Monaco', 'Courier New', monospace",
           fontSize: '16px',
