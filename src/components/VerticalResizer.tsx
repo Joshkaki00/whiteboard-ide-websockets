@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 
 interface VerticalResizerProps {
-  onResize: (topHeight: number) => void
+  readonly onResize: (topHeight: number) => void
 }
 
 export default function VerticalResizer({ onResize }: VerticalResizerProps) {

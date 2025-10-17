@@ -1,11 +1,11 @@
 import { useState, useRef, useEffect, type ReactNode } from 'react'
 
 interface ResizablePanelProps {
-  children: ReactNode
-  defaultWidth?: number
-  minWidth?: number
-  maxWidth?: number
-  direction?: 'left' | 'right'
+  readonly children: ReactNode
+  readonly defaultWidth?: number
+  readonly minWidth?: number
+  readonly maxWidth?: number
+  readonly direction?: 'left' | 'right'
 }
 
 export default function ResizablePanel({ 
