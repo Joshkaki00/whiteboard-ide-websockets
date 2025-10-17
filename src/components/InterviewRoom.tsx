@@ -459,6 +459,9 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
           <ChatPanel roomId={roomId} compact />
         </div>
       </div>
+
+      {/* Feedback Widget */}
+      <FeedbackWidget roomId={roomId} />
     </div>
   )
 }
