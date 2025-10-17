@@ -295,7 +295,7 @@ export default function LandingPage({ onJoinRoom }: LandingPageProps) {
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Ready to Practice?</h2>
           <p className="text-xl text-gray-600 mb-8">Create a room and invite your practice partner in seconds</p>
           <button 
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            onClick={() => globalThis.scrollTo({ top: 0, behavior: 'smooth' })}
             className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors shadow-lg hover:shadow-xl"
           >
             Get Started Free
