@@ -1,13 +1,13 @@
 import { useState } from 'react'
 
 interface ShareRoomProps {
-  roomId: string
+  readonly roomId: string
 }
 
 export default function ShareRoom({ roomId }: ShareRoomProps) {
   const [copied, setCopied] = useState(false)
 
-  const roomUrl = `${window.location.origin}?room=${roomId}`
+  const roomUrl = `${globalThis.location.origin}?room=${roomId}`
 
   const copyToClipboard = async () => {
     try {
