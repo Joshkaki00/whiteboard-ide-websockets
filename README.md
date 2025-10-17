@@ -41,7 +41,7 @@ A modern, gamified interview practice tool for technical coding interviews with 
 - **Difficulty Badges**: Color-coded Easy/Medium/Hard indicators
 
 ### ⏱️ **Timer Functionality**
-- **45-Minute Timer**: Default interview duration
+- **30-Minute Timer**: Default interview duration (adjustable)
 - **Start/Pause/Reset**: Full control over timing
 - **Color-Coded Urgency**: Visual feedback as time runs out
 - **Synced Across Users**: Timer state shared in real-time
