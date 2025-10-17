@@ -177,7 +177,7 @@ export default function LandingPage({ onJoinRoom }: LandingPageProps) {
             </div>
             <div>
               <div className="text-2xl mb-1">📚</div>
-              <p className="text-xs text-gray-600">1000+ Problems</p>
+              <p className="text-xs text-gray-600">100+ Problems</p>
             </div>
           </div>
         </div>
@@ -225,7 +225,7 @@ export default function LandingPage({ onJoinRoom }: LandingPageProps) {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">Curated Problems</h3>
-              <p className="text-gray-600">Access 1000+ LeetCode problems with detailed descriptions, examples, and constraints</p>
+              <p className="text-gray-600">Access 100+ LeetCode problems with detailed descriptions, examples, and constraints</p>
             </div>
 
             {/* Feature 4 */}
