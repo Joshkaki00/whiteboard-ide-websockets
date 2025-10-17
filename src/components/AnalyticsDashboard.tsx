@@ -171,7 +171,7 @@ export default function AnalyticsDashboard() {
                       <div className="flex-1">
                         <div className="flex justify-between mb-1">
                           <span className="text-sm font-medium text-gray-700">
-                            {event.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                            {event.replaceAll('_', ' ').replaceAll(/\b\w/g, l => l.toUpperCase())}
                           </span>
                           <span className="text-sm text-gray-600">{count} ({percentage}%)</span>
                         </div>
