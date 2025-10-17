@@ -104,9 +104,9 @@ export default function FeedbackWidget({ roomId }: FeedbackWidgetProps) {
       <form onSubmit={handleSubmit}>
         {/* Star Rating */}
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <div className="block text-sm font-medium text-gray-700 mb-2" role="group" aria-label="Rating">
             How was your experience?
-          </label>
+          </div>
           <div className="flex gap-2">
             {[1, 2, 3, 4, 5].map((star) => (
               <button
@@ -114,6 +114,7 @@ export default function FeedbackWidget({ roomId }: FeedbackWidgetProps) {
                 type="button"
                 onClick={() => setRating(star)}
                 className="text-3xl transition-all hover:scale-110"
+                aria-label={`${star} stars`}
               >
                 {star <= rating ? '⭐' : '☆'}
               </button>
@@ -123,10 +124,11 @@ export default function FeedbackWidget({ roomId }: FeedbackWidgetProps) {
 
         {/* Category */}
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="feedback-category" className="block text-sm font-medium text-gray-700 mb-2">
             What's this about?
           </label>
           <select
+            id="feedback-category"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
@@ -142,10 +144,11 @@ export default function FeedbackWidget({ roomId }: FeedbackWidgetProps) {
 
         {/* Message */}
         <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-700 mb-2">
+          <label htmlFor="feedback-message" className="block text-sm font-medium text-gray-700 mb-2">
             Tell us more (optional)
           </label>
           <textarea
+            id="feedback-message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="What did you like? What can we improve?"
