@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { analytics } from '../services/analytics'
 
 interface FeedbackWidgetProps {
-  roomId?: string
+  readonly roomId?: string
 }
 
 export default function FeedbackWidget({ roomId }: FeedbackWidgetProps) {
