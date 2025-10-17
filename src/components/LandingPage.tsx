@@ -64,8 +64,10 @@ export default function LandingPage({ onJoinRoom }: LandingPageProps) {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen p-8 bg-gradient-to-br from-purple-600 to-blue-600">
-    <div className="bg-white rounded-2xl p-8 shadow-2xl text-center max-w-2xl w-full">
+    <div className="min-h-screen bg-gradient-to-br from-purple-600 to-blue-600">
+      {/* Hero Section */}
+      <div className="flex items-center justify-center min-h-screen p-8">
+        <div className="bg-white rounded-2xl p-8 shadow-2xl text-center max-w-2xl w-full">
       {/* Achievement Badge & XP Counter */}
       <div className="flex justify-center gap-3 mb-6">
         <span className="achievement-badge">
