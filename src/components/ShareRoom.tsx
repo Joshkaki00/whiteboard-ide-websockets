@@ -32,7 +32,7 @@ export default function ShareRoom({ roomId }: ShareRoomProps) {
   const shareOnTwitter = () => {
     const text = `Join me for a coding interview practice session on CodePair! 🚀`
     const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(roomUrl)}`
-    window.open(url, '_blank', 'width=550,height=420')
+    globalThis.open(url, '_blank', 'width=550,height=420')
   }
 
   const shareViaEmail = () => {
