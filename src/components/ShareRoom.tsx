@@ -52,40 +52,40 @@ export default function ShareRoom({ roomId }: ShareRoomProps) {
 
       {/* Room Code */}
       <div className="mb-3">
-        <label htmlFor="room-code-input" className="block text-xs text-gray-600 mb-1">Room Code</label>
+        <label htmlFor="room-code-input" className="block text-xs font-medium text-gray-700 mb-1">Room Code</label>
         <div className="flex gap-2">
           <input
             id="room-code-input"
             type="text"
             value={roomId}
             readOnly
-            className="flex-1 px-3 py-2 bg-gray-50 border border-gray-200 rounded text-sm font-mono text-center"
+            className="flex-1 min-w-0 px-3 py-2 bg-gray-50 border border-gray-300 rounded text-sm font-mono text-center focus:outline-none"
           />
           <button
             onClick={copyToClipboard}
-            className="px-3 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded text-sm transition-colors"
+            className="flex-shrink-0 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded text-sm font-medium transition-colors whitespace-nowrap"
           >
-            {copied ? '✓' : 'Copy'}
+            {copied ? '✓ Copied' : 'Copy'}
           </button>
         </div>
       </div>
 
       {/* Share URL */}
       <div className="mb-3">
-        <label htmlFor="share-url-input" className="block text-xs text-gray-600 mb-1">Share Link</label>
+        <label htmlFor="share-url-input" className="block text-xs font-medium text-gray-700 mb-1">Share Link</label>
         <div className="flex gap-2">
           <input
             id="share-url-input"
             type="text"
             value={roomUrl}
             readOnly
-            className="flex-1 px-3 py-2 bg-gray-50 border border-gray-200 rounded text-xs truncate"
+            className="flex-1 min-w-0 px-3 py-2 bg-gray-50 border border-gray-300 rounded text-xs truncate focus:outline-none"
           />
           <button
             onClick={copyUrlToClipboard}
-            className="px-3 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded text-sm transition-colors"
+            className="flex-shrink-0 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded text-sm font-medium transition-colors whitespace-nowrap"
           >
-            {copied ? '✓' : 'Copy'}
+            {copied ? '✓ Copied' : 'Copy'}
           </button>
         </div>
       </div>
