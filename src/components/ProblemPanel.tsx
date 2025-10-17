@@ -3,7 +3,6 @@ import { type LeetCodeProblem, getLeetCodeProblem } from '../services/leetcodeSe
 
 interface ProblemPanelProps {
   readonly problemSlug: string
-  readonly compact?: boolean
 }
 
 export default function ProblemPanel({ problemSlug }: ProblemPanelProps) {
