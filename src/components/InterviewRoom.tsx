@@ -9,6 +9,8 @@ import ParticipantsPanel from './ParticipantsPanel'
 import ResizablePanel from './ResizablePanel'
 import VerticalResizer from './VerticalResizer'
 import { useSocket } from '../contexts/SocketContext'
+import { analytics } from '../services/analytics'
+import FeedbackWidget from './FeedbackWidget'
 
 interface InterviewRoomProps {
   readonly roomId: string;
