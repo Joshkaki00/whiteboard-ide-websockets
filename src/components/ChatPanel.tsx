@@ -3,7 +3,6 @@ import { useSocket } from '../contexts/SocketContext'
 
 interface ChatPanelProps {
   readonly roomId: string
-  readonly compact?: boolean
 }
 
 export default function ChatPanel({ roomId }: ChatPanelProps) {
