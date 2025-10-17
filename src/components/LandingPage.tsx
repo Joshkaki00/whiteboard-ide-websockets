@@ -270,7 +270,7 @@ export default function LandingPage({ onJoinRoom }: LandingPageProps) {
           <h2 className="text-3xl font-bold mb-12">Built for Serious Prep</h2>
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="text-5xl font-bold mb-2">1000+</div>
+              <div className="text-5xl font-bold mb-2">100+</div>
               <div className="text-purple-200">Coding Problems</div>
             </div>
             <div>

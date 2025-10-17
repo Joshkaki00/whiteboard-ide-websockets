@@ -19,7 +19,7 @@ CodePair is a real-time collaborative platform for coding interview practice. It
 - Adjustable panel sizes
 
 ### 📚 Problem Library
-- 1000+ curated LeetCode problems
+- 100+ curated LeetCode problems
 - Search by title, topic, or difficulty
 - Random problem generator
 - Detailed descriptions with examples and constraints
