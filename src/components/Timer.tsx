@@ -130,6 +130,16 @@ export default function Timer({ roomId, onTimeUp, initialMinutes = 30 }: TimerPr
               </svg>
             )}
           </button>
+        ) : (
+          <button
+            onClick={handleStart}
+            className="p-1.5 bg-green-500 hover:bg-green-600 text-white rounded-md transition-colors"
+            title="Start Timer"
+          >
+            <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </button>
         )}
         <button
           onClick={handleReset}
