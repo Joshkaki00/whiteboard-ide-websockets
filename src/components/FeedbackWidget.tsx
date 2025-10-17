@@ -65,7 +65,7 @@ export default function FeedbackWidget({ roomId }: FeedbackWidgetProps) {
     return (
       <button
         onClick={handleOpen}
-        className="fixed top-6 right-6 bg-purple-600 hover:bg-purple-700 text-white rounded-full p-3 shadow-lg transition-all hover:scale-105 z-50"
+        className="fixed bottom-6 left-6 bg-purple-600 hover:bg-purple-700 text-white rounded-full p-3 shadow-lg transition-all hover:scale-105 z-50"
         title="Send Feedback"
       >
         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,7 +77,7 @@ export default function FeedbackWidget({ roomId }: FeedbackWidgetProps) {
 
   if (submitted) {
     return (
-      <div className="fixed top-6 right-6 bg-white rounded-2xl p-6 shadow-2xl z-50 w-80">
+      <div className="fixed bottom-6 left-6 bg-white rounded-2xl p-6 shadow-2xl z-50 w-80">
         <div className="text-center">
           <div className="text-5xl mb-3">🎉</div>
           <h3 className="text-xl font-bold text-green-600 mb-2">Thank You!</h3>
@@ -88,7 +88,7 @@ export default function FeedbackWidget({ roomId }: FeedbackWidgetProps) {
   }
 
   return (
-    <div className="fixed top-6 right-6 bg-white rounded-2xl p-6 shadow-2xl z-50 w-96 max-h-[600px] overflow-y-auto">
+    <div className="fixed bottom-6 left-6 bg-white rounded-2xl p-6 shadow-2xl z-50 w-96 max-h-[600px] overflow-y-auto">
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-xl font-bold text-gray-800">Send Feedback</h3>
         <button
