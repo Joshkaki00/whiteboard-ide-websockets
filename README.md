@@ -48,9 +48,13 @@ A modern, gamified interview practice tool for technical coding interviews with 
 
 ### 🎨 **Whiteboard**
 - **Drawing Canvas**: Sketch algorithms and data structures
-- **Multiple Tools**: Freehand drawing, shapes, text
-- **Color Palette**: Customizable drawing colors
+- **Touch Support**: Full touchscreen support for tablets
+- **Real-time Sync**: Drawings appear instantly for all participants
+- **Color Picker**: Customizable drawing colors
+- **Brush Sizes**: Adjustable line thickness
 - **Clear Function**: Reset canvas when needed
+- **View Modes**: Hybrid (code + whiteboard) or whiteboard-only
+- **Resizable Panels**: Drag to adjust whiteboard and code editor sizes
 
 ### 📱 **Responsive Design**
 - **Desktop (1024px+)**: 3-column layout with full features
