@@ -1,6 +1,11 @@
 import { useSocket } from '../contexts/SocketContext'
+import ShareRoom from './ShareRoom'
 
-export default function ParticipantsPanel() {
+interface ParticipantsPanelProps {
+  roomId: string
+}
+
+export default function ParticipantsPanel({ roomId }: ParticipantsPanelProps) {
   const { participantCount } = useSocket()
 
   return (
