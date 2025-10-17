@@ -113,6 +113,7 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
           setCurrentProblemTitle(problem.title)
           setShowProblemSelector(false)
           setSearchQuery('')
+          analytics.trackProblemSelected(problem.title, problem.difficulty)
         } else {
           console.error('Failed to change problem:', response.error)
         }
