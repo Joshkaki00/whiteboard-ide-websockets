@@ -38,7 +38,7 @@ export default function ShareRoom({ roomId }: ShareRoomProps) {
   const shareViaEmail = () => {
     const subject = 'Join me for a CodePair interview practice session'
     const body = `Hi!\n\nI've created a CodePair room for us to practice coding interviews together.\n\nRoom Code: ${roomId}\n\nJoin here: ${roomUrl}\n\nSee you there! 🚀`
-    window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    globalThis.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   }
 
   return (
