@@ -456,7 +456,7 @@ export default function InterviewRoom({ roomId, onLeaveRoom}: InterviewRoomProps
         
         {/* Bottom Panel: Chat */}
         <div className="h-56 flex-shrink-0 bg-white border-t border-gray-200 overflow-hidden">
-          <ChatPanel roomId={roomId} compact />
+          <ChatPanel roomId={roomId} />
         </div>
       </div>
 
