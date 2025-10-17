@@ -2,8 +2,8 @@ import { useEffect, useRef } from 'react'
 import { useSocket } from '../contexts/SocketContext'
 
 interface CodeEditorProps {
-  roomId: string
-  compact?: boolean
+  readonly roomId: string
+  readonly compact?: boolean
 }
 
 export default function CodeEditor({ roomId, compact }: CodeEditorProps) {

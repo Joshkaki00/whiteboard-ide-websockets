@@ -4,7 +4,7 @@ import { analytics } from '../services/analytics'
 import FeedbackWidget from './FeedbackWidget'
 
 interface LandingPageProps {
-  onJoinRoom: (roomId: string) => void
+  readonly onJoinRoom: (roomId: string) => void
 }
 
 export default function LandingPage({ onJoinRoom }: LandingPageProps) {
