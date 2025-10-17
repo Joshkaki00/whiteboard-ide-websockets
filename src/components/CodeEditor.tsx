@@ -59,12 +59,13 @@ export default function CodeEditor({ roomId, compact }: CodeEditorProps) {
         ref={textareaRef}
         value={codeContent}
         onChange={handleCodeChange}
-        className="flex-1 w-full p-4 text-base bg-white text-black border border-gray-300 outline-none resize-none focus:ring-2 focus:ring-purple-500"
+        className="flex-1 w-full p-4 text-base bg-white text-black border border-gray-300 outline-none resize-none focus:ring-2 focus:ring-purple-500 font-bold"
         style={{
-          fontFamily: "'Consolas', 'Monaco', 'Courier New', monospace",
+          fontFamily: "'Roboto', 'Arial', 'Helvetica', sans-serif",
           fontSize: '16px',
-          lineHeight: '1.6',
-          letterSpacing: '0.5px'
+          lineHeight: '1.7',
+          letterSpacing: '0.3px',
+          fontWeight: 700
         }}
         placeholder="// Start typing your solution here..."
         spellCheck={false}
