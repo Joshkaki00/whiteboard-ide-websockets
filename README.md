@@ -372,7 +372,7 @@ Quick tips:
 
 - **Issues**: [GitHub Issues](https://github.com/Joshkaki00/whiteboard-ide-websockets/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/Joshkaki00/whiteboard-ide-websockets/discussions)
-- **Email**: joshkaki@hotmail.com
+- **Email**: [Mail to joshkaki@hotmail.com](mailto:joshkaki@hotmail.com)
 
 ## 🙏 Acknowledgments
 
